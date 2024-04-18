@@ -273,13 +273,17 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
   map_dfr(~read_tsv(.x, show_col_types = F) %&gt;% 
             mutate(across(any_of(c(&quot;pump_id&quot;, &quot;plant&quot;, &quot;vial&quot;)), as.character)), .id=&quot;metafile&quot;) %&gt;% 
   mutate(year = year(date))</code></pre>
-<pre class="r"><code>ggplot(metadata, aes(x=yday(date), fill=paste(site, time))) + facet_wrap(vars(year), ncol=1) + geom_bar() +
-  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_classic() + labs(x=&quot;Day of year&quot;, y=&quot;Floral and ambient samples&quot;, fill=&quot;Site, time&quot;)</code></pre>
+<div id="inventory" class="section level1">
+<h1>Inventory</h1>
+<pre class="r"><code>ggplot(metadata %&gt;% filter(type==&quot;floral&quot;), aes(x=yday(date), fill=paste(site, time))) + 
+  facet_wrap(vars(year), ncol=1) + geom_bar() +
+  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_classic() + 
+  labs(x=&quot;Day of year&quot;, y=&quot;Floral samples&quot;, fill=&quot;Site, time&quot;)</code></pre>
 <p><img src="images/plot_metadata-1.svg" width="768" /></p>
-<pre class="r"><code>metadata %&gt;% count(year, site, time) %&gt;% pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% 
-  kable(caption = &quot;floral and ambient samples in each each year&quot;)</code></pre>
+<pre class="r"><code>metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% count(year, site, time) %&gt;% 
+  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;floral samples&quot;)</code></pre>
 <table>
-<caption>floral and ambient samples in each each year</caption>
+<caption>floral samples</caption>
 <thead>
 <tr class="header">
 <th align="right">year</th>
@@ -303,60 +307,333 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2018</td>
-<td align="right">12</td>
-<td align="right">13</td>
-<td align="right">18</td>
+<td align="right">8</td>
+<td align="right">10</td>
+<td align="right">15</td>
 <td align="right"></td>
-<td align="right">20</td>
+<td align="right">17</td>
 <td align="right"></td>
 </tr>
 <tr class="odd">
 <td align="right">2019</td>
-<td align="right">30</td>
-<td align="right">33</td>
-<td align="right">43</td>
+<td align="right">25</td>
+<td align="right">29</td>
+<td align="right">39</td>
 <td align="right"></td>
-<td align="right">23</td>
+<td align="right">17</td>
 <td align="right"></td>
 </tr>
 <tr class="even">
 <td align="right">2020</td>
-<td align="right">23</td>
-<td align="right">27</td>
+<td align="right">21</td>
+<td align="right">24</td>
 <td align="right"></td>
 <td align="right"></td>
-<td align="right">16</td>
+<td align="right">14</td>
 <td align="right"></td>
 </tr>
 <tr class="odd">
 <td align="right">2021</td>
-<td align="right">18</td>
-<td align="right">25</td>
-<td align="right">47</td>
-<td align="right">35</td>
-<td align="right">22</td>
+<td align="right">15</td>
 <td align="right">23</td>
+<td align="right">44</td>
+<td align="right">29</td>
+<td align="right">20</td>
+<td align="right">21</td>
 </tr>
 <tr class="even">
 <td align="right">2022</td>
-<td align="right">48</td>
-<td align="right">91</td>
-<td align="right">52</td>
-<td align="right">52</td>
-<td align="right">23</td>
-<td align="right">24</td>
+<td align="right">38</td>
+<td align="right">85</td>
+<td align="right">49</td>
+<td align="right">47</td>
+<td align="right">19</td>
+<td align="right">20</td>
 </tr>
 <tr class="odd">
 <td align="right">2023</td>
-<td align="right">20</td>
-<td align="right">22</td>
-<td align="right">46</td>
-<td align="right">44</td>
 <td align="right">18</td>
+<td align="right">19</td>
+<td align="right">42</td>
+<td align="right">40</td>
+<td align="right">17</td>
 <td align="right"></td>
 </tr>
 </tbody>
 </table>
+<pre class="r"><code>metadata %&gt;% filter(type==&quot;ambient&quot;) %&gt;% count(year, site, time) %&gt;% 
+  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;ambient samples&quot;)</code></pre>
+<table>
+<caption>ambient samples</caption>
+<thead>
+<tr class="header">
+<th align="right">year</th>
+<th align="right">Ihyb_D</th>
+<th align="right">Ihyb_N</th>
+<th align="right">Lagg_D</th>
+<th align="right">VF_D</th>
+<th align="right">Lagg_N</th>
+<th align="right">VF_N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2018</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">2019</td>
+<td align="right">5</td>
+<td align="right">4</td>
+<td align="right">3</td>
+<td align="right">6</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">2020</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right"></td>
+<td align="right">2</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">2021</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">2</td>
+<td align="right">6</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">2022</td>
+<td align="right">10</td>
+<td align="right">6</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">5</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">2023</td>
+<td align="right">2</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% count(year, site, time, plant) %&gt;% count(year, site, time) %&gt;% 
+  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;plants&quot;)</code></pre>
+<table>
+<caption>plants</caption>
+<thead>
+<tr class="header">
+<th align="right">year</th>
+<th align="right">Ihyb_D</th>
+<th align="right">Ihyb_N</th>
+<th align="right">Lagg_D</th>
+<th align="right">Lagg_N</th>
+<th align="right">VF_D</th>
+<th align="right">VF_N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="right">32</td>
+<td align="right">25</td>
+<td align="right">48</td>
+<td align="right">22</td>
+<td align="right">44</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="right">2018</td>
+<td align="right">8</td>
+<td align="right">10</td>
+<td align="right">15</td>
+<td align="right"></td>
+<td align="right">17</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">2019</td>
+<td align="right">25</td>
+<td align="right">29</td>
+<td align="right">39</td>
+<td align="right"></td>
+<td align="right">16</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">2020</td>
+<td align="right">21</td>
+<td align="right">21</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">13</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="right">15</td>
+<td align="right">19</td>
+<td align="right">41</td>
+<td align="right">29</td>
+<td align="right">20</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="right">25</td>
+<td align="right">31</td>
+<td align="right">48</td>
+<td align="right">46</td>
+<td align="right">19</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="right">18</td>
+<td align="right">19</td>
+<td align="right">41</td>
+<td align="right">40</td>
+<td align="right">17</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>left_join(metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% count(year, site, time, name=&quot;samples&quot;),
+          metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% count(year, site, time, plant) %&gt;% count(year, site, time, name=&quot;plants&quot;)) %&gt;% 
+  mutate(samples_per_plant = samples/plants, .keep=&quot;unused&quot;) %&gt;% 
+    pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;samples_per_plant&quot;) %&gt;% kable(caption = &quot;samples per plant&quot;)</code></pre>
+<table>
+<caption>samples per plant</caption>
+<thead>
+<tr class="header">
+<th align="right">year</th>
+<th align="right">Ihyb_D</th>
+<th align="right">Ihyb_N</th>
+<th align="right">Lagg_D</th>
+<th align="right">Lagg_N</th>
+<th align="right">VF_D</th>
+<th align="right">VF_N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="right">1.062</td>
+<td align="right">1.000</td>
+<td align="right">1.042</td>
+<td align="right">1.000</td>
+<td align="right">1.204</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="even">
+<td align="right">2018</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right"></td>
+<td align="right">1.000</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">2019</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right"></td>
+<td align="right">1.062</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">2020</td>
+<td align="right">1.000</td>
+<td align="right">1.143</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">1.077</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="right">1.000</td>
+<td align="right">1.210</td>
+<td align="right">1.073</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.105</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="right">1.520</td>
+<td align="right">2.742</td>
+<td align="right">1.021</td>
+<td align="right">1.022</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.024</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="soil-moisture" class="section level1">
+<h1>Soil moisture</h1>
+<pre class="r"><code>metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% group_by(year, site, time, date) %&gt;% summarize(has_VWC = mean(!is.na(VWC))) %&gt;% 
+  ggplot(aes(y=fct_rev(paste(date, site, time)), color=paste(site, time), x=has_VWC)) + geom_point(size=3) +
+  scale_color_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
+  labs(x=&quot;Fraction of floral samples with soil moisture recorded&quot;, y=&quot;Date, site, time&quot;, color=&quot;Site, time&quot;)</code></pre>
+<p><img src="images/soil_moisture-1.svg" width="768" /></p>
+<pre class="r"><code>ggplot(metadata, aes(x=yday(date), color=paste(site, time), y=VWC)) + 
+  facet_wrap(vars(year), ncol=1) + geom_point() +
+  scale_color_brewer(palette = &quot;Paired&quot;) + theme_classic() + 
+  labs(x=&quot;Day of year&quot;, y=&quot;Soil moisture&quot;, color=&quot;Site, time&quot;)</code></pre>
+<p><img src="images/soil_moisture-2.svg" width="768" /></p>
+<pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=VWC)) + 
+  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_classic() + 
+  labs(x=&quot;Site&quot;, y=&quot;Soil moisture&quot;, fill=&quot;Site, time&quot;)</code></pre>
+<p><img src="images/soil_moisture-3.svg" width="768" /></p>
+</div>
+<div id="extraction-time" class="section level1">
+<h1>Extraction time</h1>
+<pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=bag)) + 
+  facet_grid(time~year, scales = &quot;free_y&quot;) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
+  labs(x=&quot;Site&quot;, y=&quot;Bag time&quot;, fill=&quot;Site, time&quot;)</code></pre>
+<p><img src="images/time-1.svg" width="768" /></p>
+<pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=(pump-bag)/60)) + 
+  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
+  labs(x=&quot;Site&quot;, y=&quot;Equilibration time (min)&quot;, fill=&quot;Site, time&quot;)</code></pre>
+<p><img src="images/time-2.svg" width="768" /></p>
+<pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=(end-pump)/60)) + 
+  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
+  labs(x=&quot;Site&quot;, y=&quot;Pumping time (min)&quot;, fill=&quot;Site, time&quot;)</code></pre>
+<p><img src="images/time-3.svg" width="768" /></p>
+</div>
 
 
 

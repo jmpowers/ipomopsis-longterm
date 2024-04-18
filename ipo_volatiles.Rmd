@@ -33,11 +33,62 @@ metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatile
   mutate(year = year(date))
 ```
 
-```{r plot_metadata}
-ggplot(metadata, aes(x=yday(date), fill=paste(site, time))) + facet_wrap(vars(year), ncol=1) + geom_bar() +
-  scale_fill_brewer(palette = "Paired") + theme_classic() + labs(x="Day of year", y="Floral and ambient samples", fill="Site, time")
+# Inventory 
 
-metadata %>% count(year, site, time) %>% pivot_wider(names_from=c("site","time"), values_from="n") %>% 
-  kable(caption = "floral and ambient samples in each each year")
+```{r plot_metadata}
+ggplot(metadata %>% filter(type=="floral"), aes(x=yday(date), fill=paste(site, time))) + 
+  facet_wrap(vars(year), ncol=1) + geom_bar() +
+  scale_fill_brewer(palette = "Paired") + theme_classic() + 
+  labs(x="Day of year", y="Floral samples", fill="Site, time")
+
+metadata %>% filter(type=="floral") %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "floral samples")
+metadata %>% filter(type=="ambient") %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "ambient samples")
+metadata %>% filter(type=="floral") %>% count(year, site, time, plant) %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "plants")
+
+left_join(metadata %>% filter(type=="floral") %>% count(year, site, time, name="samples"),
+          metadata %>% filter(type=="floral") %>% count(year, site, time, plant) %>% count(year, site, time, name="plants")) %>% 
+  mutate(samples_per_plant = samples/plants, .keep="unused") %>% 
+    pivot_wider(names_from=c("site","time"), values_from="samples_per_plant") %>% kable(caption = "samples per plant")
+```
+
+# Soil moisture
+
+```{r soil_moisture}
+metadata %>% filter(type=="floral") %>% group_by(year, site, time, date) %>% summarize(has_VWC = mean(!is.na(VWC))) %>% 
+  ggplot(aes(y=fct_rev(paste(date, site, time)), color=paste(site, time), x=has_VWC)) + geom_point(size=3) +
+  scale_color_brewer(palette = "Paired") + theme_minimal() + 
+  labs(x="Fraction of floral samples with soil moisture recorded", y="Date, site, time", color="Site, time")
+
+ggplot(metadata, aes(x=yday(date), color=paste(site, time), y=VWC)) + 
+  facet_wrap(vars(year), ncol=1) + geom_point() +
+  scale_color_brewer(palette = "Paired") + theme_classic() + 
+  labs(x="Day of year", y="Soil moisture", color="Site, time")
+
+ggplot(metadata, aes(x=site, fill=paste(site, time), y=VWC)) + 
+  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = "Paired") + theme_classic() + 
+  labs(x="Site", y="Soil moisture", fill="Site, time")
+```
+
+# Extraction time
+
+```{r time}
+ggplot(metadata, aes(x=site, fill=paste(site, time), y=bag)) + 
+  facet_grid(time~year, scales = "free_y") + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = "Paired") + theme_minimal() + 
+  labs(x="Site", y="Bag time", fill="Site, time")
+
+ggplot(metadata, aes(x=site, fill=paste(site, time), y=(pump-bag)/60)) + 
+  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = "Paired") + theme_minimal() + 
+  labs(x="Site", y="Equilibration time (min)", fill="Site, time")
+
+ggplot(metadata, aes(x=site, fill=paste(site, time), y=(end-pump)/60)) + 
+  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
+  scale_fill_brewer(palette = "Paired") + theme_minimal() + 
+  labs(x="Site", y="Pumping time (min)", fill="Site, time")
 ```
 
