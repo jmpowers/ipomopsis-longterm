@@ -1,0 +1,43 @@
+---
+title: "Long-term *Ipomopsis* Floral Volatiles"
+author: "[John Powers](http://sites.uci.edu/powers/)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    self_contained: no
+    lib_dir: libs
+    code_folding: hide
+    toc: yes
+    toc_float: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+<style type="text/css">
+.main-container { max-width: 1000px; margin-left: 0; margin-right: auto; }
+img{ max-width:200%; height: auto; }
+td, th { padding : 6px }
+</style>
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(knitr)
+knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
+                      fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+options(digits=4, knitr.kable.NA = "") # for kables
+```
+
+```{r load_metadata}
+metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatiles - 20", full.names=T) %>% 
+  map_dfr(~read_tsv(.x, show_col_types = F) %>% 
+            mutate(across(any_of(c("pump_id", "plant", "vial")), as.character)), .id="metafile") %>% 
+  mutate(year = year(date))
+```
+
+```{r plot_metadata}
+ggplot(metadata, aes(x=yday(date), fill=paste(site, time))) + facet_wrap(vars(year), ncol=1) + geom_bar() +
+  scale_fill_brewer(palette = "Paired") + theme_classic() + labs(x="Day of year", y="Floral and ambient samples", fill="Site, time")
+
+metadata %>% count(year, site, time) %>% pivot_wider(names_from=c("site","time"), values_from="n") %>% 
+  kable(caption = "floral and ambient samples in each each year")
+```
+

@@ -1,0 +1,291 @@
+site	time	observer	date	type	sample	plant	replicate	bag	pump	end	equil	pumping	flowers	buds	pump_id	VWC	treatment	notes
+Ihyb	N	JP	2022-07-11	floral	799	799	A	21:03	21:31	21:47	0:28	0:16	1	0	DRC5		nitrogen	Too rocky
+Ihyb	N	JP	2022-07-11	floral	506	506	A	20:48	20:58	21:13	0:10	0:15	1	0	DRC5	5.5	ambient	
+Ihyb	N	JP	2022-07-11	floral	503	503	A	20:30	21:00	21:15	0:30	0:15	1	1	DRC4		ambient	Too rocky
+Ihyb	N	JP	2022-07-11	floral	717	717	A	21:06	21:37	21:52	0:31	0:15	1	0	DRC4	6.5	water control	
+Ihyb	N	JP	2022-07-11	floral	797	797	A	21:25	21:55	22:12	0:30	0:17	1	0	DRC5	5.1	nitrogen	
+Ihyb	N	JP	2022-07-11	floral	798	798	A	21:27	21:58	22:14	0:31	0:16	1	0	DRC4	7.6	ambient	
+Ihyb	N	JP	2022-07-11	floral	706	706	A	21:44	22:20	22:35	0:36	0:15	1	0	DRC5	4.8	nitrogen	
+Ihyb	N	JP	2022-07-11	ambient	AIRJP			21:46	22:23	22:38	0:37	0:15			DRC4			
+Ihyb	N	JP	2022-07-11	floral	530	530	A	22:04	22:43	22:58	0:39	0:15	1	0	DRC4	6.2	ambient	
+Ihyb	N	JP	2022-07-11	floral	732	732	A	22:05	22:43	22:58	0:38	0:15	1	0	DRC5		water control	Too rocky
+Ihyb	N	JP	2022-07-11	floral	797	797	B	22:29	23:05	23:20	0:36	0:15	1	0	DRC5	5.1	nitrogen	
+Ihyb	N	JP	2022-07-11	floral	798	798	B	22:30	23:06	23:21	0:36	0:15	1	0	DRC4	7.6	ambient	
+Ihyb	D	JP	2022-07-12	floral	732	732		8:35	9:06	9:22	0:31	0:16	1	0	DRC10	4.4	water control	soil probe not fully inserted
+Ihyb	D	JP	2022-07-12	floral	530	530		8:36	9:08	9:23	0:32	0:15	1	0	DRC9	4.9	ambient	soil probe not fully inserted
+Ihyb	D	JP	2022-07-12	ambient	AIRJP		A	8:41	9:11	9:27	0:30	0:16			DRC8			popped out at 9:23
+Ihyb	D	JP	2022-07-12	floral	797	797		8:52	9:37	9:52	0:45	0:15	1	0	DRC8	5.6	nitrogen	
+Ihyb	D	JP	2022-07-12	floral	798	798		8:54	9:29	9:44	0:35	0:15	1	0	DRC10	8.2	ambient	
+Ihyb	D	JP	2022-07-12	floral	705	705		8:57	9:31	9:46	0:34	0:15	1	0	DRC9		water control	too rocky; popped out after 1 min
+Ihyb	D	JP	2022-07-12	floral	719	719		9:20	9:50	10:05	0:30	0:15	1	0	DRC9		nitrogen	too rocky; popped out at 10:05
+Ihyb	D	JP	2022-07-12	floral	706	706		9:21	9:51	10:06	0:30	0:15	1	0	DRC10	5.2	nitrogen	
+Ihyb	D	JP	2022-07-12	floral	707	707		9:44	10:16	10:31	0:32	0:15	1	0	DRC9	7.2	water control	
+Ihyb	D	JP	2022-07-12	ambient	AIRJP		B	10:12	10:43	11:00	0:31	0:17			DRC9			
+Ihyb	D	JP	2022-07-12	ambient	AIRJP		C	10:12	10:43	11:00	0:31	0:17			DRC10			
+Ihyb	D	JP	2022-07-12	ambient	AIRJP		D	10:19	10:45	11:00	0:26	0:15			DRC8			
+Ihyb	D	JP	2022-07-12	ambient	AIRJP		E	10:19	10:45	11:00	0:26	0:15			DRC3			
+Ihyb	N	JK	2022-07-11	floral	712	712		20:40	21:10	21:25	0:30	0:15	1	2	DRC3	4.6	water control	
+Ihyb	N	JK	2022-07-11	floral	314	314		21:17	21:54	22:09	0:37	0:15	1	3	DRC3		ambient	too rocky; JP: pump time was 21:34
+Ihyb	N	JK	2022-07-11	floral	510	510		21:40	22:21	22:36	0:41	0:15	1	1	DRC3	5.6	ambient	
+Ihyb	N	JK	2022-07-11	floral	712	712		22:30	23:00	23:15	0:30	0:15	1	2	DRC3	4.6	water control	
+Ihyb	N	JK	2022-07-11	floral	713	713		21:00	21:30	21:45	0:30	0:15	1	5	DRC3		water control	too rocky; JP changed AM to PM
+Ihyb	N	JK	2022-07-11	floral	712	712		21:37	22:07	22:22	0:30	0:15	1	2	DRC3	4.4	water control	JP changed AM to PM
+Ihyb	N	JK	2022-07-11	floral	799	799		21:57	22:27	22:42	0:30	0:15	1	1	DRC3		nitrogen	too rocky; JP changed AM to PM
+Ihyb	N	DH	2022-07-11	floral	718	718	A	20:29	20:59	21:14	0:30	0:15	1	3	DRC8	8.6	nitrogen	
+Ihyb	N	DH	2022-07-11	floral	721	721	A	20:31	21:02	21:17	0:31	0:15	1	0	DRC9	2.7	water control	
+Ihyb	N	DH	2022-07-11	floral	509	509	A	20:33	21:04	21:19	0:31	0:15	1	0	DRC10	10.2	ambient	
+Ihyb	N	DH	2022-07-11	floral	737	737	A	21:09	21:42	21:57	0:33	0:15	1	0	DRC8	6.2	water control	
+Ihyb	N	DH	2022-07-11	floral	101	101	A	21:11	21:45	22:01	0:34	0:16	1	0	DRC9	5.8	ambient	
+Ihyb	N	DH	2022-07-11	ambient	AIRDH			21:22	21:54	22:11	0:32	0:17			DRC10			
+Ihyb	N	DH	2022-07-11	floral	707	707	A	21:48	22:19	22:34	0:31	0:15	1	0	DRC9	3.9	water control	
+Ihyb	N	DH	2022-07-11	floral	731	731	A	21:51	22:22	22:37	0:31	0:15	1	0	DRC8	11.4	nitrogen	
+Ihyb	N	DH	2022-07-11	floral	729	729	A	22:01	22:31	22:46	0:30	0:15	1	0	DRC10	4.9	nitrogen	
+Ihyb	N	DH	2022-07-11	floral	701	701	A	22:09	22:41	22:56	0:32	0:15	1	0	DRC9	8.5	nitrogen	
+Ihyb	N	DH	2022-07-11	floral	718	718	B	22:26	22:56	23:11	0:30	0:15	1	0	DRC8	8.6	nitrogen	
+Ihyb	N	DH	2022-07-11	floral	721	721	B	22:28	23:00	23:15	0:32	0:15	1	0	DRC10	2.7	water control	
+Ihyb	D	DH	2022-07-12	floral	718	718		8:37	9:08	9:23	0:31	0:15	1	0	DRC4	4.9	nitrogen	
+Ihyb	D	DH	2022-07-12	floral	721	721		8:39	9:09	9:26	0:30	0:17	1	0	DRC5	4	water control	
+Ihyb	D	DH	2022-07-12	floral	101	101		8:54	9:26	9:41	0:32	0:15	1	0	DRC4	4.5	ambient	
+Ihyb	D	DH	2022-07-12	floral	731	731		8:57	9:30	9:45	0:33	0:15	1	0	DRC5	5.7	nitrogen	
+Ihyb	D	DH	2022-07-12	floral	729	729		9:15	9:54	10:09	0:39	0:15	1	0	DRC4	4.8	nitrogen	
+Ihyb	D	DH	2022-07-12	floral	701	701		9:17	9:50	10:05	0:33	0:15	1	0	DRC5	7.2	nitrogen	
+Ihyb	D	DH	2022-07-12	floral	509	509		9:40	10:14	10:29	0:34	0:15	1	0	DRC5	8.9	ambient	
+Ihyb	D	DH	2022-07-12	ambient	AIRDH			9:43	10:17	10:36	0:34	0:19			DRC4			
+Ihyb	D	DH	2022-07-12	ambient	AIRDH		B	10:29	10:59	11:14	0:30	0:15			DRC4			
+Ihyb	D	DH	2022-07-12	ambient	AIRDH		C	10:34	11:04	11:19	0:30	0:15			DRC5			
+Ihyb	N	AA	2022-07-11	floral	715	715	A	20:32	21:03	21:18	0:31	0:15	1	0	DRC7	3.4	nitrogen	
+Ihyb	N	AA	2022-07-11	floral	726	726	A	20:41	21:13	21:28	0:32	0:15	1	0	DRC1	4.1	nitrogen	
+Ihyb	N	AA	2022-07-11	floral	713	713	A	21:20	21:50	22:05	0:30	0:15	1	1	DRC1		water control	too rocky
+Ihyb	N	AA	2022-07-11	floral	705	705	A	21:35	22:10	22:25	0:35	0:15	1	0	DRC7	5.1	water control	
+Ihyb	N	AA	2022-07-11	ambient	AIRAA			21:54	22:27	22:42	0:33	0:15			DRC1			
+Ihyb	N	AA	2022-07-11	floral	719	719	A	22:22	22:52	23:07	0:30	0:15	1	0	DRC7	5.4	nitrogen	
+Ihyb	D	AA	2022-07-12	floral	503	503		8:32	9:02	9:17	0:30	0:15	1	0	DRC1	5.6	ambient	
+Ihyb	D	AA	2022-07-12	floral	506	506		8:36	9:07	9:22	0:31	0:15	1	0	DRC7		ambient	too rocky
+Ihyb	D	AA	2022-07-12	floral	737	737		8:50	9:20	9:35	0:30	0:15	1	0	DRC1	6.9	water control	
+Ihyb	D	AA	2022-07-12	floral	726	726		8:56	9:26	9:41	0:30	0:15	1	0	DRC7	3.9	nitrogen	
+Ihyb	D	AA	2022-07-12	floral	510	510		9:32	10:02	10:17	0:30	0:15	1	0	DRC1		ambient	too rocky
+Ihyb	D	AA	2022-07-12	ambient	AIRAA		A	9:54	10:24	10:39	0:30	0:15			DRC1			
+Lagg	D	DH	2022-07-21	floral	588	588		9:47	10:17	10:32	0:30	0:15	1	0	DRC8	5.2	ambient	
+Lagg	D	DH	2022-07-21	floral	590	590		9:44	10:14	10:29	0:30	0:15	1	0	DRC3	7.9	ambient	
+Lagg	D	DH	2022-07-21	floral	589	589		10:08	10:38	10:53	0:30	0:15	1	0	CWu1	6.9	water control	
+Lagg	D	DH	2022-07-21	floral	543	543		10:17	10:47	11:02	0:30	0:15	1	0	DRC3	7.7	nitrogen	
+Lagg	D	DH	2022-07-21	floral	76	76		10:19	10:49	11:04	0:30	0:15	1	0	DRC8	5.2	ambient	
+Lagg	D	DH	2022-07-21	floral	546	546		10:27	10:57	11:12	0:30	0:15	1	1	CWu1	6.5	ambient	
+Lagg	D	DH	2022-07-21	floral	596	596		10:39	11:09	11:24	0:30	0:15	1	0	DRC3	5.4	water control	
+Lagg	D	DH	2022-07-21	floral	550	550		10:41	11:11	11:26	0:30	0:15	1	0	DRC8	4.9	water control	
+Lagg	D	DH	2022-07-21	floral	325	325		11:01	11:31	11:46	0:30	0:15	1	0	CWu1	6.1	ambient	
+Lagg	D	DH	2022-07-21	floral	317	317		11:20	11:50	12:05	0:30	0:15	1	0	DRC3	6.4	ambient	
+Lagg	D	DH	2022-07-21	floral	320	320		11:22	11:52	12:07	0:30	0:15	1	3	DRC8	6.4	ambient	
+Lagg	D	DH	2022-07-21	ambient	AIRDH			11:33	12:03	12:18	0:30	0:15			CWu1			
+Lagg	D	DH	2022-07-21	floral	584	584		12:07	12:39	12:54	0:32	0:15	1	0	DRC8	6.1	water control	
+Lagg	D	DH	2022-07-21	floral	541	541		12:33	13:03	13:18	0:30	0:15	1	0	CWu1	6.9	water control	
+Lagg	N	DH	2022-07-21	floral	589	589		20:44	21:15	21:30	0:31	0:15	1	0	CWu1	6.1	water control	
+Lagg	N	DH	2022-07-21	floral	588	588		20:46	21:17	21:32	0:31	0:15	1	0	CWu2	7.3	ambient	
+Lagg	N	DH	2022-07-21	floral	590	590		21:05	21:35	21:50	0:30	0:15	1	0	CWu1	6.7	ambient	
+Lagg	N	DH	2022-07-21	floral	546	546		21:08	21:38	21:53	0:30	0:15	1	0	CWu2	5.3	ambient	trap dropped into pumpbox
+Lagg	N	DH	2022-07-21	floral	596	596		21:24	21:56	22:11	0:32	0:15	1	0	CWu1	5	water control	
+Lagg	N	DH	2022-07-21	floral	76	76		21:26	21:59	22:14	0:33	0:15	1	0	CWu2	6.1	ambient	flower pulled off when starting pump
+Lagg	N	DH	2022-07-21	ambient	AIRDH			21:42	22:15	22:30	0:33	0:15			CWu1			
+Lagg	N	DH	2022-07-21	floral	598	598		21:45	22:20	22:35	0:35	0:15	1	0	CWu2	5.1	ambient	pump sounds quiet
+Lagg	N	DH	2022-07-21	floral	320	320	A	22:03	22:33	22:48	0:30	0:15	1	0	CWu1	6.2	ambient	
+Lagg	N	DH	2022-07-21	floral	323	323		22:07	22:39	22:54	0:32	0:15	1	0	CWu2	5.9	ambient	pump died during sampling; switched for DRC4 for last 5 min
+Lagg	D	AA	2022-07-21	floral	614	614		9:33	10:03	10:18	0:30	0:15	1	0	DRC4	6.2	ambient	
+Lagg	D	AA	2022-07-21	floral	613	613		9:35	10:05	10:20	0:30	0:15	1	0	DRC1	6.9	nitrogen	
+Lagg	D	AA	2022-07-21	floral	344	344		9:39	10:09	10:24	0:30	0:15	1	0	DRC7	6.6	ambient	Slipped out a few seconds after pump end
+Lagg	D	AA	2022-07-21	floral	608	608		9:54	10:24	10:39	0:30	0:15	1	1	DRC4	5.3	nitrogen	
+Lagg	D	AA	2022-07-21	floral	616	616		10:12	10:42	10:57	0:30	0:15	1	0	DRC1	3.7	water control	
+Lagg	D	AA	2022-07-21	floral	607	607		10:15	10:45	11:00	0:30	0:15	1	0	DRC4	7.5	ambient	6.3% VWC on second reading
+Lagg	D	AA	2022-07-21	floral	601	601		10:29	10:59	11:14	0:30	0:15	1	0	DRC7	5.2	water control	Trap out for 2 min during pump sampling
+Lagg	D	AA	2022-07-21	floral	548	548		10:33	11:03	11:18	0:30	0:15	1	0	DRC4	6.5	nitrogen	
+Lagg	D	AA	2022-07-21	ambient	AIRAA			10:46	11:16	11:31	0:30	0:15			DRC7			
+Lagg	D	AA	2022-07-21	floral	598	598	B	10:49	11:19	11:34	0:30	0:15	1	0	DRC1	7	ambient	
+Lagg	D	AA	2022-07-21	floral	323	323		10:50	11:23	11:38	0:33	0:15	1	0	DRC4	7.4	ambient	
+Lagg	D	AA	2022-07-21	floral	near85	notag85		11:33	12:05	12:20	0:32	0:15	1	0	DRC1	4.1	ambient	Located near 85
+Lagg	D	AA	2022-07-21	floral	566	566		12:29	12:59	13:14	0:30	0:15	1	0	DRC1	10.8	nitrogen	Trap out for 1 min during pump sampling
+Lagg	D	AA	2022-07-21	floral	322	322		12:38	13:08	13:23	0:30	0:15	1	0	DRC7	4.4	ambient	
+Lagg	D	AA	2022-07-21	floral	568	568		12:50	13:20	13:35	0:30	0:15	1	0	DRC4	6.4	nitrogen	
+Lagg	N	AA	2022-07-21	floral	614	614		20:45	21:15	21:30	0:30	0:15	1	0	DRC10	4	ambient	
+Lagg	N	AA	2022-07-21	floral	613	613		20:47	21:17	21:32	0:30	0:15	1	0	DRC9	4.6	nitrogen	
+Lagg	N	AA	2022-07-21	floral	344	344		20:48	21:18	21:33	0:30	0:15	1	0	DRC3	6.6	ambient	
+Lagg	N	AA	2022-07-21	floral	601	601		21:23	21:53	22:08	0:30	0:15	1	0	DRC10	5.5	water control	
+Lagg	N	AA	2022-07-21	floral	599	599		21:24	21:54	22:09	0:30	0:15	1	0	DRC9	5.3	ambient	
+Lagg	N	AA	2022-07-21	floral	615	615		21:26	21:56	22:11	0:30	0:15	1	0	DRC3	5.8	nitrogen	
+Lagg	N	AA	2022-07-21	floral	616	616		21:41	22:15	22:30	0:34	0:15	1	0	DRC3	3.9	water control	
+Lagg	N	AA	2022-07-21	floral	607	607		21:43	22:17	22:32	0:34	0:15	1	0	DRC9	7.4	ambient	
+Lagg	N	AA	2022-07-21	floral	608	608		21:45	22:19	22:34	0:34	0:15	1	0	DRC10	4.4	nitrogen	
+Lagg	N	AA	2022-07-21	floral	near85	notag85		22:04	22:35	22:50	0:31	0:15	1	0	DRC3	2.6	ambient	Located near 85
+Lagg	N	AA	2022-07-21	ambient	AIRAA			22:06	22:38	22:53	0:32	0:15			DRC10			
+Lagg	D	JP	2022-07-21	floral	283	283		9:32	10:04	10:19	0:32	0:15	1	0	DRC5	5.8	ambient	
+Lagg	D	JP	2022-07-21	floral	281	281		9:34	10:06	10:21	0:32	0:15	1	0	JMP1	5.4	ambient	
+Lagg	D	JP	2022-07-21	floral	574	574		9:36	10:07	10:23	0:31	0:16	1	0	JMP3	7.5	water control	
+Lagg	D	JP	2022-07-21	floral	598	598	A	9:38	10:10	10:24	0:32	0:14	1	0	JMP2	6.4	ambient	
+Lagg	D	JP	2022-07-21	floral	332	332		10:13	10:48	11:03	0:35	0:15	1	0	DRC5	5.7	ambient	
+Lagg	D	JP	2022-07-21	floral	334	334		10:16	10:51	11:06	0:35	0:15	1	0	JMP1	4.7	ambient	
+Lagg	D	JP	2022-07-21	floral	337	337		10:19	10:51	11:06	0:32	0:15	1	0	JMP2	4.1	ambient	
+Lagg	D	JP	2022-07-21	floral	341	341		10:21	10:53	11:08	0:32	0:15	1	0	JMP3	6.2	ambient	
+Lagg	D	JP	2022-07-21	floral	563	563		10:38	11:12	11:28	0:34	0:16	1	0	DRC5	6.5	ambient	trap fell out; flower fell off @ 11:25
+Lagg	D	JP	2022-07-21	floral	293	293		10:41	11:15	11:30	0:34	0:15	1	0	JMP2	7.3	ambient	trap fell out twice; stopped @11:50
+Lagg	D	JP	2022-07-21	floral	562	562		10:45	11:18	11:33	0:33	0:15	1	1	JMP3	6.2	water control	
+Lagg	D	JP	2022-07-21	ambient	AIRAA			10:52	11:22	11:37	0:30	0:15			JMP1			
+Lagg	D	JP	2022-07-21	floral	2100	2100		11:20	11:51	12:08	0:31	0:17	1	1	JMP2	6.9	ambient	
+Lagg	D	JP	2022-07-21	floral	297	297		11:41	12:11	12:26	0:30	0:15	1	0	DRC5	5.8	ambient	
+Lagg	N	JP	2022-07-21	floral	281	281		20:44	21:26	21:41	0:42	0:15	1	0	JMP1	5.7	ambient	
+Lagg	N	JP	2022-07-21	floral	283	283		20:46	21:27	21:42	0:41	0:15	1	0	JMP2	4.9	ambient	
+Lagg	N	JP	2022-07-21	floral	341	341		20:48	21:29	21:44	0:41	0:15	1	0	JMP3	7.5	ambient	
+Lagg	N	JP	2022-07-21	floral	566	566		21:15	21:48	22:08	0:33	0:20	1	0	JMP1	6	nitrogen	
+Lagg	N	JP	2022-07-21	floral	554	554		21:19	21:51	22:10	0:32	0:19	1	0	JMP2	5.1	ambient	
+Lagg	N	JP	2022-07-21	floral	550	550		21:21	21:56	22:11	0:35	0:15	1	0	JMP3	4.7	water control	
+Lagg	N	JP	2022-07-21	floral	543	543		22:00	22:30	22:45	0:30	0:15	1	0	JMP1	8.4	nitrogen	
+Lagg	N	JP	2022-07-21	ambient	AIRJP			22:03	22:33	22:48	0:30	0:15			JMP2			pump died, recalibrated and ran 15 min
+Lagg	N	JP	2022-07-21	floral	540	540		22:17	22:53	23:08	0:36	0:15	1	0	JMP3	4.1	nitrogen	
+Lagg	N	JP	2022-07-21	floral	415	415		22:19	22:55	23:10	0:36	0:15	1	0	JMP2	5.3	ambient	
+Lagg	D	JB	2022-07-21	floral	540	540		9:38	10:08	10:23	0:30	0:15	1	0	DRC10	6.4	nitrogen	
+Lagg	D	JB	2022-07-21	floral	280	280		9:44	10:16	10:29	0:32	0:13	1	0	DRC9	6.1	ambient	
+Lagg	D	JB	2022-07-21	floral	599	599		10:12	10:42	10:57	0:30	0:15	1	1	CWu2	7	ambient	
+Lagg	D	JB	2022-07-21	floral	615	615		10:34	11:04	11:19	0:30	0:15	1	2	DRC9	6.5	nitrogen	trap touched glove
+Lagg	D	JB	2022-07-21	floral	551	551		10:38	11:08	11:25	0:30	0:17	1	1	CWu2	6.4	ambient	
+Lagg	D	JB	2022-07-21	floral	554	554		11:11	11:42	11:56	0:31	0:14	1	0	DRC10	5.4	ambient	
+Lagg	D	JB	2022-07-21	floral	593	593		11:15	11:45	12:00	0:30	0:15	1	1	DRC9	7.9	ambient	trap fell out of bag
+Lagg	D	JB	2022-07-21	floral	539	539		10:51	11:21	11:36	0:30	0:15	1	1	DRC10	7.4	nitrogen	resampled
+Lagg	D	JB	2022-07-21	floral	585	585		11:45	12:16	12:30	0:31	0:14	1	1	DRC9	7.2	nitrogen	resampled
+Lagg	N	JB	2022-07-21	floral	337	337		20:00	20:30	20:45	0:30	0:15	1	3	DRC8	2.9	ambient	
+Lagg	N	JB	2022-07-21	floral	334	334		20:02	20:32	20:47	0:30	0:15	1	1	DRC7	4.1	ambient	
+Lagg	N	JB	2022-07-21	floral	574	574		20:03	20:33	20:49	0:30	0:16	1	0	DRC5	5	water control	
+Lagg	N	JB	2022-07-21	floral	568	568		20:21	20:52	21:09	0:31	0:17	1	0	DRC8	4.5	nitrogen	
+Lagg	N	JB	2022-07-21	floral	332	332		20:24	20:56	21:11	0:32	0:15	1	2	DRC7	5.4	ambient	popped out
+Lagg	N	JB	2022-07-21	floral	551	551		20:36	21:06	21:21	0:30	0:15	1	0	DRC5	7.1	ambient	
+Lagg	N	JB	2022-07-21	floral	585	585		21:04	21:35	21:55	0:31	0:20	1	0	DRC8	4.1	nitrogen	
+Lagg	N	JB	2022-07-21	floral	584	584		21:14	21:44	21:59	0:30	0:15	1	0	DRC7	5.4	water control	
+Lagg	N	JB	2022-07-21	floral	593	593		21:16	21:46	22:02	0:30	0:16	1	0	DRC5	5.1	ambient	trap touched glove
+Lagg	N	JB	2022-07-21	floral	548	548		21:39	22:09	22:24	0:30	0:15	1	3	DRC5	6	nitrogen	
+Lagg	N	JB	2022-07-21	floral	317	317		21:50	22:20	22:35	0:30	0:15	1	2	DRC7	3.4	ambient	
+Lagg	N	JB	2022-07-21	ambient	AIRJB			22:13	22:43	22:58	0:30	0:15			DRC8			
+Lagg	N	JK	2022-07-21	floral	562	562		20:00	20:30	20:45	0:30	0:15	1	1	DRC4	6.4	water control	
+Lagg	N	JK	2022-07-21	floral	297	297		20:03	20:33	20:48	0:30	0:15	1	0	DRC1	4.7	ambient	
+Lagg	N	JK	2022-07-21	floral	2100	2100		20:27	20:57	21:12	0:30	0:15	1	0	DRC4	6.9	ambient	
+Lagg	N	JK	2022-07-21	floral	293	293		20:35	21:05	21:20	0:30	0:15	1	0	DRC1	5.4	ambient	
+Lagg	N	JK	2022-07-21	floral	322	322		21:08	21:38	21:53	0:30	0:15	1	2	DRC1	4.3	ambient	
+Lagg	N	JK	2022-07-21	floral	320	320		21:10	21:40	21:55	0:30	0:15	1	1	DRC4	6.2	ambient	
+Lagg	N	JK	2022-07-21	floral	541	541		21:43	22:13	22:28	0:30	0:15	1	1	DRC4	6.8	water control	
+Lagg	N	JK	2022-07-21	ambient	AIRJK			21:45	22:15	22:30	0:30	0:15			DRC1			
+Lagg	N	JK	2022-07-21	floral	539	539		22:19	22:49	23:04	0:30	0:15	1	1	DRC1	7.6	nitrogen	
+Ihyb	N	JK	2022-07-27	floral	721	721		20:04	20:34	20:49	0:30	0:15	1	0	DRC1		water control	
+Ihyb	N	JK	2022-07-27	floral	314	314		20:06	20:36	20:51	0:30	0:15	1	2	DRC10		ambient	too rocky
+Ihyb	N	JK	2022-07-27	floral	718	718		20:23	20:56	21:11	0:33	0:15	1	0	DRC7		nitrogen	
+Ihyb	N	JK	2022-07-27	floral	715	715		20:32	21:07	21:22	0:35	0:15	1	0	DRC1		nitrogen	
+Ihyb	N	JK	2022-07-27	floral	726	726		20:39	21:09	21:24	0:30	0:15	1	0	DRC1		nitrogen	
+Ihyb	N	JK	2022-07-27	floral	712	712	A	20:58	21:28	21:43	0:30	0:15	1	0	DRC7	3.5	water control	
+Ihyb	N	JK	2022-07-27	floral	713	713	A	20:59	21:29	21:43	0:30	0:14	1	0	DRC10		water control	
+Ihyb	N	JK	2022-07-27	ambient	AIRJK			21:13	21:43	21:58	0:30	0:15			DRC1			
+Ihyb	N	JK	2022-07-27	floral	713	713	B	21:39	22:09	22:24	0:30	0:15	1	0	DRC10	5.7	water control	
+Ihyb	N	JK	2022-07-27	floral	712	712	B	21:47	22:17	22:32	0:30	0:15	1	0	DRC7	3.5	water control	
+Ihyb	N	JP	2022-07-27	floral	732	732	A	20:03	20:38	20:56	0:35	0:18	1	0	DRC8		water control	too rocky
+Ihyb	N	JP	2022-07-27	floral	530	530	A	20:04	20:40	20:56	0:36	0:16	1	2	DRC9		ambient	too rocky
+Ihyb	N	JP	2022-07-27	floral	797	797	A	20:09	20:46	21:06	0:37	0:20	1	2	DRC5		nitrogen	too rocky
+Ihyb	N	JP	2022-07-27	floral	798	798	A	20:32	21:04	21:20	0:32	0:16	1	0	DRC3	4.4	ambient	
+Ihyb	N	JP	2022-07-27	floral	719	719	A	20:33	21:09	21:24	0:36	0:15	1	0	DRC9	4.3	nitrogen	
+Ihyb	N	JP	2022-07-27	floral	706	706	A	20:34	21:12	21:27	0:38	0:15	1	0	DRC5	5.5	nitrogen	
+Ihyb	N	JP	2022-07-27	floral	701	701	A	20:53	21:26	21:42	0:33	0:16	1	0	DRC8	3.5	nitrogen	
+Ihyb	N	JP	2022-07-27	floral	701	701	B	20:55	21:27	21:42	0:32	0:15	1	0	DRC3	3.5	nitrogen	
+Ihyb	N	JP	2022-07-27	floral	732	732	B	20:58	21:35	21:51	0:37	0:16	1	1	DRC9		water control	too rocky
+Ihyb	N	JP	2022-07-27	floral	530	530	B	21:00	21:37	21:52	0:37	0:15	1	1	DRC5		ambient	too rocky
+Ihyb	N	JP	2022-07-27	floral	797	797	B	21:17	21:48	22:03	0:31	0:15	1	0	DRC8		nitrogen	too rocky
+Ihyb	N	JP	2022-07-27	floral	798	798	B	21:19	21:49	22:04	0:30	0:15	1	0	DRC3	4.4	ambient	
+Ihyb	N	JP	2022-07-27	floral	706	706	B	22:07	22:38	22:53	0:31	0:15	1	0	DRC5	5.5	nitrogen	
+Ihyb	N	JP	2022-07-27	floral	719	719	B	22:09	22:39	22:54	0:30	0:15	1	0	DRC9	4.3	nitrogen	
+Ihyb	D	JP	2022-07-28	floral	797	797		10:08	10:53	11:12	0:45	0:19	1	1	CWu2	4.7	nitrogen	rain
+Ihyb	D	JP	2022-07-28	floral	719	719		10:17	10:55	11:14	0:38	0:19	1	0	JMP3	5.3	nitrogen	rain
+Ihyb	D	JP	2022-07-28	floral	706	706		10:19	10:58	11:14	0:39	0:16	1	0	JMP2	4.3	nitrogen	rain
+Ihyb	D	JP	2022-07-28	floral	798	798		10:21	10:59	11:14	0:38	0:15	1	0	JMP1	4.7	ambient	rain
+Ihyb	N	AA	2022-07-27	floral	503	503	A	20:05	20:35	20:50	0:30	0:15	1	0	JMP1	4	ambient	
+Ihyb	N	AA	2022-07-27	floral	506	506	A	20:07	20:38	20:53	0:31	0:15	1	0	JMP2		ambient	too rocky
+Ihyb	N	AA	2022-07-27	floral	799	799	A	20:09	20:40	20:56	0:31	0:16	1	1	JMP3	2.5	nitrogen	
+Ihyb	N	AA	2022-07-27	floral	525	525	A	20:23	20:54	21:09	0:31	0:15	1	0	JMP1	3.8	ambient	
+Ihyb	N	AA	2022-07-27	floral	502	502	A	20:25	20:57	21:12	0:32	0:15	1	0	JMP2	2.4	ambient	
+Ihyb	N	AA	2022-07-27	floral	703	703	A	20:28	21:00	21:15	0:32	0:15	1	0	JMP3	2.4	water control	
+Ihyb	N	AA	2022-07-27	floral	709	709	A	20:45	21:15	21:30	0:30	0:15	1	0	JMP1	5.5	water control	
+Ihyb	N	AA	2022-07-27	ambient	AIRAA			20:50	21:20	21:35	0:30	0:15			JMP2			
+Ihyb	N	AA	2022-07-27	floral	799	799	B	20:53	21:23	21:38	0:30	0:15	1	0	JMP3	2.5	nitrogen	
+Ihyb	N	AA	2022-07-27	floral	718	718	B	21:26	21:57	22:12	0:31	0:15	1	0	JMP1	5.2	nitrogen	
+Ihyb	N	AA	2022-07-27	floral	721	721	B	21:27	21:59	22:14	0:32	0:15	1	0	JMP2	2.3	water control	
+Ihyb	N	AA	2022-07-27	floral	726	726	B	21:33	22:03	22:18	0:30	0:15	1	0	JMP3	10.3	nitrogen	
+Ihyb	N	AA	2022-07-27	floral	703	703	B	21:43	22:24	22:39	0:41	0:15	1	0	JMP2	2.4	water control	
+Ihyb	N	AA	2022-07-27	floral	709	709	B	21:46	22:27	22:42	0:41	0:15	1	0	JMP3	5.5	water control	
+Ihyb	N	AA	2022-07-27	floral	713	713	B	21:50	22:20	22:35	0:30	0:15	1	0	JMP1	4.5	water control	
+Ihyb	D	AA	2022-07-28	floral	712	712		10:20	10:50	11:05	0:30	0:15	1	0	DRC3		water control	too rocky;rain
+Ihyb	D	AA	2022-07-28	floral	726	726		10:22	10:53	11:07	0:31	0:14	1	0	DRC9		nitrogen	too rocky;rain
+Ihyb	D	AA	2022-07-28	floral	713	713		10:34	11:04	11:19	0:30	0:15	1	0	DRC5		water control	too rocky;rain
+Ihyb	D	AA	2022-07-28	floral	715	715		10:36	11:06	11:21	0:30	0:15	1	0	DRC3	5	nitrogen	rain
+Ihyb	D	AA	2022-07-28	floral	718	718		10:38	11:13	11:28	0:35	0:15	1	0	DRC9	3.7	nitrogen	rain
+Ihyb	D	AA	2022-07-28	floral	721	721		10:40	11:15	11:30	0:35	0:15	1	0	CWu1	6.1	water control	rain
+Ihyb	N	DH	2022-07-27	floral	101	101	A	20:06	20:37	20:52	0:31	0:15	1	0	CWu1	4.1	ambient	
+Ihyb	N	DH	2022-07-27	floral	707	707	A	20:08	20:38	20:56	0:30	0:18	1	0	DRC4	5.8	water control	
+Ihyb	N	DH	2022-07-27	floral	512	512	A	20:10	20:40	20:56	0:30	0:16	1	0	CWu2	3.7	ambient	
+Ihyb	N	DH	2022-07-27	floral	737	737	A	20:24	20:54	21:09	0:30	0:15	1	0	CWu1	6.4	water control	
+Ihyb	N	DH	2022-07-27	floral	509	509	A	20:25	20:56	21:11	0:31	0:15	1	0	DRC4	3.2	ambient	
+Ihyb	N	DH	2022-07-27	floral	729	729	A	20:27	21:01	21:16	0:34	0:15	1	0	CWu2	2.9	nitrogen	
+Ihyb	N	DH	2022-07-27	ambient	AIRDH			20:49	21:19	21:34	0:30	0:15			DRC4			
+Ihyb	N	DH	2022-07-27	floral	731	731	A	20:51	21:22	21:37	0:31	0:15	1	2	CWu2	3.8	nitrogen	
+Ihyb	N	DH	2022-07-27	floral	101	101	B	21:12	21:42	21:57	0:30	0:15	1	0	DRC4	4.1	ambient	
+Ihyb	N	DH	2022-07-27	floral	509	509	B	21:16	21:46	22:01	0:30	0:15	1	0	CWu2	3.2	ambient	
+Ihyb	N	DH	2022-07-27	floral	707	707	B	21:30	22:00	22:15	0:30	0:15	1	0	CWu1	5.8	water control	
+Ihyb	N	DH	2022-07-27	floral	512	512	B	21:32	22:02	22:17	0:30	0:15	1	0	DRC4	3.7	ambient	
+Ihyb	N	DH	2022-07-27	floral	729	729	B	21:33	22:03	22:18	0:30	0:15	1	0	CWu2	2.9	nitrogen	JP: took 1 hr off end time
+Ihyb	N	DH	2022-07-27	floral	731	731	B	21:48	22:17	22:32	0:29	0:15	1	0	CWu1	3.8	nitrogen	
+Ihyb	N	DH	2022-07-27	floral	509	509	C	21:50	22:21	22:36	0:31	0:15	1	0	CWu2	3.2	ambient	
+Ihyb	D	DH	2022-07-28	floral	707	707		10:08	10:38	10:53	0:30	0:15	1	0	DRC8	5.5	water control	
+Ihyb	D	DH	2022-07-28	floral	101	101		10:10	10:40	10:55	0:30	0:15	1	0	DRC4	4.6	ambient	
+Ihyb	D	DH	2022-07-28	floral	737	737		10:12	10:42	10:57	0:30	0:15	1	0	DRC10	6.8	water control	
+Ihyb	D	DH	2022-07-28	floral	509	509		10:13	10:43	10:58	0:30	0:15	1	0	DRC1		ambient	too rocky
+Ihyb	D	DH	2022-07-28	floral	512	512		10:27	10:58	11:13	0:31	0:15	1	0	DRC8	5	ambient	
+Ihyb	D	DH	2022-07-28	floral	731	731		10:29	11:01	11:16	0:32	0:15	1	0	DRC4	5.3	nitrogen	
+Ihyb	D	DH	2022-07-28	floral	729	729		10:31	11:04	11:19	0:33	0:15	1	0	DRC10	4.9	nitrogen	
+Ihyb	D	DH	2022-07-28	floral	709	709		10:33	11:06	11:21	0:33	0:15	1	0	DRC1	6.2	water control	
+Ihyb	D	DH	2022-07-28	ambient	AIRDH			10:52	11:23	11:38	0:31	0:15						
+VF	N	DC	2022-08-02	floral	466	466		20:01	20:31	20:46	0:30	0:15	1	0	DRC7	13.5		
+VF	N	DC	2022-08-02	floral	984	984		20:06	20:36	20:51	0:30	0:15	1	1	DRC5	5.2		
+VF	N	DC	2022-08-02	floral	985	985		20:43	21:13	21:28	0:30	0:15	1	0	DRC7	10.9		flower rebagged after pump 8 broke
+VF	N	DC	2022-08-02	ambient	AIRDC			20:53	21:23	21:38	0:30	0:15	0	0	DRC5			
+VF	D	JP	2022-08-01	floral	469	469		9:32	10:02	10:17	0:30	0:15	1	0	JMP1	9		
+VF	D	JP	2022-08-01	floral	992	992		9:33	10:04	10:19	0:31	0:15	1	0	JMP3	9.2		
+VF	D	JP	2022-08-01	floral	466	466		9:35	10:05	10:20	0:30	0:15	1	0	JMP2	11.7		
+VF	D	JP	2022-08-01	ambient	AIRJP			9:50	10:20	10:35	0:30	0:15			JMP1			
+VF	D	JP	2022-08-01	floral	984	984		9:53	10:23	10:38	0:30	0:15	1	2	JMP2	7.8		
+VF	D	JP	2022-08-01	floral	427	427		9:56	10:24	10:39	0:28	0:15	1	0	JMP3	7.2		
+VF	D	AA	2022-08-01	floral	975	975		9:35	10:05	10:20	0:30	0:15	1	0	DRC7	7.4		bag detached from stalk during pump, vial cap fell on ground
+VF	D	AA	2022-08-01	floral	967	967		9:39	10:09	10:24	0:30	0:15	1	0	DRC9	4.5		
+VF	D	AA	2022-08-01	floral	966	966		9:42	10:12	10:27	0:30	0:15	1	0	DRC8			too rocky
+VF	D	AA	2022-08-01	floral	432	432		9:43	10:13	10:28	0:30	0:15	1	0	DRC5	5.2		
+VF	D	AA	2022-08-01	ambient	AIRAA			10:03	10:33	10:48	0:30	0:15			DRC7			no flowers: 973, 964, 962
+VF	D	DH	2022-08-01	floral	981	981		9:33	10:04	10:19	0:31	0:15	1	0	DRC10	5.7		
+VF	D	DH	2022-08-01	floral	977	977		9:35	10:09	10:25	0:34	0:16	1	0	CWu1	5.2		battery changed, recalibrated
+VF	D	DH	2022-08-01	floral	174	174		9:36	10:06	10:22	0:30	0:16	1	1	CWu2	5.6		
+VF	D	DH	2022-08-01	floral	952	952		9:51	10:21	10:36	0:30	0:15	1	0	DRC10	7.3		
+VF	D	DH	2022-08-01	floral	978	978		9:53	10:25	10:40	0:32	0:15	1	0	CWu2	6.5		
+VF	D	DH	2022-08-01	ambient	DHAMB			9:54	10:27	10:42	0:33	0:15			CWu1			no flowers: 980, 976, 958, 973, 964, 15, 973, 962
+VF	N	DH	2022-08-02	floral	982	982		20:01	20:31	20:46	0:30	0:15	1	0	CWu1	15.5		small scent trap?
+VF	N	DH	2022-08-02	floral	427	427		20:04	20:34	20:49	0:30	0:15	1	0	CWu2	15.6		
+VF	N	DH	2022-08-02	floral	964	964		20:06	20:37	20:52	0:31	0:15	1	0	DRC10	13.7		VWC probe not fully in
+VF	N	DH	2022-08-02	floral	966	966		20:21	20:51	21:06	0:30	0:15	1	0	CWu1			too rocky
+VF	N	DH	2022-08-02	ambient	DHAMB			20:23	20:53	21:09	0:30	0:16			DRC10			
+VF	N	DH	2022-08-02	floral	432	432		20:26	20:56	21:11	0:30	0:15	1	0	CWu2	14.9		
+VF	N	DH	2022-08-02	floral	978	978		20:45	21:15	21:30	0:30	0:15	1	0	CWu1	6.6		no flowers: 980, 958, 960, 961
+VF	N	JK	2022-08-02	floral	424	424		20:02	20:32	20:47	0:30	0:15	1	0	DRC3			too rocky; 461 chewed
+VF	N	JK	2022-08-02	floral	430	430		20:03	20:33	20:48	0:30	0:15	1	0	DRC1	13.4		probe not fully in
+VF	N	JK	2022-08-02	floral	967	967		20:05	20:35	20:50	0:30	0:15	1	0	DRC4	5.6		[illegible]
+VF	N	JK	2022-08-02	ambient	AMBJK			20:36	21:06	21:21	0:30	0:15			DRC4			popped out of bag (turned off pump when [illegible]
+VF	N	JK	2022-08-02	floral	942	942		20:41	21:11	21:26	0:30	0:15	1	0	DRC1			VWC done already
+VF	N	JK	2022-08-02	floral	464	464		20:42	21:12	21:27	0:30	0:15	1	0	DRC3			VWC done already
+VF	D	AA	2022-08-01	floral	961	961		9:33	10:03	10:18	0:30	0:15	1	1	DRC4			too rocky
+VF	D	AA	2022-08-01	floral	424	424		9:36	10:06	10:21	0:30	0:15	1	0	DRC3	2.4		probe not fully in
+VF	D	AA	2022-08-01	floral	430	430		9:37	10:07	10:22	0:30	0:15	1	0	DRC1	4.9		
+VF	D	AA	2022-08-01	floral	471	471		10:11	10:41	10:56	0:30	0:15	1	0	DRC4			too rocky
+VF	D	AA	2022-08-01	floral	440	440		10:12	10:42	10:57	0:30	0:15	1	1	DRC1	5.6		
+VF	D	AA	2022-08-01	ambient	AIRAA			10:13	10:43	10:58	0:30	0:15			DRC3			
+VF	N	AA	2022-08-02	floral	977	977		20:03	20:33	20:48	0:30	0:15	1	0	DRC9	9.9		
+VF	N	AA	2022-08-02	floral	174	174		20:08	20:39	20:54	0:31	0:15	1	0	JMP1	10.6		
+VF	N	AA	2022-08-02	floral	975	975		20:06	20:36	20:51	0:30	0:15	1	0	JMP2	10.2		no flowers: 973
+VF	N	AA	2022-08-02	floral	981	981		20:11	20:41	20:56	0:30	0:15	1	0	JMP3	7.6		
+VF	N	AA	2022-08-02	floral	440	440		20:20	20:50	21:05	0:30	0:15	1	0	DRC9	10.5		
+VF	N	AA	2022-08-02	floral	971	971		20:22	20:59	21:14	0:37	0:15	1	0	JMP1	12.7		
+VF	N	AA	2022-08-02	ambient	AIRAA			20:47	21:17	21:31	0:30	0:14	1	0	JMP1			
