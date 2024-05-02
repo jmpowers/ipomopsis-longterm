@@ -1,0 +1,135 @@
+---
+title: "Load *Ipomopsis* GC data"
+author: "[John Powers](http://sites.uci.edu/powers/)"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    self_contained: no
+    lib_dir: libs
+    code_folding: hide
+    toc: yes
+    toc_float: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(knitr)
+knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
+                      fig.path = "images-gc/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+```
+
+## Compound names
+
+```{r ipochems}
+# load short names 
+ipochems <- read_csv("data/volatiles/Ipo volatile compounds - chemsf_ipo.csv") %>% 
+  select(name, shortname, standard, verdict) %>%  filter(verdict != "") %>% 
+  mutate(standard = fct_recode(standard, "Methyl_salicylate"="Benzaldehyde"), # benzaldehyde regressions not reliable
+         class = fct_recode(standard, Aliphatics="Hexenol", Benzenoids="Methyl_salicylate", Benzenoids="Indole", 
+                            Sesquiterpenes="Caryophyllene", Monoterpenes="alpha_Pinene", Monoterpenes="Linalool")) %>%  
+  left_join(read_csv("data/volatiles/regressions_181921_filtered_slopes.csv") %>% 
+              pivot_wider(id_cols=standard, names_from="year", names_prefix="area_per_ng", values_from=area_per_ng)) 
+class_pal <- set_names(c("#BC0060","#027B8C","#E56E00","#86D400"), levels(ipochems$class))
+
+#shorten chemical names and merge compounds with multiple names
+shortnames <- ipochems %>% select(name, shortname) %>% filter(shortname!="") %>% deframe()
+#shortnames[shortnames %in% shortnames[duplicated(shortnames)]]
+
+greekify <- function(names) {
+  names %>% 
+    str_replace("^a-","\U03B1-") %>% str_replace("-a-","-\U03B1-") %>% 
+    str_replace("^b-","\U03B2-") %>% str_replace("-b-","-\U03B2-") %>% 
+    str_replace("^g-","\U03B3-") %>% str_replace("-g-","-\U03B3-")
+}
+```
+
+## Quantitative integrations
+
+```{r quant}
+source("read_shimadzu.R")
+quantpath <- "~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/RMBL Batches/quant_round4/"
+bfiles <-  list.files(quantpath)
+quant.full <- map_dfr(set_names(paste0(quantpath, bfiles), bfiles), read.shimadzu.quant, .id="batch") %>%
+  mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %>%
+  distinct(Filename, Name, .keep_all=T)
+
+quant.full %>% drop_na(Ret.Time) %>% summarize(Area = median(Area), Ret.Time = median(Ret.Time), .by=Name) %>%
+  mutate(Name = fct_reorder(Name, Ret.Time)) %>%
+  ggplot(aes(x=Ret.Time, y=Name, color=sqrt(Area))) + geom_point(size=4) + scale_color_viridis_c() + theme_dark()
+
+quant_remove <- c("1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-",
+                  "4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-",
+                  "Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-")
+quant <- quant.full %>% select(batch, Dirname, Filename, Name, Area) %>%
+  mutate(Dirname = fct_relabel(Dirname, str_remove, "C:/GCMSsolution/Data/Project1_190815/")) %>%
+  filter(!Name %in% quant_remove) %>%
+  mutate(Name = recode(Name, !!!shortnames)) %>%
+  pivot_wider(names_from = "Name", values_from="Area") %>% as.data.frame()
+quant.files <- quant %>% select(batch, Dirname, Filename)
+rownames(quant) <- quant$Filename
+quant[,c("batch","Dirname","Filename")] <- NULL
+# quant.all <- quant[rownames(vols),]
+# write_tsv(quant.all %>% rownames_to_column("Filename"), "data/volatiles/quant_all.tsv")
+# quant.all <- read_tsv("data/volatiles/quant_all.tsv") %>% column_to_rownames("Filename")
+```
+
+```{r kmeans}
+#k-means on quant integrations
+k <- 40
+set.seed(1)
+km <- kmeans(sqrt(quant), k, nstart=3)
+
+ipo.km <- quant.files %>% 
+  mutate(rowSum = rowSums(quant),
+         Project = str_extract(Filename, "Blank|[aA]ir|Aeven|Conditioning|Corydalis|PH|SE|SP|Sterile|Yeast|Veg|Ambient|GNA|SC|Lupinus|VF|PG|Ihyb|Lagg") %>% replace_na("sample"),
+         Type = fct_collapse(Project, blank="Blank", air=c("air","Air"), other_level = "sample"),
+         nameBlank = Type=="blank",
+         runYear = str_extract(Filename, "2018|2019|2020|2021") %>% replace_na("2018") %>% factor,
+         Cluster = km$cluster) %>% # Figure out which k-means clusters are the blanks
+  mutate(kBlank = Cluster %in% (count(., nameBlank, Cluster) %>% filter(nameBlank, n>60) %>% pull(Cluster)),
+         Mixup = nameBlank != kBlank) #mixup if filename=Blank but doesn't cluster with blanks, or vice versa
+
+with(ipo.km, table(kBlank, nameBlank))
+```
+
+```{r markes}
+#Markes sequence
+load("data/volatiles/markes_sequence.rda") #loads sequ, sequ.file, sequ.summary, qgdfiles
+ipo.batchids <- sequ.summary %>% mutate(ipo = str_detect(FullName, "VF|PG|Ihyb|Lagg")) %>% filter(ipo) %>% pull(id) %>% unique() %>% na.omit()
+ipogc.sequ <- sequ.summary %>% filter(id %in% ipo.batchids) #get entire batch if it had a sample that matches
+
+#join Markes/GC sequence, k-means, and batch file names
+ipogc <- ipogc.sequ %>% 
+  left_join(ipo.km %>% select(batch, FileName=Filename, nameBlank, Mixup, kBlank, Cluster)) %>% 
+  mutate(verdict="", sample="", index=row_number()) %>% 
+  select(c("index", "sequence.start", "batch", "Desorb.Start.Time", "CreationTime", "eithertime", "status", 
+           "Tube", "markes_n", "GC_n", "either_n", "markes_GC", "create_desorb", "desorb.Start.diff", 
+           "Mixup", "nameBlank", "kBlank", "Cluster",  "verdict", "FileName", "sample", "user", "FullName", "id")) %>% 
+  write_csv("data/volatiles/ipo_all210827.csv")
+#TODO annotate that with skips
+#In the meantime, load in skips from Maxfield (2018-2021) and temp annotations (2022)
+ipo.split <- bind_rows(`210827`=read_csv("data/volatiles/RMBL GC-MS Data Inventory - maxfield_all210827annot.csv"),
+          `220929`=read_csv("data/volatiles/RMBL GC-MS Data Inventory - 2022gc220929.csv"), .id="annot") %>% 
+  mutate(sample = na_if(sample,"") %>% coalesce(FileName) %>% str_remove(".qgd")) %>% #renames skips
+      filter(user %in% c("D Campbell : Poverty Gulch","D Campbell : Vera Falls") |
+           str_detect(FileName, "VF|PG|Ihyb|Lagg")) %>%
+  select(annot, index, batch, Desorb.Start.Time, FileName, verdict, sample) %>%
+  separate(sample, into=paste0("file",1:7), remove=F, fill="right") %>% 
+  mutate(site = str_extract(sample, "VF|PG|Ihyb|Lagg"),
+         type = if_else(str_detect(sample, "Air|air|AIR"), "ambient","sample"),
+         time = str_extract(sample, "_[ND]_") %>% str_remove_all("_"),
+         date_text = str_sub(sample, -17,-11) %>% str_remove("_"),
+         date = ymd(date_text),
+         rundate = str_sub(sample, -10,-4) %>% str_remove("_"), 
+         rundate = ymd(paste(str_sub(rundate,-4,-1), str_sub(rundate,1,1), str_sub(rundate, 2, -5))),
+         gc_n = str_sub(sample, -2,-1)) %>% 
+  write_csv("data/volatiles/ipo_meta_split.csv", na="")
+#output split filenames for hand annotation
+
+#read in hand-split file names
+ipo_meta <- read_csv("data/volatiles/Ipomopsis long-term volatiles - ipo_meta.csv")
+```
+
+
