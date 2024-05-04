@@ -75,6 +75,8 @@ quant[,c("batch","Dirname","Filename")] <- NULL
 # quant.all <- read_tsv("data/volatiles/quant_all.tsv") %>% column_to_rownames("Filename")
 ```
 
+## Skips
+
 ```{r kmeans}
 #k-means on quant integrations
 k <- 40
@@ -83,10 +85,10 @@ km <- kmeans(sqrt(quant), k, nstart=3)
 
 ipo.km <- quant.files %>% 
   mutate(rowSum = rowSums(quant),
-         Project = str_extract(Filename, "Blank|[aA]ir|Aeven|Conditioning|Corydalis|PH|SE|SP|Sterile|Yeast|Veg|Ambient|GNA|SC|Lupinus|VF|PG|Ihyb|Lagg") %>% replace_na("sample"),
-         Type = fct_collapse(Project, blank="Blank", air=c("air","Air"), other_level = "sample"),
+         Project = str_extract(Filename, "Blank|VF|PG|Ihyb|Lagg") %>% replace_na("sample"),
+         Type = fct_collapse(Project, blank="Blank", other_level = "sample"),
          nameBlank = Type=="blank",
-         runYear = str_extract(Filename, "2018|2019|2020|2021") %>% replace_na("2018") %>% factor,
+         runYear = str_extract(Filename, "2017|2018|2019|2020|2021|2022|2023"),
          Cluster = km$cluster) %>% # Figure out which k-means clusters are the blanks
   mutate(kBlank = Cluster %in% (count(., nameBlank, Cluster) %>% filter(nameBlank, n>60) %>% pull(Cluster)),
          Mixup = nameBlank != kBlank) #mixup if filename=Blank but doesn't cluster with blanks, or vice versa
@@ -109,6 +111,11 @@ ipogc <- ipogc.sequ %>%
            "Mixup", "nameBlank", "kBlank", "Cluster",  "verdict", "FileName", "sample", "user", "FullName", "id")) %>% 
   write_csv("data/volatiles/ipo_all210827.csv")
 #TODO annotate that with skips
+```
+
+## Split filenames
+
+```{r splitfilenames}
 #In the meantime, load in skips from Maxfield (2018-2021) and temp annotations (2022)
 ipo.split <- bind_rows(`210827`=read_csv("data/volatiles/RMBL GC-MS Data Inventory - maxfield_all210827annot.csv"),
           `220929`=read_csv("data/volatiles/RMBL GC-MS Data Inventory - 2022gc220929.csv"), .id="annot") %>% 
@@ -127,9 +134,39 @@ ipo.split <- bind_rows(`210827`=read_csv("data/volatiles/RMBL GC-MS Data Invento
          gc_n = str_sub(sample, -2,-1)) %>% 
   write_csv("data/volatiles/ipo_meta_split.csv", na="")
 #output split filenames for hand annotation
-
-#read in hand-split file names
-ipo_meta <- read_csv("data/volatiles/Ipomopsis long-term volatiles - ipo_meta.csv")
 ```
 
+## Match metadata to filenames
+
+```{r matchmeta}
+#load field metadata
+metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatiles - 20", full.names=T) %>% 
+  map_dfr(~read_tsv(.x, show_col_types = F) %>% 
+            mutate(across(any_of(c("pump_id", "plant", "vial")), as.character)), .id="metafile") %>% 
+  mutate(year = year(date))
+
+#load hand-split file names
+filemeta <- read_csv("data/volatiles/Ipomopsis long-term volatiles - ipo_meta.csv") %>% 
+  mutate(type = fct_recode(type, floral="sample"))
+filemeta %>% count(site, date, time)
+
+file.metadata <- filemeta %>% select(-index, -time) %>% rename(Filename2 = sample, notes_file = notes, plant = vial) %>% 
+  left_join(mutate(metadata, match=1)) %>% 
+  drop_na(match) %>% distinct(Filename2, .keep_all = T) #TODO
+
+quant.all <- quant[file.metadata$FileName,]
+quant.na <- is.na(quant.all[,1])
+which(quant.na)
+quant.cut <- quant.all[!quant.na & rowSums(quant.all)>0,colSums(quant.all)>0]
+```
+
+## Heatmap
+
+```{r heatmap}
+library(pheatmap)
+pheatmap(as.matrix(t(quant.cut))^(1/4),
+         show_colnames=F,
+         annotation_row = 
+         scale="none", main="Quant volatiles")
+```
 
