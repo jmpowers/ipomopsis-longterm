@@ -111,20 +111,20 @@ ipogc <- ipogc.sequ %>%
            "Mixup", "nameBlank", "kBlank", "Cluster",  "verdict", "FileName", "sample", "user", "FullName", "id")) %>% 
   write_csv("data/volatiles/ipo_all210827.csv")
 #TODO annotate that with skips
+#In the meantime, load in skips from Maxfield (2018-2021) and temp annotations (2022)
 ```
 
 ## Split filenames
 
 ```{r splitfilenames}
-#In the meantime, load in skips from Maxfield (2018-2021) and temp annotations (2022)
-ipo.split <- bind_rows(`210827`=read_csv("data/volatiles/RMBL GC-MS Data Inventory - maxfield_all210827annot.csv"),
-          `220929`=read_csv("data/volatiles/RMBL GC-MS Data Inventory - 2022gc220929.csv"), .id="annot") %>% 
+ipo.split <- list.files("data/volatiles", pattern = "RMBL GCMS Data Inventory - gc", full.names = T) %>% 
+  set_names(str_extract(., "gc([0-9]+).csv", group=T)) %>% 
+  map_dfr(~ read_csv(.x, show_col_types = F), .id="year_run") %>% 
   mutate(sample = na_if(sample,"") %>% coalesce(FileName) %>% str_remove(".qgd")) %>% #renames skips
-      filter(user %in% c("D Campbell : Poverty Gulch","D Campbell : Vera Falls") |
-           str_detect(FileName, "VF|PG|Ihyb|Lagg")) %>%
-  select(annot, index, batch, Desorb.Start.Time, FileName, verdict, sample) %>%
+      filter(user %in% c("D Campbell : Longterm")) %>% #| str_detect(FileName, "VF|PG|Ihyb|Lagg")
+  select(year_run, index, batch, Desorb.Start.Time, FileName, verdict, sample) %>%
   separate(sample, into=paste0("file",1:7), remove=F, fill="right") %>% 
-  mutate(site = str_extract(sample, "VF|PG|Ihyb|Lagg"),
+  mutate(site = str_extract(sample, "VF|PG|Ihyb|Lagg|I|L"),
          type = if_else(str_detect(sample, "Air|air|AIR"), "ambient","sample"),
          time = str_extract(sample, "_[ND]_") %>% str_remove_all("_"),
          date_text = str_sub(sample, -17,-11) %>% str_remove("_"),
@@ -146,11 +146,11 @@ metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatile
   mutate(year = year(date))
 
 #load hand-split file names
-filemeta <- read_csv("data/volatiles/Ipomopsis long-term volatiles - ipo_meta.csv") %>% 
+filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv") %>% 
   mutate(type = fct_recode(type, floral="sample"))
 filemeta %>% count(site, date, time)
 
-file.metadata <- filemeta %>% select(-index, -time) %>% rename(Filename2 = sample, notes_file = notes, plant = vial) %>% 
+file.metadata <- filemeta %>% select(-index, -time) %>% rename(Filename2 = sample, plant = vial) %>% mutate(plant=as.character(plant)) %>% 
   left_join(mutate(metadata, match=1)) %>% 
   drop_na(match) %>% distinct(Filename2, .keep_all = T) #TODO
 

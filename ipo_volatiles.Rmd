@@ -35,6 +35,8 @@ metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatile
 
 # Inventory 
 
+## Field metadata
+
 ```{r plot_metadata}
 ggplot(metadata %>% filter(type=="floral"), aes(x=yday(date), fill=paste(site, time))) + 
   facet_wrap(vars(year), ncol=1) + geom_bar() +
@@ -53,6 +55,34 @@ left_join(metadata %>% filter(type=="floral") %>% count(year, site, time, name="
   mutate(samples_per_plant = samples/plants, .keep="unused") %>% 
     pivot_wider(names_from=c("site","time"), values_from="samples_per_plant") %>% kable(caption = "samples per plant")
 ```
+
+## Filenames
+
+```{r plot_filenames}
+filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv") %>% 
+  mutate(date = ymd(date), year=year(date), vial=as.character(vial))
+
+filemeta %>% filter(type=="floral") %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "floral samples")
+filemeta %>% filter(type=="ambient") %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "ambient samples")
+
+ggplot(filemeta %>% filter(type=="floral") %>% drop_na(year), aes(x=yday(date), fill=paste(site, time))) + 
+  facet_wrap(vars(year), ncol=1) + geom_bar() +
+  scale_fill_brewer(palette = "Set3") + theme_classic() + 
+  labs(x="Day of year", y="Floral samples", fill="Site, time")
+```
+
+## Matching field metadata and filenames
+
+```{r plot_matching}
+bind_rows(files=filemeta, field=metadata, .id="source") %>% filter(type=="floral") %>% drop_na(year) %>%  
+ggplot(aes(x=yday(date), fill=source)) + 
+  facet_wrap(vars(year), ncol=1) + geom_bar(position=position_dodge(preserve="total")) + 
+  scale_fill_brewer(palette = "Set2") + theme_classic() + 
+  labs(x="Day of year", y="Floral samples", fill="Source")
+```
+
 
 # Soil moisture
 

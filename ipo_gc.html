@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="John Powers" />
+
+<meta name="date" content="2024-07-12" />
+
+<title>Load Ipomopsis GC data</title>
+
+<script src="libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Load <em>Ipomopsis</em> GC data</h1>
+<h4 class="author"><a href="http://sites.uci.edu/powers/">John
+Powers</a></h4>
+<h4 class="date">2024-07-12</h4>
+
+</div>
+
+
+<pre class="r"><code>library(tidyverse)
+library(knitr)
+knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
+                      fig.path = &quot;images-gc/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)</code></pre>
+<div id="compound-names" class="section level2">
+<h2>Compound names</h2>
+<pre class="r"><code># load short names 
+ipochems &lt;- read_csv(&quot;data/volatiles/Ipo volatile compounds - chemsf_ipo.csv&quot;) %&gt;% 
+  select(name, shortname, standard, verdict) %&gt;%  filter(verdict != &quot;&quot;) %&gt;% 
+  mutate(standard = fct_recode(standard, &quot;Methyl_salicylate&quot;=&quot;Benzaldehyde&quot;), # benzaldehyde regressions not reliable
+         class = fct_recode(standard, Aliphatics=&quot;Hexenol&quot;, Benzenoids=&quot;Methyl_salicylate&quot;, Benzenoids=&quot;Indole&quot;, 
+                            Sesquiterpenes=&quot;Caryophyllene&quot;, Monoterpenes=&quot;alpha_Pinene&quot;, Monoterpenes=&quot;Linalool&quot;)) %&gt;%  
+  left_join(read_csv(&quot;data/volatiles/regressions_181921_filtered_slopes.csv&quot;) %&gt;% 
+              pivot_wider(id_cols=standard, names_from=&quot;year&quot;, names_prefix=&quot;area_per_ng&quot;, values_from=area_per_ng)) 
+class_pal &lt;- set_names(c(&quot;#BC0060&quot;,&quot;#027B8C&quot;,&quot;#E56E00&quot;,&quot;#86D400&quot;), levels(ipochems$class))
+
+#shorten chemical names and merge compounds with multiple names
+shortnames &lt;- ipochems %&gt;% select(name, shortname) %&gt;% filter(shortname!=&quot;&quot;) %&gt;% deframe()
+#shortnames[shortnames %in% shortnames[duplicated(shortnames)]]
+
+greekify &lt;- function(names) {
+  names %&gt;% 
+    str_replace(&quot;^a-&quot;,&quot;\U03B1-&quot;) %&gt;% str_replace(&quot;-a-&quot;,&quot;-\U03B1-&quot;) %&gt;% 
+    str_replace(&quot;^b-&quot;,&quot;\U03B2-&quot;) %&gt;% str_replace(&quot;-b-&quot;,&quot;-\U03B2-&quot;) %&gt;% 
+    str_replace(&quot;^g-&quot;,&quot;\U03B3-&quot;) %&gt;% str_replace(&quot;-g-&quot;,&quot;-\U03B3-&quot;)
+}</code></pre>
+</div>
+<div id="quantitative-integrations" class="section level2">
+<h2>Quantitative integrations</h2>
+<pre class="r"><code>source(&quot;read_shimadzu.R&quot;)
+quantpath &lt;- &quot;~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/RMBL Batches/quant_round4/&quot;
+bfiles &lt;-  list.files(quantpath)
+quant.full &lt;- map_dfr(set_names(paste0(quantpath, bfiles), bfiles), read.shimadzu.quant, .id=&quot;batch&quot;) %&gt;%
+  mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %&gt;%
+  distinct(Filename, Name, .keep_all=T)
+
+quant.full %&gt;% drop_na(Ret.Time) %&gt;% summarize(Area = median(Area), Ret.Time = median(Ret.Time), .by=Name) %&gt;%
+  mutate(Name = fct_reorder(Name, Ret.Time)) %&gt;%
+  ggplot(aes(x=Ret.Time, y=Name, color=sqrt(Area))) + geom_point(size=4) + scale_color_viridis_c() + theme_dark()
+
+quant_remove &lt;- c(&quot;1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-&quot;,
+                  &quot;4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-&quot;,
+                  &quot;Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-&quot;)
+quant &lt;- quant.full %&gt;% select(batch, Dirname, Filename, Name, Area) %&gt;%
+  mutate(Dirname = fct_relabel(Dirname, str_remove, &quot;C:/GCMSsolution/Data/Project1_190815/&quot;)) %&gt;%
+  filter(!Name %in% quant_remove) %&gt;%
+  mutate(Name = recode(Name, !!!shortnames)) %&gt;%
+  pivot_wider(names_from = &quot;Name&quot;, values_from=&quot;Area&quot;) %&gt;% as.data.frame()
+quant.files &lt;- quant %&gt;% select(batch, Dirname, Filename)
+rownames(quant) &lt;- quant$Filename
+quant[,c(&quot;batch&quot;,&quot;Dirname&quot;,&quot;Filename&quot;)] &lt;- NULL
+# quant.all &lt;- quant[rownames(vols),]
+# write_tsv(quant.all %&gt;% rownames_to_column(&quot;Filename&quot;), &quot;data/volatiles/quant_all.tsv&quot;)
+# quant.all &lt;- read_tsv(&quot;data/volatiles/quant_all.tsv&quot;) %&gt;% column_to_rownames(&quot;Filename&quot;)</code></pre>
+</div>
+<div id="skips" class="section level2">
+<h2>Skips</h2>
+<pre class="r"><code>#k-means on quant integrations
+k &lt;- 40
+set.seed(1)
+km &lt;- kmeans(sqrt(quant), k, nstart=3)
+
+ipo.km &lt;- quant.files %&gt;% 
+  mutate(rowSum = rowSums(quant),
+         Project = str_extract(Filename, &quot;Blank|VF|PG|Ihyb|Lagg&quot;) %&gt;% replace_na(&quot;sample&quot;),
+         Type = fct_collapse(Project, blank=&quot;Blank&quot;, other_level = &quot;sample&quot;),
+         nameBlank = Type==&quot;blank&quot;,
+         runYear = str_extract(Filename, &quot;2017|2018|2019|2020|2021|2022|2023&quot;),
+         Cluster = km$cluster) %&gt;% # Figure out which k-means clusters are the blanks
+  mutate(kBlank = Cluster %in% (count(., nameBlank, Cluster) %&gt;% filter(nameBlank, n&gt;60) %&gt;% pull(Cluster)),
+         Mixup = nameBlank != kBlank) #mixup if filename=Blank but doesn&#39;t cluster with blanks, or vice versa
+
+with(ipo.km, table(kBlank, nameBlank))</code></pre>
+<pre class="r"><code>#Markes sequence
+load(&quot;data/volatiles/markes_sequence.rda&quot;) #loads sequ, sequ.file, sequ.summary, qgdfiles
+ipo.batchids &lt;- sequ.summary %&gt;% mutate(ipo = str_detect(FullName, &quot;VF|PG|Ihyb|Lagg&quot;)) %&gt;% filter(ipo) %&gt;% pull(id) %&gt;% unique() %&gt;% na.omit()
+ipogc.sequ &lt;- sequ.summary %&gt;% filter(id %in% ipo.batchids) #get entire batch if it had a sample that matches
+
+#join Markes/GC sequence, k-means, and batch file names
+ipogc &lt;- ipogc.sequ %&gt;% 
+  left_join(ipo.km %&gt;% select(batch, FileName=Filename, nameBlank, Mixup, kBlank, Cluster)) %&gt;% 
+  mutate(verdict=&quot;&quot;, sample=&quot;&quot;, index=row_number()) %&gt;% 
+  select(c(&quot;index&quot;, &quot;sequence.start&quot;, &quot;batch&quot;, &quot;Desorb.Start.Time&quot;, &quot;CreationTime&quot;, &quot;eithertime&quot;, &quot;status&quot;, 
+           &quot;Tube&quot;, &quot;markes_n&quot;, &quot;GC_n&quot;, &quot;either_n&quot;, &quot;markes_GC&quot;, &quot;create_desorb&quot;, &quot;desorb.Start.diff&quot;, 
+           &quot;Mixup&quot;, &quot;nameBlank&quot;, &quot;kBlank&quot;, &quot;Cluster&quot;,  &quot;verdict&quot;, &quot;FileName&quot;, &quot;sample&quot;, &quot;user&quot;, &quot;FullName&quot;, &quot;id&quot;)) %&gt;% 
+  write_csv(&quot;data/volatiles/ipo_all210827.csv&quot;)
+#TODO annotate that with skips
+#In the meantime, load in skips from Maxfield (2018-2021) and temp annotations (2022)</code></pre>
+</div>
+<div id="split-filenames" class="section level2">
+<h2>Split filenames</h2>
+<pre class="r"><code>ipo.split &lt;- list.files(&quot;data/volatiles&quot;, pattern = &quot;RMBL GCMS Data Inventory - gc&quot;, full.names = T) %&gt;% 
+  set_names(str_extract(., &quot;gc([0-9]+).csv&quot;, group=T)) %&gt;% 
+  map_dfr(~ read_csv(.x, show_col_types = F), .id=&quot;year_run&quot;) %&gt;% 
+  mutate(sample = na_if(sample,&quot;&quot;) %&gt;% coalesce(FileName) %&gt;% str_remove(&quot;.qgd&quot;)) %&gt;% #renames skips
+      filter(user %in% c(&quot;D Campbell : Longterm&quot;)) %&gt;% #| str_detect(FileName, &quot;VF|PG|Ihyb|Lagg&quot;)
+  select(year_run, index, batch, Desorb.Start.Time, FileName, verdict, sample) %&gt;%
+  separate(sample, into=paste0(&quot;file&quot;,1:7), remove=F, fill=&quot;right&quot;) %&gt;% 
+  mutate(site = str_extract(sample, &quot;VF|PG|Ihyb|Lagg|I|L&quot;),
+         type = if_else(str_detect(sample, &quot;Air|air|AIR&quot;), &quot;ambient&quot;,&quot;sample&quot;),
+         time = str_extract(sample, &quot;_[ND]_&quot;) %&gt;% str_remove_all(&quot;_&quot;),
+         date_text = str_sub(sample, -17,-11) %&gt;% str_remove(&quot;_&quot;),
+         date = ymd(date_text),
+         rundate = str_sub(sample, -10,-4) %&gt;% str_remove(&quot;_&quot;), 
+         rundate = ymd(paste(str_sub(rundate,-4,-1), str_sub(rundate,1,1), str_sub(rundate, 2, -5))),
+         gc_n = str_sub(sample, -2,-1)) %&gt;% 
+  write_csv(&quot;data/volatiles/ipo_meta_split.csv&quot;, na=&quot;&quot;)
+#output split filenames for hand annotation</code></pre>
+</div>
+<div id="match-metadata-to-filenames" class="section level2">
+<h2>Match metadata to filenames</h2>
+<pre class="r"><code>#load field metadata
+metadata &lt;- list.files(&quot;data/volatiles&quot;, pattern = &quot;Ipomopsis long-term volatiles - 20&quot;, full.names=T) %&gt;% 
+  map_dfr(~read_tsv(.x, show_col_types = F) %&gt;% 
+            mutate(across(any_of(c(&quot;pump_id&quot;, &quot;plant&quot;, &quot;vial&quot;)), as.character)), .id=&quot;metafile&quot;) %&gt;% 
+  mutate(year = year(date))
+
+#load hand-split file names
+filemeta &lt;- read_csv(&quot;data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv&quot;) %&gt;% 
+  mutate(type = fct_recode(type, floral=&quot;sample&quot;))
+filemeta %&gt;% count(site, date, time)</code></pre>
+<pre><code># A tibble: 81 × 4
+   site  date       time      n
+   &lt;chr&gt; &lt;date&gt;     &lt;chr&gt; &lt;int&gt;
+ 1 I     2017-07-21 D         3
+ 2 I     2017-07-24 D        28
+ 3 I     2017-07-27 D         5
+ 4 I     2017-08-01 N        24
+ 5 I     2017-08-10 N         2
+ 6 I     2018-07-19 N        13
+ 7 I     2018-07-20 D         9
+ 8 I     2018-07-26 D         4
+ 9 I     2018-07-30 N         1
+10 I     2019-08-02 D        25
+# ℹ 71 more rows</code></pre>
+<pre class="r"><code>file.metadata &lt;- filemeta %&gt;% select(-index, -time) %&gt;% rename(Filename2 = sample, plant = vial) %&gt;% mutate(plant=as.character(plant)) %&gt;% 
+  left_join(mutate(metadata, match=1)) %&gt;% 
+  drop_na(match) %&gt;% distinct(Filename2, .keep_all = T) #TODO
+
+quant.all &lt;- quant[file.metadata$FileName,]
+quant.na &lt;- is.na(quant.all[,1])
+which(quant.na)
+quant.cut &lt;- quant.all[!quant.na &amp; rowSums(quant.all)&gt;0,colSums(quant.all)&gt;0]</code></pre>
+</div>
+<div id="heatmap" class="section level2">
+<h2>Heatmap</h2>
+<pre class="r"><code>library(pheatmap)
+pheatmap(as.matrix(t(quant.cut))^(1/4),
+         show_colnames=F,
+         annotation_row = 
+         scale=&quot;none&quot;, main=&quot;Quant volatiles&quot;)</code></pre>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
