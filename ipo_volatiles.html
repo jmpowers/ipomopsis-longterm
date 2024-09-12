@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-07-12" />
+<meta name="date" content="2024-09-12" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-07-12</h4>
+<h4 class="date">2024-09-12</h4>
 
 </div>
 
@@ -273,14 +273,12 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
   map_dfr(~read_tsv(.x, show_col_types = F) %&gt;% 
             mutate(across(any_of(c(&quot;pump_id&quot;, &quot;plant&quot;, &quot;vial&quot;)), as.character)), .id=&quot;metafile&quot;) %&gt;% 
   mutate(year = year(date))</code></pre>
-<div id="inventory" class="section level1">
-<h1>Inventory</h1>
-<div id="field-metadata" class="section level2">
-<h2>Field metadata</h2>
-<pre class="r"><code>ggplot(metadata %&gt;% filter(type==&quot;floral&quot;), aes(x=yday(date), fill=paste(site, time))) + 
+<div id="field-metadata" class="section level1">
+<h1>Field metadata</h1>
+<pre class="r"><code>ggplot(metadata, aes(x=yday(date), fill=paste(site, time))) + 
   facet_wrap(vars(year), ncol=1) + geom_bar() +
   scale_fill_brewer(palette = &quot;Paired&quot;) + theme_classic() + 
-  labs(x=&quot;Day of year&quot;, y=&quot;Floral samples&quot;, fill=&quot;Site, time&quot;)</code></pre>
+  labs(x=&quot;Day of year&quot;, y=&quot;Samples&quot;, fill=&quot;Site, time&quot;)</code></pre>
 <p><img src="images/plot_metadata-1.svg" width="768" /></p>
 <pre class="r"><code>metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% count(year, site, time) %&gt;% 
   pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;floral samples&quot;)</code></pre>
@@ -599,283 +597,8 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="filenames" class="section level2">
-<h2>Filenames</h2>
-<pre class="r"><code>filemeta &lt;- read_csv(&quot;data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv&quot;) %&gt;% 
-  mutate(date = ymd(date), year=year(date), vial=as.character(vial))
-
-filemeta %&gt;% filter(type==&quot;floral&quot;) %&gt;% count(year, site, time) %&gt;% 
-  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;floral samples&quot;)</code></pre>
-<table style="width:100%;">
-<caption>floral samples</caption>
-<colgroup>
-<col width="7%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="9%" />
-<col width="7%" />
-<col width="7%" />
-<col width="8%" />
-<col width="11%" />
-<col width="11%" />
-<col width="8%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="right">year</th>
-<th align="right">Ihyb_D</th>
-<th align="right">Ihyb_N</th>
-<th align="right">Lagg_D</th>
-<th align="right">Lagg_N</th>
-<th align="right">VF_D</th>
-<th align="right">VF_N</th>
-<th align="right">VF_NA</th>
-<th align="right">Lagg_NA</th>
-<th align="right">Ihyb_NA</th>
-<th align="right">PG_NA</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">2017</td>
-<td align="right">33</td>
-<td align="right">25</td>
-<td align="right">50</td>
-<td align="right">24</td>
-<td align="right">66</td>
-<td align="right">3</td>
-<td align="right">3</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right">2018</td>
-<td align="right">8</td>
-<td align="right">10</td>
-<td align="right">14</td>
-<td align="right"></td>
-<td align="right">17</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right">2019</td>
-<td align="right">26</td>
-<td align="right">27</td>
-<td align="right">35</td>
-<td align="right"></td>
-<td align="right">17</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">5</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right">2020</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">12</td>
-<td align="right"></td>
-<td align="right">36</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right">2021</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">23</td>
-<td align="right">52</td>
-<td align="right">49</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right">2022</td>
-<td align="right">37</td>
-<td align="right">85</td>
-<td align="right">49</td>
-<td align="right">47</td>
-<td align="right">20</td>
-<td align="right">21</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">7</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right">2023</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">46</td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">6</td>
-<td align="right">35</td>
-<td align="right">5</td>
-<td align="right">121</td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>filemeta %&gt;% filter(type==&quot;ambient&quot;) %&gt;% count(year, site, time) %&gt;% 
-  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;ambient samples&quot;)</code></pre>
-<table>
-<caption>ambient samples</caption>
-<colgroup>
-<col width="6%" />
-<col width="8%" />
-<col width="8%" />
-<col width="6%" />
-<col width="6%" />
-<col width="7%" />
-<col width="6%" />
-<col width="6%" />
-<col width="7%" />
-<col width="8%" />
-<col width="8%" />
-<col width="9%" />
-<col width="9%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="right">year</th>
-<th align="right">Lagg_D</th>
-<th align="right">Lagg_N</th>
-<th align="right">VF_D</th>
-<th align="right">VF_N</th>
-<th align="right">VF_NA</th>
-<th align="right">NA_D</th>
-<th align="right">NA_N</th>
-<th align="right">NA_NA</th>
-<th align="right">Ihyb_D</th>
-<th align="right">Ihyb_N</th>
-<th align="right">Ihyb_NA</th>
-<th align="right">Lagg_NA</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">2017</td>
-<td align="right">3</td>
-<td align="right">1</td>
-<td align="right">2</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right">2</td>
-<td align="right">1</td>
-<td align="right">1</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="right">2018</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">4</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">4</td>
-<td align="right">2</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right">2019</td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">6</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">9</td>
-<td align="right">2</td>
-</tr>
-<tr class="even">
-<td align="right">2020</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">2</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">4</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="right">2022</td>
-<td align="right">3</td>
-<td align="right">6</td>
-<td align="right">6</td>
-<td align="right">3</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">8</td>
-<td align="right">7</td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-</tbody>
-</table>
-<pre class="r"><code>ggplot(filemeta %&gt;% filter(type==&quot;floral&quot;) %&gt;% drop_na(year), aes(x=yday(date), fill=paste(site, time))) + 
-  facet_wrap(vars(year), ncol=1) + geom_bar() +
-  scale_fill_brewer(palette = &quot;Set3&quot;) + theme_classic() + 
-  labs(x=&quot;Day of year&quot;, y=&quot;Floral samples&quot;, fill=&quot;Site, time&quot;)</code></pre>
-<p><img src="images/plot_filenames-1.svg" width="768" /></p>
-</div>
-<div id="matching-field-metadata-and-filenames" class="section level2">
-<h2>Matching field metadata and filenames</h2>
-<pre class="r"><code>bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;) %&gt;% filter(type==&quot;floral&quot;) %&gt;% drop_na(year) %&gt;%  
-ggplot(aes(x=yday(date), fill=source)) + 
-  facet_wrap(vars(year), ncol=1) + geom_bar(position=position_dodge(preserve=&quot;total&quot;)) + 
-  scale_fill_brewer(palette = &quot;Set2&quot;) + theme_classic() + 
-  labs(x=&quot;Day of year&quot;, y=&quot;Floral samples&quot;, fill=&quot;Source&quot;)</code></pre>
-<p><img src="images/plot_matching-1.svg" width="768" /></p>
-</div>
-</div>
-<div id="soil-moisture" class="section level1">
-<h1>Soil moisture</h1>
+<div id="soil-moisture" class="section level2">
+<h2>Soil moisture</h2>
 <pre class="r"><code>metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% group_by(year, site, time, date) %&gt;% summarize(has_VWC = mean(!is.na(VWC))) %&gt;% 
   ggplot(aes(y=fct_rev(paste(date, site, time)), color=paste(site, time), x=has_VWC)) + geom_point(size=3) +
   scale_color_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
@@ -892,8 +615,8 @@ ggplot(aes(x=yday(date), fill=source)) +
   labs(x=&quot;Site&quot;, y=&quot;Soil moisture&quot;, fill=&quot;Site, time&quot;)</code></pre>
 <p><img src="images/soil_moisture-3.svg" width="768" /></p>
 </div>
-<div id="extraction-time" class="section level1">
-<h1>Extraction time</h1>
+<div id="extraction-time" class="section level2">
+<h2>Extraction time</h2>
 <pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=bag)) + 
   facet_grid(time~year, scales = &quot;free_y&quot;) + geom_boxplot(outlier.size=0.5) +
   scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
@@ -909,6 +632,429 @@ ggplot(aes(x=yday(date), fill=source)) +
   scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
   labs(x=&quot;Site&quot;, y=&quot;Pumping time (min)&quot;, fill=&quot;Site, time&quot;)</code></pre>
 <p><img src="images/time-3.svg" width="768" /></p>
+</div>
+</div>
+<div id="matching-field-metadata-and-filenames" class="section level1">
+<h1>Matching field metadata and filenames</h1>
+<pre class="r"><code>filemeta &lt;- read_csv(&quot;data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv&quot;) %&gt;% 
+  filter(type != &quot;blank&quot;, !verdict %in% c(&quot;skip-notrun&quot;, &quot;leak-blank&quot;)) %&gt;% drop_na(type) %&gt;%  
+  distinct(FileName, .keep_all = T) %&gt;% 
+  mutate(date = ymd(date), year=year(date), vial=as.character(vial))
+
+bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%  
+  ggplot(aes(y=paste(date, site, time), fill=source)) + 
+  geom_bar(position=position_dodge(width=0.4)) + 
+  scale_fill_brewer(palette = &quot;Set2&quot;) + theme_classic() + 
+  labs(y=&quot;Date, site, time&quot;, x=&quot;Samples&quot;, fill=&quot;Source&quot;)</code></pre>
+<p><img src="images/plot_matching-1.svg" width="768" /></p>
+<pre class="r"><code>full_join(count(filemeta, type, name=&quot;files&quot;), count(metadata, type, name=&quot;field&quot;)) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">type</th>
+<th align="right">files</th>
+<th align="right">field</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">ambient</td>
+<td align="right">97</td>
+<td align="right">98</td>
+</tr>
+<tr class="even">
+<td align="left">floral</td>
+<td align="right">959</td>
+<td align="right">952</td>
+</tr>
+<tr class="odd">
+<td align="left">leaf</td>
+<td align="right">16</td>
+<td align="right">5</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>full_join(count(filemeta, year, date, time, site, name=&quot;files&quot;), 
+          count(metadata, year, date, time, site, name=&quot;field&quot;)) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="right">year</th>
+<th align="left">date</th>
+<th align="left">time</th>
+<th align="left">site</th>
+<th align="right">files</th>
+<th align="right">field</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-07-10</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">23</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">2017-07-13</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">29</td>
+<td align="right">27</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-07-14</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">20</td>
+<td align="right">17</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">2017-07-18</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">22</td>
+<td align="right">21</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-07-20</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">19</td>
+<td align="right">17</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">2017-07-21</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">3</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-07-21</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">14</td>
+<td align="right">12</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">2017-07-24</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">30</td>
+<td align="right">28</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-07-27</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">6</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">2017-07-31</td>
+<td align="left">N</td>
+<td align="left">VF</td>
+<td align="right">5</td>
+<td align="right">3</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-08-01</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">25</td>
+<td align="right">23</td>
+</tr>
+<tr class="even">
+<td align="right">2017</td>
+<td align="left">2017-08-10</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">2</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">2017</td>
+<td align="left">2017-08-10</td>
+<td align="left">N</td>
+<td align="left">Lagg</td>
+<td align="right">25</td>
+<td align="right">22</td>
+</tr>
+<tr class="even">
+<td align="right">2018</td>
+<td align="left">2018-07-18</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">20</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="right">2018</td>
+<td align="left">2018-07-19</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">18</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="right">2018</td>
+<td align="left">2018-07-19</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">13</td>
+<td align="right">13</td>
+</tr>
+<tr class="odd">
+<td align="right">2018</td>
+<td align="left">2018-07-20</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">8</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="right">2018</td>
+<td align="left">2018-07-26</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">4</td>
+<td align="right">4</td>
+</tr>
+<tr class="odd">
+<td align="right">2019</td>
+<td align="left">2019-07-23</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">23</td>
+<td align="right">23</td>
+</tr>
+<tr class="even">
+<td align="right">2019</td>
+<td align="left">2019-07-30</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">43</td>
+<td align="right">43</td>
+</tr>
+<tr class="odd">
+<td align="right">2019</td>
+<td align="left">2019-08-02</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">29</td>
+<td align="right">30</td>
+</tr>
+<tr class="even">
+<td align="right">2019</td>
+<td align="left">2019-08-12</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">32</td>
+<td align="right">33</td>
+</tr>
+<tr class="odd">
+<td align="right">2020</td>
+<td align="left">2020-07-15</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">24</td>
+<td align="right">27</td>
+</tr>
+<tr class="even">
+<td align="right">2020</td>
+<td align="left">2020-07-17</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">14</td>
+<td align="right">16</td>
+</tr>
+<tr class="odd">
+<td align="right">2020</td>
+<td align="left">2020-07-21</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">20</td>
+<td align="right">23</td>
+</tr>
+<tr class="even">
+<td align="right">2021</td>
+<td align="left">2021-07-12</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">28</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="left">2021-07-15</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">47</td>
+<td align="right">47</td>
+</tr>
+<tr class="even">
+<td align="right">2021</td>
+<td align="left">2021-07-20</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">6</td>
+<td align="right">22</td>
+</tr>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="left">2021-07-21</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">20</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="right">2021</td>
+<td align="left">2021-08-04</td>
+<td align="left">N</td>
+<td align="left">VF</td>
+<td align="right">23</td>
+<td align="right">23</td>
+</tr>
+<tr class="odd">
+<td align="right">2021</td>
+<td align="left">2021-08-05</td>
+<td align="left">N</td>
+<td align="left">Lagg</td>
+<td align="right">35</td>
+<td align="right">35</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="left">2022-07-11</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">37</td>
+<td align="right">37</td>
+</tr>
+<tr class="odd">
+<td align="right">2022</td>
+<td align="left">2022-07-12</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">30</td>
+<td align="right">29</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="left">2022-07-21</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">52</td>
+<td align="right">52</td>
+</tr>
+<tr class="odd">
+<td align="right">2022</td>
+<td align="left">2022-07-21</td>
+<td align="left">N</td>
+<td align="left">Lagg</td>
+<td align="right">52</td>
+<td align="right">52</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="left">2022-07-27</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">54</td>
+<td align="right">54</td>
+</tr>
+<tr class="odd">
+<td align="right">2022</td>
+<td align="left">2022-07-28</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">18</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="right">2022</td>
+<td align="left">2022-08-01</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">23</td>
+<td align="right">23</td>
+</tr>
+<tr class="odd">
+<td align="right">2022</td>
+<td align="left">2022-08-02</td>
+<td align="left">N</td>
+<td align="left">VF</td>
+<td align="right">23</td>
+<td align="right">24</td>
+</tr>
+<tr class="even">
+<td align="right">2023</td>
+<td align="left">2023-07-20</td>
+<td align="left">D</td>
+<td align="left">Lagg</td>
+<td align="right">50</td>
+<td align="right">46</td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="left">2023-07-20</td>
+<td align="left">N</td>
+<td align="left">Lagg</td>
+<td align="right">44</td>
+<td align="right">44</td>
+</tr>
+<tr class="even">
+<td align="right">2023</td>
+<td align="left">2023-07-21</td>
+<td align="left">D</td>
+<td align="left">VF</td>
+<td align="right">17</td>
+<td align="right">18</td>
+</tr>
+<tr class="odd">
+<td align="right">2023</td>
+<td align="left">2023-07-27</td>
+<td align="left">D</td>
+<td align="left">Ihyb</td>
+<td align="right">21</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="right">2023</td>
+<td align="left">2023-07-27</td>
+<td align="left">N</td>
+<td align="left">Ihyb</td>
+<td align="right">21</td>
+<td align="right">22</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>library(tidylog)
+meta &lt;- full_join(mutate(filemeta, files=1), 
+                  mutate(metadata, field=1), by=c(&quot;year&quot;, &quot;date&quot;, &quot;time&quot;, &quot;site&quot;, &quot;type&quot;, &quot;sample&quot;)) %&gt;% 
+  mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 &amp; field==1)
+
+meta %&gt;% group_by(year, date, time, site) %&gt;% 
+  summarize(across(c(files, field, match), mean)) %&gt;% 
+  mutate(files=files-match, field=field-match) %&gt;% 
+  pivot_longer(c(files, field, match)) %&gt;% 
+  mutate(name=factor(name, levels=c(&quot;files&quot;, &quot;match&quot;, &quot;field&quot;))) %&gt;% 
+  ggplot(aes(y=paste(date, site, time), x=value, fill=name)) + geom_col() +
+  labs(x=&quot;&quot;,y=&quot;&quot;, fill=&quot;&quot;) + theme_minimal()</code></pre>
+<p><img src="images/matching-1.svg" width="768" /></p>
 </div>
 
 

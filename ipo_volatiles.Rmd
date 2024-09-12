@@ -33,15 +33,13 @@ metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatile
   mutate(year = year(date))
 ```
 
-# Inventory 
-
-## Field metadata
+# Field metadata
 
 ```{r plot_metadata}
-ggplot(metadata %>% filter(type=="floral"), aes(x=yday(date), fill=paste(site, time))) + 
+ggplot(metadata, aes(x=yday(date), fill=paste(site, time))) + 
   facet_wrap(vars(year), ncol=1) + geom_bar() +
   scale_fill_brewer(palette = "Paired") + theme_classic() + 
-  labs(x="Day of year", y="Floral samples", fill="Site, time")
+  labs(x="Day of year", y="Samples", fill="Site, time")
 
 metadata %>% filter(type=="floral") %>% count(year, site, time) %>% 
   pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "floral samples")
@@ -56,35 +54,7 @@ left_join(metadata %>% filter(type=="floral") %>% count(year, site, time, name="
     pivot_wider(names_from=c("site","time"), values_from="samples_per_plant") %>% kable(caption = "samples per plant")
 ```
 
-## Filenames
-
-```{r plot_filenames}
-filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv") %>% 
-  mutate(date = ymd(date), year=year(date), vial=as.character(vial))
-
-filemeta %>% filter(type=="floral") %>% count(year, site, time) %>% 
-  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "floral samples")
-filemeta %>% filter(type=="ambient") %>% count(year, site, time) %>% 
-  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "ambient samples")
-
-ggplot(filemeta %>% filter(type=="floral") %>% drop_na(year), aes(x=yday(date), fill=paste(site, time))) + 
-  facet_wrap(vars(year), ncol=1) + geom_bar() +
-  scale_fill_brewer(palette = "Set3") + theme_classic() + 
-  labs(x="Day of year", y="Floral samples", fill="Site, time")
-```
-
-## Matching field metadata and filenames
-
-```{r plot_matching}
-bind_rows(files=filemeta, field=metadata, .id="source") %>% filter(type=="floral") %>% drop_na(year) %>%  
-ggplot(aes(x=yday(date), fill=source)) + 
-  facet_wrap(vars(year), ncol=1) + geom_bar(position=position_dodge(preserve="total")) + 
-  scale_fill_brewer(palette = "Set2") + theme_classic() + 
-  labs(x="Day of year", y="Floral samples", fill="Source")
-```
-
-
-# Soil moisture
+## Soil moisture
 
 ```{r soil_moisture}
 metadata %>% filter(type=="floral") %>% group_by(year, site, time, date) %>% summarize(has_VWC = mean(!is.na(VWC))) %>% 
@@ -103,7 +73,7 @@ ggplot(metadata, aes(x=site, fill=paste(site, time), y=VWC)) +
   labs(x="Site", y="Soil moisture", fill="Site, time")
 ```
 
-# Extraction time
+## Extraction time
 
 ```{r time}
 ggplot(metadata, aes(x=site, fill=paste(site, time), y=bag)) + 
@@ -120,5 +90,40 @@ ggplot(metadata, aes(x=site, fill=paste(site, time), y=(end-pump)/60)) +
   facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
   scale_fill_brewer(palette = "Paired") + theme_minimal() + 
   labs(x="Site", y="Pumping time (min)", fill="Site, time")
+```
+
+# Matching field metadata and filenames
+
+```{r plot_matching}
+filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv") %>% 
+  filter(type != "blank", !verdict %in% c("skip-notrun", "leak-blank")) %>% drop_na(type) %>%  
+  distinct(FileName, .keep_all = T) %>% 
+  mutate(date = ymd(date), year=year(date), vial=as.character(vial))
+
+bind_rows(files=filemeta, field=metadata, .id="source")%>%  
+  ggplot(aes(y=paste(date, site, time), fill=source)) + 
+  geom_bar(position=position_dodge(width=0.4)) + 
+  scale_fill_brewer(palette = "Set2") + theme_classic() + 
+  labs(y="Date, site, time", x="Samples", fill="Source")
+
+full_join(count(filemeta, type, name="files"), count(metadata, type, name="field")) %>% kable()
+
+full_join(count(filemeta, year, date, time, site, name="files"), 
+          count(metadata, year, date, time, site, name="field")) %>% kable()
+```
+
+```{r matching}
+library(tidylog)
+meta <- full_join(mutate(filemeta, files=1), 
+                  mutate(metadata, field=1), by=c("year", "date", "time", "site", "type", "sample")) %>% 
+  mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 & field==1)
+
+meta %>% group_by(year, date, time, site) %>% 
+  summarize(across(c(files, field, match), mean)) %>% 
+  mutate(files=files-match, field=field-match) %>% 
+  pivot_longer(c(files, field, match)) %>% 
+  mutate(name=factor(name, levels=c("files", "match", "field"))) %>% 
+  ggplot(aes(y=paste(date, site, time), x=value, fill=name)) + geom_col() +
+  labs(x="",y="", fill="") + theme_minimal()
 ```
 
