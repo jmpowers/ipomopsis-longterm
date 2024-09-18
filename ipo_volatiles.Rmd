@@ -31,6 +31,9 @@ metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatile
   map_dfr(~read_tsv(.x, show_col_types = F) %>% 
             mutate(across(any_of(c("pump_id", "plant", "vial", "sample")), as.character)), .id="metafile") %>% 
   mutate(year = year(date))
+
+# metadata %>% add_count(year, date, time, site, type, sample) %>% filter(n>1) %>% 
+#   arrange(year, date, time, site, type, sample) %>% write_tsv("data/volatiles/metadupes.tsv", na="")
 ```
 
 # Field metadata
@@ -99,6 +102,10 @@ filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv")
   filter(type != "blank", !verdict %in% c("skip-notrun", "leak-blank")) %>% drop_na(type) %>%  
   distinct(FileName, .keep_all = T) %>% 
   mutate(date = ymd(date), year=year(date), vial=as.character(vial))
+
+#TODO figure out which of these dupes has the real sample
+filemeta %>% add_count(year, date, time, site, type, sample) %>% filter(n>1) %>% 
+  arrange(year, date, time, site, type, sample) %>% write_tsv("data/volatiles/filedupes.tsv", na="")
 
 bind_rows(files=filemeta, field=metadata, .id="source")%>%  
   ggplot(aes(y=paste(date, site, time), fill=source)) + 

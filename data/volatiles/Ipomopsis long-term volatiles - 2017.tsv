@@ -193,12 +193,12 @@ L12NAug10redo_09022017	Lagg	N	2017-08-10	floral	12	2	22:10	22:40	22:55	0:30	0:15
 	Lagg	D	2017-07-20	ambient	air											
 	Lagg	D	2017-07-21	ambient	air											
 	Ihyb	D	2017-07-24	ambient	air											
-	Ihyb	D	2017-07-24	ambient	air											
+	Ihyb	D	2017-07-24	ambient	airD											
 	Ihyb	D	2017-07-27	ambient	air											
 	VF	N	2017-07-31	ambient	air											
 	Ihyb	N	2017-08-01	ambient	air											
 	Lagg	N	2017-08-10	ambient	air											
-	VF	D	2017-07-10	leaf	leaf											
+	VF	D	2017-07-10	leaf	leaf										no leaf controls in metadata, added from filenames	
 	VF	N	2017-07-31	leaf	leaf1										changed	
 	VF	D	2017-07-13	leaf	veg											
 	VF	D	2017-07-14	leaf	veg											
@@ -207,3 +207,6 @@ L12NAug10redo_09022017	Lagg	N	2017-08-10	floral	12	2	22:10	22:40	22:55	0:30	0:15
 	Lagg	D	2017-07-21	leaf	veg											
 	Ihyb	N	2017-08-01	leaf	veg											
 	Lagg	N	2017-08-10	leaf	veg											
+	Ihyb	D	2017-07-21	leaf	1											
+	Ihyb	D	2017-07-24	leaf	30											
+	Ihyb	D	2017-07-27	leaf	8											

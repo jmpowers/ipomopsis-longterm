@@ -27,10 +27,10 @@ Ihyb	D	JP	2022-07-12	ambient	airJPE		E	10:19	10:45	11:00	0:26	0:15			DRC3
 Ihyb	N	JK	2022-07-11	floral	712	712		20:40	21:10	21:25	0:30	0:15	1	2	DRC3	4.6	water control	
 Ihyb	N	JK	2022-07-11	floral	314	314		21:17	21:54	22:09	0:37	0:15	1	3	DRC3		ambient	too rocky; JP: pump time was 21:34
 Ihyb	N	JK	2022-07-11	floral	510	510		21:40	22:21	22:36	0:41	0:15	1	1	DRC3	5.6	ambient	
-Ihyb	N	JK	2022-07-11	floral	712	712		22:30	23:00	23:15	0:30	0:15	1	2	DRC3	4.6	water control	
-Ihyb	N	JK	2022-07-11	floral	713	713		21:00	21:30	21:45	0:30	0:15	1	5	DRC3		water control	too rocky; JP changed AM to PM
-Ihyb	N	JK	2022-07-11	floral	712	712		21:37	22:07	22:22	0:30	0:15	1	2	DRC3	4.4	water control	JP changed AM to PM
-Ihyb	N	JK	2022-07-11	floral	799	799		21:57	22:27	22:42	0:30	0:15	1	1	DRC3		nitrogen	too rocky; JP changed AM to PM
+Ihyb	N	JK	2022-07-11	floral	712B	712	B	22:30	23:00	23:15	0:30	0:15	1	2	DRC3	4.6	water control	JP added B
+Ihyb	D	JK	2022-07-12	floral	713	713		9:00	9:30	9:45	0:30	0:15	1	5	DRC3		water control	too rocky; JP changed date 7/11>7/12
+Ihyb	D	JK	2022-07-12	floral	712	712		9:37	10:07	10:22	0:30	0:15	1	2	DRC3	4.4	water control	JP changed date 7/11>7/12
+Ihyb	D	JK	2022-07-12	floral	799	799		9:57	10:27	10:42	0:30	0:15	1	1	DRC3		nitrogen	too rocky; JP changed date 7/11>7/12
 Ihyb	N	DH	2022-07-11	floral	718A	718	A	20:29	20:59	21:14	0:30	0:15	1	3	DRC8	8.6	nitrogen	
 Ihyb	N	DH	2022-07-11	floral	721A	721	A	20:31	21:02	21:17	0:31	0:15	1	0	DRC9	2.7	water control	
 Ihyb	N	DH	2022-07-11	floral	509A	509	A	20:33	21:04	21:19	0:31	0:15	1	0	DRC10	10.2	ambient	
@@ -136,7 +136,7 @@ Lagg	N	JP	2022-07-21	floral	566	566		21:15	21:48	22:08	0:33	0:20	1	0	JMP1	6	nitr
 Lagg	N	JP	2022-07-21	floral	554	554		21:19	21:51	22:10	0:32	0:19	1	0	JMP2	5.1	ambient	
 Lagg	N	JP	2022-07-21	floral	550	550		21:21	21:56	22:11	0:35	0:15	1	0	JMP3	4.7	water control	
 Lagg	N	JP	2022-07-21	floral	543	543		22:00	22:30	22:45	0:30	0:15	1	0	JMP1	8.4	nitrogen	
-Lagg	N	JP	2022-07-21	ambient	airJP			22:03	22:33	22:48	0:30	0:15			JMP2			pump died, recalibrated and ran 15 min
+Lagg	N	JP	2022-07-21	ambient	airJP2			22:03	22:33	22:48	0:30	0:15			JMP2			pump died, recalibrated and ran 15 min; JP added JP2
 Lagg	N	JP	2022-07-21	floral	540	540		22:17	22:53	23:08	0:36	0:15	1	0	JMP3	4.1	nitrogen	
 Lagg	N	JP	2022-07-21	floral	415	415		22:19	22:55	23:10	0:36	0:15	1	0	JMP2	5.3	ambient	
 Lagg	D	JB	2022-07-21	floral	540	540		9:38	10:08	10:23	0:30	0:15	1	0	DRC10	6.4	nitrogen	
@@ -177,7 +177,7 @@ Ihyb	N	JK	2022-07-27	floral	726A	726	A	20:39	21:09	21:24	0:30	0:15	1	0	DRC1		nit
 Ihyb	N	JK	2022-07-27	floral	712A	712	A	20:58	21:28	21:43	0:30	0:15	1	0	DRC7	3.5	water control	
 Ihyb	N	JK	2022-07-27	floral	713A	713	A	20:59	21:29	21:43	0:30	0:14	1	0	DRC10		water control	
 Ihyb	N	JK	2022-07-27	ambient	airJK			21:13	21:43	21:58	0:30	0:15			DRC1			
-Ihyb	N	JK	2022-07-27	floral	713B	713	B	21:39	22:09	22:24	0:30	0:15	1	0	DRC10	5.7	water control	
+Ihyb	N	JK	2022-07-27	floral	713C	713	B	21:39	22:09	22:24	0:30	0:15	1	0	DRC10	5.7	water control	JP: changed B>C since AA already has 713B
 Ihyb	N	JK	2022-07-27	floral	712B	712	B	21:47	22:17	22:32	0:30	0:15	1	0	DRC7	3.5	water control	
 Ihyb	N	JP	2022-07-27	floral	732A	732	A	20:03	20:38	20:56	0:35	0:18	1	0	DRC8		water control	too rocky
 Ihyb	N	JP	2022-07-27	floral	530A	530	A	20:04	20:40	20:56	0:36	0:16	1	2	DRC9		ambient	too rocky
@@ -281,7 +281,7 @@ VF	D	AA	2022-08-01	floral	424	424		9:36	10:06	10:21	0:30	0:15	1	0	DRC3	2.4		prob
 VF	D	AA	2022-08-01	floral	430	430		9:37	10:07	10:22	0:30	0:15	1	0	DRC1	4.9		
 VF	D	AA	2022-08-01	floral	471	471		10:11	10:41	10:56	0:30	0:15	1	0	DRC4			too rocky
 VF	D	AA	2022-08-01	floral	440	440		10:12	10:42	10:57	0:30	0:15	1	1	DRC1	5.6		
-VF	D	AA	2022-08-01	ambient	airAA			10:13	10:43	10:58	0:30	0:15			DRC3			
+VF	D	AA	2022-08-01	ambient	airAA2			10:13	10:43	10:58	0:30	0:15			DRC3			JP: added 2 to sample
 VF	N	AA	2022-08-02	floral	977	977		20:03	20:33	20:48	0:30	0:15	1	0	DRC9	9.9		
 VF	N	AA	2022-08-02	floral	174	174		20:08	20:39	20:54	0:31	0:15	1	0	JMP1	10.6		
 VF	N	AA	2022-08-02	floral	975	975		20:06	20:36	20:51	0:30	0:15	1	0	JMP2	10.2		no flowers: 973
