@@ -1,0 +1,149 @@
+date	time	site	type	field	files	sample	rundate	samplename	vial.x	vial.y	split_notes	notes
+2017-07-10	D	VF	floral	0	1	10	2021-08-25	VF_10D_170710_8252021_04				
+2017-07-10	D	VF	floral	0	1	11	2021-08-25	VF_11D_170710_8252021_05				
+2017-07-10	D	VF	floral	0	1	13	2021-08-25	VF_13D_170710_8252021_08				
+2017-07-10	D	VF	floral	0	1	12	2021-08-25	VF_12D_170710_8252021_09				
+2017-07-10	D	VF	floral	0	1	22	2021-08-25	VF_22D_170710_8252021_10				
+2017-07-10	D	VF	floral	0	1	23	2021-08-25	VF_23D_170710_8252021_11				
+2017-07-10	D	VF	floral	0	1	35	2021-08-25	VF_35D_170710_8252021_12				
+2017-07-10	D	VF	floral	0	1	36	2021-08-25	VF_36D_170710_8252021_13				
+2017-07-10	D	VF	floral	0	1	37	2021-08-25	VF_37D_170710_8252021_14				
+2017-07-10	D	VF	floral	0	1	48	2021-08-25	VF_48D_170710_8252021_15				
+2017-07-10	D	VF	floral	0	1	49	2021-08-25	VF_49D_170710_8252021_16				
+2017-07-18	D	Lagg	floral	1	0	6						chromatogram missing?
+2017-07-21	D	Ihyb	leaf	0	1	1	2017-08-30	VegI1DJul21_08302017				
+2017-07-24	D	Ihyb	leaf	0	1	30	2017-08-30	VegI30DJul24_08302017				
+2017-07-24	D	Ihyb	floral	1	0	7						chromatogram missing?
+2017-07-27	D	Ihyb	leaf	0	1	8	2017-08-31	VegI8DJul27_08312017				
+2018-07-19	N	Ihyb	floral	0	1	39	2018-08-06	I39NJuly19_08062018				
+2018-07-19	N	Ihyb	floral	0	1	38	2018-08-06	I38NJuly19_08062018				
+2018-07-19	N	Ihyb	floral	0	1	18	2018-08-06	I18NJuly19_08062018				
+2018-07-19	N	Ihyb	floral	0	1	182	2018-08-07	I182NJuly19_08072018			metadata has flowering plant number, file has metal tag number	
+2018-07-19	N	Ihyb	floral	0	1	184	2018-08-07	I184NJuly19_08072018			metadata has flowering plant number, file has metal tag number	
+2018-07-19	N	Ihyb	floral	0	1	2227	2018-08-07	I2227NJuly19_08072018			metadata has flowering plant number, file has metal tag number	
+2018-07-19	N	Ihyb	floral	1	0	25						JP: changed 7/19 times to PM
+2018-07-19	N	Ihyb	floral	1	0	33						corolla damage
+2018-07-19	N	Ihyb	floral	1	0	34						1 fruit in bag
+2018-07-19	N	Ihyb	floral	1	0	30						
+2018-07-19	N	Ihyb	floral	1	0	19						either pump 2 or 6
+2018-07-19	N	Ihyb	floral	1	0	20						either pump 2 or 6
+2018-07-20	D	Ihyb	floral	0	1	2223	2018-08-07	I2223DJuly20_08072018			metadata has flowering plant numbers, files have metal tag numbers	
+2018-07-20	D	Ihyb	floral	0	1	2224	2018-08-07	I2224DJuly20_08072018			metadata has flowering plant numbers, files have metal tag numbers	
+2018-07-20	D	Ihyb	floral	0	1	38	2018-08-07	I38DJuly20_08072018			metadata has flowering plant numbers, files have metal tag numbers	
+2018-07-20	D	Ihyb	floral	0	1	121	2018-08-07	I121DJuly20_08072018			metadata has flowering plant numbers, files have metal tag numbers	
+2018-07-20	D	Ihyb	floral	0	1	2227	2018-08-07	I2227DJuly20_08072018			metadata has flowering plant numbers, files have metal tag numbers	
+2018-07-20	D	Ihyb	floral	1	0	14						very small flower
+2018-07-20	D	Ihyb	floral	1	0	26						
+2018-07-20	D	Ihyb	floral	1	0	7						
+2018-07-20	D	Ihyb	floral	1	0	4						
+2018-07-20	D	Ihyb	floral	1	0	19						
+2018-07-26	D	Ihyb	floral	0	1	34	2018-08-08	I34DJuly26_08082018				
+2018-07-26	D	Ihyb	floral	0	1	200	2018-08-08	I200DJuly26_08082018				
+2018-07-26	D	Ihyb	floral	1	0	36						
+2018-07-26	D	Ihyb	floral	1	0	24						
+2019-07-23	D	VF	floral	0	1	52	2019-07-29	VF52DJuly23_07292019				
+2019-07-23	D	VF	floral	1	0	21						
+2019-08-02	D	Ihyb	floral	1	0	11						
+2019-08-12	N	Ihyb	floral	1	0	31						
+2020-07-15	N	Ihyb	floral	0	1	3015	2021-07-15	3015_Ihyb_nodate_7152021_02			guessed date based on metadata, could be 7/21 too	
+2020-07-15	N	Ihyb	floral	1	0	399						
+2020-07-15	N	Ihyb	floral	1	0	19				19		JP: missing plant number
+2020-07-15	N	Ihyb	floral	1	0	2294						
+2020-07-15	N	Ihyb	floral	1	0	392						
+2020-07-15	N	Ihyb	ambient	1	0	airXL				air		
+2020-07-17	D	VF	floral	1	0	82				5		
+2020-07-17	D	VF	floral	1	0	75				6		
+2020-07-21	D	Ihyb	floral	0	1	nolabel	2021-07-14	nolabel_Ihyb_200721_7142021_19			add D	
+2020-07-21	D	Ihyb	floral	1	0	2200						
+2020-07-21	D	Ihyb	floral	1	0	305						
+2020-07-21	D	Ihyb	floral	1	0	400						
+2020-07-21	D	Ihyb	floral	1	0	airXL				5		JP: missing plant number
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_5_210712_8232021_02	5		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_27_210712_8232021_03	27		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_1_210712_8232021_04	1		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_3_210712_8232021_13	3		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_9_210712_8232021_14	9		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_10_210712_8232021_15	10		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_7_210712_8232021_16	7		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_6_210712_8232021_18	6		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_8_210712_8232021_19	8		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1		2021-08-23	Ihyb_4_210712_8232021_20	4		add N, no vial match	
+2021-07-12	N	Ihyb	floral	0	1	20	2021-08-25	Ihyb_20_210712_redo_8252021_07			add N	
+2021-07-12	N	Ihyb	floral	1	0	509						JP: 8 plants are likely JP's, only have XL's VWC measurements,
+2021-07-12	N	Ihyb	floral	1	0	518						JP: need vial numbers (1, 3-10, 27) to match to filenames
+2021-07-12	N	Ihyb	floral	1	0	510						
+2021-07-12	N	Ihyb	floral	1	0	505						
+2021-07-12	N	Ihyb	floral	1	0	532						
+2021-07-12	N	Ihyb	floral	1	0	528						
+2021-07-12	N	Ihyb	floral	1	0	Untagged C						untagged, 4 group, old tag 160, next to 526
+2021-07-15	D	Lagg	floral	0	1		2021-08-22	Lagg_31_210715_8222021_03	31		add D, no matching vial	
+2021-07-15	D	Lagg	floral	1	0	406				L10		
+2021-07-15	D	Lagg	ambient	1	0	airKW				L26A		
+2021-07-20	D	VF	floral	1	0	464				10		
+2021-07-20	D	VF	floral	1	0	465				20		
+2021-07-20	D	VF	floral	1	0	434				11		
+2021-07-20	D	VF	floral	1	0	433				12		
+2021-07-20	D	VF	floral	1	0	436				13		
+2021-07-20	D	VF	floral	1	0	439				15		too rocky for soil moisture
+2021-07-20	D	VF	floral	1	0	438				16		
+2021-07-20	D	VF	floral	1	0	437				17		too rocky for soil moisture
+2021-07-20	D	VF	floral	1	0	69				18		
+2021-07-20	D	VF	ambient	1	0	air				19		
+2021-07-20	D	VF	floral	1	0	467				1		
+2021-07-20	D	VF	floral	1	0	462				3		
+2021-07-20	D	VF	floral	1	0	450				4		
+2021-07-20	D	VF	floral	1	0	451				5		
+2021-07-20	D	VF	floral	1	0	444				9		
+2021-07-20	D	VF	ambient	1	0	air				22		
+2021-07-21	D	Ihyb	floral	0	1		2021-08-24	Ihyb_20_210721_8242021_15	20		add D	
+2021-07-21	D	Ihyb	floral	0	1		2021-08-24	Ihyb_18_210721_8242021_16	18		add D	
+2021-08-04	N	VF	floral	0	1	used	2021-08-22	VF_used_2021_8222021_15			guessed date	
+2022-07-11	N	Ihyb	floral	0	1	712B	2022-08-02	Ihyb_712B_N_220711_822022_29				
+2022-07-11	N	Ihyb	floral	0	1	723A	2022-08-04	Ihyb_84aT9_N_220711_842022_09	9		samples from tubes_2022	
+2022-07-11	N	Ihyb	ambient	0	1	airDHA	2022-08-04	Ihyb_AIRADH_N_220711_842022_01				
+2022-07-11	N	Ihyb	floral	1	0	713						too rocky; JP changed AM to PM
+2022-07-11	N	Ihyb	floral	1	0	799						too rocky; JP changed AM to PM
+2022-07-12	D	Ihyb	floral	0	1	airDH	2022-08-02	Ihyb_T9_D_220712_822022_09	9			
+2022-07-12	D	Ihyb	floral	0	1	590	2022-08-02	Ihyb_T10_D_220712_822022_10	10			
+2022-07-12	D	Ihyb	floral	0	1	799	2022-08-02	Ihyb_T15_D_220712_822022_15	15			
+2022-07-12	D	Ihyb	floral	0	1	713	2022-08-02	Ihyb_713_D_220712_822022_03				
+2022-07-12	D	Ihyb	floral	0	1	NOIDJP	2022-08-02	Ihyb_NOIDJP_D_220712_822022_09				
+2022-07-12	D	Ihyb	floral	0	1	712	2022-08-02	Ihyb_530_D_220712_822022_14				
+2022-07-12	D	Ihyb	floral	1	0	530						soil probe not fully inserted
+2022-07-12	D	Ihyb	floral	1	0	705						too rocky; popped out after 1 min
+2022-07-12	D	Ihyb	floral	1	0	509						
+2022-07-12	D	Ihyb	ambient	1	0	airDH						
+2022-07-12	D	Ihyb	ambient	1	0	airDHC						
+2022-07-12	D	Ihyb	floral	1	0	737						
+2022-07-12	N	Ihyb	floral	0	1	redo	2022-08-02	Ihyb_T14_D_220712_822022_14	14		JP:redo N of what? look at T14	
+2022-07-21	D	Lagg	floral	1	0	607						6.3% VWC on second reading
+2022-07-21	D	Lagg	floral	1	0	293						trap fell out twice; stopped @11:50
+2022-07-21	N	Lagg	ambient	0	1	airJP2	2022-07-28	Lagg_AIRJP2_N_220721_7282022_19				
+2022-07-21	N	Lagg	floral	1	0	320A						
+2022-07-21	N	Lagg	ambient	1	0	airJP						pump died, recalibrated and ran 15 min
+2022-07-21	N	Lagg	floral	1	0	334						
+2022-07-21	N	Lagg	floral	1	0	548						
+2022-07-21	N	Lagg	ambient	1	0	airJB						
+2022-07-27	N	Ihyb	floral	0	1	715B	2022-08-01	Ihyb_715B_N_220727_812022_01				
+2022-07-27	N	Ihyb	ambient	0	1	airJP	2022-08-01	Ihyb_AIRJP_N_220727_812022_18				
+2022-07-27	N	Ihyb	floral	1	0	713B						
+2022-07-27	N	Ihyb	floral	1	0	713B						
+2022-07-28	D	Ihyb	floral	1	0	726						too rocky;rain
+2022-07-28	D	Ihyb	floral	1	0	101						
+2022-07-28	D	Ihyb	floral	1	0	737						
+2022-07-28	D	Ihyb	floral	1	0	509						too rocky
+2022-07-28	D	Ihyb	floral	1	0	512						
+2022-07-28	D	Ihyb	floral	1	0	729						
+2022-07-28	D	Ihyb	floral	1	0	709						
+2022-07-28	D	Ihyb	ambient	1	0	airDH						
+2022-08-01	D	VF	ambient	0	1	airJK	2022-08-06	VF_AIRJKredo_D_220801_862022_03				
+2022-08-01	D	VF	floral	1	0	424						probe not fully in
+2022-08-02	N	VF	ambient	1	0	airJK						popped out of bag (turned off pump when [illegible]
+2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-24	PGVF_24_8242023_11	24		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-29	PGVF_34_8292023_02	34		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-29	PGVF_54_8292023_27	54		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-29	PGVF_121_8292023_28	121		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-30	PGVF_39_8302023_02	39		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	1	0	2114				Lagg45		JP: duplicate vial numbers, diff dates, added Lagg
+2023-07-21	D	VF	floral	1	0	440				53		not on map; fell out
+2023-07-27	N	Ihyb	floral	1	0	734				415		

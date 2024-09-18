@@ -9,7 +9,7 @@ VF	D	JP	2021-07-20	floral	15	439	439	9:34	10:04	10:19	0:30	0:15	1	0	DRC10		too r
 VF	D	JP	2021-07-20	floral	16	438	438	9:35	10:05	10:20	0:30	0:15	1	0	DRC3	3.2	
 VF	D	JP	2021-07-20	floral	17	437	437	9:36	10:07	10:22	0:31	0:15	1	0			too rocky for soil moisture
 VF	D	JP	2021-07-20	floral	18	69	69	9:59	10:28	10:43	0:29	0:15	1	0	DRC1	3.7	
-VF	D	JP	2021-07-20	ambient	19	Air		10:14	10:30	10:45	0:16	0:15			DRC5		
+VF	D	JP	2021-07-20	ambient	19	air		10:14	10:30	10:45	0:16	0:15			DRC5		
 VF	D	DH	2021-07-20	floral	1	467	467	9:04	9:34	9:49	0:30	0:15	1	0	CWu1	4.5	
 VF	D	DH	2021-07-20	floral	3	462	462	9:07	9:37	9:52	0:30	0:15	1	0	DRC9	6.5	
 VF	D	DH	2021-07-20	floral	2	456	456	9:11	9:41	9:56	0:30	0:15	1	0	DRC7	3.4	
@@ -20,7 +20,7 @@ VF	D	DH	2021-07-20	floral	7	453	453	9:55	10:25	10:40	0:30	0:15	1	0	DRC9	3.3
 VF	D	DH	2021-07-20	floral	9	444	444	10:03	10:34	10:49	0:31	0:15	1	0	DRC7	6.4	
 VF	D	DH	2021-07-20	floral	6	447	447	10:06	10:36	10:51	0:30	0:15	1	0	JMP3	2.0	
 VF	D	DH	2021-07-20	floral	21	446	446	10:08	10:38	10:53	0:30	0:15	1	0	JMP2	4.8	
-VF	D	DH	2021-07-20	ambient	22	Air		10:46	11:16	11:31	0:30	0:15			DRC7		
+VF	D	DH	2021-07-20	ambient	22	air		10:46	11:16	11:31	0:30	0:15			DRC7		
 Ihyb	N	XL	2021-07-12	floral	17	504	504	20:10	20:45	21:03	0:35	0:18	1	1	4	2.9	
 Ihyb	N	XL	2021-07-12	floral	13	115	115	20:11	20:43	20:58	0:32	0:15	1	0	5	2.5	
 Ihyb	N	XL	2021-07-12	floral	15	524	524	20:13	20:47	21:04	0:34	0:17	1	0	9	2.2	
@@ -28,18 +28,18 @@ Ihyb	N	XL	2021-07-12	floral	11	527	527	20:29	21:02	21:17	0:33	0:15	1	0	5	3.1
 Ihyb	N	XL	2021-07-12	floral	16	502	502	20:34	21:08	21:23	0:34	0:15	1	0	4		
 Ihyb	N	XL	2021-07-12	floral	12	387	387	20:36	21:12	21:28	0:36	0:16	1	0	9	3.2	
 Ihyb	N	XL	2021-07-12	floral	2	504	504	20:55	21:27	21:42	0:32	0:15	1	0	5		
-Ihyb	N	XL	2021-07-12	ambient	14	Air		21:30	21:35		0:05				9		JP: no end time
+Ihyb	N	XL	2021-07-12	ambient	14	airXL		21:30	21:35		0:05				9		JP: no end time
 Ihyb	N	DH	2021-07-12	floral	18	516	516	20:12	20:45	21:00	0:33	0:15	1	0	DRC10		
 Ihyb	N	DH	2021-07-12	floral	19	304	304	20:19	20:50	21:05	0:31	0:15	1	0	DRC3	5.1	
 Ihyb	N	DH	2021-07-12	floral	20	101	101	20:22	20:53	21:08	0:31	0:15	1	0	DRC8	4.0	
 Ihyb	N	DH	2021-07-12	floral	23	105A	105	20:38	21:10	21:25	0:32	0:15	1	0	DRC10	2.5	
 Ihyb	N	DH	2021-07-12	floral	21	511	511	20:42	21:15	21:30	0:33	0:15	1	0	DRC8	3.3	Flower pulled off when fixing pump; VWC from XL
 Ihyb	N	DH	2021-07-12	floral	22	Untagged A	notag101	20:57	21:28	21:43	0:31	0:15	1	0	DRC3	3.8	Uphill from 101, whitish in color
-Ihyb	N	DH	2021-07-12	ambient	24	Air		21:34	22:00	22:15	0:26	0:15		0	DRC8		JP: added 1 hr to bag time
+Ihyb	N	DH	2021-07-12	ambient	24	airDH		21:34	22:00	22:15	0:26	0:15		0	DRC8		JP: added 1 hr to bag time
 Ihyb	N	DH	2021-07-12	floral	25	105B	105	21:39	22:11	22:26	0:32	0:15	1	0	DRC10	2.5	JP: added 1 hr to bag time
 Ihyb	N	DH	2021-07-12	floral	26	Untagged B	notag101	21:47	22:19	22:34	0:32	0:15	1	0	DRC3	3.8	Same untagged plant uphill from 101; JP: added 1 hr to bag time
 Ihyb	N	JP	2021-07-12	floral		509	509									2.3	JP: 8 plants are likely JP's, only have XL's VWC measurements,
-Ihyb	N	JP	2021-07-12	floral		518	518									3.5	
+Ihyb	N	JP	2021-07-12	floral		518	518									3.5	JP: need vial numbers (1, 3-10, 27) to match to filenames
 Ihyb	N	JP	2021-07-12	floral		510	510									4.7	
 Ihyb	N	JP	2021-07-12	floral		505	505									3.2	
 Ihyb	N	JP	2021-07-12	floral		532	532									3.2	
@@ -58,7 +58,7 @@ Lagg	D	DH	2021-07-15	floral	L29	424	424	11:06	11:36	11:51	0:30	0:15	1	0	DRC4	11.
 Lagg	D	DH	2021-07-15	floral	L10	406	406	11:09	11:39	11:54	0:30	0:15	1	0	CWu1	14.1	
 Lagg	D	DH	2021-07-15	floral	L36	407	407	11:35	12:05	12:20	0:30	0:15	1	0	CWu1	18.1	
 Lagg	D	DH	2021-07-15	floral	L38	415	415	11:41	12:15		0:34		1	0	DRC4		Fell out for several minutes, redone, JP: no end time
-Lagg	D	DH	2021-07-15	ambient	L37	Air		9:20	12:02	12:17	2:42	0:15			CWu2		JP: long equil
+Lagg	D	DH	2021-07-15	ambient	L37	airDH		9:20	12:02	12:17	2:42	0:15			CWu2		JP: long equil
 Lagg	D	DH	2021-07-15	floral	L43	2100	2100	12:10	12:40	12:55	0:30	0:15	1	0	CWu1	15.1	JP: added 1 hr to bag time
 Lagg	D	DH	2021-07-15	floral	L46	415	415	12:33	13:03	13:18	0:30	0:15	1	0	DRC4	20.4	
 Lagg	D	KW	2021-07-15	floral	L3	401	401	9:23	9:57	10:12	0:34	0:15	1	0	1	15.3	
@@ -70,13 +70,13 @@ Lagg	D	KW	2021-07-15	floral	L2	273	273	10:08	10:38	10:58	0:30	0:20	1	0	3	16.1
 Lagg	D	KW	2021-07-15	floral	L23	403	403	10:24	10:54	11:09	0:30	0:15	1	0	1	9.5	
 Lagg	D	KW	2021-07-15	floral	L24	404	404	10:27	10:57	11:12	0:30	0:15	1	0	10	15.8	
 Lagg	D	KW	2021-07-15	floral	L25	277	277	10:43	11:13	11:28	0:30	0:15	1	0	3	18.0	
-Lagg	D	KW	2021-07-15	ambient	L26A	Air		10:53	11:25	11:40	0:32	0:15			1		
+Lagg	D	KW	2021-07-15	ambient	L26A	airKW		10:53	11:25	11:40	0:32	0:15			1		
 Lagg	D	KW	2021-07-15	floral	L22	98	98	11:07	11:37	11:52	0:30	0:15	1	0	3	17.5	
 Lagg	D	KW	2021-07-15	floral	L35	422	422	11:18	11:48	12:03	0:30	0:15	1	0	10	13.7	
 Lagg	D	KW	2021-07-15	floral	L33	421	421	11:36	12:06	12:21	0:30	0:15	1	0	1	21.7	
-Lagg	D	KW	2021-07-15	floral	L34	75	75	11:40	12:10	12:25	0:30	0:15	1	0	3	19.5	Trap popped out
+Lagg	D	KW	2021-07-15	floral	L34	75A	75	11:40	12:10	12:25	0:30	0:15	1	0	3	19.5	Trap popped out JP: added A
 Lagg	D	KW	2021-07-15	floral	L44	402	402	12:17	12:47	13:02	0:30	0:15	1	0	1	16.2	
-Lagg	D	KW	2021-07-15	floral	L45	75	75	12:32	13:02	13:17	0:30	0:15	1	0	3	19.5	Same ind. flower as other 75
+Lagg	D	KW	2021-07-15	floral	L45	75B	75	12:32	13:02	13:17	0:30	0:15	1	0	3	19.5	Same ind. flower as other 75. JP: added B
 Lagg	D	JP	2021-07-15	floral	L11	414	414	9:22	9:56	10:11	0:34	0:15	1	0	DRC9	19.4	Dewy flower
 Lagg	D	JP	2021-07-15	floral	L12	217	217	9:24	9:59	10:14	0:35	0:15	1	0	JMP3	12.3	Dewy flower
 Lagg	D	JP	2021-07-15	floral	L13	413	413	9:25	10:01	10:16	0:36	0:15	1	0	JMP2	18.2	Dewy flower
@@ -92,7 +92,7 @@ Lagg	D	JP	2021-07-15	floral	L32	288	288	10:50	11:20	11:35	0:30	0:15	1	0	JMP2	16.
 Lagg	D	JP	2021-07-15	floral	L39	95	95	11:27	11:52	12:11	0:25	0:19	1	0	DRC7	17.2	
 Lagg	D	JP	2021-07-15	floral	L40	294	294	11:31	11:56	12:12	0:25	0:16	1	0	DRC9	10.2	
 Lagg	D	JP	2021-07-15	floral	L41	425	425	11:34	11:59	12:14	0:25	0:15	1	0	JMP3	8.2	Might have popped out
-Lagg	D	JP	2021-07-15	ambient	L42	Air		12:19	12:25	12:44	0:06	0:19			DRC7		
+Lagg	D	JP	2021-07-15	ambient	L42	airJP		12:19	12:25	12:44	0:06	0:19			DRC7		
 Ihyb	D	DH	2021-07-21	floral	I2	504	504	9:50	10:20	10:35	0:30	0:15	1	0	DRC7	5.5	
 Ihyb	D	DH	2021-07-21	floral	I4	524	524	10:19	10:49	11:04	0:30	0:15	1	0	DRC5	5.2	rocky, couldn't get soil moisture probe down fully
 Ihyb	D	DH	2021-07-21	floral	I1	516	516	9:59	10:29	10:44	0:30	0:15	1	0	DRC1	7.8	Chewed
@@ -100,17 +100,17 @@ Ihyb	D	DH	2021-07-21	floral	I3	510	510	10:02	10:32	10:47	0:30	0:15	1	0	CWu1	5.7	
 Ihyb	D	JP	2021-07-21	floral	I5	528	528	9:50	10:21	10:39	0:31	0:18	1	0	CWu2	6.3	
 Ihyb	D	JP	2021-07-21	floral	I8	526	526	9:53	10:23	10:39	0:30	0:16	1	0	DRC10	9.8	526=160
 Ihyb	D	JP	2021-07-21	floral	I6	532	532	9:55	10:25	10:40	0:30	0:15	1	0	JMP2	13.1	
-Ihyb	D	JP	2021-07-21	ambient	I7	Air		9:59	10:28	10:45	0:29	0:17			JMP3		
+Ihyb	D	JP	2021-07-21	ambient	I7	airJP		9:59	10:28	10:45	0:29	0:17			JMP3		
 Ihyb	D	JP	2021-07-21	floral	I13	115	115	10:32	11:02	11:17	0:30	0:15	1	0	DRC10	4.9	
 Ihyb	D	JP	2021-07-21	floral	I14	387	387	10:35	11:05	11:20	0:30	0:15	1	0	JMP2	6.7	albino; petal chips chewed off by Epicauta beetle on Monday 7/19
 Ihyb	D	JP	2021-07-21	floral	I15	2228	2228	10:37	11:07	11:22	0:30	0:15	1	0	CWu2	14.4	beetle in the bag
-Ihyb	D	KW	2021-07-21	ambient	I16	Air		11:00	11:02	11:17	0:02	0:15	1		JMP3		
+Ihyb	D	KW	2021-07-21	ambient	I16	airKW1		11:00	11:02	11:17	0:02	0:15	1		JMP3		
 Ihyb	D	KW	2021-07-21	floral	I10	518	518	9:54	10:26	10:41	0:32	0:15	1	2	9	9.3	
 Ihyb	D	KW	2021-07-21	floral	I9	105	105	9:57	10:27	10:43	0:30	0:16	1	0	3	4.9	
 Ihyb	D	KW	2021-07-21	floral	I11	509	509	9:59	10:29	10:44	0:30	0:15	1	0	4	7.0	
 Ihyb	D	KW	2021-07-21	floral	I12	101	101	10:04	10:34	10:49	0:30	0:15	1	0	8	5.6	
 Ihyb	D	KW	2021-07-21	floral	I17	511	511	10:40	11:10	11:25	0:30	0:15	1	0	9	6.1	
-Ihyb	D	KW	2021-07-21	ambient	I19	Air		10:55	11:25	11:40	0:30	0:15			4		
+Ihyb	D	KW	2021-07-21	ambient	I19	airKW2		10:55	11:25	11:40	0:30	0:15			4		
 VF	N	XL	2021-08-04	floral	V53	460	460	20:24	20:54	21:09	0:30	0:15	1	0	4	13.1	JP: observer guess based on handwriting
 VF	N	XL	2021-08-04	floral	V54	456	456	20:27	20:58	21:13	0:31	0:15	1	0	2	11.9	
 VF	N	XL	2021-08-04	floral	V66	453	453	20:55	21:25	21:40	0:30	0:15	1	0	3	12.0	
@@ -124,21 +124,21 @@ Lagg	N	RT	2021-08-05	floral	L110	80	80	20:07	20:40	20:59	0:33	0:19			8
 Lagg	N	RT	2021-08-05	floral	L108	403	403	21:17	21:45	22:01	0:28	0:16			8		
 Lagg	N	RT	2021-08-05	floral	L106	423	423	20:27	21:05	21:22	0:38	0:17			9		
 Lagg	N	RT	2021-08-05	floral	L111	402	402	21:20	21:50	22:03	0:30	0:13			8		
-Lagg	N	RT	2021-08-05	floral	cont	cont		21:34	22:05	22:20	0:31	0:15	1	0	DRC7		JP: no VWC on sheet
-Lagg	N	XL	2021-08-05	floral	L103	288	288	20:05	20:35	20:50	0:30	0:15	1	0	SRC10		
-Lagg	N	XL	2021-08-05	floral	L104	286	286	20:08	20:38	20:53	0:30	0:15	1	0	SRC7		
-Lagg	N	XL	2021-08-05	floral	L101	410	410	20:25	21:06	21:21	0:41	0:15	1	0	SRC10		battery ran out, repump at 9:06. JP: bag time read 20:55 JP: last digit of vial not in Diane's photo of page, guessed 1
+Lagg	N	RT	2021-08-05	ambient	cont	cont		21:34	22:05	22:20	0:31	0:15	1	0	DRC7		JP: no VWC on sheet, guessing ambient
+Lagg	N	XL	2021-08-05	floral	L103	288	288	20:05	20:35	20:50	0:30	0:15	1	0	DRC10		
+Lagg	N	XL	2021-08-05	floral	L104	286	286	20:08	20:38	20:53	0:30	0:15	1	0	DRC7		
+Lagg	N	XL	2021-08-05	floral	L101	410	410	20:25	21:06	21:21	0:41	0:15	1	0	DRC10		battery ran out, repump at 9:06. JP: bag time read 20:55 JP: last digit of vial not in Diane's photo of page, guessed 1
 Lagg	N	XL	2021-08-05	floral	L105	284	284	20:28	21:00	21:15	0:32	0:15	1	0	DRC10		
 Lagg	N	XL	2021-08-05	floral	L100	210	210	20:45	21:17	21:32	0:32	0:15	1	0	DRC10		
 Lagg	N	XL	2021-08-05	floral	L102	95	95	20:48	21:23	21:38	0:35	0:15	1	0	DRC7		
-Lagg	N	XL	2021-08-05	ambient	L133	Air		20:20	21:35	21:50	1:15	0:15			DRC10		JP: can't read bag time
+Lagg	N	XL	2021-08-05	ambient	L133	air		20:20	21:35	21:50	1:15	0:15			DRC10		JP: can't read bag time
 Lagg	N	JB	2021-08-05	floral	L116	414	414	20:04	20:36	20:51	0:32	0:15	1	0	DRC10		
 Lagg	N	JB	2021-08-05	floral	L117	217	217	20:07	20:40	20:55	0:33	0:15	1	0	DRC5		
 Lagg	N	JB	2021-08-05	floral	L115	412	412	20:24	20:59	21:14	0:35	0:15	1	0	DRC5		
 Lagg	N	JB	2021-08-05	floral	L114	411	411	20:28	21:03	21:18	0:35	0:15	1	0	DRC1		
 Lagg	N	JB	2021-08-05	floral	L113	277	277	21:12	21:43	21:58	0:31	0:15	1	0	DRC5		
-Lagg	N	JB	2021-08-05	ambient	L112	Air	Air		21:18	21:33		0:15			DRC5		
-Lagg	N	JB	2021-08-05	ambient	L119	Air	Air		21:29	21:44		0:15			DRC1		sampled near cow poo
+Lagg	N	JB	2021-08-05	ambient	L112	air			21:18	21:33		0:15			DRC5		
+Lagg	N	JB	2021-08-05	ambient	L119	air			21:29	21:44		0:15			DRC1		sampled near cow poo
 Lagg	N	DH	2021-08-05	floral	L127	415	415	20:06	20:36	20:51	0:30	0:15	1	0	DRC4		
 Lagg	N	DH	2021-08-05	floral	L129	409	409	20:08	20:38	20:53	0:30	0:15	1	0	DRC3		
 Lagg	N	DH	2021-08-05	floral	L125	408	408	20:27	20:57	21:12	0:30	0:15	1	0	DRC4		
@@ -146,21 +146,21 @@ Lagg	N	DH	2021-08-05	floral	L124	425	425	20:28	20:59	21:14	0:31	0:15	1	0	DRC3
 Lagg	N	DH	2021-08-05	floral	L128	407	407	20:49	21:19	21:34	0:30	0:15	1	0	DRC4		flower pulled off fixing pump
 Lagg	N	DH	2021-08-05	floral	L126	421	421	20:51	21:21	21:36	0:30	0:15	1	0	DRC3		
 Lagg	N	DH	2021-08-05	floral	L131	292	292	21:09	21:39	21:54	0:30	0:15	1	0	DRC3		
-Lagg	N	DH	2021-08-05	ambient	L130	Air		21:11	21:41	21:56	0:30	0:15	1	0	DRC4		on right side
-Lagg	N	DH	2021-08-05	ambient	L134	Air		21:26	21:56	22:11	0:30	0:15	1	0	DRC4		sampled very near cow shite; left side
+Lagg	N	DH	2021-08-05	ambient	L130	air		21:11	21:41	21:56	0:30	0:15	1	0	DRC4		on right side
+Lagg	N	DH	2021-08-05	ambient	L134	air		21:26	21:56	22:11	0:30	0:15	1	0	DRC4		sampled very near cow shite; left side
 Lagg	N	JP	2021-08-05	floral	L123	294	294	20:04	20:34	20:49	0:30	0:15	1	0	JMP3		
 Lagg	N	JP	2021-08-05	floral	L121	2095	2095	20:06	20:36	20:51	0:30	0:15	1	0	JMP2		
 Lagg	N	JP	2021-08-05	floral	L120	406	406	20:40	21:12	21:27	0:32	0:15	1	0			
 Lagg	N	JP	2021-08-05	floral	L118	422	422	20:43	21:13	21:28	0:30	0:15	1	0			
 Lagg	N	JP	2021-08-05	floral	L132	405	405	21:00	21:32	21:47	0:32	0:15	1	0	JMP2		
-Lagg	N	JP	2021-08-05	ambient	L122	Air		21:36	21:50	22:05	0:14	0:15			JMP3		
+Lagg	N	JP	2021-08-05	ambient	L122	air		21:36	21:50	22:05	0:14	0:15			JMP3		
 VF	N	JB	2021-08-04	floral	50	464	464	20:16	20:47	21:02	0:31	0:15	1	0	5	17.4	
 VF	N	JB	2021-08-04	floral	51	465	465	20:20	20:50	21:05	0:30	0:15	1	1	3	16.2	tube broke - 1/2 in
 VF	N	JB	2021-08-04	floral	62	467	467	20:22	20:55	21:10	0:33	0:15	1	0	7	15.8	flower fell off - [not in photo]
 VF	N	JB	2021-08-04	floral	67	467	467	20:22	21:33	21:48	1:11	0:15	1	0	3	15.8	flower fell off - [not in photo]
 VF	N	JB	2021-08-04	floral	72	465	465	20:20	22:02	22:17	1:42	0:15	1	1	3	16.2	redo
-VF	N	JB	2021-08-04	ambient	VF73	Air		22:12	22:13	22:28	0:01	0:15			7		
-VF	N	JB	2021-08-04	ambient	VF74	Air		22:20	22:21	22:36	0:01	0:15			3		
+VF	N	JB	2021-08-04	ambient	VF73	air		22:12	22:13	22:28	0:01	0:15			7		
+VF	N	JB	2021-08-04	ambient	VF74	air		22:20	22:21	22:36	0:01	0:15			3		
 VF	N	JP	2021-08-04	floral	55	428	428	20:25	21:00	21:20	0:35	0:20	1	0	DRC9	11.5	
 VF	N	JP	2021-08-04	floral	56	169	169	20:29	21:04	21:21	0:35	0:17	1	0	DRC8	13.0	
 VF	N	JP	2021-08-04	floral	61	438	438	21:29	21:59	22:16	0:30	0:17			DRC9	24.1	

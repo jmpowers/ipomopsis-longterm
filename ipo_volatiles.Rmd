@@ -29,7 +29,7 @@ options(digits=4, knitr.kable.NA = "") # for kables
 ```{r load_metadata}
 metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatiles - 20", full.names=T) %>% 
   map_dfr(~read_tsv(.x, show_col_types = F) %>% 
-            mutate(across(any_of(c("pump_id", "plant", "vial")), as.character)), .id="metafile") %>% 
+            mutate(across(any_of(c("pump_id", "plant", "vial", "sample")), as.character)), .id="metafile") %>% 
   mutate(year = year(date))
 ```
 
@@ -117,6 +117,11 @@ library(tidylog)
 meta <- full_join(mutate(filemeta, files=1), 
                   mutate(metadata, field=1), by=c("year", "date", "time", "site", "type", "sample")) %>% 
   mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 & field==1)
+
+meta %>% filter(match==F) %>% arrange(date, time, site, field, files) %>% 
+  select(date, time, site, type, field, files, sample, 
+         rundate, samplename, vial.x, vial.y, split_notes, notes) %>% 
+  write_tsv("data/volatiles/matching.tsv", na="")
 
 meta %>% group_by(year, date, time, site) %>% 
   summarize(across(c(files, field, match), mean)) %>% 
