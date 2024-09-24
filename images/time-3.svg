@@ -227,6 +227,9 @@
 <circle cx='315.75' cy='313.04' r='0.89' style='stroke-width: 0.71; stroke: #333333; fill: #333333;' />
 <circle cx='315.75' cy='342.69' r='0.89' style='stroke-width: 0.71; stroke: #333333; fill: #333333;' />
 <circle cx='315.75' cy='372.34' r='0.89' style='stroke-width: 0.71; stroke: #333333; fill: #333333;' />
+<circle cx='315.75' cy='313.04' r='0.89' style='stroke-width: 0.71; stroke: #333333; fill: #333333;' />
+<circle cx='315.75' cy='253.74' r='0.89' style='stroke-width: 0.71; stroke: #333333; fill: #333333;' />
+<circle cx='315.75' cy='253.74' r='0.89' style='stroke-width: 0.71; stroke: #333333; fill: #333333;' />
 <line x1='315.75' y1='401.98' x2='315.75' y2='401.98' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <line x1='315.75' y1='401.98' x2='315.75' y2='401.98' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polygon points='312.53,401.98 312.53,401.98 318.97,401.98 318.97,401.98 312.53,401.98 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F78B4;' />

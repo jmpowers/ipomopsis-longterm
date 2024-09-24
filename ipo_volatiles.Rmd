@@ -99,13 +99,21 @@ ggplot(metadata, aes(x=site, fill=paste(site, time), y=(end-pump)/60)) +
 
 ```{r plot_matching}
 filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv") %>% 
-  filter(type != "blank", !verdict %in% c("skip-notrun", "leak-blank")) %>% drop_na(type) %>%  
-  distinct(FileName, .keep_all = T) %>% 
+  filter(type != "blank", #GC blank
+         !verdict %in% c("skip-notrun", #tube was skipped by the autosampler
+                         "leak-blank", #tube leaked, not desorbed but GC run anyway
+                         "mismatch-leak", #tube leaked, tube time not aligned with file time
+                         "skip-rename-mismatch-leak", #tube leaked after skip, tube time not aligned with file time
+                         "filemoved" #file was moved on disk so creation time is wrong
+         )) %>% drop_na(type, FileName) %>%  #no file match to desorb start time
+  distinct(FileName, .keep_all = T) %>% #some files got duplicated from fuzzy matching times
   mutate(date = ymd(date), year=year(date), vial=as.character(vial))
 
 #TODO figure out which of these dupes has the real sample
 filemeta %>% add_count(year, date, time, site, type, sample) %>% filter(n>1) %>% 
   arrange(year, date, time, site, type, sample) %>% write_tsv("data/volatiles/filedupes.tsv", na="")
+#until then, use only the first duplicate
+filemeta <- filemeta %>% distinct(year, date, time, site, type, sample, .keep_all=T)
 
 bind_rows(files=filemeta, field=metadata, .id="source")%>%  
   ggplot(aes(y=paste(date, site, time), fill=source)) + 

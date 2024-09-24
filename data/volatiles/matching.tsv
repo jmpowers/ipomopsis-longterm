@@ -64,8 +64,8 @@ date	time	site	type	field	files	sample	rundate	samplename	vial.x	vial.y	split_no
 2021-07-20	D	VF	floral	1	0	451				5		
 2021-07-20	D	VF	floral	1	0	444				9		
 2021-07-20	D	VF	ambient	1	0	airDH				22		
-2021-07-21	D	Ihyb	floral	0	1		2021-08-24	Ihyb_20_210721_8242021_15	20		add D, no matching vial	
-2021-07-21	D	Ihyb	floral	0	1		2021-08-24	Ihyb_18_210721_8242021_16	18		add D, no matching vial	
+2021-07-21	D	Ihyb	floral	0	1	vial 20	2021-08-24	Ihyb_20_210721_8242021_15	20		add D,  CHECK no matching vial	
+2021-07-21	D	Ihyb	floral	0	1	vial 18	2021-08-24	Ihyb_18_210721_8242021_16	18		add D, CHECK no matching vial	
 2021-08-04	N	VF	floral	0	1	used	2021-08-22	VF_used_2021_8222021_15			guessed date	
 2021-08-04	N	VF	floral	1	0	467				62		flower fell off - [not in photo]
 2022-07-11	N	Ihyb	floral	0	1	723A	2022-08-04	Ihyb_84aT9_N_220711_842022_09	9		samples from tubes_2022	
@@ -74,11 +74,7 @@ date	time	site	type	field	files	sample	rundate	samplename	vial.x	vial.y	split_no
 2022-07-12	D	Ihyb	ambient	1	0	airDHC						
 2022-07-12	D	Ihyb	floral	1	0	737						
 2022-07-21	D	Lagg	floral	1	0	607						6.3% VWC on second reading
-2022-07-21	D	Lagg	floral	1	0	293						trap fell out twice; stopped @11:50
-2022-07-21	N	Lagg	floral	1	0	320A						
-2022-07-21	N	Lagg	floral	1	0	334						
 2022-07-21	N	Lagg	floral	1	0	548						
-2022-07-21	N	Lagg	ambient	1	0	airJB						
 2022-07-27	N	Ihyb	floral	0	1	715B	2022-08-01	Ihyb_715B_N_220727_812022_01				
 2022-07-27	N	Ihyb	ambient	0	1	airJP	2022-08-01	Ihyb_AIRJP_N_220727_812022_18				
 2022-07-27	N	Ihyb	floral	1	0	713C						JP: changed B>C since AA already has 713B
@@ -93,11 +89,11 @@ date	time	site	type	field	files	sample	rundate	samplename	vial.x	vial.y	split_no
 2022-07-28	D	Ihyb	ambient	1	0	airDH						
 2022-08-01	D	VF	floral	1	0	424						probe not fully in
 2022-08-01	D	VF	ambient	1	0	airAA2						JP: added 2 to sample
-2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-24	PGVF_24_8242023_11	24		no vial match, guessed date/site/time	
-2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-29	PGVF_34_8292023_02	34		no vial match, guessed date/site/time	
-2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-29	PGVF_54_8292023_27	54		no vial match, guessed date/site/time	
-2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-29	PGVF_121_8292023_28	121		no vial match, guessed date/site/time	
-2023-07-20	D	Lagg	floral	0	1	no vial match	2023-08-30	PGVF_39_8302023_02	39		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	vial 24	2023-08-24	PGVF_24_8242023_11	24		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	vial 34	2023-08-29	PGVF_34_8292023_02	34		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	vial 54	2023-08-29	PGVF_54_8292023_27	54		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	vial 121	2023-08-29	PGVF_121_8292023_28	121		no vial match, guessed date/site/time	
+2023-07-20	D	Lagg	floral	0	1	vial 39	2023-08-30	PGVF_39_8302023_02	39		no vial match, guessed date/site/time	
 2023-07-20	D	Lagg	floral	1	0	2114				Lagg45		JP: duplicate vial numbers, diff dates, added Lagg
 2023-07-20	D	Lagg	floral	1	0	2142B						rocky; failure again, same bag and flower as last one; JP: no filled in bag time; JP: vial 36, removed from this row since duplicate with AA; added B
 2023-07-21	D	VF	floral	1	0	440				53		not on map; fell out

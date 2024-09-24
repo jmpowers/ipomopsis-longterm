@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-09-17" />
+<meta name="date" content="2024-09-23" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-09-17</h4>
+<h4 class="date">2024-09-23</h4>
 
 </div>
 
@@ -272,7 +272,10 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 <pre class="r"><code>metadata &lt;- list.files(&quot;data/volatiles&quot;, pattern = &quot;Ipomopsis long-term volatiles - 20&quot;, full.names=T) %&gt;% 
   map_dfr(~read_tsv(.x, show_col_types = F) %&gt;% 
             mutate(across(any_of(c(&quot;pump_id&quot;, &quot;plant&quot;, &quot;vial&quot;, &quot;sample&quot;)), as.character)), .id=&quot;metafile&quot;) %&gt;% 
-  mutate(year = year(date))</code></pre>
+  mutate(year = year(date))
+
+# metadata %&gt;% add_count(year, date, time, site, type, sample) %&gt;% filter(n&gt;1) %&gt;% 
+#   arrange(year, date, time, site, type, sample) %&gt;% write_tsv(&quot;data/volatiles/metadupes.tsv&quot;, na=&quot;&quot;)</code></pre>
 <div id="field-metadata" class="section level1">
 <h1>Field metadata</h1>
 <pre class="r"><code>ggplot(metadata, aes(x=yday(date), fill=paste(site, time))) + 
@@ -325,7 +328,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2020</td>
-<td align="right">21</td>
+<td align="right">20</td>
 <td align="right">24</td>
 <td align="right"></td>
 <td align="right"></td>
@@ -335,7 +338,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 <tr class="odd">
 <td align="right">2021</td>
 <td align="right">15</td>
-<td align="right">23</td>
+<td align="right">24</td>
 <td align="right">44</td>
 <td align="right">28</td>
 <td align="right">20</td>
@@ -343,8 +346,8 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2022</td>
-<td align="right">38</td>
-<td align="right">85</td>
+<td align="right">41</td>
+<td align="right">82</td>
 <td align="right">49</td>
 <td align="right">47</td>
 <td align="right">19</td>
@@ -406,7 +409,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2020</td>
-<td align="right">2</td>
+<td align="right">3</td>
 <td align="right">3</td>
 <td align="right"></td>
 <td align="right"></td>
@@ -416,7 +419,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 <tr class="odd">
 <td align="right">2021</td>
 <td align="right">3</td>
-<td align="right">2</td>
+<td align="right">3</td>
 <td align="right">3</td>
 <td align="right">7</td>
 <td align="right">2</td>
@@ -487,7 +490,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2020</td>
-<td align="right">21</td>
+<td align="right">20</td>
 <td align="right">21</td>
 <td align="right"></td>
 <td align="right"></td>
@@ -497,7 +500,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 <tr class="odd">
 <td align="right">2021</td>
 <td align="right">15</td>
-<td align="right">19</td>
+<td align="right">18</td>
 <td align="right">41</td>
 <td align="right">28</td>
 <td align="right">20</td>
@@ -505,7 +508,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2022</td>
-<td align="right">25</td>
+<td align="right">26</td>
 <td align="right">31</td>
 <td align="right">48</td>
 <td align="right">46</td>
@@ -580,7 +583,7 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 <tr class="odd">
 <td align="right">2021</td>
 <td align="right">1.000</td>
-<td align="right">1.210</td>
+<td align="right">1.333</td>
 <td align="right">1.073</td>
 <td align="right">1.000</td>
 <td align="right">1.000</td>
@@ -588,8 +591,8 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 </tr>
 <tr class="even">
 <td align="right">2022</td>
-<td align="right">1.520</td>
-<td align="right">2.742</td>
+<td align="right">1.577</td>
+<td align="right">2.645</td>
 <td align="right">1.021</td>
 <td align="right">1.022</td>
 <td align="right">1.000</td>
@@ -646,9 +649,21 @@ options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
 <div id="matching-field-metadata-and-filenames" class="section level1">
 <h1>Matching field metadata and filenames</h1>
 <pre class="r"><code>filemeta &lt;- read_csv(&quot;data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv&quot;) %&gt;% 
-  filter(type != &quot;blank&quot;, !verdict %in% c(&quot;skip-notrun&quot;, &quot;leak-blank&quot;)) %&gt;% drop_na(type) %&gt;%  
-  distinct(FileName, .keep_all = T) %&gt;% 
+  filter(type != &quot;blank&quot;, #GC blank
+         !verdict %in% c(&quot;skip-notrun&quot;, #tube was skipped by the autosampler
+                         &quot;leak-blank&quot;, #tube leaked, not desorbed but GC run anyway
+                         &quot;mismatch-leak&quot;, #tube leaked, tube time not aligned with file time
+                         &quot;skip-rename-mismatch-leak&quot;, #tube leaked after skip, tube time not aligned with file time
+                         &quot;filemoved&quot; #file was moved on disk so creation time is wrong
+         )) %&gt;% drop_na(type, FileName) %&gt;%  #no file match to desorb start time
+  distinct(FileName, .keep_all = T) %&gt;% #some files got duplicated from fuzzy matching times
   mutate(date = ymd(date), year=year(date), vial=as.character(vial))
+
+#TODO figure out which of these dupes has the real sample
+filemeta %&gt;% add_count(year, date, time, site, type, sample) %&gt;% filter(n&gt;1) %&gt;% 
+  arrange(year, date, time, site, type, sample) %&gt;% write_tsv(&quot;data/volatiles/filedupes.tsv&quot;, na=&quot;&quot;)
+#until then, use only the first duplicate
+filemeta &lt;- filemeta %&gt;% distinct(year, date, time, site, type, sample, .keep_all=T)
 
 bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%  
   ggplot(aes(y=paste(date, site, time), fill=source)) + 
@@ -668,18 +683,18 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">ambient</td>
-<td align="right">106</td>
-<td align="right">111</td>
+<td align="right">107</td>
+<td align="right">113</td>
 </tr>
 <tr class="even">
 <td align="left">floral</td>
-<td align="right">950</td>
+<td align="right">929</td>
 <td align="right">952</td>
 </tr>
 <tr class="odd">
 <td align="left">leaf</td>
 <td align="right">16</td>
-<td align="right">13</td>
+<td align="right">16</td>
 </tr>
 </tbody>
 </table>
@@ -702,7 +717,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2017-07-10</td>
 <td align="left">D</td>
 <td align="left">VF</td>
-<td align="right">23</td>
+<td align="right">22</td>
 <td align="right">11</td>
 </tr>
 <tr class="even">
@@ -718,7 +733,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2017-07-14</td>
 <td align="left">D</td>
 <td align="left">VF</td>
-<td align="right">20</td>
+<td align="right">19</td>
 <td align="right">19</td>
 </tr>
 <tr class="even">
@@ -743,7 +758,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">D</td>
 <td align="left">Ihyb</td>
 <td align="right">3</td>
-<td align="right">2</td>
+<td align="right">3</td>
 </tr>
 <tr class="odd">
 <td align="right">2017</td>
@@ -759,7 +774,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">D</td>
 <td align="left">Ihyb</td>
 <td align="right">30</td>
-<td align="right">30</td>
+<td align="right">31</td>
 </tr>
 <tr class="odd">
 <td align="right">2017</td>
@@ -767,7 +782,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">D</td>
 <td align="left">Ihyb</td>
 <td align="right">6</td>
-<td align="right">5</td>
+<td align="right">6</td>
 </tr>
 <tr class="even">
 <td align="right">2017</td>
@@ -798,7 +813,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2017-08-10</td>
 <td align="left">N</td>
 <td align="left">Lagg</td>
-<td align="right">25</td>
+<td align="right">24</td>
 <td align="right">24</td>
 </tr>
 <tr class="even">
@@ -878,7 +893,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2020-07-15</td>
 <td align="left">N</td>
 <td align="left">Ihyb</td>
-<td align="right">24</td>
+<td align="right">23</td>
 <td align="right">27</td>
 </tr>
 <tr class="even">
@@ -902,15 +917,15 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2021-07-12</td>
 <td align="left">N</td>
 <td align="left">Ihyb</td>
-<td align="right">28</td>
-<td align="right">25</td>
+<td align="right">27</td>
+<td align="right">27</td>
 </tr>
 <tr class="odd">
 <td align="right">2021</td>
 <td align="left">2021-07-15</td>
 <td align="left">D</td>
 <td align="left">Lagg</td>
-<td align="right">47</td>
+<td align="right">46</td>
 <td align="right">47</td>
 </tr>
 <tr class="even">
@@ -950,8 +965,8 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2022-07-11</td>
 <td align="left">N</td>
 <td align="left">Ihyb</td>
-<td align="right">37</td>
-<td align="right">37</td>
+<td align="right">36</td>
+<td align="right">34</td>
 </tr>
 <tr class="odd">
 <td align="right">2022</td>
@@ -959,41 +974,33 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">D</td>
 <td align="left">Ihyb</td>
 <td align="right">29</td>
-<td align="right">29</td>
+<td align="right">32</td>
 </tr>
 <tr class="even">
-<td align="right">2022</td>
-<td align="left">2022-07-12</td>
-<td align="left">N</td>
-<td align="left">Ihyb</td>
-<td align="right">1</td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
 <td align="right">2022</td>
 <td align="left">2022-07-21</td>
 <td align="left">D</td>
 <td align="left">Lagg</td>
-<td align="right">52</td>
+<td align="right">51</td>
 <td align="right">52</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">2022</td>
 <td align="left">2022-07-21</td>
 <td align="left">N</td>
 <td align="left">Lagg</td>
-<td align="right">52</td>
+<td align="right">51</td>
 <td align="right">52</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">2022</td>
 <td align="left">2022-07-27</td>
 <td align="left">N</td>
 <td align="left">Ihyb</td>
-<td align="right">61</td>
+<td align="right">54</td>
 <td align="right">54</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">2022</td>
 <td align="left">2022-07-28</td>
 <td align="left">D</td>
@@ -1001,31 +1008,31 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="right">11</td>
 <td align="right">19</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">2022</td>
 <td align="left">2022-08-01</td>
 <td align="left">D</td>
 <td align="left">VF</td>
-<td align="right">23</td>
+<td align="right">21</td>
 <td align="right">23</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">2022</td>
 <td align="left">2022-08-02</td>
 <td align="left">N</td>
 <td align="left">VF</td>
-<td align="right">23</td>
+<td align="right">24</td>
 <td align="right">24</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">2023</td>
 <td align="left">2023-07-20</td>
 <td align="left">D</td>
 <td align="left">Lagg</td>
-<td align="right">50</td>
+<td align="right">49</td>
 <td align="right">46</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">2023</td>
 <td align="left">2023-07-20</td>
 <td align="left">N</td>
@@ -1033,7 +1040,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="right">44</td>
 <td align="right">44</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">2023</td>
 <td align="left">2023-07-21</td>
 <td align="left">D</td>
@@ -1041,15 +1048,15 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="right">17</td>
 <td align="right">18</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">2023</td>
 <td align="left">2023-07-27</td>
 <td align="left">D</td>
 <td align="left">Ihyb</td>
-<td align="right">21</td>
+<td align="right">20</td>
 <td align="right">20</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">2023</td>
 <td align="left">2023-07-27</td>
 <td align="left">N</td>
