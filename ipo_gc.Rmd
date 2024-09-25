@@ -134,6 +134,12 @@ ipo.split <- list.files("data/volatiles", pattern = "RMBL GCMS Data Inventory - 
          gc_n = str_sub(sample, -2,-1)) %>% 
   write_csv("data/volatiles/ipo_meta_split.csv", na="")
 #output split filenames for hand annotation
+
+list.files("data/volatiles", pattern = "RMBL GCMS Data Inventory - gc", full.names = T) %>% 
+    map_dfr(~ read_csv(.x, show_col_types = F)) %>% 
+    filter(user == "D Campbell : Longterm", !is.na(FullName)) %>% select(FullName) %>% 
+  write_csv("data/volatiles/ipo_fullnames.txt", na="", col_names = F)
+#output full filenames to make a batch file to integrate
 ```
 
 ## Match metadata to filenames

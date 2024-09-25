@@ -20,6 +20,9 @@ td, th { padding : 6px }
 
 ```{r setup, message=FALSE}
 library(tidyverse)
+library(pheatmap)
+library(dendsort)
+library(viridis)
 library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
@@ -129,21 +132,82 @@ full_join(count(filemeta, year, date, time, site, name="files"),
 
 ```{r matching}
 library(tidylog)
-meta <- full_join(mutate(filemeta, files=1), 
+meta.full <- full_join(mutate(filemeta, files=1), 
                   mutate(metadata, field=1), by=c("year", "date", "time", "site", "type", "sample")) %>% 
   mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 & field==1)
 
-meta %>% filter(match==F) %>% arrange(date, time, site, field, files) %>% 
+meta.full %>% filter(match==F) %>% arrange(date, time, site, field, files) %>% 
   select(date, time, site, type, field, files, sample, 
          rundate, samplename, vial.x, vial.y, split_notes, notes) %>% 
   write_tsv("data/volatiles/matching.tsv", na="")
 
-meta %>% group_by(year, date, time, site) %>% 
+meta.full %>% group_by(year, date, time, site) %>% 
   summarize(across(c(files, field, match), mean)) %>% 
   mutate(files=files-match, field=field-match) %>% 
   pivot_longer(c(files, field, match)) %>% 
   mutate(name=factor(name, levels=c("files", "match", "field"))) %>% 
   ggplot(aes(y=paste(date, site, time), x=value, fill=name)) + geom_col() +
   labs(x="",y="", fill="") + theme_minimal()
+```
+
+# Samples vs. controls
+
+```{r ipochems}
+# load short names 
+ipochems <- read_csv("data/volatiles/Ipo volatile compounds - chemsf_ipo.csv") %>% 
+  select(name, shortname, standard, verdict) %>%  filter(verdict != "") %>% 
+  mutate(standard = fct_recode(standard, "Methyl_salicylate"="Benzaldehyde"), # benzaldehyde regressions not reliable
+         class = fct_recode(standard, Aliphatics="Hexenol", Benzenoids="Methyl_salicylate", Benzenoids="Indole", 
+                            Sesquiterpenes="Caryophyllene", Monoterpenes="alpha_Pinene", Monoterpenes="Linalool")) %>%  
+  left_join(read_csv("data/volatiles/regressions_181921_filtered_slopes.csv") %>% 
+              pivot_wider(id_cols=standard, names_from="year", names_prefix="area_per_ng", values_from=area_per_ng)) 
+class_pal <- set_names(c("#BC0060","#027B8C","#E56E00","#86D400"), levels(ipochems$class))
+
+#shorten chemical names and merge compounds with multiple names
+shortnames <- ipochems %>% select(name, shortname) %>% filter(shortname!="") %>% deframe()
+#shortnames[shortnames %in% shortnames[duplicated(shortnames)]]
+
+greekify <- function(names) {
+  names %>% 
+    str_replace("^a-","\U03B1-") %>% str_replace("-a-","-\U03B1-") %>% 
+    str_replace("^b-","\U03B2-") %>% str_replace("-b-","-\U03B2-") %>% 
+    str_replace("^g-","\U03B3-") %>% str_replace("-g-","-\U03B3-")
+}
+```
+
+
+```{r quant}
+source("read_shimadzu.R")
+quant.full <- list.files("data/volatiles/quant/", full.names = T) %>% 
+  map_dfr(read.shimadzu.quant) %>%
+  mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %>% 
+  distinct(Filename, Name, .keep_all=T)
+
+setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
+setdiff(meta.full$FileName, quant.full$Filename)#TODO need to find and integrate these
+
+#only keep file-metadata matches
+files.match <- intersect(meta.full$FileName, quant.full$Filename)
+meta.all   <- meta.full %>% filter(FileName %in% files.match)
+quant.all <- quant.full %>% filter(Filename %in% files.match) %>%
+  select(Filename, Name, Area) %>%
+  mutate(Name = recode(Name, !!!shortnames)) %>%
+  pivot_wider(names_from = "Name", values_from="Area") %>% 
+  arrange(match(Filename, meta.all$FileName)) %>% 
+  write_tsv("data/volatiles/quant_all.tsv") %>% 
+  as.data.frame() %>% column_to_rownames("Filename")
+```
+
+```{r quant_heatmap, dev="png", dev.args=list(),fig.width=16, fig.height=12}
+# annot_pal <- list(
+#   year_run = set_names(brewer.pal(8, "Set1")[1:length(unique(meta.all$year_run))], unique(meta.all$year_run)),
+#   type = set_names(brewer.pal(8, "Set1")[1:length(unique(meta.all$type))], unique(meta.all$type)))
+pheatmap(as.matrix(t(quant.all))^(1/4), 
+         cluster_cols=F, show_colnames=F,
+         clustering_method="mcquitty", clustering_distance_rows="correlation",
+         clustering_callback = function(hc, ...){dendsort(hc, type="average")},
+         # annotation_col=meta.all %>% select(year_run) %>% mutate(across(everything(), factor)),
+         # annotation_colors =  annot_pal,
+         scale="none", color=mako(512),main="Quant volatiles")
 ```
 

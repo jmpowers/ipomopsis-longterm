@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-09-23" />
+<meta name="date" content="2024-09-24" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-09-23</h4>
+<h4 class="date">2024-09-24</h4>
 
 </div>
 
@@ -265,6 +265,9 @@ img{ max-width:200%; height: auto; }
 td, th { padding : 6px }
 </style>
 <pre class="r"><code>library(tidyverse)
+library(pheatmap)
+library(dendsort)
+library(viridis)
 library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
@@ -1067,16 +1070,16 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 </tbody>
 </table>
 <pre class="r"><code>library(tidylog)
-meta &lt;- full_join(mutate(filemeta, files=1), 
+meta.full &lt;- full_join(mutate(filemeta, files=1), 
                   mutate(metadata, field=1), by=c(&quot;year&quot;, &quot;date&quot;, &quot;time&quot;, &quot;site&quot;, &quot;type&quot;, &quot;sample&quot;)) %&gt;% 
   mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 &amp; field==1)
 
-meta %&gt;% filter(match==F) %&gt;% arrange(date, time, site, field, files) %&gt;% 
+meta.full %&gt;% filter(match==F) %&gt;% arrange(date, time, site, field, files) %&gt;% 
   select(date, time, site, type, field, files, sample, 
          rundate, samplename, vial.x, vial.y, split_notes, notes) %&gt;% 
   write_tsv(&quot;data/volatiles/matching.tsv&quot;, na=&quot;&quot;)
 
-meta %&gt;% group_by(year, date, time, site) %&gt;% 
+meta.full %&gt;% group_by(year, date, time, site) %&gt;% 
   summarize(across(c(files, field, match), mean)) %&gt;% 
   mutate(files=files-match, field=field-match) %&gt;% 
   pivot_longer(c(files, field, match)) %&gt;% 
@@ -1084,6 +1087,95 @@ meta %&gt;% group_by(year, date, time, site) %&gt;%
   ggplot(aes(y=paste(date, site, time), x=value, fill=name)) + geom_col() +
   labs(x=&quot;&quot;,y=&quot;&quot;, fill=&quot;&quot;) + theme_minimal()</code></pre>
 <p><img src="images/matching-1.svg" width="768" /></p>
+</div>
+<div id="samples-vs.-controls" class="section level1">
+<h1>Samples vs. controls</h1>
+<pre class="r"><code># load short names 
+ipochems &lt;- read_csv(&quot;data/volatiles/Ipo volatile compounds - chemsf_ipo.csv&quot;) %&gt;% 
+  select(name, shortname, standard, verdict) %&gt;%  filter(verdict != &quot;&quot;) %&gt;% 
+  mutate(standard = fct_recode(standard, &quot;Methyl_salicylate&quot;=&quot;Benzaldehyde&quot;), # benzaldehyde regressions not reliable
+         class = fct_recode(standard, Aliphatics=&quot;Hexenol&quot;, Benzenoids=&quot;Methyl_salicylate&quot;, Benzenoids=&quot;Indole&quot;, 
+                            Sesquiterpenes=&quot;Caryophyllene&quot;, Monoterpenes=&quot;alpha_Pinene&quot;, Monoterpenes=&quot;Linalool&quot;)) %&gt;%  
+  left_join(read_csv(&quot;data/volatiles/regressions_181921_filtered_slopes.csv&quot;) %&gt;% 
+              pivot_wider(id_cols=standard, names_from=&quot;year&quot;, names_prefix=&quot;area_per_ng&quot;, values_from=area_per_ng)) 
+class_pal &lt;- set_names(c(&quot;#BC0060&quot;,&quot;#027B8C&quot;,&quot;#E56E00&quot;,&quot;#86D400&quot;), levels(ipochems$class))
+
+#shorten chemical names and merge compounds with multiple names
+shortnames &lt;- ipochems %&gt;% select(name, shortname) %&gt;% filter(shortname!=&quot;&quot;) %&gt;% deframe()
+#shortnames[shortnames %in% shortnames[duplicated(shortnames)]]
+
+greekify &lt;- function(names) {
+  names %&gt;% 
+    str_replace(&quot;^a-&quot;,&quot;\U03B1-&quot;) %&gt;% str_replace(&quot;-a-&quot;,&quot;-\U03B1-&quot;) %&gt;% 
+    str_replace(&quot;^b-&quot;,&quot;\U03B2-&quot;) %&gt;% str_replace(&quot;-b-&quot;,&quot;-\U03B2-&quot;) %&gt;% 
+    str_replace(&quot;^g-&quot;,&quot;\U03B3-&quot;) %&gt;% str_replace(&quot;-g-&quot;,&quot;-\U03B3-&quot;)
+}</code></pre>
+<pre class="r"><code>source(&quot;read_shimadzu.R&quot;)
+quant.full &lt;- list.files(&quot;data/volatiles/quant/&quot;, full.names = T) %&gt;% 
+  map_dfr(read.shimadzu.quant) %&gt;%
+  mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %&gt;% 
+  distinct(Filename, Name, .keep_all=T)
+
+setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in</code></pre>
+<pre><code> [1] &quot;Blank1_852019_01.qgd&quot;                 
+ [2] &quot;I23DAug2_08052019.qgd&quot;                
+ [3] &quot;L13NAug10_09022017.qgd&quot;               
+ [4] &quot;VF9D07142017_07140217anal.qgd&quot;        
+ [5] &quot;Ihyb_20_210712_redo_8252021_07.qgd&quot;   
+ [6] &quot;Lagg_26_210715_8222021_07.qgd&quot;        
+ [7] &quot;No_Drierite_2_07152021_7162021_14.qgd&quot;
+ [8] &quot;5_Ihyb_nodate_7142021_20.qgd&quot;         
+ [9] &quot;Ihyb_222_230728_8232023_10.qgd&quot;       
+[10] &quot;Ihyb_223_230728_8222023_25.qgd&quot;       
+[11] &quot;Ihyb_232_230728_8232023_12.qgd&quot;       
+[12] &quot;Ihyb_235_230728_8232023_06.qgd&quot;       
+[13] &quot;Ihyb_403_230728_8222023_06.qgd&quot;       
+[14] &quot;PGVF_5_8312023_07.qgd&quot;                
+[15] &quot;PGVF_80_8302023_15.qgd&quot;               
+[16] &quot;PGVF_121_8292023_28.qgd&quot;              
+[17] &quot;Ihyb_703B_N_220727_812022_15.qgd&quot;     
+[18] &quot;Ihyb_707B_N_220727_812022_13.qgd&quot;     
+[19] &quot;Ihyb_721B_N_220727_812022_10.qgd&quot;     
+[20] &quot;Ihyb_732_D_220712_822022_13.qgd&quot;      
+[21] &quot;Ihyb_AIRJP_D_220712_842022_14.qgd&quot;    
+[22] &quot;Ihyb_T1_N_220727_822022_01.qgd&quot;       
+[23] &quot;Ihyb_T2_N_220727_822022_02.qgd&quot;       
+[24] &quot;Ihyb_T3_N_220727_822022_03.qgd&quot;       
+[25] &quot;Ihyb_T4_N_220727_822022_04.qgd&quot;       
+[26] &quot;Ihyb_T5_N_220727_822022_05.qgd&quot;       
+[27] &quot;Ihyb_T6_N_220727_822022_06.qgd&quot;       
+[28] &quot;Ihyb_T7_N_220727_822022_07.qgd&quot;       
+[29] &quot;Lagg_415_N_220721_7282022_25.qgd&quot;     
+[30] &quot;Lagg_548_D_220721_7282022_13.qgd&quot;     
+[31] &quot;Lagg_AIRDH_N_220721_7262022_24.qgd&quot;   
+[32] &quot;VF_978_N_220802_852022_08.qgd&quot;        
+[33] &quot;VF_AIRJK_D_220801_852022_03.qgd&quot;      
+[34] &quot;VF_AIRJP_D_220801_842022_19.qgd&quot;      </code></pre>
+<pre class="r"><code>setdiff(meta.full$FileName, quant.full$Filename)#TODO need to find and integrate these</code></pre>
+<pre><code>[1] &quot;VF14DJul13reallyVF15D_09042017.qgd&quot; &quot;VF13DJul14_09052017.qgd&quot;           
+[3] &quot;VF13DJuly18_07232018.qgd&quot;           &quot;VF13DJuly23_07292019.qgd&quot;          
+[5] NA                                  </code></pre>
+<pre class="r"><code>#only keep file-metadata matches
+files.match &lt;- intersect(meta.full$FileName, quant.full$Filename)
+meta.all   &lt;- meta.full %&gt;% filter(FileName %in% files.match)
+quant.all &lt;- quant.full %&gt;% filter(Filename %in% files.match) %&gt;%
+  select(Filename, Name, Area) %&gt;%
+  mutate(Name = recode(Name, !!!shortnames)) %&gt;%
+  pivot_wider(names_from = &quot;Name&quot;, values_from=&quot;Area&quot;) %&gt;% 
+  arrange(match(Filename, meta.all$FileName)) %&gt;% 
+  write_tsv(&quot;data/volatiles/quant_all.tsv&quot;) %&gt;% 
+  as.data.frame() %&gt;% column_to_rownames(&quot;Filename&quot;)</code></pre>
+<pre class="r"><code># annot_pal &lt;- list(
+#   year_run = set_names(brewer.pal(8, &quot;Set1&quot;)[1:length(unique(meta.all$year_run))], unique(meta.all$year_run)),
+#   type = set_names(brewer.pal(8, &quot;Set1&quot;)[1:length(unique(meta.all$type))], unique(meta.all$type)))
+pheatmap(as.matrix(t(quant.all))^(1/4), 
+         cluster_cols=F, show_colnames=F,
+         clustering_method=&quot;mcquitty&quot;, clustering_distance_rows=&quot;correlation&quot;,
+         clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
+         # annotation_col=meta.all %&gt;% select(year_run) %&gt;% mutate(across(everything(), factor)),
+         # annotation_colors =  annot_pal,
+         scale=&quot;none&quot;, color=mako(512),main=&quot;Quant volatiles&quot;)</code></pre>
+<p><img src="images/quant_heatmap-1.png" width="1536" /></p>
 </div>
 
 

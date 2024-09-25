@@ -1,0 +1,1098 @@
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF1D07102017_07122017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF207102017_07122017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF5D07102017_07132017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF6D07102017_07132017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VFAIR07102017_07132017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF4D07142017_07142017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF6D07142017_07142017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF7D07102017_07142017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF7D07142017_07142017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF9D07102017_07142017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF9D07142017_07140217.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF1D07142017_07152017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF2D07142017_07152017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF8D07102017_07152017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF8D07142017_07152017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I3DJul24_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I3NAug1_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I10DJul24_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I10NAug108262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I11DJul24_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I11NAug1_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I12DJul24_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I12NAug1_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I17DJul244_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I15NAug1_08262017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2NAug1_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I4NAug1_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I6NAug1_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I9NAug1_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I17NAug1_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirJul24_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2DJul24_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I4DJul24_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I5DJul24_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I6DJul24_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I9DJul24_08272017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I13DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I14DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I18DJul2408282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I19DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I21DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I25DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I26DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I28DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I30DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I31DJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDJul24_08282017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I16DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I1DJul21_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I20DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I20DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I24DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I16NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I19NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I23NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I24NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I25NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I26NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I27NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I29NAug1_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegI1DJul21_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegI30DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2DJul21_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I15DJul27_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I16DJul27_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I22DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I27DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDJul27_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegI8DJul27_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I8DJul27_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I33DJul27_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirNAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I8NAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I13NAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I14NAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I20NAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I28NAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I30NAug108312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I33NAug1_08312017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegINAug1_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L37DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L28DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L39DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L43DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L35DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L36DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L23NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L25NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L38NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L41NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L48NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L50NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L44DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L42DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L34DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L40DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L41DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L6DJul21_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L16NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L14NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L18NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L15NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L19NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L49NAug10_09012017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L47DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L25DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L32DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L24DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L30DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L38DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L45NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L42NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L24NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L12NAug10really L44N_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L44NAug10reallyL13N_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L43NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L46NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L21NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L47NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L31DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L45DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L26DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L50DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L49DJul20_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L12NAug10redo_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirNLAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegNLAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDLJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegDLJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L29DJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L48DJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L33DJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L19DJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L46DJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L16DJul20_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L4DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L7DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L8DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L9DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L12DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L13DJul18reallyL21DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L21DJul18reallyL15DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDLJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegDLJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDLJul21_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegDLJul21_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L1DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L3DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L5DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L10DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L11DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L14DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L17DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L18DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L13DJul18redo_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L20DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L22DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L23DJul18_09032017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF18DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF19DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF30DJul13reallyVF26D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF26DJul13reallyVF17D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF17DJul13really VF29D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF29DJuly13reallyVF25D.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF25DJul13really VF21D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF21DJul13reallyVF20D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF20DJul13reallyVF14D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF14DJul13reallyVF15D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF15DJul13reallyVF16D_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF32DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF31DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF30DJul13redo_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF27DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF33DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF39DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF28DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF40DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF41DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF47DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF3DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF43DJul13_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF36DJul14_09042017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF10DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF11DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF12DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF13DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF22DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF23DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF37DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF40DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF42DJul13_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF44DJul13_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF45DJul13_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF46DJul13_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF49DJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDVFJul13_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/AirDVFJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegDVFJul13_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VegDVFJul14_09052017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF307102017_07122017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Data/VF4D07102017_07132017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/RMBL Analysis/VF9D07142017_07140217anal.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF4D07102017_07132017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF307102017_07122017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I23DJul24_08302017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L13NAug10_09022017.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/Air1DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF11DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF13DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF14DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF26DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF34DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF40DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF44DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF45DJuly18_07232018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/Air1DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L06DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L08DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L25DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L37DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L41DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L46DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L48DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L50DJuly19_07282018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/Air2DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF6DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF10DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF22DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF25DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF27DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF35DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF36DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF39DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF48DJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF39DvegJuly18_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L02DJuly19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L03DJuly19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L24DJuly19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L29DJuly19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L35DJuly19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L36DJuly19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L39July19_08052018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/Air2DJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir1NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L36DvegJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I26NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I39NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I12NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I7NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I38NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I18NJuly19_08062018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir2NJuly19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2224vegNJuly19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2224vegNJuly19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I182NJuly19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I4N2223July19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I184NJuly19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2223DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2224DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I38DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I121DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2227DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir1DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir1DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2227vegDJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir1DJuly26_08082018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I34DJuly26_08082018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I23D183July26_08082018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I200DJuly26_08082018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2227NJuly19_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir2DJuly20_08072018.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VFAirLSJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF3DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF15DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF16DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF2DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF4DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VFAirKWJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF8DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF6DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VFAirJNJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF20DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF9DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF7DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF19DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF5DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF13DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF12DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF14DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF12ADJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VF52DJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VFAir2JNJuly23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VFAir2July23_07292019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/LAir1LSJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L3DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L4DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L5DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L6DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L8DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L9DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L10DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/LAirJNJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L13DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L14DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L15DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L16DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L17DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L18DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L19DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L20DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L21DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/VFAir2LSJuly23redo_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/LAir2LSJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L22DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L23DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L24DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L25DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L27DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L28DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2057DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2064DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2097DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2254DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2259DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2260DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2261DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2262DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2263DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2264DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2265DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2266DJuly30_07312019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2252July30_852019_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2251July30_852019_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2273July30_852019_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2269July30_852019_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2060July30_852019_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAirKWAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I1DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I4DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I5DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I6DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I7DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I8DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I9DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir2KWAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I10DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I12DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I17DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I19DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I20DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I21DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I23DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I24DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I25DAug2_08052019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAirJNAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir2LSAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I22DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I26DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I27DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I28DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I29DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I30DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I32DAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAir1LSAug2_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I23DAug2redo_08062019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAirDCAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I1NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I2NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I3NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I4NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I5DAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I6NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I7NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I8NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAirJPAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I10NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I11NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I12NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I13NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I14NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I16NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/II17NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I18NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I19NAug12_08152019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAirJNAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I20NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I21NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I22NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I23NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I24NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I25NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I27NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I28NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/IAirKWAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I29NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I30NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/I32NAug12_08162019.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/Blank1_852019_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2252July30_852019_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2251July30_852019_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2273July30_852019_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2269July30_852019_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis/L2060July30_852019_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Maxfield meadow 2020/VF_17_125_200717_782021_35.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Maxfield meadow 2020/Ihyb_30_380_200721_782021_36.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/27_383_Ihyb_200716_7142021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/28_382_Ihyb_200716_7142021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/20_390_Ihyb_200716_7142021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/21_389_Ihyb_200716_7142021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/23_387_Ihyb_200716_7142021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/5_line__Ihyb_200716_7142021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/6_line_Ihyb_200716_7142021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/air_ST_Ihyb_200716_7142021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/line_381_Ihyb_200716_7142021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/line_2283_Ihyb_200716_7142021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/15_395_Ihyb_200721_7142021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/6_2245_Ihyb_200721_7142021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/14_396_Ihyb_200721_7142021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/8_2294_Ihyb_200721_7142021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/18_392_Ihyb_200721_7142021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/12_398_Ihyb_200721_7142021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/air_JP_Ihyb_200721_7142021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/nolabel_Ihyb_200721_7142021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/5_Ihyb_nodate_7142021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/5_Ihyb_nodate_7142021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/3015_Ihyb_nodate_7152021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/400_Ihyb_nodate_7152021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/2200_Ihyb_nodate_7152021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/28_382_Ihyb_200721_7152021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/27_383_Ihyb_200721_7152021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/25_385_Ihyb_200721_7152021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/384_Ihyb_Ihyb_200721_7152021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/387_Ihyb_200721_7152021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/air_ST_Ihyb_200721_7152021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/389_Ihyb_200721_7152021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/7_228_Ihyb_200721_7152021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/399_Ihyb_200721_7152021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/2282_Ihyb_200721_7152021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/2283_Ihyb_200721_7152021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_4_129_200717_7152021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_3_32_200717_7152021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_21_129_200717_7152021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_9_117_200717_7152021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_10_118_200717_7152021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/No_Drierite_2_07152021_7162021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Blank2_7162021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_air_JP_200717_7162021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/25_line_Ihyb_200715_7162021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/26_384_Ihyb_200715_7162021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/line_2217_Ihyb_200715_7162021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/13_397_Ihyb_200715_7162021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/7_2228_Ihyb_200715_7162021_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/12_398_Ihyb_200715_7162021_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/14_396_Ihyb_200715_7162021_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/16_394_Ihyb_200715_7162021_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/15_395_Ihyb_200715_7162021_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/air_JP_Ihyb_200715_7162021_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_16_200717_7162021_27.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_7_200717_7162021_28.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_14_200717_7162021_29.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_13_200717_7162021_30.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_11_200717_7162021_31.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_22_200717_7162021_32.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_21_210720_7272021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_6_210720_7272021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_8_210720_7272021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_7_210720_7272021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_10_210721_7272021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_9_210721_7272021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_11_210721_7272021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_14_210720_redo_7272021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_12_210721_7282021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_17_210721_7282021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_19_210721_7282021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_5_210721_7282021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_8_210721_7282021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_6_210721_7282021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_7_210721_7282021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_13_210721_7282021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_14_210721_7282021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_15_210721_7282021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_16_210721_7282021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_4_210721_7282021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_2_210721_7282021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_3_210721_7282021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_1_210721_7282021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_46_210715_7282021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_2_210720_7282021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_133_8142021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_104_8142021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_100_8142021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_103_8142021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_101_8142021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_102_8142021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_105_8142021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_123_8142021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_121_8142021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_120_8142021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_118_8142021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_132_8142021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_113_8142021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_119_8162021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_116_8162021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_112_8162021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_117_8162021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_115_8162021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_114_8162021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_127_8162021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_128_8162021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_125_8162021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_126_8162021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_129_8162021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_124_8162021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_131_8162021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_130_8162021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_134_8162021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_110_8162021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_109_8162021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_106_8162021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_111_8162021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_13_210715_8212021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_12_210716_8212021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_8_210717_8212021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_7_210718_8212021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_10_210719_8212021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_9_210720_8212021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_6_210721_8212021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_1_210722_8212021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_3_210723_8212021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_4_210724_8212021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_14_210725_8212021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_15_210715_8222021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_16_210715_8222021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_17_210715_8222021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_5_210715_8222021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_2_210715_8222021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_23_210715_8222021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_26_210715_8222021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_11_210715_8222021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_27_210715_8222021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_28_210715_8222021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_18_210715_8222021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_19_210715_8222021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_20_210715_8222021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_21_210715_8222021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_32_210715_8222021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_39_210715_8222021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_40_210715_8222021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_41_210715_8222021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_30_210715_8222021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_37_210715_8222021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_31_210715_8222021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_29_210715_8222021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_36_210715_8222021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_22_210715_8222021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_26_210715_8222021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_24_210715_8222021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_35_210715_8222021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_25_210715_8222021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_33_210715_8222021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_72_2021_8222021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_73_2021_8222021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_74_2021_8222021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_used_2021_8222021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_108_2021_8222021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_107_2021_8222021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_122_2021_8222021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_69_2021_8222021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_55_2021_8222021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_44_210715_8232021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_57_210804_8232021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_68_210804_8232021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_56_210804_8232021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_59_210804_8232021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_61_210804_8232021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_70_210804_8232021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_60_210804_8232021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_53_210804_8232021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_65_210804_8232021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_63_210804_8232021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_66_210804_8232021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_58_210804_8232021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_54_210804_8232021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_64_210804_8232021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_50_210804_8232021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_51_210804_8232021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_38_210715_8232021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_67_210804_8232021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_5_210712_8232021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_27_210712_8232021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_1_210712_8232021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_26_210712_8232021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_22_210712_8232021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_20_210712_8232021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_21_210712_8232021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_23_210712_8232021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_18_210712_8232021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_12_210712_8232021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_24_210712_8232021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_3_210712_8232021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_9_210712_8232021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_10_210712_8232021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_7_210712_8232021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_25_210712_8232021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_6_210712_8232021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_8_210712_8232021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_19_210712_8242021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_16_210712_8242021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_15_210712_8242021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_14_210712_8242021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_17_210712_8242021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_20_210712_redo_8242021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_11_210712_8242021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_13_210712_8242021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_2_210712_8242021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_34_210715_8242021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_42_210715_8242021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_43_210715_8242021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Lagg_45_210715_8242021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_20_210721_8242021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_18_210721_8242021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_29D_2017_8242021_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_airN_170731_8242021_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_1N_170731_8242021_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_leaf1N_170731_8242021_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_31N_170731_8252021_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_30N_170731_8252021_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_10D_170710_8252021_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_11D_170710_8252021_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_leafD_170710_8252021_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/Ihyb_20_210712_redo_8252021_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_13D_170710_8252021_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_12D_170710_8252021_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_22D_170710_8252021_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_23D_170710_8252021_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_35D_170710_8252021_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_36D_170710_8252021_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_37D_170710_8252021_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_48D_170710_8252021_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_210827/Campbell RMBL Data/Ipomopsis 2020/VF_49D_170710_8252021_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_281_N_220721_7252022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_540_D_220721_7252022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_280_D_220721_7252022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_599_D_220721_7252022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_615_D_220721_7252022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_557_D_220721_7252022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_539_D_220721_7252022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_554_D_220721_7252022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_593_D_220721_7252022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_585_D_220721_7252022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_337_N_220721_7252022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_334_D_220721_7252022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_574_N_220721_7252022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_568_N_220721_7252022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_332_N_220721_7252022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_551_N_220721_7252022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_585_N_220721_7252022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_584_N_220721_7252022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_593_N_220721_7252022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_283_D_220721_7262022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_562_D_220721_7262022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_281_D_220721_7262022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_574_D_220721_7262022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_598_D_220721_7262022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_332_D_220721_7262022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_341_D_220721_7262022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_337_D_220721_7262022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_334_D_220721_7262022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_541_N_220721_7262022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_297_N_220721_7262022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_562_N_220721_7262022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_2100_N_220721_7262022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_293_N_220721_7262022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_322_N_220721_7262022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_320_N_220721_7262022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRJK_N_220721_7262022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_539_N_220721_7262022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_540_N_220721_7262022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_563_D_220721_7262022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_548_D_220721_7262022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRJP_D_220721_7262022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_297_D_220721_7262022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_2100_D_220721_7262022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_325_D_220721_7262022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRDH_D_220721_7262022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_317_D_220721_7262022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_584_D_220721_7262022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_320_D_220721_7262022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_607_N_220721_7262022_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_323_N_220721_7262022_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_76_N_220721_7262022_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRDH_N_220721_7262022_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_598_N_220721_7262022_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_320_N_220721_7262022_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_613_N_220721_7272022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_614_N_220721_7272022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_344_N_220721_7272022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_615_N_220721_7272022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_601_N_220721_7272022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_599_N_220721_7272022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_608_N_220721_7272022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_near85_N_220721_7272022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_616_N_220721_7272022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRAA_N_220721_7272022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_566_D_220721_7272022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_322_D_220721_7272022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_568_D_220721_7272022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_541_D_220721_7272022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_283_N_220721_7272022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_590_N_220721_7272022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_341_N_220721_7272022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_566_N_220721_7272022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_554_N_220721_7272022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_543_N_220721_7272022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRAA_D_220721_7272022_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_550_D_220721_7272022_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_546_D_220721_7272022_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRDH_N_220721_REDO_7272022_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_543_D_220721_7272022_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_596_D_220721_7272022_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_76_D_220721_7282022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_589_D_220721_7282022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_323_D_220721_7282022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_598_D_220721_7282022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_near85_D_220721_7282022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_614_D_220721_7282022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_613_D_220721_7282022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_344_D_220721_7282022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_608_D_220721_7282022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_616_D_220721_7282022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_588_D_220721_7282022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_590_D_220721_7282022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_548_D_220721_7282022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_601_D_220721_7282022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_550_N_220721_7282022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_317_N_220721_7282022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRDH_N_220721_7282022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_546_N_220721_7282022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_AIRJP2_N_220721_7282022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_596_N_220721_7282022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_589_N_220721_7282022_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_293_N_220721_7282022_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_588_N_220721_7282022_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_415_N_220721_7282022_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Lagg_415_N_220721_7282022_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T26__220721_7282022_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T27__220722_7282022_27.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T28__220723_7282022_28.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T29__220724_7282022_29.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T30__220725_7282022_30.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T31__220726_7282022_31.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T32__220727_7282022_32.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_732A_N_220727_7292022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_530A_N_220727_7292022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_797A_N_220727_7292022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_798A_N_220727_7292022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_719A_N_220727_7292022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_706A_N_220727_7292022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_701A_N_220727_7292022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_701B_N_220727_7292022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_732B_N_220727_7292022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_530B_N_220727_7292022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_503A_N_220727_812022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_506A_N_220727_812022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_799A_N_220727_812022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_525A_N_220727_812022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_502A_N_220727_812022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_703A_N_220727_812022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_709A_N_220727_812022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRAA_N_220727_812022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_799B_N_220727_812022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_721B_N_220727_812022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_718B_N_220727_812022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_726B_N_220727_812022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_713B_N_220727_812022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_709B_N_220727_812022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_703B_N_220727_812022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_715unreadable_D_220728_812022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_718_D_220728_812022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_721_D_220728_812022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_797_D_220728_812022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_719_D_220728_812022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_706_D_220728_812022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_798_D_220728_812022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_721_N_220727_812022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_314_N_220727_812022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_721Bredo_N_220727_812022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_715_N_220727_812022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_726_N_220727_812022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_713_N_220727_812022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_712_N_220727_812022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRDH_N_220727_812022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_726Aredo_D_220727_812022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_715B_N_220727_812022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_712BBrokenTrap_N_220727_812022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_718_N_220727_812022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_712A_D_220728_812022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_713_D_220728_812022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_731B_N_220727_812022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_509C_N_220727_812022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_509B_N_220727_812022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_101B_N_220727_812022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_729B_N_220727_812022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_512B_N_220727_812022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRDH_N_220727_812022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_707B_N_220727_812022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_797B_N_220727_812022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_798B_N_220727_812022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_706B_N_220727_812022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_719B_N_220727_812022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRJP_N_220727_812022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_707_D_220728_812022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_731_D_220727_812022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T1_N_220727_822022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T2_N_220727_822022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T3_N_220727_822022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T4_N_220727_822022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T5_N_220727_822022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T6_N_220727_822022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T7_N_220727_822022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T8_D_220712_822022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T9_D_220712_822022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T10_D_220712_822022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T11_D_220712_822022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T12_D_220712_822022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_707B_N_220727_822022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T14_D_220712_822022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T15_D_220712_822022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T16_D_220712_822022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T17_D_220712_822022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T18_D_220712_822022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T19_D_220712_822022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_T20_D_220712_822022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_701A_N_220711_822022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRDHB_D_220712_822022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_713_D_220712_822022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_731_D_220712_822022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_707_D_220712_822022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_706_D_220712_822022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_719_D_220712_822022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_798_D_220712_822022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_NOIDJP_D_220712_822022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_797_D_220712_822022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_726_D_220712_822022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_737_D_220712_822022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_732_D_220712_822022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_530_D_220712_822022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_715A_N_220711_822022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_797B_N_220711_822022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_798B_N_220711_822022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_506A_N_220711_822022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_503A_N_220711_822022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_799A_N_220711_822022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_717A_N_220711_822022_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_797A_N_220711_822022_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_798A_N_220711_822022_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_706A_N_220711_822022_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_732A_N_220711_822022_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_530A_N_220711_822022_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_712_N_220711_822022_27.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_718A_N_220711_822022_28.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_712B_N_220711_822022_29.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT1_N_220711_842022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT2_N_220711_842022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT3_N_220711_842022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT4_N_220711_842022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT5_N_220711_842022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT6_N_220711_842022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT7_N_220711_842022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT8_N_220711_842022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT9_N_220711_842022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_84aT10_N_220711_842022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRADH_N_220711_842022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_707A_N_220711_842022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIR5JP_D_220712_842022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_718B_N_220711_842022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIR2JP_D_220712_842022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_729A_N_220711_842022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_721B_N_220711_842022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRJP_N_220711_842022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIR3JP_D_220712_842022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIR4JP_D_220712_842022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_731A_N_220711_842022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRAA_D_220712_842022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRDH_N_220711_842022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRJP_D_220712_842022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_471_D_220801_842022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_469_D_220801_842022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_992_D_220801_842022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_466_D_220801_842022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRJP_D_220801_842022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_984_D_220801_842022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_427_D_220801_842022_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_981_D_220801_842022_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_977_D_220801_842022_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_174_D_220801_842022_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_440_D_220801_842022_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_432_D_220801_842022_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_966_D_220801_842022_27.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_978_D_220801_842022_28.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_982_D_220801_842022_29.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_961_D_220801_852022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_430_D_220801_852022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRJK_D_220801_852022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRAA_D_220801_852022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_967_D_220801_852022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_975_D_220801_852022_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_427_N_220802_852022_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_978_N_220802_852022_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_432_N_220802_852022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRDH_N_220802_852022_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_967_N_220802_852022_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_429_N_220802_852022_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_442_N_220802_852022_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/Ihyb_AIRJPredo_D_220712_852022_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_430_N_220802_852022_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_469_N_220802_852022_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_982_N_220802_852022_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_966_N_220802_852022_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRJPredo_D_220801_852022_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_964_N_220802_852022_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRAA_N_220802_852022_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_971_N_220802_852022_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_174_N_220802_852022_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_440_N_220802_852022_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_440redo_D_220801_852022_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_975_N_220802_852022_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_981_N_220802_852022_27.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_977_N_220802_852022_28.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_466_N_220802_852022_29.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_984_N_220802_862022_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRDC_N_220802_862022_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRJKredo_D_220801_862022_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_AIRAAredo_D_220801_862022_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/Ipomopsis 2022/VF_432redo_N_220802_862022_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_220929/GCMS Course 2022/VF_967_D_220801_852022_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_400_230728_8222023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_405_230728_8222023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_422_230728_8222023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_404_230728_8222023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_406_230728_8222023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_403_230728_8222023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_401_230728_8222023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_425_230728_8222023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_427_230728_8222023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_415_230728_8222023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_417_230728_8222023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_414_230728_8222023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_416_230728_8222023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_412_230728_8222023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_408_230728_8222023_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_411_230728_8222023_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_419_230728_8222023_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_418_230728_8222023_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_413_230728_8222023_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_407_230728_8222023_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_409_230728_8222023_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_402_230728_8222023_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_205_230728_8222023_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_223_230728_8222023_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_403redo_230728_8232023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_415redo_230728_8232023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_215redo_230728_8232023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_221_230728_8232023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_214_230728_8232023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_222_230728_8232023_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_236_230728_8232023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_231_230728_8232023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_234_230728_8232023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_230_230728_8232023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_235_230728_8232023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_233_230728_8232023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_225_230728_8232023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_228_230728_8232023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_224_230728_8232023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_232_230728_8232023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_227_230728_8232023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_220_230728_8232023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_229_230728_8232023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_61_8232023_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_82_8232023_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_131_8232023_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_71_8232023_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_72_8232023_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_122_8232023_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_90_8232023_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_226_230728_8232023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_23_8242023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_14_8242023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_16_8242023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_15_8242023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_235_230728_8242023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_18_8242023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_13_8242023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_17_8242023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_28_8242023_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_24_8242023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/Ihyb_232_230728_8242023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_34_8242023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_42_8242023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_5_8242023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_61_8242023_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_21_8242023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_21_8292023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_34_8292023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_42_8292023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_19_8292023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_29_8292023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_30_8292023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_103_8292023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_52_8292023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_79_8292023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_22_8292023_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_27_8292023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_25_8292023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_26_8292023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_104_8292023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_101_8292023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_105_8292023_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_102_8292023_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_20_8292023_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_88_8292023_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_86_8292023_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_87_8292023_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_89_8292023_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_81_8292023_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_36_8292023_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_37_8292023_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_12_8292023_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_54_8292023_27.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_121_8292023_28.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_41_8302023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_39_8302023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_40_8302023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_106_8302023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_43_8302023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_109_8302023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_108_8302023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_113_8302023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_79_redo_8302023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_111_8302023_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_107_8302023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_110_8302023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_112_8302023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_114_8302023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_80_8302023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_9_8302023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_10_8302023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_40redo_8302023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_11_8302023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_44_8302023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_38_8302023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_99_8302023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_94_8302023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_91_redo_8302023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_92_8302023_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_95_8302023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_98_8302023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_100_8302023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_96_8302023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_97_8302023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_93_8302023_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_84_8302023_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_85_8302023_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_83_8302023_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_51_8302023_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_2_8302023_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_123_8302023_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_124_8302023_23.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_128_8302023_24.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_127_8302023_25.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_129_8302023_26.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_35_8312023_01.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_31_8312023_02.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_8_8312023_03.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_7_8312023_04.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_67_8312023_05.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_33_8312023_06.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_5_8312023_07.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_63_8312023_08.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_64_8312023_09.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_4_8312023_10.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_95redo_8312023_11.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_120_8312023_12.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_65_8312023_13.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_45_8312023_14.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_77_8312023_15.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_75_8312023_16.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_74_8312023_17.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_78_8312023_18.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_76_8312023_19.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_51redo_8312023_20.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_73_8312023_21.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_127redo_8312023_22.qgd
+/media/john/Bonzai/Backups_Documents/GCMSsolution_200109/Data/Project1_230915/Emitters 2023/PGVF_69redo_8312023_23.qgd
