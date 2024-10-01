@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-09-24" />
+<meta name="date" content="2024-10-01" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-09-24</h4>
+<h4 class="date">2024-10-01</h4>
 
 </div>
 
@@ -268,10 +268,12 @@ td, th { padding : 6px }
 library(pheatmap)
 library(dendsort)
 library(viridis)
+library(bouquet)
 library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
-options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables</code></pre>
+options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables
+source(&quot;read_shimadzu.R&quot;)</code></pre>
 <pre class="r"><code>metadata &lt;- list.files(&quot;data/volatiles&quot;, pattern = &quot;Ipomopsis long-term volatiles - 20&quot;, full.names=T) %&gt;% 
   map_dfr(~read_tsv(.x, show_col_types = F) %&gt;% 
             mutate(across(any_of(c(&quot;pump_id&quot;, &quot;plant&quot;, &quot;vial&quot;, &quot;sample&quot;)), as.character)), .id=&quot;metafile&quot;) %&gt;% 
@@ -1069,7 +1071,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>library(tidylog)
+<pre class="r"><code>#library(tidylog)
 meta.full &lt;- full_join(mutate(filemeta, files=1), 
                   mutate(metadata, field=1), by=c(&quot;year&quot;, &quot;date&quot;, &quot;time&quot;, &quot;site&quot;, &quot;type&quot;, &quot;sample&quot;)) %&gt;% 
   mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 &amp; field==1)
@@ -1088,8 +1090,8 @@ meta.full %&gt;% group_by(year, date, time, site) %&gt;%
   labs(x=&quot;&quot;,y=&quot;&quot;, fill=&quot;&quot;) + theme_minimal()</code></pre>
 <p><img src="images/matching-1.svg" width="768" /></p>
 </div>
-<div id="samples-vs.-controls" class="section level1">
-<h1>Samples vs. controls</h1>
+<div id="filtering-compounds" class="section level1">
+<h1>Filtering compounds</h1>
 <pre class="r"><code># load short names 
 ipochems &lt;- read_csv(&quot;data/volatiles/Ipo volatile compounds - chemsf_ipo.csv&quot;) %&gt;% 
   select(name, shortname, standard, verdict) %&gt;%  filter(verdict != &quot;&quot;) %&gt;% 
@@ -1110,8 +1112,7 @@ greekify &lt;- function(names) {
     str_replace(&quot;^b-&quot;,&quot;\U03B2-&quot;) %&gt;% str_replace(&quot;-b-&quot;,&quot;-\U03B2-&quot;) %&gt;% 
     str_replace(&quot;^g-&quot;,&quot;\U03B3-&quot;) %&gt;% str_replace(&quot;-g-&quot;,&quot;-\U03B3-&quot;)
 }</code></pre>
-<pre class="r"><code>source(&quot;read_shimadzu.R&quot;)
-quant.full &lt;- list.files(&quot;data/volatiles/quant/&quot;, full.names = T) %&gt;% 
+<pre class="r"><code>quant.full &lt;- list.files(&quot;data/volatiles/quant/&quot;, full.names = T) %&gt;% 
   map_dfr(read.shimadzu.quant) %&gt;%
   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %&gt;% 
   distinct(Filename, Name, .keep_all=T)
@@ -1165,17 +1166,161 @@ quant.all &lt;- quant.full %&gt;% filter(Filename %in% files.match) %&gt;%
   arrange(match(Filename, meta.all$FileName)) %&gt;% 
   write_tsv(&quot;data/volatiles/quant_all.tsv&quot;) %&gt;% 
   as.data.frame() %&gt;% column_to_rownames(&quot;Filename&quot;)</code></pre>
+<pre class="r"><code>qual.full &lt;- list.files(&quot;data/volatiles/qual/&quot;, full.names = T) %&gt;% 
+  map_dfr(read.shimadzu)
+
+#only keep file-metadata matches
+files.match &lt;- intersect(meta.full$FileName, qual.full$Filename)
+meta.all   &lt;- meta.full %&gt;% filter(FileName %in% files.match)
+qual.data &lt;-  qual.full %&gt;% filter(Filename %in% files.match) %&gt;% 
+  filter(Name != &quot;&quot;) %&gt;% #drop peaks without identifications
+  mutate(Name = droplevels(recode(Name, !!!shortnames)))#bouquet doesn&#39;t like empty levels
+qual.all &lt;- qual.data %&gt;% select(Filename, Name, Area) %&gt;%
+  pivot_wider(names_from = &quot;Name&quot;, values_from=&quot;Area&quot;, values_fn = sum) %&gt;% 
+  arrange(match(Filename, meta.all$FileName)) %&gt;% 
+  as.data.frame() %&gt;% column_to_rownames(&quot;Filename&quot;)</code></pre>
+<pre class="r"><code>longdata &lt;- qual.data %&gt;% load_longdata(sample=&quot;Filename&quot;, RT=&quot;Ret.Time&quot;, 
+                          name=&quot;Name&quot;, area=&quot;Area&quot;, match = &quot;SI&quot;, maxmatch=100) 
+metadata.df &lt;- meta.all %&gt;% 
+  as.data.frame() %&gt;% #tibbles break bouquet&#39;s add_count_freqs
+  select(-sample) %&gt;% #name conflict with bouquet
+  load_metadata(date=&quot;date&quot;, sample=&quot;FileName&quot;, type=&quot;type&quot;)
+rownames(metadata.df) &lt;- metadata.df$sample
+
+qual.all &lt;- make_sampletable(longdata, metadata.df)
+chems &lt;- make_chemtable(longdata, metadata.df)</code></pre>
+<div id="bouquet" class="section level2">
+<h2>Bouquet</h2>
+<pre class="r"><code>chemsf &lt;- chems %&gt;%
+  filter_RT(2, 17) %&gt;% 
+  filter_match(0.8) %&gt;% 
+  filter_freq(0.1) %&gt;% 
+  filter_contaminant(cont.list = c(&quot;Caprolactam&quot;)) %&gt;%
+  filter_area(min_maximum = 1e5) %&gt;% 
+  filter_ambient_ratio(qual.all, metadata.df, ratio = 4) %&gt;%
+  combine_filters() 
+
+chemsf$filter_final &lt;- with(chemsf, filter_freq.floral==&quot;OK&quot; &amp;
+                              filter_ambient_ratio==&quot;OK&quot;) #only use these for final filtering
+
+bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre>
+<p><img src="images/bouquet-1.svg" width="768" /></p>
+<pre class="r"><code>bouquet::plot_filters(chemsf, option=&quot;ambient&quot;, yrange=3.5)</code></pre>
+<p><img src="images/bouquet-2.svg" width="768" /></p>
+<pre class="r"><code>bouquet::plot_filters(chemsf, option=&quot;prop&quot;)</code></pre>
+<p><img src="images/bouquet-3.svg" width="768" /></p>
+</div>
+<div id="compare-quant-and-bouquet-compounds" class="section level2">
+<h2>Compare quant and bouquet compounds</h2>
+<pre class="r"><code>qual_chems &lt;- chemsf$name[chemsf$filter_final]
+
+#TODO check on new compounds to investigate
+(qual_only &lt;- setdiff(qual_chems, names(quant.all)))</code></pre>
+<pre><code>[1] &quot;(3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol&quot;
+[2] &quot;hex-2-enal&quot;                               
+[3] &quot;5-Methyloxazolidine&quot;                      
+[4] &quot;7-epi-trans-sesquisabinene hydrate&quot;       
+[5] &quot;8-Hexadecenal, 14-methyl-, (Z)-&quot;          
+[6] &quot;methyl 2-methylbutanoate&quot;                 
+[7] &quot;carveol&quot;                                  
+[8] &quot;Decane, 3,6-dimethyl-&quot;                    
+[9] &quot;Formic acid, undecyl ester&quot;               </code></pre>
+<pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% qual_only, .before=1) %&gt;% View()
+
+#TODO see if any other quant peak should be included
+(quant_only &lt;- setdiff(names(quant.all), qual_chems))</code></pre>
+<pre><code> [1] &quot;3-methylbutanal oxime&quot;                             
+ [2] &quot;g-terpinene&quot;                                       
+ [3] &quot;methyl benzoate&quot;                                   
+ [4] &quot;(3E)-4,8-dimethylnona-1,3,7-triene&quot;                
+ [5] &quot;2-methylbenzonitrile&quot;                              
+ [6] &quot;a-campholenal&quot;                                     
+ [7] &quot;Decanal&quot;                                           
+ [8] &quot;Caprolactam&quot;                                       
+ [9] &quot;Nonanoic acid&quot;                                     
+[10] &quot;indole&quot;                                            
+[11] &quot;(E)-a-bergamotene&quot;                                 
+[12] &quot;pseudoionone&quot;                                      
+[13] &quot;trans-Geranylgeraniol&quot;                             
+[14] &quot;[(E)-hex-3-enyl] acetate&quot;                          
+[15] &quot;[(E)-hex-3-enyl] butanoate&quot;                        
+[16] &quot;(Z)-a-bergamotene&quot;                                 
+[17] &quot;a-humulene&quot;                                        
+[18] &quot;(2E)-2,7-dimethylocta-2,6-dien-1-ol&quot;               
+[19] &quot;benzaldehyde&quot;                                      
+[20] &quot;limonene&quot;                                          
+[21] &quot;methyl salicylate&quot;                                 
+[22] &quot;1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-&quot;        
+[23] &quot;(E)-4-oxohex-2-enal&quot;                               
+[24] &quot;p-mentha-1,3,8-triene&quot;                             
+[25] &quot;tricyclo[5.2.1.02,6]dec-2-ene&quot;                     
+[26] &quot;3,6-diethyl-3,6-dimethyltricyclo[3.1.0.02,4]hexane&quot;
+[27] &quot;furan-3-carbaldehyde&quot;                              
+[28] &quot;sabinene&quot;                                          
+[29] &quot;3-carene&quot;                                          
+[30] &quot;b-caryophyllene oxide&quot;                             
+[31] &quot;[(Z)-hex-3-enyl] 2-methylbutanoate&quot;                
+[32] &quot;2-butyloctan-1-ol&quot;                                 
+[33] &quot;hexan-1-ol&quot;                                        
+[34] &quot;3-methylbutan-1-ol&quot;                                
+[35] &quot;decan-2-one&quot;                                       
+[36] &quot;1,2,3-Propanetriol, 1-acetate&quot;                     
+[37] &quot;Benzamide&quot;                                         
+[38] &quot;Benzenebutanoic acid, .gamma.-oxo-&quot;                </code></pre>
+<pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% iponew, .before=1) %&gt;% View()
+
+#both
+(quant_qual &lt;- intersect(names(quant.all), qual_chems))</code></pre>
+<pre><code> [1] &quot;(E)-hex-2-enal&quot;                           
+ [2] &quot;a-pinene&quot;                                 
+ [3] &quot;b-myrcene&quot;                                
+ [4] &quot;(Z)-b-ocimene&quot;                            
+ [5] &quot;(E)-b-ocimene&quot;                            
+ [6] &quot;linalool&quot;                                 
+ [7] &quot;a-copaene&quot;                                
+ [8] &quot;petasitene&quot;                               
+ [9] &quot;b-caryophyllene&quot;                          
+[10] &quot;(E)-b-bergamotene&quot;                        
+[11] &quot;a-farnesene&quot;                              
+[12] &quot;(Z)-hex-3-en-1-ol&quot;                        
+[13] &quot;[(Z)-hex-3-enyl] butanoate&quot;               
+[14] &quot;a-terpineol&quot;                              
+[15] &quot;cosmene&quot;                                  
+[16] &quot;(4E,6Z)-alloocimene&quot;                      
+[17] &quot;verbenone&quot;                                
+[18] &quot;3-ethenyl-1,2-dimethylcyclohexa-1,4-diene&quot;
+[19] &quot;geranial&quot;                                 </code></pre>
+<pre class="r"><code>qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[,quant_qual]
+qual_not_quant &lt;- setdiff(rownames(qual.all), rownames(quant.all)) #TODO figure out why these are here
+quant &lt;- quant.all[setdiff(rownames(qual), qual_not_quant), quant_qual]</code></pre>
+</div>
+<div id="retention-time-of-qual-integrations" class="section level2">
+<h2>Retention time of qual integrations</h2>
+<pre class="r"><code>ggplot(longdata %&gt;% filter(name %in% qual_chems), 
+       aes(x=RT, y=fct_reorder(name, RT), color=factor(name, levels=sample(levels(name))))) + 
+  geom_jitter(width = 0, height=0.5) + guides(color=&quot;none&quot;) + ylab(&quot;&quot;)</code></pre>
+<p><img src="images/retention-1.svg" width="768" /></p>
+<pre class="r"><code>#TODO make sure quant has correct RT, investigate second peaks
+#TODO cosmene/carveol/alloocimene puzzle
+#TODO (E)-hex-2-enal vs. no isomer specified</code></pre>
+</div>
+</div>
+<div id="filtered-data" class="section level1">
+<h1>Filtered data</h1>
+<div id="heatmap-of-filtered-quant-integrations" class="section level2">
+<h2>Heatmap of filtered quant integrations</h2>
 <pre class="r"><code># annot_pal &lt;- list(
 #   year_run = set_names(brewer.pal(8, &quot;Set1&quot;)[1:length(unique(meta.all$year_run))], unique(meta.all$year_run)),
 #   type = set_names(brewer.pal(8, &quot;Set1&quot;)[1:length(unique(meta.all$type))], unique(meta.all$type)))
-pheatmap(as.matrix(t(quant.all))^(1/4), 
-         cluster_cols=F, show_colnames=F,
+pheatmap(as.matrix(t(quant))^(1/4), 
+         cluster_cols=T, show_colnames=F,
          clustering_method=&quot;mcquitty&quot;, clustering_distance_rows=&quot;correlation&quot;,
          clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
          # annotation_col=meta.all %&gt;% select(year_run) %&gt;% mutate(across(everything(), factor)),
          # annotation_colors =  annot_pal,
-         scale=&quot;none&quot;, color=mako(512),main=&quot;Quant volatiles&quot;)</code></pre>
-<p><img src="images/quant_heatmap-1.png" width="1536" /></p>
+         scale=&quot;none&quot;, color=mako(512),main=&quot;Filtered quant volatiles&quot;)</code></pre>
+<p><img src="images/quant_heatmap-1.png" width="960" /></p>
+</div>
 </div>
 
 

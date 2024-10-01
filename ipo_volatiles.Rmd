@@ -23,10 +23,12 @@ library(tidyverse)
 library(pheatmap)
 library(dendsort)
 library(viridis)
+library(bouquet)
 library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 options(digits=4, knitr.kable.NA = "") # for kables
+source("read_shimadzu.R")
 ```
 
 ```{r load_metadata}
@@ -131,7 +133,7 @@ full_join(count(filemeta, year, date, time, site, name="files"),
 ```
 
 ```{r matching}
-library(tidylog)
+#library(tidylog)
 meta.full <- full_join(mutate(filemeta, files=1), 
                   mutate(metadata, field=1), by=c("year", "date", "time", "site", "type", "sample")) %>% 
   mutate(files=replace_na(files, 0), field=replace_na(field, 0), match = files==1 & field==1)
@@ -150,7 +152,7 @@ meta.full %>% group_by(year, date, time, site) %>%
   labs(x="",y="", fill="") + theme_minimal()
 ```
 
-# Samples vs. controls
+# Filtering compounds
 
 ```{r ipochems}
 # load short names 
@@ -177,7 +179,6 @@ greekify <- function(names) {
 
 
 ```{r quant}
-source("read_shimadzu.R")
 quant.full <- list.files("data/volatiles/quant/", full.names = T) %>% 
   map_dfr(read.shimadzu.quant) %>%
   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %>% 
@@ -198,16 +199,100 @@ quant.all <- quant.full %>% filter(Filename %in% files.match) %>%
   as.data.frame() %>% column_to_rownames("Filename")
 ```
 
-```{r quant_heatmap, dev="png", dev.args=list(),fig.width=16, fig.height=12}
+```{r qual}
+qual.full <- list.files("data/volatiles/qual/", full.names = T) %>% 
+  map_dfr(read.shimadzu)
+
+#only keep file-metadata matches
+files.match <- intersect(meta.full$FileName, qual.full$Filename)
+meta.all   <- meta.full %>% filter(FileName %in% files.match)
+qual.data <-  qual.full %>% filter(Filename %in% files.match) %>% 
+  filter(Name != "") %>% #drop peaks without identifications
+  mutate(Name = droplevels(recode(Name, !!!shortnames)))#bouquet doesn't like empty levels
+qual.all <- qual.data %>% select(Filename, Name, Area) %>%
+  pivot_wider(names_from = "Name", values_from="Area", values_fn = sum) %>% 
+  arrange(match(Filename, meta.all$FileName)) %>% 
+  as.data.frame() %>% column_to_rownames("Filename")
+```
+
+```{r bouquetprep}
+longdata <- qual.data %>% load_longdata(sample="Filename", RT="Ret.Time", 
+                          name="Name", area="Area", match = "SI", maxmatch=100) 
+metadata.df <- meta.all %>% 
+  as.data.frame() %>% #tibbles break bouquet's add_count_freqs
+  select(-sample) %>% #name conflict with bouquet
+  load_metadata(date="date", sample="FileName", type="type")
+rownames(metadata.df) <- metadata.df$sample
+
+qual.all <- make_sampletable(longdata, metadata.df)
+chems <- make_chemtable(longdata, metadata.df)
+```
+
+## Bouquet
+
+```{r bouquet}
+chemsf <- chems %>%
+  filter_RT(2, 17) %>% 
+  filter_match(0.8) %>% 
+  filter_freq(0.1) %>% 
+  filter_contaminant(cont.list = c("Caprolactam")) %>%
+  filter_area(min_maximum = 1e5) %>% 
+  filter_ambient_ratio(qual.all, metadata.df, ratio = 4) %>%
+  combine_filters() 
+
+chemsf$filter_final <- with(chemsf, filter_freq.floral=="OK" &
+                              filter_ambient_ratio=="OK") #only use these for final filtering
+
+bouquet::plot_filters(chemsf, option="rarity", yrange=3.5)
+bouquet::plot_filters(chemsf, option="ambient", yrange=3.5)
+bouquet::plot_filters(chemsf, option="prop")
+```
+
+## Compare quant and bouquet compounds
+
+```{r quant_qual}
+qual_chems <- chemsf$name[chemsf$filter_final]
+
+#TODO check on new compounds to investigate
+(qual_only <- setdiff(qual_chems, names(quant.all)))
+#chemsf %>% filter(filter_final) %>% mutate(check = name %in% qual_only, .before=1) %>% View()
+
+#TODO see if any other quant peak should be included
+(quant_only <- setdiff(names(quant.all), qual_chems))
+#chemsf %>% filter(filter_final) %>% mutate(check = name %in% iponew, .before=1) %>% View()
+
+#both
+(quant_qual <- intersect(names(quant.all), qual_chems))
+
+qual <- prune_sampletable(qual.all, chemsf, metadata.df)[,quant_qual]
+qual_not_quant <- setdiff(rownames(qual.all), rownames(quant.all)) #TODO figure out why these are here
+quant <- quant.all[setdiff(rownames(qual), qual_not_quant), quant_qual]
+```
+
+## Retention time of qual integrations
+
+```{r retention}
+ggplot(longdata %>% filter(name %in% qual_chems), 
+       aes(x=RT, y=fct_reorder(name, RT), color=factor(name, levels=sample(levels(name))))) + 
+  geom_jitter(width = 0, height=0.5) + guides(color="none") + ylab("")
+#TODO make sure quant has correct RT, investigate second peaks
+#TODO cosmene/carveol/alloocimene puzzle
+#TODO (E)-hex-2-enal vs. no isomer specified
+```
+
+# Filtered data
+
+## Heatmap of filtered quant integrations
+
+```{r quant_heatmap, dev="png", dev.args=list(),fig.width=10, fig.height=8}
 # annot_pal <- list(
 #   year_run = set_names(brewer.pal(8, "Set1")[1:length(unique(meta.all$year_run))], unique(meta.all$year_run)),
 #   type = set_names(brewer.pal(8, "Set1")[1:length(unique(meta.all$type))], unique(meta.all$type)))
-pheatmap(as.matrix(t(quant.all))^(1/4), 
-         cluster_cols=F, show_colnames=F,
+pheatmap(as.matrix(t(quant))^(1/4), 
+         cluster_cols=T, show_colnames=F,
          clustering_method="mcquitty", clustering_distance_rows="correlation",
          clustering_callback = function(hc, ...){dendsort(hc, type="average")},
          # annotation_col=meta.all %>% select(year_run) %>% mutate(across(everything(), factor)),
          # annotation_colors =  annot_pal,
-         scale="none", color=mako(512),main="Quant volatiles")
+         scale="none", color=mako(512),main="Filtered quant volatiles")
 ```
-

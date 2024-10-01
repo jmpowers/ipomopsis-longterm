@@ -1,6 +1,10 @@
 read.shimadzu = function(filepath) {
   library(dplyr)
-  con = file(filepath, "r")
+  if(tools::file_ext(filepath)=="gz") {
+    con = gzfile(filepath, "r")
+  } else {
+    con = file(filepath, "r")
+  }
   mcpeaktable = list()
   simsearch = list()
   filelist = list()
