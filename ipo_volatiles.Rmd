@@ -23,7 +23,9 @@ library(tidyverse)
 library(pheatmap)
 library(dendsort)
 library(viridis)
+library(RColorBrewer)
 library(bouquet)
+library(vegan)
 library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
@@ -185,7 +187,6 @@ quant.full <- list.files("data/volatiles/quant/", full.names = T) %>%
   distinct(Filename, Name, .keep_all=T)
 
 setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
-setdiff(meta.full$FileName, quant.full$Filename)#TODO need to find and integrate these
 
 #only keep file-metadata matches
 files.match <- intersect(meta.full$FileName, quant.full$Filename)
@@ -261,12 +262,16 @@ qual_chems <- chemsf$name[chemsf$filter_final]
 (quant_only <- setdiff(names(quant.all), qual_chems))
 #chemsf %>% filter(filter_final) %>% mutate(check = name %in% iponew, .before=1) %>% View()
 
-#both
+# compounds in both quant and qual lists
 (quant_qual <- intersect(names(quant.all), qual_chems))
 
-qual <- prune_sampletable(qual.all, chemsf, metadata.df)[,quant_qual]
-qual_not_quant <- setdiff(rownames(qual.all), rownames(quant.all)) #TODO figure out why these are here
-quant <- quant.all[setdiff(rownames(qual), qual_not_quant), quant_qual]
+toolow <- rownames(quant.all)[rowSums(quant.all[,quant_qual]) < 2500] #exclude 2 samples with very low integrations
+
+qual <- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
+qual <- qual[!rownames(qual) %in% toolow,]
+quant <- quant.all[rownames(qual), quant_qual]
+meta <- metadata.df[rownames(qual),] %>% 
+  mutate(across(c(year_run, site, time), factor))
 ```
 
 ## Retention time of qual integrations
@@ -282,17 +287,38 @@ ggplot(longdata %>% filter(name %in% qual_chems),
 
 # Filtered data
 
-## Heatmap of filtered quant integrations
+## Heatmap
 
 ```{r quant_heatmap, dev="png", dev.args=list(),fig.width=10, fig.height=8}
-# annot_pal <- list(
-#   year_run = set_names(brewer.pal(8, "Set1")[1:length(unique(meta.all$year_run))], unique(meta.all$year_run)),
-#   type = set_names(brewer.pal(8, "Set1")[1:length(unique(meta.all$type))], unique(meta.all$type)))
+pal <- with(meta, list(
+  year_run = set_names(brewer.pal(nlevels(year_run), "Set2"), levels(year_run)),
+  site = set_names(brewer.pal(nlevels(site), "Set1"), levels(site)),
+  time = set_names(c("lightblue","plum1"), levels(time))))
 pheatmap(as.matrix(t(quant))^(1/4), 
          cluster_cols=T, show_colnames=F,
          clustering_method="mcquitty", clustering_distance_rows="correlation",
          clustering_callback = function(hc, ...){dendsort(hc, type="average")},
-         # annotation_col=meta.all %>% select(year_run) %>% mutate(across(everything(), factor)),
-         # annotation_colors =  annot_pal,
+         annotation_col = meta %>% select(year_run, site, time) %>% mutate(across(everything(), factor)),
+         annotation_colors =  pal,
          scale="none", color=mako(512),main="Filtered quant volatiles")
 ```
+
+## NMDS
+
+```{r quant_nmds}
+nmds <- metaMDS(decostand(quant, "hellinger"), autotransform = F, trymax=1)
+
+plot(nmds, type="n")
+points(nmds, display="sites", col = pal$time[meta$time])
+legend("topleft", levels(meta$time), fill=pal$time)
+text(nmds, display="species")
+
+plot(nmds, type="n")
+points(nmds, display="sites", col = pal$site[meta$site], pch=c(1,19)[as.integer(meta$time)])
+legend("topleft", levels(meta$site), fill=pal$site)
+
+plot(nmds, type="n")
+points(nmds, display="sites", col = pal$year_run[meta$year_run], pch=c(1,19)[as.integer(meta$time)])
+legend("topleft", levels(meta$year_run), fill=pal$year_run)
+```
+

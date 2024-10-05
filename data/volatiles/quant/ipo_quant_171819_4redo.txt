@@ -1,0 +1,264 @@
+[Header]
+Data File Name	C:\GCMSsolution\Data\PGVF\Campbell RMBL Data\Ipomopsis\VF13DJul14_09052017.qgd
+Output Date	10/4/2024
+Output Time	3:10:37 PM
+
+[MS Quantitative Results]
+# of IDs	57
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	2-Hexenal, (E)- 	Target	0	41.00	Not Identified									5.720	Linear	0	0	0	0																																	4.91														5152.263	
+2	Butanal, 3-methyl-, oxime 	Target	0	59.00	Not Identified									6.100	Linear	0	0	0	0																																	0.59														930.667	
+3	(1R)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene 	Target	0	93.00	7.207	7.105	7.265	1.690	53731	31715	0.00000	Auto	13	7.220	Linear	0	0	0	0	0	0	39.00	37.09	0.00	94	91.00	0	0	39.00	37.09	92.00	0	0	39.00	39.17	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		67.54	ipos		0.00000	1.065										469.583	
+4	.beta.-Myrcene 	Target	0	93.00	Not Identified									8.180	Linear	0	0	0	0																																	4.33														1967.619	
+5	trans-.beta.-Ocimene 	Target	0	93.00	8.864	8.830	8.915	2.310	35698	15456	0.00000	Auto	22	8.970	Linear	0	0	0	0	0	0	28.00	26.72	0.00	76	91.00	0	0	28.00	26.72	92.00	0	0	35.00	32.18	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.46	ipos		0.00000	1.385										3467.000	
+6	.beta.-Ocimene 	Target	0	93.00	9.243	9.215	9.275	1.580	13211	8379	0.00000	Auto	29	9.150	Linear	0	0	0	0	0	0	45.00	76.74	0.00	60	91.00	0	0	45.00	76.74	80.00	0	0	43.00	36.84	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.42	ipos		0.00000	1.034										3467.000	
+7	.gamma.-Terpinene 	Target	0	93.00	9.243	9.200	9.275	1.610	13647	8484	0.00000	Auto	33	9.370	Linear	0	0	0	0	0	0	46.00	77.47	0.00	34	91.00	0	0	46.00	77.47	136.00	0	0	39.00	1.14	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.78	ipos		0.00000	1.004										10854.442	
+8	Benzoic acid, methyl ester 	Target	0	105.00	9.963	9.935	9.995	2.090	17246	8261	0.00000	Auto	38	9.970	Linear	0	0	0	0	0	0	54.00	43.74	0.00	25	77.00	0	0	54.00	43.74	136.00	0	0	33.00	38.92	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.52	ipos		0.00000	1.053										3276.964	
+9	Linalool 	Target	0	71.00	Not Identified									10.000	Linear	0	0	0	0																																	2.00														5294.238	
+10	(E)-4,8-Dimethylnona-1,3,7-triene 	Target	0	69.00	10.258	10.230	10.320	1.570	69085	43949	0.00000	Auto	50	10.250	Linear	0	0	0	0	0	0	44.00	50.16	0.00	89	41.00	0	0	44.00	50.16	81.00	0	0	13.00	13.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		9.41	ipos		0.00000	1.111										4668.474	
+11	Benzonitrile, 2-methyl- 	Target	0	117.00	10.662	10.630	10.685	1.630	4411	2713	0.00000	Auto	52	10.640	Linear	0	0	0	0	0	0	59.00	66.53	0.00	46	90.00	0	0	59.00	66.53	116.00	0	0	40.00	37.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		10.88	ipos		0.00000	0.938										249.444	
+12	.alpha.-Campholenal 	Target	0	108.00	Not Identified									11.590	Linear	0	0	0	0																																															748.985	
+13	Decanal 	Target	0	57.00	11.631	11.555	11.670	1.530	252782	165187	0.00000	Auto	65	11.600	Linear	0	0	0	0	0	0	82.00	72.97	0.00	97	43.00	0	0	82.00	72.97	41.00	0	0	73.00	64.70	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		16.93	ipos		0.00000	1.005										9756.400	
+14	Caprolactam 	Target	0	55.00	12.398	12.175	12.445	8.870	4323200	487213	0.00000	Auto	69	12.340	Linear	0	0	0	0	0	0	94.00	77.54	0.00	94	113.00	0	0	94.00	77.54	56.00	0	0	86.00	84.40	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		57.23	ipos		0.00000	0.606										8513.368	
+15	Nonanoic acid 	Target	0	60.00	Not Identified									12.470	Linear	0	0	0	0																																	37.98														3930.024	
+16	Indole 	Target	0	117.00	13.111	13.035	13.185	6.330	6070	959	0.00000	Auto	78	13.000	Linear	0	0	0	0	0	0	44.00	32.63	0.00	46	90.00	0	0	44.00	32.63	89.00	0	0	29.00	13.31	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.90	ipos		0.00000	1.008										330.250	
+17	.alfa.-Copaene	Target	0	119.00	Not Identified									14.210	Linear	0	0	0	0																																	2.72														664.370	
+18	Petasitene 	Target	0	137.00	14.525	14.505	14.550	1.700	1516	892	0.00000	Auto	89	14.520	Linear	0	0	0	0	0	0	28.00	25.69	0.00	40	95.00	0	0	28.00	25.69	121.00	0	0	29.00	15.10	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.96	ipos		0.00000	1.061										454.314	
+19	trans-.alpha.-Bergamotene 	Target	0	119.00	Not Identified									15.580	Linear	0	0	0	0																																	1.55														2163.953	
+20	Caryophyllene 	Target	0	93.00	14.823	14.795	14.850	1.530	6446	4203	0.00000	Auto	97	14.820	Linear	0	0	0	0	0	0	87.00	72.29	0.00	92	69.00	0	0	87.00	72.29	133.00	0	0	85.00	79.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		3.58	ipos		0.00000	1.096										1173.333	
+21	(1S,5S,6R)-6-Methyl-2-methylene-6-(4-methylpent-3-en-1-yl)bicyclo[3.1.1]heptane 	Target	0	69.00	15.071	15.040	15.095	2.010	42643	21212	0.00000	Auto	101	15.110	Linear	0	0	0	0	0	0	65.00	50.58	0.00	57	41.00	0	0	65.00	50.58	93.00	0	0	55.00	23.76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.86	ipos		0.00000	0.945										4362.941	
+22	.alpha.-Farnesene 	Target	0	93.00	Not Identified									15.760	Linear	0	0	0	0																																	0.86														1735.000	
+23	3,5,9-Undecatrien-2-one, 6,10-dimethyl- 	Target	0	69.00	Not Identified									16.720	Linear	0	0	0	0																																	1.83														2587.900	
+24	trans-Geranylgeraniol 	Target	0	69.00	Not Identified									18.260	Linear	0	0	0	0																																	0.92														7244.579	
+25	4-Hexen-1-ol, (Z)- 	Target	0	67.00	Not Identified									5.780	Linear	0	0	0	0																																	3.21														1151.892	
+26	3-Hexen-1-ol, acetate, (E)- 	Target	0	67.00	Not Identified									8.430	Linear	0	0	0	0																																	6.78														4928.714	
+27	Butanoic acid, 3-hexenyl ester, (E)- 	Target	0	67.00	10.592	10.570	10.620	1.370	5250	3842	0.00000	Auto	132	10.670	Linear	0	0	0	0	0	0	69.26	72.82	0.00	64	82.00	0	0	69.26	72.82	43.00	0	0	59.21	57.69	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.56	ipos		0.00000	1.045										2461.750	
+28	Butanoic acid, 3-hexenyl ester, (Z)- 	Target	0	67.00	11.456	11.425	11.480	1.950	15283	7834	0.00000	Auto	138	11.330	Linear	0	0	0	0	0	0	79.51	43.31	0.00	37	43.00	0	0	79.51	43.31	82.00	0	0	73.16	48.62	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.82	ipos		0.00000	0.887										4300.000	
+29	L-.alpha.-Terpineol 	Target	0	59.00	11.494	11.465	11.530	1.910	11058	5797	0.00000	Auto	145	11.490	Linear	0	0	0	0	0	0	62.51	31.78	0.00	52	93.00	0	0	62.51	31.78	121.00	0	0	51.59	28.71	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.75	ipos		0.00000	1.017										2109.444	
+30	cis-.alpha.-Bergamotene 	Target	0	119.00	14.675	14.595	14.715	2.870	10882	3797	0.00000	Auto	147	14.670	Linear	0	0	0	0	0	0	89.18	113.96	0.00	60	93.00	0	0	89.18	113.96	69.00	0	0	36.98	48.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		5.19	ipos		0.00000	0.731										732.000	
+31	1,4,7,-Cycloundecatriene, 1,5,9,9-tetramethyl-, Z,Z,Z- 	Target	0	93.00	15.280	15.240	15.315	2.850	9093	3188	0.00000	Auto	154	15.270	Linear	0	0	0	0	0	0	32.95	15.80	0.00	33	80.00	0	0	32.95	15.80	121.00	0	0	26.40	21.64	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.99	ipos		0.00000	0.949										1066.882	
+32	2,6-Octadien-1-ol, 2,7-dimethyl- 	Target	0	41.00	Not Identified									8.180	Linear	0	0	0	0																																	7.93														5923.133	
+33	Benzaldehyde 	Target	0	106.00	7.668	7.620	7.920	1.740	343164	197269	0.00000	Auto	162	7.650	Linear	0	0	0	0	0	0	93.18	95.84	0.00	97	105.00	0	0	93.18	95.84	77.00	0	0	83.23	96.83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		410.59	ipos		0.00000	1.079										480.458	
+34	D-Limonene 	Target	0	68.00	8.861	8.835	8.905	1.620	32109	19807	0.00000	Auto	169	8.845	Linear	0	0	0	0	0	0	86.28	81.37	0.00	93	93.00	0	0	86.28	81.37	67.00	0	0	72.27	66.27	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		5.66	ipos		0.00000	1.038										3501.000	
+35	Methyl salicylate 	Target	0	120.00	11.555	11.520	11.595	1.630	8865	5454	0.00000	Auto	173	11.545	Linear	0	0	0	0	0	0	49.17	44.07	0.00	81	152.00	0	0	49.17	44.07	92.00	0	0	48.26	52.15	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		14.93	ipos		0.00000	1.070										365.222	
+36	1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl- 	Target	0	93.00	Not Identified									16.455	Linear	0	0	0	0																																	0.68														1801.700	
+37	(E)-4-Oxohex-2-enal	Target	0	83.00	7.608	7.595	7.640	1.430	8779	6128	0.00000	Auto	184	7.580	Linear	0	0	0	0	0	0	59.02	74.04	0.00	68	55.00	0	0	59.02	74.04	112.00	0	0	16.16	54.51	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.36	ipos		0.00000	1.500										2591.333	
+38	1,3,8-p-Menthatriene 	Target	0	119.00	Not Identified									10.465	Linear	0	0	0	0																																	2.16														653.000	
+39	4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-	Target	0	91.00	Not Identified									8.420	Linear	0	0	0	0																																	3.27														2028.333	
+40	2,6-Dimethyl-1,3,5,7-octatetraene, E,E- 	Target	0	91.00	Not Identified									10.320	Linear	0	0	0	0																																	1.03														1179.949	
+41	2,4,6-Octatriene, 2,6-dimethyl-, (E,Z)- 	Target	0	121.00	Not Identified									10.425	Linear	0	0	0	0																																	1.70														468.020	
+42	Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-	Target	0	107.00	Not Identified									16.795	Linear	0	0	0	0																																	1.02														1380.579	
+43	3-Furaldehyde 	Target	0	96.00	5.356	5.320	5.415	1.790	33498	18757	0.00000	Auto	215	5.310	Linear	0	0	0	0	0	0	92.91	92.41	0.00	77	95.00	0	0	92.91	92.41	39.00	0	0	45.16	53.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		16.83	ipos		0.00000	1.082										1114.500	
+44	Bicyclo[3.1.0]hexane, 4-methylene-1-(1-methylethyl)- 	Target	0	93.00	7.908	7.880	7.940	1.550	9810	6322	0.00000	Auto	217	7.900	Linear	0	0	0	0	0	0	43.72	33.03	0.00	89	91.00	0	0	43.72	33.03	77.00	0	0	34.25	32.96	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		5.69	ipos		0.00000	1.064										1111.333	
+45	3-Carene 	Target	0	93.00	8.550	8.520	8.585	1.550	23454	15158	0.00000	Auto	223	8.550	Linear	0	0	0	0	0	0	51.16	43.27	0.00	88	91.00	0	0	51.16	43.27	79.00	0	0	32.05	26.81	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		6.02	ipos		0.00000	1.025										2519.583	
+46	Caryophyllene oxide 	Target	0	79.00	Not Identified									16.900	Linear	0	0	0	0																																	1.62														1255.340	
+47	cis-3-Hexenyl-.alpha.-methylbutyrate 	Target	0	57.00	Not Identified									12.000	Linear	0	0	0	0																																															18531.502	
+48	1-Octanol, 2-butyl- 	Target	0	57.00	Not Identified									12.445	Linear	0	0	0	0																																	27.65														13691.811	
+49	1-Hexanol 	Target	0	56.00	6.010	5.970	6.085	1.790	53907	30166	0.00000	Auto	243	6.010	Linear	0	0	0	0	0	0	88.33	67.99	0.00	84	43.00	0	0	88.33	67.99	55.00	0	0	51.97	87.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		14.50	ipos		0.00000	1.235										2080.766	
+50	Bicyclo[3.1.1]hept-3-en-2-one, 4,6,6-trimethyl-, (1S)- 	Target	0	107.00	11.694	11.670	11.720	1.610	3199	1991	0.00000	Auto	246	11.800	Linear	0	0	0	0	0	0	60.01	79.08	0.00	68	91.00	0	0	60.01	79.08	135.00	0	0	54.12	75.21	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.69	ipos		0.00000	1.023										1176.982	
+51	1-Pentanol 	Target	0	55.00	Not Identified									3.700	Linear	0	0	0	0																																															5310.481	
+52	1,4-Cyclohexadiene, 3-ethenyl-1,2-dimethyl-	Target	0	91.00	Not Identified									9.630	Linear	0	0	0	0																																	0.44														10507.875	
+53	2-Decanone	Target	0	58.00	11.433	11.380	11.475	1.630	71088	43556	0.00000	Auto	263	11.380	Linear	0	0	0	0	0	0	75.12	59.39	0.00	0	43.00	0	0	75.12	59.39	71.00	0	0	33.61	17.64	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		29.63	ipos		0.00000	0.950										1469.851	
+54	2,6-Octadienal, 3,7-dimethyl-, (E)-	Target	0	41.00	Not Identified									12.140	Linear	0	0	0	0																																	0.31														73562.412	
+55	1,2,3-Propanetriol, 1-acetate	Target	0	43.00	Not Identified									12.155	Linear	0	0	0	0																																	0.91														8563.188	
+56	Benzamide	Target	0	105.00	13.512	13.380	13.595	6.250	138209	22107	0.00000	Auto	279	13.490	Linear	0	0	0	0	0	0	95.52	93.37	0.00	0	77.00	0	0	95.52	93.37	121.00	0	0	81.54	84.76	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		20.10	ipos		0.00000	0.781										1099.600	
+57	Benzenebutanoic acid, .gamma.-oxo-	Target	0	105.00	14.015	13.990	14.050	1.390	3938	2826	0.00000	Auto	282	14.030	Linear	0	0	0	0	0	0	43.83	36.38	0.00	0	77.00	0	0	43.83	36.38	51.00	0	0	16.33	8.54	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.24	ipos		0.00000	1.189										11695.800	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\PGVF\Campbell RMBL Data\Ipomopsis\VF13DJuly18_07232018.qgd
+Output Date	10/4/2024
+Output Time	3:10:39 PM
+
+[MS Quantitative Results]
+# of IDs	57
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	2-Hexenal, (E)- 	Target	0	41.00	5.757	5.720	5.780	2.130	4303	2020	0.00000	Auto	2	5.720	Linear	0	0	0	0	0	0	92.00	84.87	0.00	81	55.00	0	0	92.00	84.87	69.00	0	0	84.00	85.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		3.83	ipos		0.00000	0.871										527.324	
+2	Butanal, 3-methyl-, oxime 	Target	0	59.00	Not Identified									6.100	Linear	0	0	0	0																																															492.038	
+3	(1R)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene 	Target	0	93.00	7.224	7.125	7.360	1.660	462214	278959	0.00000	Auto	13	7.220	Linear	0	0	0	0	0	0	39.00	37.14	0.00	98	91.00	0	0	39.00	37.14	92.00	0	0	39.00	38.93	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1729.60	ipos		0.00000	1.040										161.286	
+4	.beta.-Myrcene 	Target	0	93.00	8.181	8.145	8.225	1.540	16609	10818	0.00000	Auto	19	8.180	Linear	0	0	0	0	0	0	79.00	70.59	0.00	88	69.00	0	0	79.00	70.59	41.00	0	0	84.00	83.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		8.87	ipos		0.00000	1.039										1219.130	
+5	trans-.beta.-Ocimene 	Target	0	93.00	8.969	8.920	9.010	1.650	3492	2122	0.00000	Auto	23	8.970	Linear	0	0	0	0	0	0	28.00	42.67	0.00	78	91.00	0	0	28.00	42.67	92.00	0	0	35.00	44.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		14.05	ipos		0.00000	0.748										151.000	
+6	.beta.-Ocimene 	Target	0	93.00	Not Identified									9.150	Linear	0	0	0	0																																	23.27														151.000	
+7	.gamma.-Terpinene 	Target	0	93.00	9.526	9.500	9.570	1.690	906	536	0.00000	Auto	34	9.370	Linear	0	0	0	0	0	0	46.00	47.98	0.00	28	91.00	0	0	46.00	47.98	136.00	0	0	39.00	20.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.07	ipos		0.00000	1.232										7313.923	
+8	Benzoic acid, methyl ester 	Target	0	105.00	9.965	9.935	10.000	1.700	3043	1789	0.00000	Auto	40	9.970	Linear	0	0	0	0	0	0	54.00	47.10	0.00	53	77.00	0	0	54.00	47.10	136.00	0	0	33.00	28.83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.74	ipos		0.00000	1.148										377.432	
+9	Linalool 	Target	0	71.00	Not Identified									10.000	Linear	0	0	0	0																																	2.89														12324.103	
+10	(E)-4,8-Dimethylnona-1,3,7-triene 	Target	0	69.00	Not Identified									10.250	Linear	0	0	0	0																																	1.21														1277.000	
+11	Benzonitrile, 2-methyl- 	Target	0	117.00	10.666	10.635	10.685	1.990	1342	674	0.00000	Auto	52	10.640	Linear	0	0	0	0	0	0	59.00	49.06	0.00	32	90.00	0	0	59.00	49.06	116.00	0	0	40.00	47.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		5.13	ipos		0.00000	0.820										131.500	
+12	.alpha.-Campholenal 	Target	0	108.00	Not Identified									11.590	Linear	0	0	0	0																																	0.30														1440.429	
+13	Decanal 	Target	0	57.00	11.625	11.545	11.655	2.230	54148	24311	0.00000	Auto	63	11.600	Linear	0	0	0	0	0	0	82.00	69.00	0.00	98	43.00	0	0	82.00	69.00	41.00	0	0	73.00	67.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.81	ipos		0.00000	0.745										8639.286	
+14	Caprolactam 	Target	0	55.00	Not Identified									12.340	Linear	0	0	0	0																																	1.93														2850.070	
+15	Nonanoic acid 	Target	0	60.00	Not Identified									12.470	Linear	0	0	0	0																																															309.490	
+16	Indole 	Target	0	117.00	Not Identified									13.000	Linear	0	0	0	0																																															136.678	
+17	.alfa.-Copaene	Target	0	119.00	14.192	14.160	14.220	1.850	1106	598	0.00000	Auto	83	14.210	Linear	0	0	0	0	0	0	76.00	66.61	0.00	72	161.00	0	0	76.00	66.61	105.00	0	0	96.00	107.28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.65	ipos		0.00000	0.961										225.571	
+18	Petasitene 	Target	0	137.00	Not Identified									14.520	Linear	0	0	0	0																																	1.21														139.929	
+19	trans-.alpha.-Bergamotene 	Target	0	119.00	Not Identified									15.580	Linear	0	0	0	0																																	3.06														199.000	
+20	Caryophyllene 	Target	0	93.00	14.813	14.775	14.865	1.880	7568	4026	0.00000	Auto	99	14.820	Linear	0	0	0	0	0	0	87.00	92.50	0.00	89	69.00	0	0	87.00	92.50	133.00	0	0	85.00	74.72	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		6.36	ipos		0.00000	1.241										633.000	
+21	(1S,5S,6R)-6-Methyl-2-methylene-6-(4-methylpent-3-en-1-yl)bicyclo[3.1.1]heptane 	Target	0	69.00	15.245	15.200	15.285	3.710	4052	1091	0.00000	Auto	102	15.110	Linear	0	0	0	0	0	0	65.00	61.49	0.00	51	41.00	0	0	65.00	61.49	93.00	0	0	55.00	67.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.99	ipos		0.00000	1.003										1103.091	
+22	.alpha.-Farnesene 	Target	0	93.00	15.752	15.730	15.790	1.970	1878	954	0.00000	Auto	108	15.760	Linear	0	0	0	0	0	0	56.00	31.46	0.00	68	69.00	0	0	56.00	31.46	41.00	0	0	58.00	52.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		3.09	ipos		0.00000	1.432										309.000	
+23	3,5,9-Undecatrien-2-one, 6,10-dimethyl- 	Target	0	69.00	Not Identified									16.720	Linear	0	0	0	0																																	1.23														1264.000	
+24	trans-Geranylgeraniol 	Target	0	69.00	Not Identified									18.260	Linear	0	0	0	0																																	0.95														967.487	
+25	4-Hexen-1-ol, (Z)- 	Target	0	67.00	5.817	5.780	6.025	2.050	75330	36780	0.00000	Auto	123	5.780	Linear	0	0	0	0	0	0	94.20	90.95	0.00	96	41.00	0	0	94.20	90.95	82.00	0	0	47.64	46.73	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		83.17	ipos		0.00000	1.534										442.211	
+26	3-Hexen-1-ol, acetate, (E)- 	Target	0	67.00	8.441	8.410	8.495	1.570	25281	16143	0.00000	Auto	129	8.430	Linear	0	0	0	0	0	0	93.39	92.03	0.00	71	43.00	0	0	93.39	92.03	82.00	0	0	56.37	60.19	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		12.64	ipos		0.00000	1.074										1276.778	
+27	Butanoic acid, 3-hexenyl ester, (E)- 	Target	0	67.00	10.664	10.620	10.695	1.590	4894	3086	0.00000	Auto	132	10.670	Linear	0	0	0	0	0	0	69.26	77.87	0.00	80	82.00	0	0	69.26	77.87	43.00	0	0	59.21	62.03	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		6.07	ipos		0.00000	0.964										508.122	
+28	Butanoic acid, 3-hexenyl ester, (Z)- 	Target	0	67.00	11.322	11.285	11.355	1.540	8604	5604	0.00000	Auto	137	11.330	Linear	0	0	0	0	0	0	79.51	48.14	0.00	83	43.00	0	0	79.51	48.14	82.00	0	0	73.16	78.11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		9.70	ipos		0.00000	0.976										578.000	
+29	L-.alpha.-Terpineol 	Target	0	59.00	11.494	11.460	11.540	2.000	4155	2077	0.00000	Auto	143	11.490	Linear	0	0	0	0	0	0	62.51	67.06	0.00	55	93.00	0	0	62.51	67.06	121.00	0	0	51.59	42.16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		5.49	ipos		0.00000	1.080										378.364	
+30	cis-.alpha.-Bergamotene 	Target	0	119.00	14.669	14.600	14.695	2.300	1798	783	0.00000	Auto	147	14.670	Linear	0	0	0	0	0	0	89.18	119.57	0.00	71	93.00	0	0	89.18	119.57	69.00	0	0	36.98	17.99	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.44	ipos		0.00000	0.687										544.462	
+31	1,4,7,-Cycloundecatriene, 1,5,9,9-tetramethyl-, Z,Z,Z- 	Target	0	93.00	15.257	15.215	15.295	2.170	1328	611	0.00000	Auto	152	15.270	Linear	0	0	0	0	0	0	32.95	30.44	0.00	37	80.00	0	0	32.95	30.44	121.00	0	0	26.40	26.20	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.71	ipos		0.00000	0.948										855.846	
+32	2,6-Octadien-1-ol, 2,7-dimethyl- 	Target	0	41.00	8.181	8.140	8.215	1.630	14309	8789	0.00000	Auto	158	8.180	Linear	0	0	0	0	0	0	85.22	86.85	0.00	90	69.00	0	0	85.22	86.85	93.00	0	0	80.96	120.50	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		3.01	ipos		0.00000	0.945										2920.000	
+33	Benzaldehyde 	Target	0	106.00	7.685	7.635	7.900	2.160	156748	72522	0.00000	Auto	162	7.650	Linear	0	0	0	0	0	0	93.18	94.11	0.00	99	105.00	0	0	93.18	94.11	77.00	0	0	83.23	82.37	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		450.45	ipos		0.00000	1.532										161.000	
+34	D-Limonene 	Target	0	68.00	8.864	8.790	8.920	1.720	37555	21797	0.00000	Auto	169	8.845	Linear	0	0	0	0	0	0	86.28	76.81	0.00	95	93.00	0	0	86.28	76.81	67.00	0	0	72.27	70.89	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		67.93	ipos		0.00000	0.811										320.857	
+35	Methyl salicylate 	Target	0	120.00	11.553	11.515	11.595	2.020	5359	2650	0.00000	Auto	172	11.545	Linear	0	0	0	0	0	0	49.17	42.32	0.00	83	152.00	0	0	49.17	42.32	92.00	0	0	48.26	51.38	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		31.93	ipos		0.00000	1.260										83.000	
+36	1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl- 	Target	0	93.00	Not Identified									16.455	Linear	0	0	0	0																																	0.69														299.600	
+37	(E)-4-Oxohex-2-enal	Target	0	83.00	7.584	7.555	7.600	1.550	2538	1641	0.00000	Auto	184	7.580	Linear	0	0	0	0	0	0	59.02	98.57	0.00	62	55.00	0	0	59.02	98.57	112.00	0	0	16.16	0.51	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.24	ipos		0.00000	0.841										387.042	
+38	1,3,8-p-Menthatriene 	Target	0	119.00	Not Identified									10.465	Linear	0	0	0	0																																	2.21														218.667	
+39	4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-	Target	0	91.00	Not Identified									8.420	Linear	0	0	0	0																																	1.53														571.000	
+40	2,6-Dimethyl-1,3,5,7-octatetraene, E,E- 	Target	0	91.00	Not Identified									10.320	Linear	0	0	0	0																																	0.62														603.125	
+41	2,4,6-Octatriene, 2,6-dimethyl-, (E,Z)- 	Target	0	121.00	10.464	10.435	10.490	1.720	522	304	0.00000	Auto	203	10.425	Linear	0	0	0	0	0	0	44.07	39.91	0.00	48	105.00	0	0	44.07	39.91	136.00	0	0	41.16	53.36	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.80	ipos		0.00000	0.851										168.941	
+42	Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-	Target	0	107.00	Not Identified									16.795	Linear	0	0	0	0																																	1.41														374.500	
+43	3-Furaldehyde 	Target	0	96.00	5.412	5.375	5.495	2.340	9425	4030	0.00000	Auto	213	5.310	Linear	0	0	0	0	0	0	92.91	89.97	0.00	90	95.00	0	0	92.91	89.97	39.00	0	0	45.16	45.09	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		32.33	ipos		0.00000	1.878										124.667	
+44	Bicyclo[3.1.0]hexane, 4-methylene-1-(1-methylethyl)- 	Target	0	93.00	7.917	7.885	7.950	1.600	7198	4512	0.00000	Auto	217	7.900	Linear	0	0	0	0	0	0	43.72	34.26	0.00	88	91.00	0	0	43.72	34.26	77.00	0	0	34.25	27.35	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		25.79	ipos		0.00000	1.000										174.925	
+45	3-Carene 	Target	0	93.00	8.448	8.425	8.475	1.410	1426	1013	0.00000	Auto	223	8.550	Linear	0	0	0	0	0	0	51.16	83.83	0.00	41	91.00	0	0	51.16	83.83	79.00	0	0	32.05	17.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.83	ipos		0.00000	1.092										1221.351	
+46	Caryophyllene oxide 	Target	0	79.00	17.040	16.975	17.060	4.560	1428	313	0.00000	Auto	229	16.900	Linear	0	0	0	0	0	0	93.36	68.89	0.00	51	41.00	0	0	93.36	68.89	91.00	0	0	76.08	36.11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.75	ipos		0.00000	0.654										418.571	
+47	cis-3-Hexenyl-.alpha.-methylbutyrate 	Target	0	57.00	Not Identified									12.000	Linear	0	0	0	0																																															17816.750	
+48	1-Octanol, 2-butyl- 	Target	0	57.00	12.460	12.440	12.490	1.340	18938	14096	0.00000	Auto	239	12.445	Linear	0	0	0	0	0	0	92.07	82.53	0.00	89	43.00	0	0	92.07	82.53	85.00	0	0	70.05	89.31	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.87	ipos		0.00000	1.123										16265.600	
+49	1-Hexanol 	Target	0	56.00	Not Identified									6.010	Linear	0	0	0	0																																	80.97														356.500	
+50	Bicyclo[3.1.1]hept-3-en-2-one, 4,6,6-trimethyl-, (1S)- 	Target	0	107.00	11.820	11.790	11.870	1.780	1836	1033	0.00000	Auto	248	11.800	Linear	0	0	0	0	0	0	60.01	60.22	0.00	70	91.00	0	0	60.01	60.22	135.00	0	0	54.12	61.94	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		8.35	ipos		0.00000	1.039										123.667	
+51	1-Pentanol 	Target	0	55.00	3.789	3.755	3.820	1.740	3037	1745	0.00000	Auto	253	3.700	Linear	0	0	0	0	0	0	89.66	53.72	0.00	67	70.00	0	0	89.66	53.72	42.00	0	0	83.53	54.09	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.74	ipos		0.00000	1.046										1000.711	
+52	1,4-Cyclohexadiene, 3-ethenyl-1,2-dimethyl-	Target	0	91.00	Not Identified									9.630	Linear	0	0	0	0																																	0.20														6363.091	
+53	2-Decanone	Target	0	58.00	Not Identified									11.380	Linear	0	0	0	0																																	6.39														530.270	
+54	2,6-Octadienal, 3,7-dimethyl-, (E)-	Target	0	41.00	12.185	12.175	12.230	1.430	9654	6747	0.00000	Auto	268	12.140	Linear	0	0	0	0	0	0	94.06	75.15	0.00	0	69.00	0	0	94.06	75.15	94.00	0	0	30.87	3.23	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.37	ipos		0.00000	2.750										4914.231	
+55	1,2,3-Propanetriol, 1-acetate	Target	0	43.00	12.065	12.040	12.095	1.480	12703	8583	0.00000	Auto	273	12.155	Linear	0	0	0	0	0	0	19.63	27.94	0.00	0	103.00	0	0	19.63	27.94	86.00	0	0	11.08	5.39	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.82	ipos		0.00000	1.063										10453.375	
+56	Benzamide	Target	0	105.00	Not Identified									13.490	Linear	0	0	0	0																																	0.76														743.158	
+57	Benzenebutanoic acid, .gamma.-oxo-	Target	0	105.00	Not Identified									14.030	Linear	0	0	0	0																																	0.80														809.400	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\PGVF\Campbell RMBL Data\Ipomopsis\VF13DJuly23_07292019.qgd
+Output Date	10/4/2024
+Output Time	3:10:40 PM
+
+[MS Quantitative Results]
+# of IDs	57
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	2-Hexenal, (E)- 	Target	0	41.00	Not Identified									5.720	Linear	0	0	0	0																																	2.40														1925.667	
+2	Butanal, 3-methyl-, oxime 	Target	0	59.00	Not Identified									6.100	Linear	0	0	0	0																																	0.50														1373.000	
+3	(1R)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene 	Target	0	93.00	7.246	7.200	7.305	1.710	16855	9884	0.00000	Auto	12	7.220	Linear	0	0	0	0	0	0	39.00	41.67	0.00	92	91.00	0	0	39.00	41.67	92.00	0	0	39.00	40.37	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		79.60	ipos		0.00000	1.048										124.176	
+4	.beta.-Myrcene 	Target	0	93.00	Not Identified									8.180	Linear	0	0	0	0																																	1.22														276.115	
+5	trans-.beta.-Ocimene 	Target	0	93.00	8.885	8.855	8.925	2.070	2494	1204	0.00000	Auto	22	8.970	Linear	0	0	0	0	0	0	28.00	31.07	0.00	54	91.00	0	0	28.00	31.07	92.00	0	0	35.00	32.64	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		5.27	ipos		0.00000	1.209										228.273	
+6	.beta.-Ocimene 	Target	0	93.00	Not Identified									9.150	Linear	0	0	0	0																																	14.84														228.273	
+7	.gamma.-Terpinene 	Target	0	93.00	Not Identified									9.370	Linear	0	0	0	0																																	5.72														209.870	
+8	Benzoic acid, methyl ester 	Target	0	105.00	9.970	9.910	10.020	1.680	15836	9425	0.00000	Auto	40	9.970	Linear	0	0	0	0	0	0	54.00	65.13	0.00	74	77.00	0	0	54.00	65.13	136.00	0	0	33.00	38.01	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		19.09	ipos		0.00000	1.004										493.667	
+9	Linalool 	Target	0	71.00	Not Identified									10.000	Linear	0	0	0	0																																	3.49														1458.875	
+10	(E)-4,8-Dimethylnona-1,3,7-triene 	Target	0	69.00	Not Identified									10.250	Linear	0	0	0	0																																	1.57														1811.606	
+11	Benzonitrile, 2-methyl- 	Target	0	117.00	10.652	10.605	10.690	1.690	5608	3310	0.00000	Auto	52	10.640	Linear	0	0	0	0	0	0	59.00	58.11	0.00	79	90.00	0	0	59.00	58.11	116.00	0	0	40.00	38.95	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		23.64	ipos		0.00000	1.071										140.000	
+12	.alpha.-Campholenal 	Target	0	108.00	Not Identified									11.590	Linear	0	0	0	0																																	3.54														301.750	
+13	Decanal 	Target	0	57.00	11.635	11.565	11.685	1.510	147155	97583	0.00000	Auto	63	11.600	Linear	0	0	0	0	0	0	82.00	79.85	0.00	97	43.00	0	0	82.00	79.85	41.00	0	0	73.00	80.64	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		6.24	ipos		0.00000	1.012										15635.963	
+14	Caprolactam 	Target	0	55.00	12.392	12.360	12.435	1.980	98072	49419	0.00000	Auto	67	12.340	Linear	0	0	0	0	0	0	94.00	65.64	0.00	95	113.00	0	0	94.00	65.64	56.00	0	0	86.00	81.59	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		11.39	ipos		0.00000	1.335										4339.000	
+15	Nonanoic acid 	Target	0	60.00	12.502	12.445	12.575	1.870	117043	62552	0.00000	Auto	73	12.470	Linear	0	0	0	0	0	0	81.00	73.41	0.00	95	73.00	0	0	81.00	73.41	57.00	0	0	64.00	69.27	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		124.43	ipos		0.00000	0.920										502.714	
+16	Indole 	Target	0	117.00	13.002	12.965	13.040	1.740	6659	3834	0.00000	Auto	76	13.000	Linear	0	0	0	0	0	0	44.00	43.66	0.00	65	90.00	0	0	44.00	43.66	89.00	0	0	29.00	30.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		17.19	ipos		0.00000	1.028										223.000	
+17	.alfa.-Copaene	Target	0	119.00	Not Identified									14.210	Linear	0	0	0	0																																	0.70														296.200	
+18	Petasitene 	Target	0	137.00	Not Identified									14.520	Linear	0	0	0	0																																	2.96														327.800	
+19	trans-.alpha.-Bergamotene 	Target	0	119.00	Not Identified									15.580	Linear	0	0	0	0																																	2.44														635.909	
+20	Caryophyllene 	Target	0	93.00	14.832	14.815	14.850	1.610	1470	915	0.00000	Auto	97	14.820	Linear	0	0	0	0	0	0	87.00	97.52	0.00	73	69.00	0	0	87.00	97.52	133.00	0	0	85.00	91.94	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.14	ipos		0.00000	1.019										799.500	
+21	(1S,5S,6R)-6-Methyl-2-methylene-6-(4-methylpent-3-en-1-yl)bicyclo[3.1.1]heptane 	Target	0	69.00	Not Identified									15.110	Linear	0	0	0	0																																	0.96														1376.545	
+22	.alpha.-Farnesene 	Target	0	93.00	Not Identified									15.760	Linear	0	0	0	0																																	1.59														417.000	
+23	3,5,9-Undecatrien-2-one, 6,10-dimethyl- 	Target	0	69.00	16.739	16.700	16.780	2.160	5102	2362	0.00000	Auto	114	16.720	Linear	0	0	0	0	0	0	60.00	34.57	0.00	60	81.00	0	0	60.00	34.57	41.00	0	0	53.00	87.44	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.23	ipos		0.00000	1.030										1056.968	
+24	trans-Geranylgeraniol 	Target	0	69.00	Not Identified									18.260	Linear	0	0	0	0																																	1.65														2089.556	
+25	4-Hexen-1-ol, (Z)- 	Target	0	67.00	Not Identified									5.780	Linear	0	0	0	0																																	7.54														363.161	
+26	3-Hexen-1-ol, acetate, (E)- 	Target	0	67.00	Not Identified									8.430	Linear	0	0	0	0																																	22.21														771.000	
+27	Butanoic acid, 3-hexenyl ester, (E)- 	Target	0	67.00	Not Identified									10.670	Linear	0	0	0	0																																	1.21														1085.897	
+28	Butanoic acid, 3-hexenyl ester, (Z)- 	Target	0	67.00	11.206	11.180	11.225	1.280	1734	1358	0.00000	Auto	138	11.330	Linear	0	0	0	0	0	0	79.51	68.08	0.00	53	43.00	0	0	79.51	68.08	82.00	0	0	73.16	43.57	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.73	ipos		0.00000	0.894										786.151	
+29	L-.alpha.-Terpineol 	Target	0	59.00	Not Identified									11.490	Linear	0	0	0	0																																	0.63														3985.333	
+30	cis-.alpha.-Bergamotene 	Target	0	119.00	Not Identified									14.670	Linear	0	0	0	0																																	0.33														496.231	
+31	1,4,7,-Cycloundecatriene, 1,5,9,9-tetramethyl-, Z,Z,Z- 	Target	0	93.00	Not Identified									15.270	Linear	0	0	0	0																																	1.41														851.667	
+32	2,6-Octadien-1-ol, 2,7-dimethyl- 	Target	0	41.00	Not Identified									8.180	Linear	0	0	0	0																																	0.56														7625.468	
+33	Benzaldehyde 	Target	0	106.00	7.686	7.645	7.895	1.710	380688	223053	0.00000	Auto	162	7.650	Linear	0	0	0	0	0	0	93.18	92.37	0.00	94	105.00	0	0	93.18	92.37	77.00	0	0	83.23	102.30	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		810.60	ipos		0.00000	1.113										275.171	
+34	D-Limonene 	Target	0	68.00	8.880	8.855	8.910	1.650	2401	1452	0.00000	Auto	169	8.845	Linear	0	0	0	0	0	0	86.28	84.44	0.00	78	93.00	0	0	86.28	84.44	67.00	0	0	72.27	93.83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.51	ipos		0.00000	0.985										964.648	
+35	Methyl salicylate 	Target	0	120.00	11.559	11.515	11.615	1.690	10331	6109	0.00000	Auto	172	11.545	Linear	0	0	0	0	0	0	49.17	38.52	0.00	88	152.00	0	0	49.17	38.52	92.00	0	0	48.26	62.77	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		48.98	ipos		0.00000	1.013										124.737	
+36	1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl- 	Target	0	93.00	Not Identified									16.455	Linear	0	0	0	0																																	0.94														345.091	
+37	(E)-4-Oxohex-2-enal	Target	0	83.00	7.625	7.610	7.665	1.430	5481	3826	0.00000	Auto	184	7.580	Linear	0	0	0	0	0	0	59.02	87.06	0.00	68	55.00	0	0	59.02	87.06	112.00	0	0	16.16	26.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		3.26	ipos		0.00000	1.323										1173.500	
+38	1,3,8-p-Menthatriene 	Target	0	119.00	Not Identified									10.465	Linear	0	0	0	0																																	1.20														330.600	
+39	4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-	Target	0	91.00	Not Identified									8.420	Linear	0	0	0	0																																	0.91														448.000	
+40	2,6-Dimethyl-1,3,5,7-octatetraene, E,E- 	Target	0	91.00	Not Identified									10.320	Linear	0	0	0	0																																	2.15														255.174	
+41	2,4,6-Octatriene, 2,6-dimethyl-, (E,Z)- 	Target	0	121.00	Not Identified									10.425	Linear	0	0	0	0																																															141.377	
+42	Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-	Target	0	107.00	Not Identified									16.795	Linear	0	0	0	0																																	0.45														512.179	
+43	3-Furaldehyde 	Target	0	96.00	5.415	5.380	5.480	1.800	17746	9841	0.00000	Auto	214	5.310	Linear	0	0	0	0	0	0	92.91	94.37	0.00	86	95.00	0	0	92.91	94.37	39.00	0	0	45.16	57.59	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		55.51	ipos		0.00000	1.143										177.276	
+44	Bicyclo[3.1.0]hexane, 4-methylene-1-(1-methylethyl)- 	Target	0	93.00	7.933	7.910	7.965	1.510	1021	676	0.00000	Auto	217	7.900	Linear	0	0	0	0	0	0	43.72	34.88	0.00	49	91.00	0	0	43.72	34.88	77.00	0	0	34.25	14.88	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.33	ipos		0.00000	1.127										290.235	
+45	3-Carene 	Target	0	93.00	8.572	8.550	8.605	1.480	1184	799	0.00000	Auto	223	8.550	Linear	0	0	0	0	0	0	51.16	15.98	0.00	64	91.00	0	0	51.16	15.98	79.00	0	0	32.05	39.65	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.89	ipos		0.00000	1.205										276.115	
+46	Caryophyllene oxide 	Target	0	79.00	Not Identified									16.900	Linear	0	0	0	0																																	1.06														420.273	
+47	cis-3-Hexenyl-.alpha.-methylbutyrate 	Target	0	57.00	Not Identified									12.000	Linear	0	0	0	0																																															2732.821	
+48	1-Octanol, 2-butyl- 	Target	0	57.00	Not Identified									12.445	Linear	0	0	0	0																																	1.82														2732.821	
+49	1-Hexanol 	Target	0	56.00	6.051	6.020	6.115	1.550	26736	17224	0.00000	Auto	243	6.010	Linear	0	0	0	0	0	0	88.33	88.64	0.00	92	43.00	0	0	88.33	88.64	55.00	0	0	51.97	71.22	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		20.38	ipos		0.00000	1.149										845.000	
+50	Bicyclo[3.1.1]hept-3-en-2-one, 4,6,6-trimethyl-, (1S)- 	Target	0	107.00	Not Identified									11.800	Linear	0	0	0	0																																	2.17														228.455	
+51	1-Pentanol 	Target	0	55.00	Not Identified									3.700	Linear	0	0	0	0																																	2.55														2638.500	
+52	1,4-Cyclohexadiene, 3-ethenyl-1,2-dimethyl-	Target	0	91.00	Not Identified									9.630	Linear	0	0	0	0																																	0.02														25001.000	
+53	2-Decanone	Target	0	58.00	11.394	11.375	11.410	1.090	485	444	0.00000	Auto	263	11.380	Linear	0	0	0	0	0	0	75.12	99.50	0.00	0	43.00	0	0	75.12	99.50	71.00	0	0	33.61	39.45	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.75	ipos		0.00000	0.945										591.500	
+54	2,6-Octadienal, 3,7-dimethyl-, (E)-	Target	0	41.00	Not Identified									12.140	Linear	0	0	0	0																																	0.59														67398.750	
+55	1,2,3-Propanetriol, 1-acetate	Target	0	43.00	12.149	12.120	12.175	1.500	11319	7543	0.00000	Auto	271	12.155	Linear	0	0	0	0	0	0	19.63	8.39	0.00	0	103.00	0	0	19.63	8.39	86.00	0	0	11.08	10.72	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.61	ipos		0.00000	0.968										12444.065	
+56	Benzamide	Target	0	105.00	13.518	13.485	13.570	1.860	35614	19190	0.00000	Auto	278	13.490	Linear	0	0	0	0	0	0	95.52	108.82	0.00	0	77.00	0	0	95.52	108.82	121.00	0	0	81.54	93.33	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		9.16	ipos		0.00000	1.113										2094.828	
+57	Benzenebutanoic acid, .gamma.-oxo-	Target	0	105.00	14.011	13.990	14.050	1.530	4372	2861	0.00000	Auto	283	14.030	Linear	0	0	0	0	0	0	43.83	33.85	0.00	0	77.00	0	0	43.83	33.85	51.00	0	0	16.33	12.54	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.28	ipos		0.00000	1.454										10293.333	
+
+[Header]
+Data File Name	C:\GCMSsolution\Data\PGVF\Campbell RMBL Data\Ipomopsis\VF14DJul13reallyVF15D_09042017.qgd
+Output Date	10/4/2024
+Output Time	3:10:42 PM
+
+[MS Quantitative Results]
+# of IDs	57
+ID#	Name	Type	ISTD Group#	Mass	Ret.Time	Start Time	End Time	A/H	Area	Height	Conc.	Mode	Peak#	Std.Ret.Time	Calibration Curve	3rd	2nd	1st	Constant	Ref.Ion Area	Ref.Ion Height	Ref.Ion Set Ratio	Ref.Ion Ratio	Recovery	SI	Ref.Ion1 m/z	Ref.Ion1 Area	Ref.Ion1 Height	Ref.Ion1 Set Ratio	Ref.Ion1 Ratio	Ref.Ion2 m/z	Ref.Ion2 Area	Ref.Ion2 Height	Ref.Ion2 Set Ratio	Ref.Ion2 Ratio	Ref.Ion3 m/z	Ref.Ion3 Area	Ref.Ion3 Height	Ref.Ion3 Set Ratio	Ref.Ion3 Ratio	Ref.Ion4 m/z	Ref.Ion4 Area	Ref.Ion4 Height	Ref.Ion4 Set Ratio	Ref.Ion4 Ratio	Ref.Ion5 m/z	Ref.Ion5 Area	Ref.Ion5 Height	Ref.Ion5 Set Ratio	Ref.Ion5 Ratio	Ret. Index	S/N	Unit	Description	Threshold	Tailing	Ref.Ion1 S/N	Ref.Ion2 S/N	Ref.Ion3 S/N	Ref.Ion4 S/N	Ref.Ion5 S/N	ISTD Name	ISTD Area	ISTD Height	ISTD Ret.Time	Noise
+1	2-Hexenal, (E)- 	Target	0	41.00	5.752	5.725	5.775	1.560	17505	11243	0.00000	Auto	3	5.720	Linear	0	0	0	0	0	0	92.00	115.46	0.00	90	55.00	0	0	92.00	115.46	69.00	0	0	84.00	73.24	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.02	ipos		0.00000	1.047										11072.429	
+2	Butanal, 3-methyl-, oxime 	Target	0	59.00	Not Identified									6.100	Linear	0	0	0	0																																	1.13														2266.333	
+3	(1R)-2,6,6-Trimethylbicyclo[3.1.1]hept-2-ene 	Target	0	93.00	7.231	7.125	7.275	1.680	39377	23381	0.00000	Auto	12	7.220	Linear	0	0	0	0	0	0	39.00	39.51	0.00	85	91.00	0	0	39.00	39.51	92.00	0	0	39.00	38.52	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		42.17	ipos		0.00000	1.043										554.421	
+4	.beta.-Myrcene 	Target	0	93.00	Not Identified									8.180	Linear	0	0	0	0																																	1.99														1220.762	
+5	trans-.beta.-Ocimene 	Target	0	93.00	8.877	8.850	8.915	2.080	6439	3099	0.00000	Auto	21	8.970	Linear	0	0	0	0	0	0	28.00	21.16	0.00	68	91.00	0	0	28.00	21.16	92.00	0	0	35.00	32.17	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.59	ipos		0.00000	1.186										1950.400	
+6	.beta.-Ocimene 	Target	0	93.00	9.256	9.235	9.285	1.310	2870	2196	0.00000	Auto	28	9.150	Linear	0	0	0	0	0	0	45.00	74.60	0.00	57	91.00	0	0	45.00	74.60	80.00	0	0	43.00	41.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		2.16	ipos		0.00000	1.057										1017.067	
+7	.gamma.-Terpinene 	Target	0	93.00	9.323	9.285	9.350	1.610	30755	19044	0.00000	Auto	33	9.370	Linear	0	0	0	0	0	0	46.00	8.32	0.00	32	91.00	0	0	46.00	8.32	136.00	0	0	39.00	0.11	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		8.87	ipos		0.00000	1.032										2147.780	
+8	Benzoic acid, methyl ester 	Target	0	105.00	9.972	9.905	10.010	1.660	30291	18291	0.00000	Auto	38	9.970	Linear	0	0	0	0	0	0	54.00	59.88	0.00	33	77.00	0	0	54.00	59.88	136.00	0	0	33.00	34.83	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		9.44	ipos		0.00000	1.002										1937.519	
+9	Linalool 	Target	0	71.00	Not Identified									10.000	Linear	0	0	0	0																																	1.05														11749.143	
+10	(E)-4,8-Dimethylnona-1,3,7-triene 	Target	0	69.00	Not Identified									10.250	Linear	0	0	0	0																																	1.62														11204.218	
+11	Benzonitrile, 2-methyl- 	Target	0	117.00	10.666	10.630	10.735	1.850	6594	3566	0.00000	Auto	54	10.640	Linear	0	0	0	0	0	0	59.00	60.53	0.00	59	90.00	0	0	59.00	60.53	116.00	0	0	40.00	49.75	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		13.93	ipos		0.00000	1.416										256.000	
+12	.alpha.-Campholenal 	Target	0	108.00	Not Identified									11.590	Linear	0	0	0	0																																	0.65														1237.576	
+13	Decanal 	Target	0	57.00	11.636	11.560	11.680	1.550	464421	300175	0.00000	Auto	65	11.600	Linear	0	0	0	0	0	0	82.00	71.50	0.00	97	43.00	0	0	82.00	71.50	41.00	0	0	73.00	63.79	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		6.21	ipos		0.00000	1.024										48335.250	
+14	Caprolactam 	Target	0	55.00	12.370	12.335	12.415	3.250	116671	35945	0.00000	Auto	69	12.340	Linear	0	0	0	0	0	0	94.00	59.83	0.00	84	113.00	0	0	94.00	59.83	56.00	0	0	86.00	60.93	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.10	ipos		0.00000	1.011										32536.250	
+15	Nonanoic acid 	Target	0	60.00	12.430	12.400	12.550	4.930	139205	28246	0.00000	Auto	75	12.470	Linear	0	0	0	0	0	0	81.00	76.43	0.00	55	73.00	0	0	81.00	76.43	57.00	0	0	64.00	67.41	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		12.50	ipos		0.00000	2.088										2259.852	
+16	Indole 	Target	0	117.00	13.103	13.040	13.190	5.760	10757	1868	0.00000	Auto	77	13.000	Linear	0	0	0	0	0	0	44.00	43.23	0.00	46	90.00	0	0	44.00	43.23	89.00	0	0	29.00	9.32	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.19	ipos		0.00000	1.190										446.210	
+17	.alfa.-Copaene	Target	0	119.00	14.205	14.175	14.240	1.370	3071	2240	0.00000	Auto	82	14.210	Linear	0	0	0	0	0	0	76.00	69.22	0.00	65	161.00	0	0	76.00	69.22	105.00	0	0	96.00	82.84	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.57	ipos		0.00000	1.055										1431.000	
+18	Petasitene 	Target	0	137.00	Not Identified									14.520	Linear	0	0	0	0																																	0.76														1013.333	
+19	trans-.alpha.-Bergamotene 	Target	0	119.00	Not Identified									15.580	Linear	0	0	0	0																																	11.18														753.522	
+20	Caryophyllene 	Target	0	93.00	Not Identified									14.820	Linear	0	0	0	0																																	10.58														1405.333	
+21	(1S,5S,6R)-6-Methyl-2-methylene-6-(4-methylpent-3-en-1-yl)bicyclo[3.1.1]heptane 	Target	0	69.00	Not Identified									15.110	Linear	0	0	0	0																																	0.69														6743.364	
+22	.alpha.-Farnesene 	Target	0	93.00	Not Identified									15.760	Linear	0	0	0	0																																	0.76														2451.108	
+23	3,5,9-Undecatrien-2-one, 6,10-dimethyl- 	Target	0	69.00	Not Identified									16.720	Linear	0	0	0	0																																	2.54														2062.400	
+24	trans-Geranylgeraniol 	Target	0	69.00	Not Identified									18.260	Linear	0	0	0	0																																	0.86														7144.429	
+25	4-Hexen-1-ol, (Z)- 	Target	0	67.00	Not Identified									5.780	Linear	0	0	0	0																																	0.42														7598.824	
+26	3-Hexen-1-ol, acetate, (E)- 	Target	0	67.00	8.447	8.425	8.480	1.460	8995	6175	0.00000	Auto	130	8.430	Linear	0	0	0	0	0	0	93.39	61.18	0.00	76	43.00	0	0	93.39	61.18	82.00	0	0	56.37	61.59	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.07	ipos		0.00000	1.079										5792.389	
+27	Butanoic acid, 3-hexenyl ester, (E)- 	Target	0	67.00	Not Identified									10.670	Linear	0	0	0	0																																	0.91														4941.211	
+28	Butanoic acid, 3-hexenyl ester, (Z)- 	Target	0	67.00	Not Identified									11.330	Linear	0	0	0	0																																	4.15														10417.545	
+29	L-.alpha.-Terpineol 	Target	0	59.00	Not Identified									11.490	Linear	0	0	0	0																																	1.03														2084.000	
+30	cis-.alpha.-Bergamotene 	Target	0	119.00	Not Identified									14.670	Linear	0	0	0	0																																	18.15														606.455	
+31	1,4,7,-Cycloundecatriene, 1,5,9,9-tetramethyl-, Z,Z,Z- 	Target	0	93.00	Not Identified									15.270	Linear	0	0	0	0																																	2.43														1417.125	
+32	2,6-Octadien-1-ol, 2,7-dimethyl- 	Target	0	41.00	Not Identified									8.180	Linear	0	0	0	0																																	6.43														8967.826	
+33	Benzaldehyde 	Target	0	106.00	7.689	7.595	7.875	1.700	1534365	904267	0.00000	Auto	161	7.650	Linear	0	0	0	0	0	0	93.18	91.06	0.00	96	105.00	0	0	93.18	91.06	77.00	0	0	83.23	92.64	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1292.22	ipos		0.00000	1.033										699.776	
+34	D-Limonene 	Target	0	68.00	Not Identified									8.845	Linear	0	0	0	0																																	0.33														18129.200	
+35	Methyl salicylate 	Target	0	120.00	11.561	11.515	11.610	1.750	4565	2609	0.00000	Auto	170	11.545	Linear	0	0	0	0	0	0	49.17	38.41	0.00	58	152.00	0	0	49.17	38.41	92.00	0	0	48.26	43.28	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.63	ipos		0.00000	1.367										563.200	
+36	1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl- 	Target	0	93.00	Not Identified									16.455	Linear	0	0	0	0																																	0.89														986.071	
+37	(E)-4-Oxohex-2-enal	Target	0	83.00	Not Identified									7.580	Linear	0	0	0	0																																	52.28														3684.429	
+38	1,3,8-p-Menthatriene 	Target	0	119.00	10.394	10.370	10.420	1.310	816	623	0.00000	Auto	183	10.465	Linear	0	0	0	0	0	0	99.44	76.11	0.00	46	91.00	0	0	99.44	76.11	134.00	0	0	64.47	44.03	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.00	ipos		0.00000	0.942										621.706	
+39	4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-	Target	0	91.00	Not Identified									8.420	Linear	0	0	0	0																																	8.11														1014.909	
+40	2,6-Dimethyl-1,3,5,7-octatetraene, E,E- 	Target	0	91.00	Not Identified									10.320	Linear	0	0	0	0																																	0.50														2467.250	
+41	2,4,6-Octatriene, 2,6-dimethyl-, (E,Z)- 	Target	0	121.00	Not Identified									10.425	Linear	0	0	0	0																																															369.300	
+42	Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-	Target	0	107.00	Not Identified									16.795	Linear	0	0	0	0																																	1.47														1309.889	
+43	3-Furaldehyde 	Target	0	96.00	5.402	5.370	5.455	1.770	22820	12916	0.00000	Auto	210	5.310	Linear	0	0	0	0	0	0	92.91	93.06	0.00	76	95.00	0	0	92.91	93.06	39.00	0	0	45.16	46.13	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		23.15	ipos		0.00000	1.121										557.923	
+44	Bicyclo[3.1.0]hexane, 4-methylene-1-(1-methylethyl)- 	Target	0	93.00	7.925	7.905	7.980	1.840	2277	1239	0.00000	Auto	213	7.900	Linear	0	0	0	0	0	0	43.72	29.49	0.00	62	91.00	0	0	43.72	29.49	77.00	0	0	34.25	49.85	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		0.82	ipos		0.00000	2.058										1502.000	
+45	3-Carene 	Target	0	93.00	Not Identified									8.550	Linear	0	0	0	0																																	0.70														2227.300	
+46	Caryophyllene oxide 	Target	0	79.00	Not Identified									16.900	Linear	0	0	0	0																																	0.81														1242.161	
+47	cis-3-Hexenyl-.alpha.-methylbutyrate 	Target	0	57.00	Not Identified									12.000	Linear	0	0	0	0																																	0.01														1055782.108	
+48	1-Octanol, 2-butyl- 	Target	0	57.00	Not Identified									12.445	Linear	0	0	0	0																																	1.15														16185.143	
+49	1-Hexanol 	Target	0	56.00	6.043	6.005	6.110	1.770	143243	80859	0.00000	Auto	240	6.010	Linear	0	0	0	0	0	0	88.33	48.48	0.00	88	43.00	0	0	88.33	48.48	55.00	0	0	51.97	65.08	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		13.14	ipos		0.00000	1.215										6155.500	
+50	Bicyclo[3.1.1]hept-3-en-2-one, 4,6,6-trimethyl-, (1S)- 	Target	0	107.00	Not Identified									11.800	Linear	0	0	0	0																																	2.57														1530.000	
+51	1-Pentanol 	Target	0	55.00	Not Identified									3.700	Linear	0	0	0	0																																															24811.273	
+52	1,4-Cyclohexadiene, 3-ethenyl-1,2-dimethyl-	Target	0	91.00	Not Identified									9.630	Linear	0	0	0	0																																	0.05														160289.576	
+53	2-Decanone	Target	0	58.00	11.439	11.390	11.490	1.540	299072	194240	0.00000	Auto	260	11.380	Linear	0	0	0	0	0	0	75.12	61.35	0.00	0	43.00	0	0	75.12	61.35	71.00	0	0	33.61	17.39	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		68.25	ipos		0.00000	1.020										2845.857	
+54	2,6-Octadienal, 3,7-dimethyl-, (E)-	Target	0	41.00	Not Identified									12.140	Linear	0	0	0	0																																	0.16														161731.588	
+55	1,2,3-Propanetriol, 1-acetate	Target	0	43.00	12.267	12.220	12.300	1.850	94181	50812	0.00000	Auto	268	12.155	Linear	0	0	0	0	0	0	19.63	0.68	0.00	0	103.00	0	0	19.63	0.68	86.00	0	0	11.08	7.50	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		1.32	ipos		0.00000	0.827										38466.438	
+56	Benzamide	Target	0	105.00	13.551	13.440	13.650	3.540	112369	31768	0.00000	Auto	274	13.490	Linear	0	0	0	0	0	0	95.52	94.63	0.00	0	77.00	0	0	95.52	94.63	121.00	0	0	81.54	85.82	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		14.02	ipos		0.00000	1.367										2266.000	
+57	Benzenebutanoic acid, .gamma.-oxo-	Target	0	105.00	14.095	14.065	14.150	2.810	49414	17594	0.00000	Auto	279	14.030	Linear	0	0	0	0	0	0	43.83	59.60	0.00	0	77.00	0	0	43.83	59.60	51.00	0	0	16.33	22.06	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0		4.15	ipos		0.00000	1.441										4236.045	
+

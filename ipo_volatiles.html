@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-10-01" />
+<meta name="date" content="2024-10-04" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-10-01</h4>
+<h4 class="date">2024-10-04</h4>
 
 </div>
 
@@ -268,7 +268,9 @@ td, th { padding : 6px }
 library(pheatmap)
 library(dendsort)
 library(viridis)
+library(RColorBrewer)
 library(bouquet)
+library(vegan)
 library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
@@ -1152,10 +1154,6 @@ setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider fill
 [32] &quot;VF_978_N_220802_852022_08.qgd&quot;        
 [33] &quot;VF_AIRJK_D_220801_852022_03.qgd&quot;      
 [34] &quot;VF_AIRJP_D_220801_842022_19.qgd&quot;      </code></pre>
-<pre class="r"><code>setdiff(meta.full$FileName, quant.full$Filename)#TODO need to find and integrate these</code></pre>
-<pre><code>[1] &quot;VF14DJul13reallyVF15D_09042017.qgd&quot; &quot;VF13DJul14_09052017.qgd&quot;           
-[3] &quot;VF13DJuly18_07232018.qgd&quot;           &quot;VF13DJuly23_07292019.qgd&quot;          
-[5] NA                                  </code></pre>
 <pre class="r"><code>#only keep file-metadata matches
 files.match &lt;- intersect(meta.full$FileName, quant.full$Filename)
 meta.all   &lt;- meta.full %&gt;% filter(FileName %in% files.match)
@@ -1269,7 +1267,7 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 [38] &quot;Benzenebutanoic acid, .gamma.-oxo-&quot;                </code></pre>
 <pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% iponew, .before=1) %&gt;% View()
 
-#both
+# compounds in both quant and qual lists
 (quant_qual &lt;- intersect(names(quant.all), qual_chems))</code></pre>
 <pre><code> [1] &quot;(E)-hex-2-enal&quot;                           
  [2] &quot;a-pinene&quot;                                 
@@ -1290,9 +1288,13 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 [17] &quot;verbenone&quot;                                
 [18] &quot;3-ethenyl-1,2-dimethylcyclohexa-1,4-diene&quot;
 [19] &quot;geranial&quot;                                 </code></pre>
-<pre class="r"><code>qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[,quant_qual]
-qual_not_quant &lt;- setdiff(rownames(qual.all), rownames(quant.all)) #TODO figure out why these are here
-quant &lt;- quant.all[setdiff(rownames(qual), qual_not_quant), quant_qual]</code></pre>
+<pre class="r"><code>toolow &lt;- rownames(quant.all)[rowSums(quant.all[,quant_qual]) &lt; 2500] #exclude 2 samples with very low integrations
+
+qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
+qual &lt;- qual[!rownames(qual) %in% toolow,]
+quant &lt;- quant.all[rownames(qual), quant_qual]
+meta &lt;- metadata.df[rownames(qual),] %&gt;% 
+  mutate(across(c(year_run, site, time), factor))</code></pre>
 </div>
 <div id="retention-time-of-qual-integrations" class="section level2">
 <h2>Retention time of qual integrations</h2>
@@ -1307,19 +1309,41 @@ quant &lt;- quant.all[setdiff(rownames(qual), qual_not_quant), quant_qual]</code
 </div>
 <div id="filtered-data" class="section level1">
 <h1>Filtered data</h1>
-<div id="heatmap-of-filtered-quant-integrations" class="section level2">
-<h2>Heatmap of filtered quant integrations</h2>
-<pre class="r"><code># annot_pal &lt;- list(
-#   year_run = set_names(brewer.pal(8, &quot;Set1&quot;)[1:length(unique(meta.all$year_run))], unique(meta.all$year_run)),
-#   type = set_names(brewer.pal(8, &quot;Set1&quot;)[1:length(unique(meta.all$type))], unique(meta.all$type)))
+<div id="heatmap" class="section level2">
+<h2>Heatmap</h2>
+<pre class="r"><code>pal &lt;- with(meta, list(
+  year_run = set_names(brewer.pal(nlevels(year_run), &quot;Set2&quot;), levels(year_run)),
+  site = set_names(brewer.pal(nlevels(site), &quot;Set1&quot;), levels(site)),
+  time = set_names(c(&quot;lightblue&quot;,&quot;plum1&quot;), levels(time))))
 pheatmap(as.matrix(t(quant))^(1/4), 
          cluster_cols=T, show_colnames=F,
          clustering_method=&quot;mcquitty&quot;, clustering_distance_rows=&quot;correlation&quot;,
          clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
-         # annotation_col=meta.all %&gt;% select(year_run) %&gt;% mutate(across(everything(), factor)),
-         # annotation_colors =  annot_pal,
+         annotation_col = meta %&gt;% select(year_run, site, time) %&gt;% mutate(across(everything(), factor)),
+         annotation_colors =  pal,
          scale=&quot;none&quot;, color=mako(512),main=&quot;Filtered quant volatiles&quot;)</code></pre>
 <p><img src="images/quant_heatmap-1.png" width="960" /></p>
+</div>
+<div id="nmds" class="section level2">
+<h2>NMDS</h2>
+<pre class="r"><code>nmds &lt;- metaMDS(decostand(quant, &quot;hellinger&quot;), autotransform = F, trymax=1)</code></pre>
+<pre><code>Run 0 stress 0.2002 
+Run 1 stress 0.2293 
+*** Best solution was not repeated -- monoMDS stopping criteria:
+     1: scale factor of the gradient &lt; sfgrmin</code></pre>
+<pre class="r"><code>plot(nmds, type=&quot;n&quot;)
+points(nmds, display=&quot;sites&quot;, col = pal$time[meta$time])
+legend(&quot;topleft&quot;, levels(meta$time), fill=pal$time)
+text(nmds, display=&quot;species&quot;)</code></pre>
+<p><img src="images/quant_nmds-1.svg" width="768" /></p>
+<pre class="r"><code>plot(nmds, type=&quot;n&quot;)
+points(nmds, display=&quot;sites&quot;, col = pal$site[meta$site], pch=c(1,19)[as.integer(meta$time)])
+legend(&quot;topleft&quot;, levels(meta$site), fill=pal$site)</code></pre>
+<p><img src="images/quant_nmds-2.svg" width="768" /></p>
+<pre class="r"><code>plot(nmds, type=&quot;n&quot;)
+points(nmds, display=&quot;sites&quot;, col = pal$year_run[meta$year_run], pch=c(1,19)[as.integer(meta$time)])
+legend(&quot;topleft&quot;, levels(meta$year_run), fill=pal$year_run)</code></pre>
+<p><img src="images/quant_nmds-3.svg" width="768" /></p>
 </div>
 </div>
 
