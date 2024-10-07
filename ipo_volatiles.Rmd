@@ -26,6 +26,7 @@ library(viridis)
 library(RColorBrewer)
 library(bouquet)
 library(vegan)
+library(ggvegan)
 library(knitr)
 knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F, 
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
@@ -271,7 +272,11 @@ qual <- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual <- qual[!rownames(qual) %in% toolow,]
 quant <- quant.all[rownames(qual), quant_qual]
 meta <- metadata.df[rownames(qual),] %>% 
-  mutate(across(c(year_run, site, time), factor))
+  mutate(across(c(year, site, time), factor))
+
+quant %>% rownames_to_column("FileName") %>% write_tsv("data/volatiles/filtered_quant.tsv")
+meta %>% write_tsv("data/volatiles/filtered_meta.tsv")
+save(quant, meta, file = "data/volatiles/filtered_quantmeta.rda")
 ```
 
 ## Retention time of qual integrations
@@ -285,21 +290,25 @@ ggplot(longdata %>% filter(name %in% qual_chems),
 #TODO (E)-hex-2-enal vs. no isomer specified
 ```
 
-# Filtered data
+# Analysis of filtered volatiles
 
 ## Heatmap
 
 ```{r quant_heatmap, dev="png", dev.args=list(),fig.width=10, fig.height=8}
+load("data/volatiles/filtered_quantmeta.rda")
+
 pal <- with(meta, list(
-  year_run = set_names(brewer.pal(nlevels(year_run), "Set2"), levels(year_run)),
+  year = set_names(brewer.pal(nlevels(year), "Set2"), levels(year)),
   site = set_names(brewer.pal(nlevels(site), "Set1"), levels(site)),
   time = set_names(c("lightblue","plum1"), levels(time))))
+times <- c(D="day", N="night")
+
 pheatmap(as.matrix(t(quant))^(1/4), 
          cluster_cols=T, show_colnames=F,
          clustering_method="mcquitty", clustering_distance_rows="correlation",
          clustering_callback = function(hc, ...){dendsort(hc, type="average")},
-         annotation_col = meta %>% select(year_run, site, time) %>% mutate(across(everything(), factor)),
-         annotation_colors =  pal,
+         annotation_col = meta %>% select(year, site, time) %>% mutate(across(everything(), factor)),
+         annotation_colors =pal,
          scale="none", color=mako(512),main="Filtered quant volatiles")
 ```
 
@@ -308,17 +317,65 @@ pheatmap(as.matrix(t(quant))^(1/4),
 ```{r quant_nmds}
 nmds <- metaMDS(decostand(quant, "hellinger"), autotransform = F, trymax=1)
 
-plot(nmds, type="n")
-points(nmds, display="sites", col = pal$time[meta$time])
-legend("topleft", levels(meta$time), fill=pal$time)
-text(nmds, display="species")
+nmds.df <- fortify(nmds) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
+nmds.plot <- ggplot(filter(nmds.df, score=="sites"), aes(x=NMDS1, y=NMDS2, label=label)) +
+  theme_classic() + theme(legend.position = "top")
 
-plot(nmds, type="n")
-points(nmds, display="sites", col = pal$site[meta$site], pch=c(1,19)[as.integer(meta$time)])
-legend("topleft", levels(meta$site), fill=pal$site)
+nmds.plot + geom_point(aes(color=time)) +
+  geom_text(data=filter(nmds.df, score=="species")) +
+  scale_color_manual("Time", values=pal$time, label=times)
+  
+nmds.plot + geom_point(aes(color=site, shape=time)) +
+  scale_color_manual("Site", values=pal$site) + 
+  scale_shape_manual("Time", values=c(1,19))
 
-plot(nmds, type="n")
-points(nmds, display="sites", col = pal$year_run[meta$year_run], pch=c(1,19)[as.integer(meta$time)])
-legend("topleft", levels(meta$year_run), fill=pal$year_run)
+nmds.plot + geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(nmds.df, score=="species")) +
+  scale_color_manual("Year", values=pal$year) + 
+  scale_shape_manual("Time", values=c(1,19))
 ```
 
+## CAP with time, year, site
+
+```{r cap_tys}
+cap.tys <- capscale(sqrt(quant) ~ time + year + site, data=meta)
+cap.tys
+anova(cap.tys, by="term")
+
+cap.tys.df <- fortify(cap.tys) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
+
+cap.tys.plot <- ggplot(filter(cap.tys.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = "top")
+
+cap.tys.plot + geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.tys.df, score=="species")) +
+  scale_color_manual("Year", values=pal$year) + 
+  scale_shape_manual("Time", values=c(D=1,N=19))
+```
+
+## CAP with year, within time
+
+```{r cap_year}
+meta.D <- filter(meta, time=="D")
+quant.D <- quant[rownames(meta.D),]
+meta.N <- filter(meta, time=="N")
+quant.N <- quant[rownames(meta.N),]
+
+cap.year.D.df <- capscale(sqrt(quant.D) ~ year, data=meta.D) %>% 
+  fortify() %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
+ggplot(filter(cap.year.D.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = "top") + 
+  geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.year.D.df, score=="species")) +
+  scale_color_manual("Year", values=pal$year) + 
+  scale_shape_manual("Time", values=c(D=1,N=19))
+
+cap.year.N.df <- capscale(sqrt(quant.N) ~ year, data=meta.N) %>% 
+  fortify() %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
+ggplot(filter(cap.year.N.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = "top") + 
+  geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.year.N.df, score=="species")) +
+  scale_color_manual("Year", values=pal$year) + 
+  scale_shape_manual("Time", values=c(D=1,N=19))
+```

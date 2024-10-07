@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-10-04" />
+<meta name="date" content="2024-10-07" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-10-04</h4>
+<h4 class="date">2024-10-07</h4>
 
 </div>
 
@@ -271,6 +271,7 @@ library(viridis)
 library(RColorBrewer)
 library(bouquet)
 library(vegan)
+library(ggvegan)
 library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
@@ -1294,7 +1295,11 @@ qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual &lt;- qual[!rownames(qual) %in% toolow,]
 quant &lt;- quant.all[rownames(qual), quant_qual]
 meta &lt;- metadata.df[rownames(qual),] %&gt;% 
-  mutate(across(c(year_run, site, time), factor))</code></pre>
+  mutate(across(c(year, site, time), factor))
+
+quant %&gt;% rownames_to_column(&quot;FileName&quot;) %&gt;% write_tsv(&quot;data/volatiles/filtered_quant.tsv&quot;)
+meta %&gt;% write_tsv(&quot;data/volatiles/filtered_meta.tsv&quot;)
+save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</code></pre>
 </div>
 <div id="retention-time-of-qual-integrations" class="section level2">
 <h2>Retention time of qual integrations</h2>
@@ -1307,20 +1312,24 @@ meta &lt;- metadata.df[rownames(qual),] %&gt;%
 #TODO (E)-hex-2-enal vs. no isomer specified</code></pre>
 </div>
 </div>
-<div id="filtered-data" class="section level1">
-<h1>Filtered data</h1>
+<div id="analysis-of-filtered-volatiles" class="section level1">
+<h1>Analysis of filtered volatiles</h1>
 <div id="heatmap" class="section level2">
 <h2>Heatmap</h2>
-<pre class="r"><code>pal &lt;- with(meta, list(
-  year_run = set_names(brewer.pal(nlevels(year_run), &quot;Set2&quot;), levels(year_run)),
+<pre class="r"><code>load(&quot;data/volatiles/filtered_quantmeta.rda&quot;)
+
+pal &lt;- with(meta, list(
+  year = set_names(brewer.pal(nlevels(year), &quot;Set2&quot;), levels(year)),
   site = set_names(brewer.pal(nlevels(site), &quot;Set1&quot;), levels(site)),
   time = set_names(c(&quot;lightblue&quot;,&quot;plum1&quot;), levels(time))))
+times &lt;- c(D=&quot;day&quot;, N=&quot;night&quot;)
+
 pheatmap(as.matrix(t(quant))^(1/4), 
          cluster_cols=T, show_colnames=F,
          clustering_method=&quot;mcquitty&quot;, clustering_distance_rows=&quot;correlation&quot;,
          clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
-         annotation_col = meta %&gt;% select(year_run, site, time) %&gt;% mutate(across(everything(), factor)),
-         annotation_colors =  pal,
+         annotation_col = meta %&gt;% select(year, site, time) %&gt;% mutate(across(everything(), factor)),
+         annotation_colors =pal,
          scale=&quot;none&quot;, color=mako(512),main=&quot;Filtered quant volatiles&quot;)</code></pre>
 <p><img src="images/quant_heatmap-1.png" width="960" /></p>
 </div>
@@ -1331,19 +1340,104 @@ pheatmap(as.matrix(t(quant))^(1/4),
 Run 1 stress 0.2293 
 *** Best solution was not repeated -- monoMDS stopping criteria:
      1: scale factor of the gradient &lt; sfgrmin</code></pre>
-<pre class="r"><code>plot(nmds, type=&quot;n&quot;)
-points(nmds, display=&quot;sites&quot;, col = pal$time[meta$time])
-legend(&quot;topleft&quot;, levels(meta$time), fill=pal$time)
-text(nmds, display=&quot;species&quot;)</code></pre>
+<pre class="r"><code>nmds.df &lt;- fortify(nmds) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
+nmds.plot &lt;- ggplot(filter(nmds.df, score==&quot;sites&quot;), aes(x=NMDS1, y=NMDS2, label=label)) +
+  theme_classic() + theme(legend.position = &quot;top&quot;)
+
+nmds.plot + geom_point(aes(color=time)) +
+  geom_text(data=filter(nmds.df, score==&quot;species&quot;)) +
+  scale_color_manual(&quot;Time&quot;, values=pal$time, label=times)</code></pre>
 <p><img src="images/quant_nmds-1.svg" width="768" /></p>
-<pre class="r"><code>plot(nmds, type=&quot;n&quot;)
-points(nmds, display=&quot;sites&quot;, col = pal$site[meta$site], pch=c(1,19)[as.integer(meta$time)])
-legend(&quot;topleft&quot;, levels(meta$site), fill=pal$site)</code></pre>
+<pre class="r"><code>nmds.plot + geom_point(aes(color=site, shape=time)) +
+  scale_color_manual(&quot;Site&quot;, values=pal$site) + 
+  scale_shape_manual(&quot;Time&quot;, values=c(1,19))</code></pre>
 <p><img src="images/quant_nmds-2.svg" width="768" /></p>
-<pre class="r"><code>plot(nmds, type=&quot;n&quot;)
-points(nmds, display=&quot;sites&quot;, col = pal$year_run[meta$year_run], pch=c(1,19)[as.integer(meta$time)])
-legend(&quot;topleft&quot;, levels(meta$year_run), fill=pal$year_run)</code></pre>
+<pre class="r"><code>nmds.plot + geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(nmds.df, score==&quot;species&quot;)) +
+  scale_color_manual(&quot;Year&quot;, values=pal$year) + 
+  scale_shape_manual(&quot;Time&quot;, values=c(1,19))</code></pre>
 <p><img src="images/quant_nmds-3.svg" width="768" /></p>
+</div>
+<div id="cap-with-time-year-site" class="section level2">
+<h2>CAP with time, year, site</h2>
+<pre class="r"><code>cap.tys &lt;- capscale(sqrt(quant) ~ time + year + site, data=meta)
+cap.tys</code></pre>
+<pre><code>Call: capscale(formula = sqrt(quant) ~ time + year + site, data = meta)
+
+-- Model Summary --
+
+               Inertia Proportion Rank
+Total         1.13e+06   1.00e+00     
+Constrained   4.66e+05   4.12e-01    9
+Unconstrained 6.66e+05   5.88e-01   19
+
+Inertia is mean squared Euclidean distance
+
+-- Note --
+
+Species scores projected from &#39;sqrt&#39;
+Species scores projected from &#39;quant&#39;
+
+-- Eigenvalues --
+
+Eigenvalues for constrained axes:
+  CAP1   CAP2   CAP3   CAP4   CAP5   CAP6   CAP7   CAP8   CAP9 
+402907  46307   5940   4939   3379   1206    803    473    124 
+
+Eigenvalues for unconstrained axes:
+  MDS1   MDS2   MDS3   MDS4   MDS5   MDS6   MDS7   MDS8 
+322513 161614  68063  38736  17111  11110  10128   7873 
+(Showing 8 of 19 unconstrained eigenvalues)</code></pre>
+<pre class="r"><code>anova(cap.tys, by=&quot;term&quot;)</code></pre>
+<pre><code>Permutation test for capscale under reduced model
+Terms added sequentially (first to last)
+Permutation: free
+Number of permutations: 999
+
+Model: capscale(formula = sqrt(quant) ~ time + year + site, data = meta)
+          Df Variance      F Pr(&gt;F)    
+time       1   365958 504.14  0.001 ***
+year       6    90609  20.80  0.001 ***
+site       2     9512   6.55  0.001 ***
+Residual 917   665662                  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>cap.tys.df &lt;- fortify(cap.tys) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
+
+cap.tys.plot &lt;- ggplot(filter(cap.tys.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = &quot;top&quot;)
+
+cap.tys.plot + geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.tys.df, score==&quot;species&quot;)) +
+  scale_color_manual(&quot;Year&quot;, values=pal$year) + 
+  scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
+<p><img src="images/cap_tys-1.svg" width="768" /></p>
+</div>
+<div id="cap-with-year-within-time" class="section level2">
+<h2>CAP with year, within time</h2>
+<pre class="r"><code>meta.D &lt;- filter(meta, time==&quot;D&quot;)
+quant.D &lt;- quant[rownames(meta.D),]
+meta.N &lt;- filter(meta, time==&quot;N&quot;)
+quant.N &lt;- quant[rownames(meta.N),]
+
+cap.year.D.df &lt;- capscale(sqrt(quant.D) ~ year, data=meta.D) %&gt;% 
+  fortify() %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
+ggplot(filter(cap.year.D.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) + 
+  geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.year.D.df, score==&quot;species&quot;)) +
+  scale_color_manual(&quot;Year&quot;, values=pal$year) + 
+  scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
+<p><img src="images/cap_year-1.svg" width="768" /></p>
+<pre class="r"><code>cap.year.N.df &lt;- capscale(sqrt(quant.N) ~ year, data=meta.N) %&gt;% 
+  fortify() %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
+ggplot(filter(cap.year.N.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) + 
+  geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.year.N.df, score==&quot;species&quot;)) +
+  scale_color_manual(&quot;Year&quot;, values=pal$year) + 
+  scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
+<p><img src="images/cap_year-2.svg" width="768" /></p>
 </div>
 </div>
 
