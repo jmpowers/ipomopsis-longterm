@@ -290,7 +290,7 @@ ggplot(longdata %>% filter(name %in% qual_chems),
 #TODO (E)-hex-2-enal vs. no isomer specified
 ```
 
-# Analysis of filtered volatiles
+# Ordinations of filtered volatiles
 
 ## Heatmap
 
@@ -338,19 +338,31 @@ nmds.plot + geom_point(aes(color=year, shape=time)) +
 ## CAP with time, year, site
 
 ```{r cap_tys}
-cap.tys <- capscale(sqrt(quant) ~ time + year + site, data=meta)
+cap.tys <- capscale(sqrt(quant) ~ time + year + site + year:site + time:site, data=meta)
 cap.tys
 anova(cap.tys, by="term")
 
 cap.tys.df <- fortify(cap.tys) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
 
-cap.tys.plot <- ggplot(filter(cap.tys.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
-  theme_classic() + theme(legend.position = "top")
-
-cap.tys.plot + geom_point(aes(color=year, shape=time)) +
+ggplot(filter(cap.tys.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = "top") + 
+  geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.tys.df, score=="species")) +
   scale_color_manual("Year", values=pal$year) + 
   scale_shape_manual("Time", values=c(D=1,N=19))
+```
+
+## CAP with time, year, site, soil moisture
+
+```{r cap_vwc}
+meta.withvwc <- meta %>% drop_na(VWC) %>% 
+  group_by(date, site, time) %>% #see plot above for which dates have soil moisture data
+  mutate(relVWC = VWC - mean(VWC)) %>% ungroup() #VWC centered to mean for each sampling date
+quant.withvwc <- quant[meta.withvwc$sample,]
+
+cap.tysv <- capscale(sqrt(quant.withvwc) ~ time + year + site + relVWC, data=meta.withvwc)
+cap.tysv
+anova(cap.tysv, by="term")
 ```
 
 ## CAP with year, within time

@@ -1312,8 +1312,8 @@ save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</cod
 #TODO (E)-hex-2-enal vs. no isomer specified</code></pre>
 </div>
 </div>
-<div id="analysis-of-filtered-volatiles" class="section level1">
-<h1>Analysis of filtered volatiles</h1>
+<div id="ordinations-of-filtered-volatiles" class="section level1">
+<h1>Ordinations of filtered volatiles</h1>
 <div id="heatmap" class="section level2">
 <h2>Heatmap</h2>
 <pre class="r"><code>load(&quot;data/volatiles/filtered_quantmeta.rda&quot;)
@@ -1360,16 +1360,17 @@ nmds.plot + geom_point(aes(color=time)) +
 </div>
 <div id="cap-with-time-year-site" class="section level2">
 <h2>CAP with time, year, site</h2>
-<pre class="r"><code>cap.tys &lt;- capscale(sqrt(quant) ~ time + year + site, data=meta)
+<pre class="r"><code>cap.tys &lt;- capscale(sqrt(quant) ~ time + year + site + year:site + time:site, data=meta)
 cap.tys</code></pre>
-<pre><code>Call: capscale(formula = sqrt(quant) ~ time + year + site, data = meta)
+<pre><code>Call: capscale(formula = sqrt(quant) ~ time + year + site + year:site +
+time:site, data = meta)
 
 -- Model Summary --
 
                Inertia Proportion Rank
 Total         1.13e+06   1.00e+00     
-Constrained   4.66e+05   4.12e-01    9
-Unconstrained 6.66e+05   5.88e-01   19
+Constrained   4.91e+05   4.33e-01   19
+Unconstrained 6.41e+05   5.67e-01   19
 
 Inertia is mean squared Euclidean distance
 
@@ -1378,15 +1379,21 @@ Inertia is mean squared Euclidean distance
 Species scores projected from &#39;sqrt&#39;
 Species scores projected from &#39;quant&#39;
 
+Some constraints or conditions were aliased because they were redundant.
+This can happen if terms are linearly dependent (collinear):
+&#39;year2020:siteLagg&#39;
+
 -- Eigenvalues --
 
 Eigenvalues for constrained axes:
-  CAP1   CAP2   CAP3   CAP4   CAP5   CAP6   CAP7   CAP8   CAP9 
-402907  46307   5940   4939   3379   1206    803    473    124 
+  CAP1   CAP2   CAP3   CAP4   CAP5   CAP6   CAP7   CAP8   CAP9  CAP10  CAP11 
+415174  52561   7443   5603   4293   2089   1264    880    445    368    155 
+ CAP12  CAP13  CAP14  CAP15  CAP16  CAP17  CAP18  CAP19 
+   127     76     41     36     14      7      6      1 
 
 Eigenvalues for unconstrained axes:
   MDS1   MDS2   MDS3   MDS4   MDS5   MDS6   MDS7   MDS8 
-322513 161614  68063  38736  17111  11110  10128   7873 
+308206 157088  66759  37251  16494  10732   9839   7546 
 (Showing 8 of 19 unconstrained eigenvalues)</code></pre>
 <pre class="r"><code>anova(cap.tys, by=&quot;term&quot;)</code></pre>
 <pre><code>Permutation test for capscale under reduced model
@@ -1394,24 +1401,77 @@ Terms added sequentially (first to last)
 Permutation: free
 Number of permutations: 999
 
-Model: capscale(formula = sqrt(quant) ~ time + year + site, data = meta)
-          Df Variance      F Pr(&gt;F)    
-time       1   365958 504.14  0.001 ***
-year       6    90609  20.80  0.001 ***
-site       2     9512   6.55  0.001 ***
-Residual 917   665662                  
+Model: capscale(formula = sqrt(quant) ~ time + year + site + year:site + time:site, data = meta)
+           Df Variance      F Pr(&gt;F)    
+time        1   365958 515.98  0.001 ***
+year        6    90609  21.29  0.001 ***
+site        2     9512   6.71  0.001 ***
+year:site  11    20086   2.57  0.001 ***
+time:site   2     4417   3.11  0.018 *  
+Residual  904   641159                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>cap.tys.df &lt;- fortify(cap.tys) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
 
-cap.tys.plot &lt;- ggplot(filter(cap.tys.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
-  theme_classic() + theme(legend.position = &quot;top&quot;)
-
-cap.tys.plot + geom_point(aes(color=year, shape=time)) +
+ggplot(filter(cap.tys.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) + 
+  geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.tys.df, score==&quot;species&quot;)) +
   scale_color_manual(&quot;Year&quot;, values=pal$year) + 
   scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
 <p><img src="images/cap_tys-1.svg" width="768" /></p>
+</div>
+<div id="cap-with-time-year-site-soil-moisture" class="section level2">
+<h2>CAP with time, year, site, soil moisture</h2>
+<pre class="r"><code>meta.withvwc &lt;- meta %&gt;% drop_na(VWC) %&gt;% 
+  group_by(date, site, time) %&gt;% #see plot above for which dates have soil moisture data
+  mutate(relVWC = VWC - mean(VWC)) %&gt;% ungroup() #VWC centered to mean for each sampling date
+quant.withvwc &lt;- quant[meta.withvwc$sample,]
+
+cap.tysv &lt;- capscale(sqrt(quant.withvwc) ~ time + year + site + relVWC, data=meta.withvwc)
+cap.tysv</code></pre>
+<pre><code>Call: capscale(formula = sqrt(quant.withvwc) ~ time + year + site + relVWC,
+data = meta.withvwc)
+
+-- Model Summary --
+
+               Inertia Proportion Rank
+Total         1.03e+06   1.00e+00     
+Constrained   4.18e+05   4.07e-01    9
+Unconstrained 6.10e+05   5.93e-01   19
+
+Inertia is mean squared Euclidean distance
+
+-- Note --
+
+Species scores projected from &#39;sqrt&#39;
+Species scores projected from &#39;quant.withvwc&#39;
+
+-- Eigenvalues --
+
+Eigenvalues for constrained axes:
+  CAP1   CAP2   CAP3   CAP4   CAP5   CAP6   CAP7   CAP8   CAP9 
+322833  77149   6947   5683   2663   1069    735    445     81 
+
+Eigenvalues for unconstrained axes:
+  MDS1   MDS2   MDS3   MDS4   MDS5   MDS6   MDS7   MDS8 
+251397 177987  65455  49635  14311  11800   8224   7838 
+(Showing 8 of 19 unconstrained eigenvalues)</code></pre>
+<pre class="r"><code>anova(cap.tysv, by=&quot;term&quot;)</code></pre>
+<pre><code>Permutation test for capscale under reduced model
+Terms added sequentially (first to last)
+Permutation: free
+Number of permutations: 999
+
+Model: capscale(formula = sqrt(quant.withvwc) ~ time + year + site + relVWC, data = meta.withvwc)
+          Df Variance      F Pr(&gt;F)    
+time       1   286720 240.78  0.001 ***
+year       5   112705  18.93  0.001 ***
+site       2    15733   6.61  0.001 ***
+relVWC     1     2448   2.06  0.087 .  
+Residual 512   609696                  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
 <div id="cap-with-year-within-time" class="section level2">
 <h2>CAP with year, within time</h2>
