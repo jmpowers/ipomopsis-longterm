@@ -32,6 +32,7 @@ knitr::opts_chunk$set(comment="", cache=T, warning = F, message = F,
                       fig.path = "images/", dev="svglite", dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 options(digits=4, knitr.kable.NA = "") # for kables
 source("read_shimadzu.R")
+explained <- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(cap)$tot.chi, 0), "% explained")
 ```
 
 ```{r load_metadata}
@@ -187,7 +188,7 @@ quant.full <- list.files("data/volatiles/quant/", full.names = T) %>%
   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %>% 
   distinct(Filename, Name, .keep_all=T)
 
-setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
+need_meta <- setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
 
 #only keep file-metadata matches
 files.match <- intersect(meta.full$FileName, quant.full$Filename)
@@ -230,7 +231,43 @@ qual.all <- make_sampletable(longdata, metadata.df)
 chems <- make_chemtable(longdata, metadata.df)
 ```
 
-## Bouquet
+## Check ambients vs. samples
+
+```{r check_ambi}
+meta.all.noleaf <- meta.all %>% filter(type != "leaf")
+cut_threshold <- 5e8
+qual.all.cut <- qual.all[meta.all.noleaf$FileName, colSums(qual.all) > cut_threshold | #big compounds
+                           colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
+
+cap.ambi <- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
+anova(cap.ambi)
+explained(cap.ambi)
+
+cap.ambi.df <- fortify(cap.ambi) %>% left_join(mutate(meta.all.noleaf, score="sites"), by=c(label="FileName", "score"))
+
+zoom <- 40
+cap_threshold <- 3
+ggplot(filter(cap.ambi.df, score=="sites"), aes(x=CAP1, y=MDS1, label=greekify(label))) +
+  theme_classic() + theme(legend.position = "top") + 
+  geom_point(aes(shape=type, color=type)) + scale_shape_manual(values=c(19,1))+
+  scale_color_manual(values=c("darkblue","magenta")) +
+  geom_text(data=filter(cap.ambi.df, score=="species", abs(CAP1)>cap_threshold), aes(x=CAP1*zoom))
+
+#filter(cap.ambi.df, score=="species", label%in%colnames(quant.all)) %>% arrange(CAP1) %>% View()
+contams <- c("decan-2-one", "Nonanoic acid", "Decanal", "Caprolactam")
+filter(cap.ambi.df, score=="species") %>% 
+  mutate(verdict = if_else(label %in% colnames(quant.all), if_else(label %in% contams, "contam", "keep"), "unknown")) %>% 
+ggplot(aes(x=CAP1, y=MDS1, label=greekify(label), color=verdict)) +
+  theme_classic() + theme(legend.position = "top") +
+  geom_vline(xintercept = c(cap_threshold,cap_threshold), linetype=2)+ geom_vline(xintercept=0)+
+  geom_hline(yintercept=-25, linetype=2)+ geom_hline(yintercept=0)+
+  geom_point()+  geom_smooth()
+
+ggplot(filter(cap.ambi.df, score=="sites"), aes(y=-CAP1, x=type)) + geom_boxplot()
+```
+
+
+## Filtering criteria
 
 ```{r bouquet}
 chemsf <- chems %>%
@@ -250,7 +287,7 @@ bouquet::plot_filters(chemsf, option="ambient", yrange=3.5)
 bouquet::plot_filters(chemsf, option="prop")
 ```
 
-## Compare quant and bouquet compounds
+## Compare quant and filtered compounds
 
 ```{r quant_qual}
 qual_chems <- chemsf$name[chemsf$filter_final]
@@ -271,6 +308,8 @@ toolow <- rownames(quant.all)[rowSums(quant.all[,quant_qual]) < 2500] #exclude 2
 qual <- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual <- qual[!rownames(qual) %in% toolow,]
 quant <- quant.all[rownames(qual), quant_qual]
+quant.long <- quant %>% rownames_to_column("sample") %>% pivot_longer(colnames(quant))
+ipochemsf <- ipochems[match(colnames(qual), ipochems$shortname),]
 meta <- metadata.df[rownames(qual),] %>% 
   mutate(across(c(year, site, time), factor))
 
@@ -290,11 +329,34 @@ ggplot(longdata %>% filter(name %in% qual_chems),
 #TODO (E)-hex-2-enal vs. no isomer specified
 ```
 
-# Ordinations of filtered volatiles
+# Descriptions of filtered volatiles
+
+## Sample size
+
+```{r sampsize}
+meta %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "floral samples")
+meta %>% count(year, site, time, plant) %>% count(year, site, time) %>% 
+  pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "plants")
+```
+
+
+## Correlations
+
+```{r corr, fig.width=10, fig.height=8}
+corr.annot <- ipochemsf %>% select(shortname, Class=class) %>% column_to_rownames("shortname")
+corr.vols <- cor(quant, method="pearson")
+pheatmap(corr.vols, 
+         scale="none", clustering_method = "mcquitty",
+         color=colorRampPalette(c("blue","white","red"))(200), breaks=seq(-1,1,by=0.01),
+         annotation_col=corr.annot, annotation_row=corr.annot, 
+         annotation_colors = list(Class=class_pal),
+         labels_row=greekify(rownames(corr.vols)), labels_col=greekify(colnames(corr.vols)))
+```
 
 ## Heatmap
 
-```{r quant_heatmap, dev="png", dev.args=list(),fig.width=10, fig.height=8}
+```{r quant_heatmap, dev="png", dev.args=list(),fig.width=11, fig.height=8}
 load("data/volatiles/filtered_quantmeta.rda")
 
 pal <- with(meta, list(
@@ -302,6 +364,7 @@ pal <- with(meta, list(
   site = set_names(brewer.pal(nlevels(site), "Set1"), levels(site)),
   time = set_names(c("lightblue","plum1"), levels(time))))
 times <- c(D="day", N="night")
+dots <- c(D=1, N=19)
 
 pheatmap(as.matrix(t(quant))^(1/4), 
          cluster_cols=T, show_colnames=F,
@@ -312,13 +375,23 @@ pheatmap(as.matrix(t(quant))^(1/4),
          scale="none", color=mako(512),main="Filtered quant volatiles")
 ```
 
+## Boxplots
+
+```{r boxplots, fig.width=14, fig.height=10}
+quant.long %>% left_join(meta) %>% mutate(name=fct_reorder(greekify(name), -value)) %>% 
+  ggplot(aes(x=year, y=value, fill=time, color=site)) + facet_wrap(vars(name), scales="free_y") + 
+  geom_boxplot(outlier.size= 0.1) + scale_y_sqrt() +
+  scale_color_manual("Site", values=pal$site) + scale_fill_manual("Time", values=c(D="white",N="black")) +
+  theme_bw() + theme(axis.title=element_blank(), legend.position = "top")
+```
+
 ## NMDS
 
 ```{r quant_nmds}
-nmds <- metaMDS(decostand(quant, "hellinger"), autotransform = F, trymax=1)
+nmds <- metaMDS(decostand(quant, "hellinger"), autotransform = F, trymax=1, trace=F)
 
 nmds.df <- fortify(nmds) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
-nmds.plot <- ggplot(filter(nmds.df, score=="sites"), aes(x=NMDS1, y=NMDS2, label=label)) +
+nmds.plot <- ggplot(filter(nmds.df, score=="sites"), aes(x=NMDS1, y=NMDS2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top")
 
 nmds.plot + geom_point(aes(color=time)) +
@@ -327,29 +400,54 @@ nmds.plot + geom_point(aes(color=time)) +
   
 nmds.plot + geom_point(aes(color=site, shape=time)) +
   scale_color_manual("Site", values=pal$site) + 
-  scale_shape_manual("Time", values=c(1,19))
+  scale_shape_manual("Time", values=dots, label=times)
 
 nmds.plot + geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(nmds.df, score=="species")) +
   scale_color_manual("Year", values=pal$year) + 
-  scale_shape_manual("Time", values=c(1,19))
+  scale_shape_manual("Time", values=dots, label=times)
+```
+
+# Test group differences
+
+## CAP with time
+
+```{r cap_time}
+cap.t <- capscale(sqrt(quant) ~ time, data=meta)
+explained(cap.t)
+
+cap.t.df <- fortify(cap.t) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
+
+ggplot(filter(cap.t.df, score=="sites"), aes(x=CAP1, y=MDS1, label=greekify(label))) +
+  theme_classic() + theme(legend.position = "top") + 
+  geom_vline(xintercept = 0)+
+  geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.t.df, score=="species")) +
+  scale_color_manual("Year", values=pal$year) + 
+  scale_shape_manual("Time", values=dots, label=times)
+
+ggplot(filter(cap.t.df, score=="sites"), aes(y=-CAP1, x=pump, color=year)) + 
+  geom_point(shape=1) + geom_smooth(aes(group=paste(time, year)), se=F, span=1.4) +
+  scale_color_manual(values=pal$year) + theme_minimal() +
+  scale_x_time(breaks=as.POSIXct(seq(0,24, by=2)*60*60), labels=hour) + 
+  labs(x="Hour of sampling", y="CAP separating day and night", color="Year")
 ```
 
 ## CAP with time, year, site
 
 ```{r cap_tys}
 cap.tys <- capscale(sqrt(quant) ~ time + year + site + year:site + time:site, data=meta)
-cap.tys
 anova(cap.tys, by="term")
+explained(cap.tys)
 
 cap.tys.df <- fortify(cap.tys) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
 
-ggplot(filter(cap.tys.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+ggplot(filter(cap.tys.df, score=="sites"), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top") + 
   geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.tys.df, score=="species")) +
   scale_color_manual("Year", values=pal$year) + 
-  scale_shape_manual("Time", values=c(D=1,N=19))
+  scale_shape_manual("Time", values=dots, label=times)
 ```
 
 ## CAP with time, year, site, soil moisture
@@ -361,8 +459,8 @@ meta.withvwc <- meta %>% drop_na(VWC) %>%
 quant.withvwc <- quant[meta.withvwc$sample,]
 
 cap.tysv <- capscale(sqrt(quant.withvwc) ~ time + year + site + relVWC, data=meta.withvwc)
-cap.tysv
 anova(cap.tysv, by="term")
+explained(cap.tysv)
 ```
 
 ## CAP with year, within time
@@ -375,19 +473,19 @@ quant.N <- quant[rownames(meta.N),]
 
 cap.year.D.df <- capscale(sqrt(quant.D) ~ year, data=meta.D) %>% 
   fortify() %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
-ggplot(filter(cap.year.D.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+ggplot(filter(cap.year.D.df, score=="sites"), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top") + 
   geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.year.D.df, score=="species")) +
   scale_color_manual("Year", values=pal$year) + 
-  scale_shape_manual("Time", values=c(D=1,N=19))
+  scale_shape_manual("Time", values=dots, label=times)
 
 cap.year.N.df <- capscale(sqrt(quant.N) ~ year, data=meta.N) %>% 
   fortify() %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
-ggplot(filter(cap.year.N.df, score=="sites"), aes(x=CAP1, y=CAP2, label=label)) +
+ggplot(filter(cap.year.N.df, score=="sites"), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top") + 
   geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.year.N.df, score=="species")) +
   scale_color_manual("Year", values=pal$year) + 
-  scale_shape_manual("Time", values=c(D=1,N=19))
+  scale_shape_manual("Time", values=dots, label=times)
 ```

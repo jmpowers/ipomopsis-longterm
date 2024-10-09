@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-10-07" />
+<meta name="date" content="2024-10-08" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-10-07</h4>
+<h4 class="date">2024-10-08</h4>
 
 </div>
 
@@ -276,7 +276,8 @@ library(knitr)
 knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
                       fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
 options(digits=4, knitr.kable.NA = &quot;&quot;) # for kables
-source(&quot;read_shimadzu.R&quot;)</code></pre>
+source(&quot;read_shimadzu.R&quot;)
+explained &lt;- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(cap)$tot.chi, 0), &quot;% explained&quot;)</code></pre>
 <pre class="r"><code>metadata &lt;- list.files(&quot;data/volatiles&quot;, pattern = &quot;Ipomopsis long-term volatiles - 20&quot;, full.names=T) %&gt;% 
   map_dfr(~read_tsv(.x, show_col_types = F) %&gt;% 
             mutate(across(any_of(c(&quot;pump_id&quot;, &quot;plant&quot;, &quot;vial&quot;, &quot;sample&quot;)), as.character)), .id=&quot;metafile&quot;) %&gt;% 
@@ -1120,42 +1121,9 @@ greekify &lt;- function(names) {
   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %&gt;% 
   distinct(Filename, Name, .keep_all=T)
 
-setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in</code></pre>
-<pre><code> [1] &quot;Blank1_852019_01.qgd&quot;                 
- [2] &quot;I23DAug2_08052019.qgd&quot;                
- [3] &quot;L13NAug10_09022017.qgd&quot;               
- [4] &quot;VF9D07142017_07140217anal.qgd&quot;        
- [5] &quot;Ihyb_20_210712_redo_8252021_07.qgd&quot;   
- [6] &quot;Lagg_26_210715_8222021_07.qgd&quot;        
- [7] &quot;No_Drierite_2_07152021_7162021_14.qgd&quot;
- [8] &quot;5_Ihyb_nodate_7142021_20.qgd&quot;         
- [9] &quot;Ihyb_222_230728_8232023_10.qgd&quot;       
-[10] &quot;Ihyb_223_230728_8222023_25.qgd&quot;       
-[11] &quot;Ihyb_232_230728_8232023_12.qgd&quot;       
-[12] &quot;Ihyb_235_230728_8232023_06.qgd&quot;       
-[13] &quot;Ihyb_403_230728_8222023_06.qgd&quot;       
-[14] &quot;PGVF_5_8312023_07.qgd&quot;                
-[15] &quot;PGVF_80_8302023_15.qgd&quot;               
-[16] &quot;PGVF_121_8292023_28.qgd&quot;              
-[17] &quot;Ihyb_703B_N_220727_812022_15.qgd&quot;     
-[18] &quot;Ihyb_707B_N_220727_812022_13.qgd&quot;     
-[19] &quot;Ihyb_721B_N_220727_812022_10.qgd&quot;     
-[20] &quot;Ihyb_732_D_220712_822022_13.qgd&quot;      
-[21] &quot;Ihyb_AIRJP_D_220712_842022_14.qgd&quot;    
-[22] &quot;Ihyb_T1_N_220727_822022_01.qgd&quot;       
-[23] &quot;Ihyb_T2_N_220727_822022_02.qgd&quot;       
-[24] &quot;Ihyb_T3_N_220727_822022_03.qgd&quot;       
-[25] &quot;Ihyb_T4_N_220727_822022_04.qgd&quot;       
-[26] &quot;Ihyb_T5_N_220727_822022_05.qgd&quot;       
-[27] &quot;Ihyb_T6_N_220727_822022_06.qgd&quot;       
-[28] &quot;Ihyb_T7_N_220727_822022_07.qgd&quot;       
-[29] &quot;Lagg_415_N_220721_7282022_25.qgd&quot;     
-[30] &quot;Lagg_548_D_220721_7282022_13.qgd&quot;     
-[31] &quot;Lagg_AIRDH_N_220721_7262022_24.qgd&quot;   
-[32] &quot;VF_978_N_220802_852022_08.qgd&quot;        
-[33] &quot;VF_AIRJK_D_220801_852022_03.qgd&quot;      
-[34] &quot;VF_AIRJP_D_220801_842022_19.qgd&quot;      </code></pre>
-<pre class="r"><code>#only keep file-metadata matches
+need_meta &lt;- setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
+
+#only keep file-metadata matches
 files.match &lt;- intersect(meta.full$FileName, quant.full$Filename)
 meta.all   &lt;- meta.full %&gt;% filter(FileName %in% files.match)
 quant.all &lt;- quant.full %&gt;% filter(Filename %in% files.match) %&gt;%
@@ -1188,8 +1156,52 @@ rownames(metadata.df) &lt;- metadata.df$sample
 
 qual.all &lt;- make_sampletable(longdata, metadata.df)
 chems &lt;- make_chemtable(longdata, metadata.df)</code></pre>
-<div id="bouquet" class="section level2">
-<h2>Bouquet</h2>
+<div id="check-ambients-vs.-samples" class="section level2">
+<h2>Check ambients vs. samples</h2>
+<pre class="r"><code>meta.all.noleaf &lt;- meta.all %&gt;% filter(type != &quot;leaf&quot;)
+cut_threshold &lt;- 5e8
+qual.all.cut &lt;- qual.all[meta.all.noleaf$FileName, colSums(qual.all) &gt; cut_threshold | #big compounds
+                           colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
+
+cap.ambi &lt;- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
+anova(cap.ambi)</code></pre>
+<pre><code>Permutation test for capscale under reduced model
+Permutation: free
+Number of permutations: 999
+
+Model: capscale(formula = sqrt(qual.all.cut) ~ type, data = meta.all.noleaf)
+           Df Variance    F Pr(&gt;F)    
+Model       1 4.14e+05 3.82  0.001 ***
+Residual 1034 1.12e+08                
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>explained(cap.ambi)</code></pre>
+<pre><code>[1] &quot;0% explained&quot;</code></pre>
+<pre class="r"><code>cap.ambi.df &lt;- fortify(cap.ambi) %&gt;% left_join(mutate(meta.all.noleaf, score=&quot;sites&quot;), by=c(label=&quot;FileName&quot;, &quot;score&quot;))
+
+zoom &lt;- 40
+cap_threshold &lt;- 3
+ggplot(filter(cap.ambi.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) + 
+  geom_point(aes(shape=type, color=type)) + scale_shape_manual(values=c(19,1))+
+  scale_color_manual(values=c(&quot;darkblue&quot;,&quot;magenta&quot;)) +
+  geom_text(data=filter(cap.ambi.df, score==&quot;species&quot;, abs(CAP1)&gt;cap_threshold), aes(x=CAP1*zoom))</code></pre>
+<p><img src="images/check_ambi-1.svg" width="768" /></p>
+<pre class="r"><code>#filter(cap.ambi.df, score==&quot;species&quot;, label%in%colnames(quant.all)) %&gt;% arrange(CAP1) %&gt;% View()
+contams &lt;- c(&quot;decan-2-one&quot;, &quot;Nonanoic acid&quot;, &quot;Decanal&quot;, &quot;Caprolactam&quot;)
+filter(cap.ambi.df, score==&quot;species&quot;) %&gt;% 
+  mutate(verdict = if_else(label %in% colnames(quant.all), if_else(label %in% contams, &quot;contam&quot;, &quot;keep&quot;), &quot;unknown&quot;)) %&gt;% 
+ggplot(aes(x=CAP1, y=MDS1, label=greekify(label), color=verdict)) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) +
+  geom_vline(xintercept = c(cap_threshold,cap_threshold), linetype=2)+ geom_vline(xintercept=0)+
+  geom_hline(yintercept=-25, linetype=2)+ geom_hline(yintercept=0)+
+  geom_point()+  geom_smooth()</code></pre>
+<p><img src="images/check_ambi-2.svg" width="768" /></p>
+<pre class="r"><code>ggplot(filter(cap.ambi.df, score==&quot;sites&quot;), aes(y=-CAP1, x=type)) + geom_boxplot()</code></pre>
+<p><img src="images/check_ambi-3.svg" width="768" /></p>
+</div>
+<div id="filtering-criteria" class="section level2">
+<h2>Filtering criteria</h2>
 <pre class="r"><code>chemsf &lt;- chems %&gt;%
   filter_RT(2, 17) %&gt;% 
   filter_match(0.8) %&gt;% 
@@ -1209,8 +1221,8 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 <pre class="r"><code>bouquet::plot_filters(chemsf, option=&quot;prop&quot;)</code></pre>
 <p><img src="images/bouquet-3.svg" width="768" /></p>
 </div>
-<div id="compare-quant-and-bouquet-compounds" class="section level2">
-<h2>Compare quant and bouquet compounds</h2>
+<div id="compare-quant-and-filtered-compounds" class="section level2">
+<h2>Compare quant and filtered compounds</h2>
 <pre class="r"><code>qual_chems &lt;- chemsf$name[chemsf$filter_final]
 
 #TODO check on new compounds to investigate
@@ -1294,6 +1306,8 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual &lt;- qual[!rownames(qual) %in% toolow,]
 quant &lt;- quant.all[rownames(qual), quant_qual]
+quant.long &lt;- quant %&gt;% rownames_to_column(&quot;sample&quot;) %&gt;% pivot_longer(colnames(quant))
+ipochemsf &lt;- ipochems[match(colnames(qual), ipochems$shortname),]
 meta &lt;- metadata.df[rownames(qual),] %&gt;% 
   mutate(across(c(year, site, time), factor))
 
@@ -1312,8 +1326,185 @@ save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</cod
 #TODO (E)-hex-2-enal vs. no isomer specified</code></pre>
 </div>
 </div>
-<div id="ordinations-of-filtered-volatiles" class="section level1">
-<h1>Ordinations of filtered volatiles</h1>
+<div id="descriptions-of-filtered-volatiles" class="section level1">
+<h1>Descriptions of filtered volatiles</h1>
+<div id="sample-size" class="section level2">
+<h2>Sample size</h2>
+<pre class="r"><code>meta %&gt;% count(year, site, time) %&gt;% 
+  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;floral samples&quot;)</code></pre>
+<table>
+<caption>floral samples</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="right">Ihyb_D</th>
+<th align="right">Ihyb_N</th>
+<th align="right">Lagg_D</th>
+<th align="right">Lagg_N</th>
+<th align="right">VF_D</th>
+<th align="right">VF_N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="right">33</td>
+<td align="right">25</td>
+<td align="right">49</td>
+<td align="right">22</td>
+<td align="right">63</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2018</td>
+<td align="right">8</td>
+<td align="right">10</td>
+<td align="right">15</td>
+<td align="right"></td>
+<td align="right">17</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="right">24</td>
+<td align="right">28</td>
+<td align="right">40</td>
+<td align="right"></td>
+<td align="right">17</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="right">18</td>
+<td align="right">21</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">12</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2021</td>
+<td align="right">17</td>
+<td align="right">23</td>
+<td align="right">44</td>
+<td align="right">28</td>
+<td align="right">6</td>
+<td align="right">21</td>
+</tr>
+<tr class="even">
+<td align="left">2022</td>
+<td align="right">32</td>
+<td align="right">82</td>
+<td align="right">48</td>
+<td align="right">46</td>
+<td align="right">18</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="left">2023</td>
+<td align="right">18</td>
+<td align="right">18</td>
+<td align="right">45</td>
+<td align="right">40</td>
+<td align="right">16</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>meta %&gt;% count(year, site, time, plant) %&gt;% count(year, site, time) %&gt;% 
+  pivot_wider(names_from=c(&quot;site&quot;,&quot;time&quot;), values_from=&quot;n&quot;) %&gt;% kable(caption = &quot;plants&quot;)</code></pre>
+<table>
+<caption>plants</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="right">Ihyb_D</th>
+<th align="right">Ihyb_N</th>
+<th align="right">Lagg_D</th>
+<th align="right">Lagg_N</th>
+<th align="right">VF_D</th>
+<th align="right">VF_N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2017</td>
+<td align="right">12</td>
+<td align="right">11</td>
+<td align="right">11</td>
+<td align="right">10</td>
+<td align="right">45</td>
+<td align="right">3</td>
+</tr>
+<tr class="even">
+<td align="left">2018</td>
+<td align="right">5</td>
+<td align="right">6</td>
+<td align="right">15</td>
+<td align="right"></td>
+<td align="right">17</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="right">24</td>
+<td align="right">28</td>
+<td align="right">40</td>
+<td align="right"></td>
+<td align="right">16</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="right">18</td>
+<td align="right">18</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">11</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">2021</td>
+<td align="right">16</td>
+<td align="right">17</td>
+<td align="right">41</td>
+<td align="right">28</td>
+<td align="right">6</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">2022</td>
+<td align="right">22</td>
+<td align="right">32</td>
+<td align="right">47</td>
+<td align="right">45</td>
+<td align="right">18</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="left">2023</td>
+<td align="right">18</td>
+<td align="right">18</td>
+<td align="right">41</td>
+<td align="right">40</td>
+<td align="right">16</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="correlations" class="section level2">
+<h2>Correlations</h2>
+<pre class="r"><code>corr.annot &lt;- ipochemsf %&gt;% select(shortname, Class=class) %&gt;% column_to_rownames(&quot;shortname&quot;)
+corr.vols &lt;- cor(quant, method=&quot;pearson&quot;)
+pheatmap(corr.vols, 
+         scale=&quot;none&quot;, clustering_method = &quot;mcquitty&quot;,
+         color=colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(200), breaks=seq(-1,1,by=0.01),
+         annotation_col=corr.annot, annotation_row=corr.annot, 
+         annotation_colors = list(Class=class_pal),
+         labels_row=greekify(rownames(corr.vols)), labels_col=greekify(colnames(corr.vols)))</code></pre>
+<p><img src="images/corr-1.svg" width="960" /></p>
+</div>
 <div id="heatmap" class="section level2">
 <h2>Heatmap</h2>
 <pre class="r"><code>load(&quot;data/volatiles/filtered_quantmeta.rda&quot;)
@@ -1323,6 +1514,7 @@ pal &lt;- with(meta, list(
   site = set_names(brewer.pal(nlevels(site), &quot;Set1&quot;), levels(site)),
   time = set_names(c(&quot;lightblue&quot;,&quot;plum1&quot;), levels(time))))
 times &lt;- c(D=&quot;day&quot;, N=&quot;night&quot;)
+dots &lt;- c(D=1, N=19)
 
 pheatmap(as.matrix(t(quant))^(1/4), 
          cluster_cols=T, show_colnames=F,
@@ -1331,17 +1523,23 @@ pheatmap(as.matrix(t(quant))^(1/4),
          annotation_col = meta %&gt;% select(year, site, time) %&gt;% mutate(across(everything(), factor)),
          annotation_colors =pal,
          scale=&quot;none&quot;, color=mako(512),main=&quot;Filtered quant volatiles&quot;)</code></pre>
-<p><img src="images/quant_heatmap-1.png" width="960" /></p>
+<p><img src="images/quant_heatmap-1.png" width="1056" /></p>
+</div>
+<div id="boxplots" class="section level2">
+<h2>Boxplots</h2>
+<pre class="r"><code>quant.long %&gt;% left_join(meta) %&gt;% mutate(name=fct_reorder(greekify(name), -value)) %&gt;% 
+  ggplot(aes(x=year, y=value, fill=time, color=site)) + facet_wrap(vars(name), scales=&quot;free_y&quot;) + 
+  geom_boxplot(outlier.size= 0.1) + scale_y_sqrt() +
+  scale_color_manual(&quot;Site&quot;, values=pal$site) + scale_fill_manual(&quot;Time&quot;, values=c(D=&quot;white&quot;,N=&quot;black&quot;)) +
+  theme_bw() + theme(axis.title=element_blank(), legend.position = &quot;top&quot;)</code></pre>
+<p><img src="images/boxplots-1.svg" width="1344" /></p>
 </div>
 <div id="nmds" class="section level2">
 <h2>NMDS</h2>
-<pre class="r"><code>nmds &lt;- metaMDS(decostand(quant, &quot;hellinger&quot;), autotransform = F, trymax=1)</code></pre>
-<pre><code>Run 0 stress 0.2002 
-Run 1 stress 0.2293 
-*** Best solution was not repeated -- monoMDS stopping criteria:
-     1: scale factor of the gradient &lt; sfgrmin</code></pre>
-<pre class="r"><code>nmds.df &lt;- fortify(nmds) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
-nmds.plot &lt;- ggplot(filter(nmds.df, score==&quot;sites&quot;), aes(x=NMDS1, y=NMDS2, label=label)) +
+<pre class="r"><code>nmds &lt;- metaMDS(decostand(quant, &quot;hellinger&quot;), autotransform = F, trymax=1, trace=F)
+
+nmds.df &lt;- fortify(nmds) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
+nmds.plot &lt;- ggplot(filter(nmds.df, score==&quot;sites&quot;), aes(x=NMDS1, y=NMDS2, label=greekify(label))) +
   theme_classic() + theme(legend.position = &quot;top&quot;)
 
 nmds.plot + geom_point(aes(color=time)) +
@@ -1350,52 +1548,43 @@ nmds.plot + geom_point(aes(color=time)) +
 <p><img src="images/quant_nmds-1.svg" width="768" /></p>
 <pre class="r"><code>nmds.plot + geom_point(aes(color=site, shape=time)) +
   scale_color_manual(&quot;Site&quot;, values=pal$site) + 
-  scale_shape_manual(&quot;Time&quot;, values=c(1,19))</code></pre>
+  scale_shape_manual(&quot;Time&quot;, values=dots, label=times)</code></pre>
 <p><img src="images/quant_nmds-2.svg" width="768" /></p>
 <pre class="r"><code>nmds.plot + geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(nmds.df, score==&quot;species&quot;)) +
   scale_color_manual(&quot;Year&quot;, values=pal$year) + 
-  scale_shape_manual(&quot;Time&quot;, values=c(1,19))</code></pre>
+  scale_shape_manual(&quot;Time&quot;, values=dots, label=times)</code></pre>
 <p><img src="images/quant_nmds-3.svg" width="768" /></p>
+</div>
+</div>
+<div id="test-group-differences" class="section level1">
+<h1>Test group differences</h1>
+<div id="cap-with-time" class="section level2">
+<h2>CAP with time</h2>
+<pre class="r"><code>cap.t &lt;- capscale(sqrt(quant) ~ time, data=meta)
+explained(cap.t)</code></pre>
+<pre><code>[1] &quot;32% explained&quot;</code></pre>
+<pre class="r"><code>cap.t.df &lt;- fortify(cap.t) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
+
+ggplot(filter(cap.t.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) + 
+  geom_vline(xintercept = 0)+
+  geom_point(aes(color=year, shape=time)) +
+  geom_text(data=filter(cap.t.df, score==&quot;species&quot;)) +
+  scale_color_manual(&quot;Year&quot;, values=pal$year) + 
+  scale_shape_manual(&quot;Time&quot;, values=dots, label=times)</code></pre>
+<p><img src="images/cap_time-1.svg" width="768" /></p>
+<pre class="r"><code>ggplot(filter(cap.t.df, score==&quot;sites&quot;), aes(y=-CAP1, x=pump, color=year)) + 
+  geom_point(shape=1) + geom_smooth(aes(group=paste(time, year)), se=F, span=1.4) +
+  scale_color_manual(values=pal$year) + theme_minimal() +
+  scale_x_time(breaks=as.POSIXct(seq(0,24, by=2)*60*60), labels=hour) + 
+  labs(x=&quot;Hour of sampling&quot;, y=&quot;CAP separating day and night&quot;, color=&quot;Year&quot;)</code></pre>
+<p><img src="images/cap_time-2.svg" width="768" /></p>
 </div>
 <div id="cap-with-time-year-site" class="section level2">
 <h2>CAP with time, year, site</h2>
 <pre class="r"><code>cap.tys &lt;- capscale(sqrt(quant) ~ time + year + site + year:site + time:site, data=meta)
-cap.tys</code></pre>
-<pre><code>Call: capscale(formula = sqrt(quant) ~ time + year + site + year:site +
-time:site, data = meta)
-
--- Model Summary --
-
-               Inertia Proportion Rank
-Total         1.13e+06   1.00e+00     
-Constrained   4.91e+05   4.33e-01   19
-Unconstrained 6.41e+05   5.67e-01   19
-
-Inertia is mean squared Euclidean distance
-
--- Note --
-
-Species scores projected from &#39;sqrt&#39;
-Species scores projected from &#39;quant&#39;
-
-Some constraints or conditions were aliased because they were redundant.
-This can happen if terms are linearly dependent (collinear):
-&#39;year2020:siteLagg&#39;
-
--- Eigenvalues --
-
-Eigenvalues for constrained axes:
-  CAP1   CAP2   CAP3   CAP4   CAP5   CAP6   CAP7   CAP8   CAP9  CAP10  CAP11 
-415174  52561   7443   5603   4293   2089   1264    880    445    368    155 
- CAP12  CAP13  CAP14  CAP15  CAP16  CAP17  CAP18  CAP19 
-   127     76     41     36     14      7      6      1 
-
-Eigenvalues for unconstrained axes:
-  MDS1   MDS2   MDS3   MDS4   MDS5   MDS6   MDS7   MDS8 
-308206 157088  66759  37251  16494  10732   9839   7546 
-(Showing 8 of 19 unconstrained eigenvalues)</code></pre>
-<pre class="r"><code>anova(cap.tys, by=&quot;term&quot;)</code></pre>
+anova(cap.tys, by=&quot;term&quot;)</code></pre>
 <pre><code>Permutation test for capscale under reduced model
 Terms added sequentially (first to last)
 Permutation: free
@@ -1411,14 +1600,16 @@ time:site   2     4417   3.11  0.018 *
 Residual  904   641159                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>explained(cap.tys)</code></pre>
+<pre><code>[1] &quot;43% explained&quot;</code></pre>
 <pre class="r"><code>cap.tys.df &lt;- fortify(cap.tys) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
 
-ggplot(filter(cap.tys.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+ggplot(filter(cap.tys.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = &quot;top&quot;) + 
   geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.tys.df, score==&quot;species&quot;)) +
   scale_color_manual(&quot;Year&quot;, values=pal$year) + 
-  scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
+  scale_shape_manual(&quot;Time&quot;, values=dots, label=times)</code></pre>
 <p><img src="images/cap_tys-1.svg" width="768" /></p>
 </div>
 <div id="cap-with-time-year-site-soil-moisture" class="section level2">
@@ -1429,35 +1620,7 @@ ggplot(filter(cap.tys.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=l
 quant.withvwc &lt;- quant[meta.withvwc$sample,]
 
 cap.tysv &lt;- capscale(sqrt(quant.withvwc) ~ time + year + site + relVWC, data=meta.withvwc)
-cap.tysv</code></pre>
-<pre><code>Call: capscale(formula = sqrt(quant.withvwc) ~ time + year + site + relVWC,
-data = meta.withvwc)
-
--- Model Summary --
-
-               Inertia Proportion Rank
-Total         1.03e+06   1.00e+00     
-Constrained   4.18e+05   4.07e-01    9
-Unconstrained 6.10e+05   5.93e-01   19
-
-Inertia is mean squared Euclidean distance
-
--- Note --
-
-Species scores projected from &#39;sqrt&#39;
-Species scores projected from &#39;quant.withvwc&#39;
-
--- Eigenvalues --
-
-Eigenvalues for constrained axes:
-  CAP1   CAP2   CAP3   CAP4   CAP5   CAP6   CAP7   CAP8   CAP9 
-322833  77149   6947   5683   2663   1069    735    445     81 
-
-Eigenvalues for unconstrained axes:
-  MDS1   MDS2   MDS3   MDS4   MDS5   MDS6   MDS7   MDS8 
-251397 177987  65455  49635  14311  11800   8224   7838 
-(Showing 8 of 19 unconstrained eigenvalues)</code></pre>
-<pre class="r"><code>anova(cap.tysv, by=&quot;term&quot;)</code></pre>
+anova(cap.tysv, by=&quot;term&quot;)</code></pre>
 <pre><code>Permutation test for capscale under reduced model
 Terms added sequentially (first to last)
 Permutation: free
@@ -1472,6 +1635,8 @@ relVWC     1     2448   2.06  0.087 .
 Residual 512   609696                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>explained(cap.tysv)</code></pre>
+<pre><code>[1] &quot;41% explained&quot;</code></pre>
 </div>
 <div id="cap-with-year-within-time" class="section level2">
 <h2>CAP with year, within time</h2>
@@ -1482,21 +1647,21 @@ quant.N &lt;- quant[rownames(meta.N),]
 
 cap.year.D.df &lt;- capscale(sqrt(quant.D) ~ year, data=meta.D) %&gt;% 
   fortify() %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
-ggplot(filter(cap.year.D.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+ggplot(filter(cap.year.D.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = &quot;top&quot;) + 
   geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.year.D.df, score==&quot;species&quot;)) +
   scale_color_manual(&quot;Year&quot;, values=pal$year) + 
-  scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
+  scale_shape_manual(&quot;Time&quot;, values=dots, label=times)</code></pre>
 <p><img src="images/cap_year-1.svg" width="768" /></p>
 <pre class="r"><code>cap.year.N.df &lt;- capscale(sqrt(quant.N) ~ year, data=meta.N) %&gt;% 
   fortify() %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
-ggplot(filter(cap.year.N.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=label)) +
+ggplot(filter(cap.year.N.df, score==&quot;sites&quot;), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = &quot;top&quot;) + 
   geom_point(aes(color=year, shape=time)) +
   geom_text(data=filter(cap.year.N.df, score==&quot;species&quot;)) +
   scale_color_manual(&quot;Year&quot;, values=pal$year) + 
-  scale_shape_manual(&quot;Time&quot;, values=c(D=1,N=19))</code></pre>
+  scale_shape_manual(&quot;Time&quot;, values=dots, label=times)</code></pre>
 <p><img src="images/cap_year-2.svg" width="768" /></p>
 </div>
 </div>
