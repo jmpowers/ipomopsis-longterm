@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-10-08" />
+<meta name="date" content="2024-10-09" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-10-08</h4>
+<h4 class="date">2024-10-09</h4>
 
 </div>
 
@@ -1156,14 +1156,29 @@ rownames(metadata.df) &lt;- metadata.df$sample
 
 qual.all &lt;- make_sampletable(longdata, metadata.df)
 chems &lt;- make_chemtable(longdata, metadata.df)</code></pre>
-<div id="check-ambients-vs.-samples" class="section level2">
-<h2>Check ambients vs. samples</h2>
+<div id="correlations-among-unfiltered-compounds"
+class="section level2">
+<h2>Correlations among unfiltered compounds</h2>
 <pre class="r"><code>meta.all.noleaf &lt;- meta.all %&gt;% filter(type != &quot;leaf&quot;)
 cut_threshold &lt;- 5e8
 qual.all.cut &lt;- qual.all[meta.all.noleaf$FileName, colSums(qual.all) &gt; cut_threshold | #big compounds
                            colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
 
-cap.ambi &lt;- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
+contams &lt;- c(&quot;Nonanoic acid&quot;, &quot;Decanal&quot;, &quot;Caprolactam&quot;)
+inquant &lt;- data.frame(inquant=if_else(colnames(qual.all.cut) %in% setdiff(colnames(quant.all), contams),&quot;Y&quot;,&quot;N&quot;),
+                      row.names=colnames(qual.all.cut))
+pheatmap(cor(sqrt(qual.all.cut)), scale=&quot;none&quot;, 
+         clustering_method = &quot;mcquitty&quot;, cutree_rows = 20,
+         clustering_distance_rows=&quot;correlation&quot;, clustering_distance_cols=&quot;correlation&quot;,
+         clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
+         annotation_col = inquant, annotation_row = inquant,
+         color=colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(200), breaks=seq(-1,1,by=0.01), 
+         labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)</code></pre>
+<p><img src="images/corr_all-1.png" width="1152" /></p>
+</div>
+<div id="check-ambients-vs.-samples" class="section level2">
+<h2>Check ambients vs. samples</h2>
+<pre class="r"><code>cap.ambi &lt;- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
 anova(cap.ambi)</code></pre>
 <pre><code>Permutation test for capscale under reduced model
 Permutation: free
@@ -1177,28 +1192,34 @@ Residual 1034 1.12e+08
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.ambi)</code></pre>
 <pre><code>[1] &quot;0% explained&quot;</code></pre>
-<pre class="r"><code>cap.ambi.df &lt;- fortify(cap.ambi) %&gt;% left_join(mutate(meta.all.noleaf, score=&quot;sites&quot;), by=c(label=&quot;FileName&quot;, &quot;score&quot;))
+<pre class="r"><code>cap.ambi.df &lt;- fortify(cap.ambi) %&gt;% 
+  left_join(mutate(meta.all.noleaf, score=&quot;sites&quot;), by=c(label=&quot;FileName&quot;, &quot;score&quot;)) %&gt;% 
+  left_join(rownames_to_column(inquant, &quot;label&quot;))
 
 zoom &lt;- 40
 cap_threshold &lt;- 3
 ggplot(filter(cap.ambi.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
   theme_classic() + theme(legend.position = &quot;top&quot;) + 
-  geom_point(aes(shape=type, color=type)) + scale_shape_manual(values=c(19,1))+
+  geom_point(aes(color=type, shape=type)) + scale_shape_manual(values=c(19,1))+
   scale_color_manual(values=c(&quot;darkblue&quot;,&quot;magenta&quot;)) +
   geom_text(data=filter(cap.ambi.df, score==&quot;species&quot;, abs(CAP1)&gt;cap_threshold), aes(x=CAP1*zoom))</code></pre>
 <p><img src="images/check_ambi-1.svg" width="768" /></p>
 <pre class="r"><code>#filter(cap.ambi.df, score==&quot;species&quot;, label%in%colnames(quant.all)) %&gt;% arrange(CAP1) %&gt;% View()
-contams &lt;- c(&quot;decan-2-one&quot;, &quot;Nonanoic acid&quot;, &quot;Decanal&quot;, &quot;Caprolactam&quot;)
-filter(cap.ambi.df, score==&quot;species&quot;) %&gt;% 
-  mutate(verdict = if_else(label %in% colnames(quant.all), if_else(label %in% contams, &quot;contam&quot;, &quot;keep&quot;), &quot;unknown&quot;)) %&gt;% 
-ggplot(aes(x=CAP1, y=MDS1, label=greekify(label), color=verdict)) +
+ggplot(filter(cap.ambi.df, score==&quot;species&quot;),  aes(x=CAP1, y=MDS1, color=inquant)) +
+  labs(color= &quot;In quant integrations?&quot;)+
   theme_classic() + theme(legend.position = &quot;top&quot;) +
-  geom_vline(xintercept = c(cap_threshold,cap_threshold), linetype=2)+ geom_vline(xintercept=0)+
-  geom_hline(yintercept=-25, linetype=2)+ geom_hline(yintercept=0)+
-  geom_point()+  geom_smooth()</code></pre>
+  geom_vline(xintercept=0)+ geom_hline(yintercept=0)+
+  geom_smooth() + geom_point() </code></pre>
 <p><img src="images/check_ambi-2.svg" width="768" /></p>
-<pre class="r"><code>ggplot(filter(cap.ambi.df, score==&quot;sites&quot;), aes(y=-CAP1, x=type)) + geom_boxplot()</code></pre>
+<pre class="r"><code>compounds.cap.angles &lt;- cap.ambi.df %&gt;% filter(score==&quot;species&quot;) %&gt;% 
+  mutate(angle = atan2((CAP1*zoom), MDS1)*180/pi)
+
+ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inquant), ncol=1) +
+  geom_histogram(binwidth=5) + scale_x_continuous(breaks=seq(-180, 180, by=30))+
+  labs(fill= &quot;In quant integrations?&quot;)</code></pre>
 <p><img src="images/check_ambi-3.svg" width="768" /></p>
+<pre class="r"><code># cap.candidates &lt;- compounds.cap.angles %&gt;% 
+#   filter(abs(angle+90)&lt;5, inquant==&quot;N&quot;) %&gt;% select(name=label, CAP1, angle) %&gt;% arrange(CAP1)</code></pre>
 </div>
 <div id="filtering-criteria" class="section level2">
 <h2>Filtering criteria</h2>
