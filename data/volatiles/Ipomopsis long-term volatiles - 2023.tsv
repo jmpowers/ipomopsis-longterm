@@ -23,13 +23,13 @@ Lagg	D	TS	2023-07-20	floral	28	608	608	10:57	11:28	11:43	0:31	0:15	1	0	DRC1	1.5
 Lagg	D	TS	2023-07-20	floral	41	607	607	11:54	12:24	12:38	0:30	0:14	1	0	DRC1	4.6	
 Lagg	D	TS	2023-07-20	floral	38	2167	2167	11:25	11:57	12:12	0:32	0:15	2	0	DRC1	3.6	
 Lagg	D	TS	2023-07-20	ambient	40	airTS		11:34	12:05	12:20	0:31	0:15			CWu2		
-Lagg	N	TS	2023-07-20	floral	2	2165	2165	20:13	20:47	21:02	0:34	0:15	1	0	DRC3		JP: need to copy VWC from D to N for 7-20
-Lagg	N	TS	2023-07-20	floral	124	609	609	20:17	20:43	20:58	0:26	0:15	1	1	DRC8		
-Lagg	N	TS	2023-07-20	floral	51	608	608	20:33	21:07	21:22	0:34	0:15	1	1	DRC3		
+Lagg	N	TS	2023-07-20	floral	2	2165	2165	20:13	20:47	21:02	0:34	0:15	1	0	DRC3	5.1	copied vwc from daytime
+Lagg	N	TS	2023-07-20	floral	124	609	609	20:17	20:43	20:58	0:26	0:15	1	1	DRC8	4.1	copied vwc from daytime
+Lagg	N	TS	2023-07-20	floral	51	608	608	20:33	21:07	21:22	0:34	0:15	1	1	DRC3	1.5	copied vwc from daytime
 Lagg	N	TS	2023-07-20	floral	123	617	617	20:40	21:11	21:26	0:31	0:15	1	0	DRC8		
 Lagg	N	TS	2023-07-20	ambient	127	airTS2		21:15	21:45	22:00	0:30	0:15			DRC8		
-Lagg	N	TS	2023-07-20	floral	128	2167	2167	21:20	21:50	22:05	0:30	0:15	1	1	DRC3		
-Lagg	N	TS	2023-07-20	floral	129	605	605	21:37	22:08	22:23	0:31	0:15	1	0	DRC8		
+Lagg	N	TS	2023-07-20	floral	128	2167	2167	21:20	21:50	22:05	0:30	0:15	1	1	DRC3	3.6	copied vwc from daytime
+Lagg	N	TS	2023-07-20	floral	129	605	605	21:37	22:08	22:23	0:31	0:15	1	0	DRC8	3.4	copied vwc from daytime
 Lagg	D	AA	2023-07-20	floral	10	545	545	10:18	10:48	11:03	0:30	0:15	1	1	DRC7	1.9	
 Lagg	D	AA	2023-07-20	floral	9	2126	2126	10:20	10:50	11:05	0:30	0:15	1	2	CWu1	3.4	
 Lagg	D	AA	2023-07-20	floral	12	2160	2160	10:24	10:54	11:09	0:30	0:15	1	1	DRC4	1.1	
@@ -45,10 +45,10 @@ Lagg	D	AA	2023-07-20	floral	32	2161	2161	11:26	11:56	12:11	0:30	0:15	1	0	DRC4	2.
 Lagg	D	AA	2023-07-20	floral	1	2148	2148	11:38	12:08	12:23	0:30	0:15	1	2	DRC7	3	
 Lagg	D	AA	2023-07-20	floral	36	547	547	11:40	12:10	12:25	0:30	0:15	1	0	CWu1	3	
 Lagg	D	AA	2023-07-20	floral	37	580	580	11:45	12:15	12:30	0:30	0:15	1	2	DRC10	5.1	
-Lagg	N	HH	2023-07-20	floral	89	2128	2128	20:22	20:52	21:07	0:30	0:15	1	1	DRC7		observer: Henry Hopp
-Lagg	N	HH	2023-07-20	floral	87	2126	2126	20:48	21:18	21:33	0:30	0:15	1	3	DRC7		
-Lagg	N	HH	2023-07-20	floral	88	545	545	21:13	21:44	21:59	0:31	0:15	1	2	DRC7		
-Lagg	N	HH	2023-07-20	floral	86	2160	2160	21:37	22:07	22:22	0:30	0:15	1	0	DRC7		
+Lagg	N	HH	2023-07-20	floral	89	2128	2128	20:22	20:52	21:07	0:30	0:15	1	1	DRC7	5.1	observer: Henry Hopp. copied vwc from daytime
+Lagg	N	HH	2023-07-20	floral	87	2126	2126	20:48	21:18	21:33	0:30	0:15	1	3	DRC7	3.4	copied vwc from daytime
+Lagg	N	HH	2023-07-20	floral	88	545	545	21:13	21:44	21:59	0:31	0:15	1	2	DRC7	1.9	copied vwc from daytime
+Lagg	N	HH	2023-07-20	floral	86	2160	2160	21:37	22:07	22:22	0:30	0:15	1	0	DRC7	1.1	copied vwc from daytime
 Lagg	D	JP	2023-07-20	floral	19	2143	2143	10:18	10:58	11:17	0:40	0:19	1	0	JMP2	6.1	
 Lagg	D	JP	2023-07-20	floral	30	583	583	10:19	11:02	11:17	0:43	0:15	1	0	JMP1	4.7	
 Lagg	D	JP	2023-07-20	floral	29	573	573	10:20	11:06	11:21	0:46	0:15	1	0	JMP3	2.4	
@@ -59,27 +59,27 @@ Lagg	D	JP	2023-07-20	floral	105	2099	2099	11:32	12:12	12:30	0:40	0:18	1	0	JMP1	2
 Lagg	D	JP	2023-07-20	floral	102	559	559	11:34	12:14	12:30	0:40	0:16	1	0	JMP2	4.3	
 Lagg	D	JP	2023-07-20	floral	20	558	558	11:36	12:17	12:32	0:41	0:15	1	0	JMP3	4.4	
 Lagg	D	JP	2023-07-20	ambient	106	airJP1		11:53	12:38	12:53	0:45	0:15			JMP1		JP: no vial number, guessing 106
-Lagg	N	JP	2023-07-20	floral	107	2099	2099	20:08	20:58	21:14	0:50	0:16	1	0	JMP1		>5 hawkmoths, and rufous hummingbirds visiting Lagg stie 20:30-20:50
-Lagg	N	JP	2023-07-20	floral	110	559	559	20:10	20:56	21:13	0:46	0:17	1	0	JMP2		
-Lagg	N	JP	2023-07-20	floral	112	558	558	20:11	21:00	21:15	0:49	0:15	1	0	JMP3		
+Lagg	N	JP	2023-07-20	floral	107	2099	2099	20:08	20:58	21:14	0:50	0:16	1	0	JMP1	2.7	>5 hawkmoths, and rufous hummingbirds visiting Lagg site 20:30-20:50. copied vwc from daytime
+Lagg	N	JP	2023-07-20	floral	110	559	559	20:10	20:56	21:13	0:46	0:17	1	0	JMP2	4.3	copied vwc from daytime
+Lagg	N	JP	2023-07-20	floral	112	558	558	20:11	21:00	21:15	0:49	0:15	1	0	JMP3	4.4	copied vwc from daytime
 Lagg	N	JP	2023-07-20	floral	111	2184	2184	20:42	21:20	21:39	0:38	0:19	1	0	JMP1		
-Lagg	N	JP	2023-07-20	floral	108	2148	2148	20:44	21:22	21:40	0:38	0:18	1	0	JMP2		
-Lagg	N	JP	2023-07-20	floral	114	2138	2138	20:50	21:26	21:41	0:36	0:15	1	0	JMP2		
+Lagg	N	JP	2023-07-20	floral	108	2148	2148	20:44	21:22	21:40	0:38	0:18	1	0	JMP2	3	copied vwc from daytime
+Lagg	N	JP	2023-07-20	floral	114	2138	2138	20:50	21:26	21:41	0:36	0:15	1	0	JMP2	5.4	copied vwc from daytime
 Lagg	N	JP	2023-07-20	floral	80	2112	2112	21:09	21:53	22:08	0:44	0:15	1	0	JMP1		
-Lagg	N	JP	2023-07-20	floral	113	597	597	21:11	21:56	22:11	0:45	0:15	1	0	JMP2		
+Lagg	N	JP	2023-07-20	floral	113	597	597	21:11	21:56	22:11	0:45	0:15	1	0	JMP2	4.9	copied vwc from daytime
 Lagg	N	JP	2023-07-20	ambient	109	airJP2		21:12	21:58	22:13	0:46	0:15			JMP3		
 Lagg	N	JB	2023-07-20	floral	96	2150	2150	20:07	20:38	20:53	0:31	0:15	1	1	DRC10		2159 eaten
-Lagg	N	JB	2023-07-20	floral	97	573	573	20:08	20:39	20:54	0:31	0:15	1	0	DRC1		
+Lagg	N	JB	2023-07-20	floral	97	573	573	20:08	20:39	20:54	0:31	0:15	1	0	DRC1	2.4	copied vwc from daytime
 Lagg	N	JB	2023-07-20	floral	99	572	572	20:09	20:40	20:55	0:31	0:15	1	0	DRC5		
-Lagg	N	JB	2023-07-20	floral	95	567	567	20:30	21:02	21:17	0:32	0:15	1	0	DRC10		
-Lagg	N	JB	2023-07-20	floral	91	579	579	20:32	21:03	21:18	0:31	0:15	1	0	DRC1		
-Lagg	N	JB	2023-07-20	floral	93	2111	2111	20:35	21:05	21:20	0:30	0:15	1	1	DRC5		
-Lagg	N	JB	2023-07-20	floral	98	2143	2143	20:50	21:24	21:39	0:34	0:15	1	1	DRC10		
+Lagg	N	JB	2023-07-20	floral	95	567	567	20:30	21:02	21:17	0:32	0:15	1	0	DRC10	3.5	copied vwc from daytime
+Lagg	N	JB	2023-07-20	floral	91	579	579	20:32	21:03	21:18	0:31	0:15	1	0	DRC1	4.5	copied vwc from daytime
+Lagg	N	JB	2023-07-20	floral	93	2111	2111	20:35	21:05	21:20	0:30	0:15	1	1	DRC5	5.1	copied vwc from daytime
+Lagg	N	JB	2023-07-20	floral	98	2143	2143	20:50	21:24	21:39	0:34	0:15	1	1	DRC10	6.1	copied vwc from daytime
 Lagg	N	JB	2023-07-20	floral	92	571	571	20:51	21:25	21:40	0:34	0:15	1	1	DRC1		
-Lagg	N	JB	2023-07-20	floral	100	583	583	20:52	21:27	21:42	0:35	0:15	1	1	DRC5		
+Lagg	N	JB	2023-07-20	floral	100	583	583	20:52	21:27	21:42	0:35	0:15	1	1	DRC5	4.7	copied vwc from daytime
 Lagg	N	JB	2023-07-20	ambient	94	airJB		21:06	21:40	21:55	0:34	0:15			DRC10		
 Lagg	N	LH	2023-07-20	floral	83	339	339	20:23	20:53	21:08	0:30	0:15	1	1	DRC4		observer: Lauren Hopp
-Lagg	N	LH	2023-07-20	floral	85	602	602	21:16	21:46	22:01	0:30	0:15	1	1	DRC4		
+Lagg	N	LH	2023-07-20	floral	85	602	602	21:16	21:46	22:01	0:30	0:15	1	1	DRC4	4.6	copied vwc from daytime
 Lagg	N	LH	2023-07-20	floral	84	318	318	21:37	22:07	22:22	0:30	0:15	1	2	DRC4		
 Lagg	D	DH	2023-07-20	floral	16	2166	2166	10:25	10:55	11:10	0:30	0:15	1	0	CWu2	4	pump recalibrated after this sample
 Lagg	D	DH	2023-07-20	floral	15	2165	2165	10:26	10:56	11:11	0:30	0:15	1	0	DRC3	5.1	
@@ -96,27 +96,27 @@ Lagg	D	DH	2023-07-20	floral	42	605	605	11:55	12:25	12:40	0:30	0:15	1	0	DRC3	3.4	
 Lagg	D	DH	2023-07-20	floral	Lagg45	2114	2114	12:18	12:48	13:05	0:30	0:17	1	0	DRC5	2.2	JP: duplicate vial numbers, diff dates, added Lagg
 Lagg	D	DH	2023-07-20	floral	44	2142	2142	12:22	12:52	13:07	0:30	0:15	1	3	DRC9		rocky; failure, line crossed out
 Lagg	D	DH	2023-07-20	floral		2142B	2142	12:22	13:10	13:25	0:48	0:15	1	3	DRC9		rocky; failure again, same bag and flower as last one; JP: no filled in bag time; JP: vial 36, removed from this row since duplicate with AA; added B
-Lagg	N	DH	2023-07-20	floral	131	2114	2114	20:14	20:44	20:59	0:30	0:15	1	0	CWu1		
-Lagg	N	DH	2023-07-20	floral	122	2166	2166	20:17	20:47	21:02	0:30	0:15	1	0	CWu2		
-Lagg	N	DH	2023-07-20	floral	61	2161	2161	20:19	20:51	21:06	0:32	0:15	1	1	DRC9		
-Lagg	N	DH	2023-07-20	floral	72	547	547	20:41	21:12	21:27	0:31	0:15	1	0	CWu1		
-Lagg	N	DH	2023-07-20	floral	62	2137	2137	20:43	21:14	21:29	0:31	0:15	1	0	DRC9		
-Lagg	N	DH	2023-07-20	floral	52	611	611	21:16	21:48	22:03	0:32	0:15	1	0	CWu2		
+Lagg	N	DH	2023-07-20	floral	131	2114	2114	20:14	20:44	20:59	0:30	0:15	1	0	CWu1	2.2	copied vwc from daytime
+Lagg	N	DH	2023-07-20	floral	122	2166	2166	20:17	20:47	21:02	0:30	0:15	1	0	CWu2	4	copied vwc from daytime
+Lagg	N	DH	2023-07-20	floral	61	2161	2161	20:19	20:51	21:06	0:32	0:15	1	1	DRC9	2.3	copied vwc from daytime
+Lagg	N	DH	2023-07-20	floral	72	547	547	20:41	21:12	21:27	0:31	0:15	1	0	CWu1	3	copied vwc from daytime
+Lagg	N	DH	2023-07-20	floral	62	2137	2137	20:43	21:14	21:29	0:31	0:15	1	0	DRC9	3.5	copied vwc from daytime
+Lagg	N	DH	2023-07-20	floral	52	611	611	21:16	21:48	22:03	0:32	0:15	1	0	CWu2	4.3	copied vwc from daytime
 Lagg	N	DH	2023-07-20	floral	71	2162	2162	21:18	21:50	22:05	0:32	0:15	1	0	DRC9		
-Lagg	N	DH	2023-07-20	floral	82	603	603	21:20	21:53	22:08	0:33	0:15	1	0	CWu1		
+Lagg	N	DH	2023-07-20	floral	82	603	603	21:20	21:53	22:08	0:33	0:15	1	0	CWu1	1.9	copied vwc from daytime
 Lagg	N	DH	2023-07-20	ambient	90	airDH2		21:36	22:06	22:21	0:30	0:15			CWu2		
-Lagg	N	DH	2023-07-20	floral	79	2130	2130	21:42	22:12	22:27	0:30	0:15	1	0	DRC9		
-Lagg	N	DH	2023-07-20	floral	81	2139	2139	21:45	22:15	22:30	0:30	0:15	1	1	CWu1		
+Lagg	N	DH	2023-07-20	floral	79	2130	2130	21:42	22:12	22:27	0:30	0:15	1	0	DRC9	5.4	copied vwc from daytime
+Lagg	N	DH	2023-07-20	floral	81	2139	2139	21:45	22:15	22:30	0:30	0:15	1	1	CWu1	4	copied vwc from daytime
 Ihyb	D	JB	2023-07-27	floral	229	1536	1536	11:26	11:56	12:11	0:30	0:15	1	0	DRC4		
-Ihyb	D	JB	2023-07-27	floral	228	711	711	11:27	11:57	12:13	0:30	0:16	1	0	DRC10		
-Ihyb	D	JB	2023-07-27	floral	230	799	799	11:30	12:00	12:19	0:30	0:19	1	0	DRC1		
-Ihyb	D	JB	2023-07-27	floral	232	1562	1562	11:35	12:05	12:20	0:30	0:15	1	2	JMP2		
-Ihyb	D	JB	2023-07-27	floral	224	736	736	11:38	12:09	12:24	0:31	0:15	1	0	JMP1		
-Ihyb	D	JB	2023-07-27	floral	225	1543	1543	11:41	12:11	12:26	0:30	0:15	1	0	JMP3		
-Ihyb	D	JB	2023-07-27	floral	226	102	102	13:15	13:30	13:45	0:15	0:15					initial bagging in wrong spot
-Ihyb	D	JB	2023-07-27	floral	231	724	724	12:29	12:59	13:14	0:30	0:15					
+Ihyb	D	JB	2023-07-27	floral	228	711	711	11:27	11:57	12:13	0:30	0:16	1	0	DRC10	2.7	vwc copied from nighttime
+Ihyb	D	JB	2023-07-27	floral	230	799	799	11:30	12:00	12:19	0:30	0:19	1	0	DRC1	0.6	vwc copied from nighttime
+Ihyb	D	JB	2023-07-27	floral	232	1562	1562	11:35	12:05	12:20	0:30	0:15	1	2	JMP2	1.4	vwc copied from nighttime
+Ihyb	D	JB	2023-07-27	floral	224	736	736	11:38	12:09	12:24	0:31	0:15	1	0	JMP1	0.9	vwc copied from nighttime
+Ihyb	D	JB	2023-07-27	floral	225	1543	1543	11:41	12:11	12:26	0:30	0:15	1	0	JMP3	0.7	vwc copied from nighttime
+Ihyb	D	JB	2023-07-27	floral	226	102	102	13:15	13:30	13:45	0:15	0:15				1.7	initial bagging in wrong spot. vwc copied from nighttime
+Ihyb	D	JB	2023-07-27	floral	231	724	724	12:29	12:59	13:14	0:30	0:15				1.3	vwc copied from nighttime
 Ihyb	D	JB	2023-07-27	ambient	227	airJB		12:31	13:01	13:16	0:30	0:15					
-Ihyb	D	JB	2023-07-27	floral	233	1556	1556	12:56	13:26	13:41	0:30	0:15					JP: inferred end time (blank)
+Ihyb	D	JB	2023-07-27	floral	233	1556	1556	12:56	13:26	13:41	0:30	0:15				1.3	JP: inferred end time (blank). vwc copied from nighttime
 Ihyb	N	AA	2023-07-27	floral	406	708	708	20:04	20:34	20:49	0:30	0:15	1	3	DRC10	3.7	no flowers: 1517, 1503, 1513, 1540, 1523
 Ihyb	N	AA	2023-07-27	floral	400	1504	1504	20:07	20:37	20:52	0:30	0:15	1	0	DRC8	2.8	
 Ihyb	N	AA	2023-07-27	floral	401	513	513	20:09	20:40	20:55	0:31	0:15	1	1	DRC5	1.4	
@@ -127,17 +127,17 @@ Ihyb	N	AA	2023-07-27	ambient	403	airAA		20:17	20:48	21:03	0:31	0:15			DRC3
 Ihyb	N	AA	2023-07-27	floral	427	1506	1506	20:25	21:05	21:20	0:40	0:15	1	0	DRC8		too rocky; late pump
 Ihyb	N	AA	2023-07-27	floral	425	799	799	20:27	21:08	21:23	0:41	0:15	1	0	DRC7	0.6	
 Ihyb	N	AA	2023-07-27	floral	422	1562	1562	20:30	21:11	21:26	0:41	0:15	1	2	CWu1	1.4	
-Ihyb	D	JP	2023-07-27	floral	223	1512	1512	10:59	11:37	11:54	0:38	0:17	1	0	DRC7		DRC3 is dying
-Ihyb	D	JP	2023-07-27	floral	214	513	513	11:02	11:40	11:55	0:38	0:15	1	0	SRC9		plant 531 is shriveled
-Ihyb	D	JP	2023-07-27	floral	215	702	702	11:04	11:43	11:58	0:39	0:15	1	0	DRC5		
+Ihyb	D	JP	2023-07-27	floral	223	1512	1512	10:59	11:37	11:54	0:38	0:17	1	0	DRC7	1.2	DRC3 is dying. vwc copied from nighttime
+Ihyb	D	JP	2023-07-27	floral	214	513	513	11:02	11:40	11:55	0:38	0:15	1	0	SRC9	1.4	plant 531 is shriveled. vwc copied from nighttime
+Ihyb	D	JP	2023-07-27	floral	215	702	702	11:04	11:43	11:58	0:39	0:15	1	0	DRC5	2.5	vwc copied from nighttime
 Ihyb	D	JP	2023-07-27	floral	205	1506	1506	11:06	11:49	12:06	0:43	0:17	1	0	DRC3		
-Ihyb	D	JP	2023-07-27	floral	221	108	108	11:10	11:53	12:08	0:43	0:15	1	0	CWu2		
-Ihyb	D	JP	2023-07-27	floral	222	1504	1504	11:16	12:00	12:19	0:44	0:19	1	0	DRC5		
-Ihyb	D	JP	2023-07-27	floral	220	1538	1538	11:20	12:04	12:21	0:44	0:17	1	1	DRC9		
-Ihyb	D	JP	2023-07-27	floral	235	1511	1511	12:13	12:46	13:03	0:33	0:17	1	0	CWu2		check vial number
-Ihyb	D	JP	2023-07-27	floral	236	1514	1514	12:18	12:49	13:04	0:31	0:15	1	0	DRC9		
+Ihyb	D	JP	2023-07-27	floral	221	108	108	11:10	11:53	12:08	0:43	0:15	1	0	CWu2	2.4	vwc copied from nighttime
+Ihyb	D	JP	2023-07-27	floral	222	1504	1504	11:16	12:00	12:19	0:44	0:19	1	0	DRC5	2.8	vwc copied from nighttime
+Ihyb	D	JP	2023-07-27	floral	220	1538	1538	11:20	12:04	12:21	0:44	0:17	1	1	DRC9	0.5	vwc copied from nighttime
+Ihyb	D	JP	2023-07-27	floral	235	1511	1511	12:13	12:46	13:03	0:33	0:17	1	0	CWu2	2.9	check vial number. vwc copied from nighttime
+Ihyb	D	JP	2023-07-27	floral	236	1514	1514	12:18	12:49	13:04	0:31	0:15	1	0	DRC9	1.7	vwc copied from nighttime
 Ihyb	D	JP	2023-07-27	ambient	234	airJP1		12:31	13:19	13:44	0:48	0:25			DRC5		
-Ihyb	N	DH	2023-07-27	floral	418	724	724	20:02	20:52	21:07	0:50	0:15	1	0	JMP2	1.3	ddead pump JMP1 > JMP2
+Ihyb	N	DH	2023-07-27	floral	418	724	724	20:02	20:52	21:07	0:50	0:15	1	0	JMP2	1.3	dead pump JMP1 > JMP2
 Ihyb	N	DH	2023-07-27	floral	419	102	102	20:05	20:35	20:50	0:30	0:15	1	3	JMP2	1.7	
 Ihyb	N	DH	2023-07-27	floral	409	1514	1514	20:07	20:38	20:53	0:31	0:15	1	1	JMP3	1.7	
 Ihyb	N	DH	2023-07-27	floral	414	1511	1511	20:09	20:37	20:53	0:28	0:16	1	0	DRC4	2.9	old-looking flower

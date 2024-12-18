@@ -118,11 +118,11 @@ filemeta <- read_csv("data/volatiles/Ipomopsis GCMS files - ipo_meta_split.csv")
   distinct(FileName, .keep_all = T) %>% #some files got duplicated from fuzzy matching times
   mutate(date = ymd(date), year=year(date), vial=as.character(vial))
 
-#TODO figure out which of these dupes has the real sample
+#figured out which of these dupes has the real sample using PCA
 filemeta %>% add_count(year, date, time, site, type, sample) %>% filter(n>1) %>% 
   arrange(year, date, time, site, type, sample) %>% write_tsv("data/volatiles/filedupes.tsv", na="")
-#until then, use only the first duplicate
-filemeta <- filemeta %>% distinct(year, date, time, site, type, sample, .keep_all=T)
+filedupes <- read_tsv("data/volatiles/filedupes_annotated.tsv") %>% filter(!is.na(exclude)) %>% pull(FileName)
+filemeta <- filemeta %>% filter(!FileName %in% filedupes)
 
 bind_rows(files=filemeta, field=metadata, .id="source")%>%  
   ggplot(aes(y=paste(date, site, time), fill=source)) + 
@@ -201,6 +201,28 @@ quant.all <- quant.full %>% filter(Filename %in% files.match) %>%
   write_tsv("data/volatiles/quant_all.tsv") %>% 
   as.data.frame() %>% column_to_rownames("Filename")
 ```
+
+```{r checkdupes, eval=FALSE}
+filedupes <- read_tsv("data/volatiles/filedupes_annotated.tsv") %>% 
+  mutate(fullsample = paste(year, date, time, site, type, sample), exclude=!is.na(exclude)) %>% 
+  rename(Filename=FileName) %>% left_join(quant.full)
+filedupes.wide <- filedupes %>% 
+  select(Filename, Name, Area) %>%
+  mutate(Name = recode(Name, !!!shortnames)) %>%
+  filter(Name !="1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-") %>% 
+  pivot_wider(names_from = "Name", values_from="Area") %>% 
+  as.data.frame() %>% column_to_rownames("Filename")
+filedupes.meta <- filedupes %>% distinct(Filename, fullsample, .keep_all = T)
+
+filedupes.pca.df <- fortify(rda(sqrt(filedupes.wide)))
+ggplot(filter(filedupes.pca.df, score=="sites"), aes(x=PC1, y=PC2, color=factor(filedupes.meta$year))) +
+  geom_vline(xintercept = 0) + geom_hline(yintercept = 0)+
+  geom_text(data=filter(filedupes.pca.df, score=="species"), aes(label=greekify(label)), color="grey40") +
+  geom_path(aes(group=filedupes.meta$fullsample)) + geom_point() + 
+  geom_text(aes(label=if_else(filedupes.meta$exclude, "", str_remove(filedupes.meta$Filename,".qgd")))) + 
+  guides(color="none") + theme_classic()
+```
+
 
 ```{r qual}
 qual.full <- list.files("data/volatiles/qual/", full.names = T) %>% 
