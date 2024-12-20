@@ -573,25 +573,32 @@
 <circle cx='98.54' cy='224.25' r='1.95' style='stroke-width: 0.71; stroke: #66C2A5;' />
 <circle cx='80.60' cy='263.65' r='1.95' style='stroke-width: 0.71; stroke: #66C2A5;' />
 <circle cx='125.22' cy='229.26' r='1.95' style='stroke-width: 0.71; stroke: #8DA0CB;' />
-<text x='175.42' y='285.56' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(E)-hex-2-enal</text>
-<text x='376.09' y='288.48' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-pinene</text>
-<text x='214.20' y='262.54' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>β-myrcene</text>
-<text x='136.00' y='285.41' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(Z)-β-ocimene</text>
-<text x='167.01' y='266.38' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(E)-β-ocimene</text>
-<text x='167.76' y='262.46' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>linalool</text>
-<text x='159.30' y='271.80' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-copaene</text>
-<text x='148.22' y='274.02' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>petasitene</text>
-<text x='184.99' y='261.42' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>β-caryophyllene</text>
-<text x='150.26' y='286.16' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(E)-β-bergamotene</text>
-<text x='175.54' y='277.13' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-farnesene</text>
-<text x='238.10' y='230.56' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(Z)-hex-3-en-1-ol</text>
-<text x='156.62' y='266.42' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>[(Z)-hex-3-enyl] butanoate</text>
-<text x='141.91' y='274.83' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-terpineol</text>
-<text x='153.63' y='268.83' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>cosmene</text>
-<text x='154.92' y='268.57' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(4E,6Z)-alloocimene</text>
-<text x='163.33' y='272.84' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>verbenone</text>
-<text x='147.83' y='269.40' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>3-ethenyl-1,2-dimethylcyclohexa-1,4-diene</text>
-<text x='129.21' y='285.93' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>geranial</text>
+<text x='175.42' y='285.56' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(E)-hex-2-enal</text>
+<text x='376.09' y='288.48' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-pinene</text>
+<text x='214.20' y='262.54' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>β-myrcene</text>
+<text x='136.00' y='285.41' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(Z)-β-ocimene</text>
+<text x='167.01' y='266.38' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(E)-β-ocimene</text>
+<text x='167.76' y='262.46' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>linalool</text>
+<text x='159.30' y='271.80' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-copaene</text>
+<text x='148.22' y='274.02' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>petasitene</text>
+<text x='184.99' y='261.42' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>β-caryophyllene</text>
+<text x='150.26' y='286.16' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(E)-β-bergamotene</text>
+<text x='175.54' y='277.13' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-farnesene</text>
+<text x='238.10' y='230.56' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(Z)-hex-3-en-1-ol</text>
+<text x='156.62' y='266.42' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>[(Z)-hex-3-enyl] butanoate</text>
+<text x='141.91' y='274.83' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-terpineol</text>
+<text x='153.63' y='268.83' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>cosmene</text>
+<text x='154.92' y='268.57' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(4E,6Z)-alloocimene</text>
+<text x='163.33' y='272.84' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>verbenone</text>
+<text x='147.83' y='269.40' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>3-ethenyl-1,2-dimethylcyclohexa-1,4-diene</text>
+<text x='129.21' y='285.93' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>geranial</text>
+<text x='122.06' y='291.19' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2017</text>
+<text x='129.77' y='252.85' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2018</text>
+<text x='171.20' y='241.48' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2019</text>
+<text x='133.92' y='265.80' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2020</text>
+<text x='220.48' y='291.86' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2021</text>
+<text x='124.37' y='259.45' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2022</text>
+<text x='166.88' y='261.80' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2023</text>
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
 <polyline points='37.83,544.29 37.83,67.44 ' style='stroke-width: 1.07; stroke-linecap: butt;' />

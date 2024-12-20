@@ -394,11 +394,12 @@ meta %>% count(year, site, time, plant) %>% count(year, site, time) %>%
 
 #average samples by plant
 meta.quant.plant <- bind_cols(meta, quant) %>% drop_na(plant) %>% 
-  group_by(year, site, time, plant) %>% summarize(across(where(is.numeric), ~mean(.x, na.rm=T))) %>% ungroup()
-meta.plant <- meta.quant.plant %>% select(year, site, time, plant, VWC)
-quant.plant <- meta.quant.plant %>% select(all_of(colnames(quant)))
+  group_by(year, site, time, plant) %>% summarize(across(where(is.numeric), ~mean(.x, na.rm=T))) %>% ungroup() %>% 
+  mutate(ystp = paste0(year, site, time, plant))
+meta.plant <- meta.quant.plant %>% select(ystp, year, site, time, plant, VWC) 
+quant.plant <- meta.quant.plant %>% select(all_of(colnames(quant)), ystp) %>% column_to_rownames("ystp")
+quant.long.plant <- quant.plant %>% rownames_to_column("ystp") %>% pivot_longer(colnames(quant))
 ```
-
 
 ## Correlations
 
@@ -479,7 +480,8 @@ ggplot(filter(cap.t.df, score=="sites"), aes(x=CAP1, y=MDS1, label=greekify(labe
   theme_classic() + theme(legend.position = "top") + 
   geom_vline(xintercept = 0)+
   geom_point(aes(color=year, shape=time)) +
-  geom_text(data=filter(cap.t.df, score=="species")) +
+  geom_text(data=filter(cap.t.df, score=="species"), color="grey40") +
+  geom_text(data=filter(cap.t.df, score=="centroids")) +
   scale_color_manual("Year", values=pal$year) + 
   scale_shape_manual("Time", values=dots, label=times)
 
@@ -493,16 +495,18 @@ ggplot(filter(cap.t.df, score=="sites"), aes(y=-CAP1, x=pump, color=year)) +
 ## CAP with time, year, site
 
 ```{r cap_tys}
-cap.tys <- capscale(sqrt(quant) ~ time + year + site + year:site + time:site, data=meta)
+#use data averaged by plant
+cap.tys <- capscale(sqrt(quant.plant) ~ time + year + site + time:year + time:site + year:site, data=meta.plant)
 anova(cap.tys, by="term")
 explained(cap.tys)
 
-cap.tys.df <- fortify(cap.tys) %>% left_join(mutate(meta, score="sites"), by=c(label="sample", "score"))
+cap.tys.df <- fortify(cap.tys) %>% left_join(mutate(meta.plant, score="sites"), by=c(label="ystp", "score"))
 
 ggplot(filter(cap.tys.df, score=="sites"), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top") + 
   geom_point(aes(color=year, shape=time)) +
-  geom_text(data=filter(cap.tys.df, score=="species")) +
+  geom_text(data=filter(cap.tys.df, score=="species"), color="grey40") +
+  geom_text(data=filter(cap.tys.df, score=="centroids")) +
   scale_color_manual("Year", values=pal$year) + 
   scale_shape_manual("Time", values=dots, label=times)
 ```
@@ -515,7 +519,7 @@ meta.withvwc <- meta %>% drop_na(VWC) %>%
   mutate(relVWC = VWC - mean(VWC)) %>% ungroup() #VWC centered to mean for each sampling date
 quant.withvwc <- quant[meta.withvwc$sample,]
 
-cap.tysv <- capscale(sqrt(quant.withvwc) ~ time + year + site + relVWC, data=meta.withvwc)
+cap.tysv <- capscale(sqrt(quant.withvwc) ~ time + year + site + time:year + time:site + relVWC, data=meta.withvwc)
 anova(cap.tysv, by="term")
 explained(cap.tysv)
 ```
@@ -533,7 +537,8 @@ cap.year.D.df <- capscale(sqrt(quant.D) ~ year, data=meta.D) %>%
 ggplot(filter(cap.year.D.df, score=="sites"), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top") + 
   geom_point(aes(color=year, shape=time)) +
-  geom_text(data=filter(cap.year.D.df, score=="species")) +
+  geom_text(data=filter(cap.year.D.df, score=="species"), color="grey40") +
+  geom_text(data=filter(cap.year.D.df, score=="centroids")) +
   scale_color_manual("Year", values=pal$year) + 
   scale_shape_manual("Time", values=dots, label=times)
 
@@ -542,7 +547,8 @@ cap.year.N.df <- capscale(sqrt(quant.N) ~ year, data=meta.N) %>%
 ggplot(filter(cap.year.N.df, score=="sites"), aes(x=CAP1, y=CAP2, label=greekify(label))) +
   theme_classic() + theme(legend.position = "top") + 
   geom_point(aes(color=year, shape=time)) +
-  geom_text(data=filter(cap.year.N.df, score=="species")) +
+  geom_text(data=filter(cap.year.N.df, score=="species"), color="grey40") +
+  geom_text(data=filter(cap.year.N.df, score=="centroids")) +
   scale_color_manual("Year", values=pal$year) + 
   scale_shape_manual("Time", values=dots, label=times)
 ```

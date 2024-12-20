@@ -415,25 +415,32 @@
 <circle cx='87.03' cy='291.35' r='1.95' style='stroke-width: 0.71; stroke: #FFD92F; fill: #FFD92F;' />
 <circle cx='98.07' cy='280.32' r='1.95' style='stroke-width: 0.71; stroke: #FFD92F; fill: #FFD92F;' />
 <circle cx='292.21' cy='326.32' r='1.95' style='stroke-width: 0.71; stroke: #A6D854; fill: #A6D854;' />
-<text x='243.05' y='321.92' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(E)-hex-2-enal</text>
-<text x='413.14' y='285.78' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-pinene</text>
-<text x='295.55' y='316.58' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>β-myrcene</text>
-<text x='297.15' y='321.69' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(Z)-β-ocimene</text>
-<text x='472.83' y='330.09' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(E)-β-ocimene</text>
-<text x='239.87' y='324.99' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>linalool</text>
-<text x='242.37' y='323.83' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-copaene</text>
-<text x='248.59' y='316.88' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>petasitene</text>
-<text x='258.25' y='320.69' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>β-caryophyllene</text>
-<text x='259.01' y='324.95' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(E)-β-bergamotene</text>
-<text x='362.34' y='359.71' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-farnesene</text>
-<text x='241.35' y='322.88' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(Z)-hex-3-en-1-ol</text>
-<text x='236.26' y='322.56' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>[(Z)-hex-3-enyl] butanoate</text>
-<text x='238.07' y='323.22' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>α-terpineol</text>
-<text x='240.28' y='314.99' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>cosmene</text>
-<text x='255.10' y='321.77' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>(4E,6Z)-alloocimene</text>
-<text x='233.14' y='318.65' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>verbenone</text>
-<text x='241.78' y='320.81' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>3-ethenyl-1,2-dimethylcyclohexa-1,4-diene</text>
-<text x='239.23' y='327.45' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>geranial</text>
+<text x='243.05' y='321.92' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(E)-hex-2-enal</text>
+<text x='413.14' y='285.78' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-pinene</text>
+<text x='295.55' y='316.58' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>β-myrcene</text>
+<text x='297.15' y='321.69' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(Z)-β-ocimene</text>
+<text x='472.83' y='330.09' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(E)-β-ocimene</text>
+<text x='239.87' y='324.99' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>linalool</text>
+<text x='242.37' y='323.83' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-copaene</text>
+<text x='248.59' y='316.88' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>petasitene</text>
+<text x='258.25' y='320.69' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>β-caryophyllene</text>
+<text x='259.01' y='324.95' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(E)-β-bergamotene</text>
+<text x='362.34' y='359.71' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-farnesene</text>
+<text x='241.35' y='322.88' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(Z)-hex-3-en-1-ol</text>
+<text x='236.26' y='322.56' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>[(Z)-hex-3-enyl] butanoate</text>
+<text x='238.07' y='323.22' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>α-terpineol</text>
+<text x='240.28' y='314.99' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>cosmene</text>
+<text x='255.10' y='321.77' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>(4E,6Z)-alloocimene</text>
+<text x='233.14' y='318.65' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>verbenone</text>
+<text x='241.78' y='320.81' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>3-ethenyl-1,2-dimethylcyclohexa-1,4-diene</text>
+<text x='239.23' y='327.45' text-anchor='middle' style='font-size: 11.04px;fill: #666666; font-family: "Arial";'>geranial</text>
+<text x='291.40' y='348.34' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2017</text>
+<text x='238.30' y='385.81' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2018</text>
+<text x='258.57' y='342.38' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2019</text>
+<text x='185.19' y='311.52' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2020</text>
+<text x='295.03' y='297.30' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2021</text>
+<text x='187.28' y='324.00' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2022</text>
+<text x='208.08' y='307.09' text-anchor='middle' style='font-size: 11.04px; font-family: "Arial";'>year2023</text>
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
 <polyline points='37.83,544.29 37.83,67.44 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
