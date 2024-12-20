@@ -195,7 +195,7 @@ quant.full <- list.files("data/volatiles/quant/", full.names = T) %>%
   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %>% 
   distinct(Filename, Name, .keep_all=T)
 
-need_meta <- setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
+need_meta <- setdiff(quant.full$Filename, meta.full$FileName)#just the ones filtered out when reading in filemeta
 
 #only keep file-metadata matches
 files.match <- intersect(meta.full$FileName, quant.full$Filename)
@@ -265,7 +265,7 @@ chems <- make_chemtable(longdata, metadata.df)
 
 ```{r corr_all, fig.height=25, fig.width=12, dev="png", dev.args=list()}
 meta.all.noleaf <- meta.all %>% filter(type != "leaf")
-cut_threshold <- 5e8
+cut_threshold <- 1e9
 qual.all.cut <- qual.all[meta.all.noleaf$FileName, colSums(qual.all) > cut_threshold | #big compounds
                            colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
 
@@ -318,7 +318,6 @@ ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inqua
 #   filter(abs(angle+90)<5, inquant=="N") %>% select(name=label, CAP1, angle) %>% arrange(CAP1)
 ```
 
-
 ## Filtering criteria
 
 ```{r bouquet}
@@ -344,15 +343,15 @@ bouquet::plot_filters(chemsf, option="prop")
 ```{r quant_qual}
 qual_chems <- chemsf$name[chemsf$filter_final]
 
-#TODO check on new compounds to investigate
+print("New compounds for investigation, not yet in quant integrations:")
 (qual_only <- setdiff(qual_chems, names(quant.all)))
 #chemsf %>% filter(filter_final) %>% mutate(check = name %in% qual_only, .before=1) %>% View()
 
-#TODO see if any other quant peak should be included
+print("Compounds integrated for other Ipomopsis projects that did not pass filters:")
 (quant_only <- setdiff(names(quant.all), qual_chems))
 #chemsf %>% filter(filter_final) %>% mutate(check = name %in% iponew, .before=1) %>% View()
 
-# compounds in both quant and qual lists
+print("Compounds that passed filters and already have quant integrations:")
 (quant_qual <- intersect(names(quant.all), qual_chems))
 
 toolow <- rownames(quant.all)[rowSums(quant.all[,quant_qual]) < 2500] #exclude 2 samples with very low integrations
@@ -370,16 +369,42 @@ meta %>% write_tsv("data/volatiles/filtered_meta.tsv")
 save(quant, meta, file = "data/volatiles/filtered_quantmeta.rda")
 ```
 
-## Retention time of qual integrations
+## Retention time of qual and quant integrations
 
 ```{r retention}
-ggplot(longdata %>% filter(name %in% qual_chems), 
-       aes(x=RT, y=fct_reorder(name, RT), color=factor(name, levels=sample(levels(name))))) + 
-  geom_jitter(width = 0, height=0.5) + guides(color="none") + ylab("")
-#TODO make sure quant has correct RT, investigate second peaks
-#TODO cosmene/carveol/alloocimene puzzle
-#TODO (E)-hex-2-enal vs. no isomer specified
+quant.RT <- quant.full %>% summarize(RT = median(Ret.Time, na.rm=T), .by=Name) %>% 
+  mutate(name = recode(Name, !!!shortnames)) %>% filter(name %in% qual_chems)
+
+ggplot(longdata %>% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(name, RT))) + 
+  geom_jitter(aes(color=factor(name, levels=sample(levels(name)))), width = 0, height=0.5, size=0.5) + 
+  geom_point(data=quant.RT) + 
+  guides(color="none") + ylab("") + theme_minimal()
 ```
+
+New compounds to keep, some with multiple RTs:
+
+* 5-Methyloxazolidine
+* methyl 2-methylbutanoate
+* Decane, 3,6-dimethyl (3 RT)
+* (3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol
+* Formic acid, undecyl ester (3 RT)
+* 8-Hexadecenal, 14 methyl- (Z) (4+ RT)
+* 7-epi-trans-sesquisabinene hydrate (4+ RT)
+
+New compounds that already line up with quant integrations:
+
+* hex-2-enal = (E)-hex-2-enal
+* carveol = cosmene
+* [(Z)-hex-3-enyl] 2-methylpropanoate = [(Z)-hex-3-enyl] butananoate
+
+Compounds with extra RTs to investigate:
+
+* [(Z)-hex-3-enyl] butanoate (2 RT)
+* hex-2-enal (2 RT)
+* geranial (2 RT)
+* cosmene (3 RT)
+* a-terpineol (2 RT)
+* b-caryophyllene (2 RT)
 
 # Descriptions of filtered volatiles
 

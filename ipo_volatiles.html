@@ -1127,7 +1127,7 @@ greekify &lt;- function(names) {
   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %&gt;% 
   distinct(Filename, Name, .keep_all=T)
 
-need_meta &lt;- setdiff(quant.full$Filename, meta.full$FileName)#TODO no metadata, consider filling some in
+need_meta &lt;- setdiff(quant.full$Filename, meta.full$FileName)#just the ones filtered out when reading in filemeta
 
 #only keep file-metadata matches
 files.match &lt;- intersect(meta.full$FileName, quant.full$Filename)
@@ -1184,7 +1184,7 @@ chems &lt;- make_chemtable(longdata, metadata.df)</code></pre>
 class="section level2">
 <h2>Correlations among unfiltered compounds</h2>
 <pre class="r"><code>meta.all.noleaf &lt;- meta.all %&gt;% filter(type != &quot;leaf&quot;)
-cut_threshold &lt;- 5e8
+cut_threshold &lt;- 1e9
 qual.all.cut &lt;- qual.all[meta.all.noleaf$FileName, colSums(qual.all) &gt; cut_threshold | #big compounds
                            colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
 
@@ -1270,8 +1270,9 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 <h2>Compare quant and filtered compounds</h2>
 <pre class="r"><code>qual_chems &lt;- chemsf$name[chemsf$filter_final]
 
-#TODO check on new compounds to investigate
-(qual_only &lt;- setdiff(qual_chems, names(quant.all)))</code></pre>
+print(&quot;New compounds for investigation, not yet in quant integrations:&quot;)</code></pre>
+<pre><code>[1] &quot;New compounds for investigation, not yet in quant integrations:&quot;</code></pre>
+<pre class="r"><code>(qual_only &lt;- setdiff(qual_chems, names(quant.all)))</code></pre>
 <pre><code> [1] &quot;(3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol&quot;
  [2] &quot;hex-2-enal&quot;                               
  [3] &quot;5-Methyloxazolidine&quot;                      
@@ -1284,8 +1285,9 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 [10] &quot;Formic acid, undecyl ester&quot;               </code></pre>
 <pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% qual_only, .before=1) %&gt;% View()
 
-#TODO see if any other quant peak should be included
-(quant_only &lt;- setdiff(names(quant.all), qual_chems))</code></pre>
+print(&quot;Compounds integrated for other Ipomopsis projects that did not pass filters:&quot;)</code></pre>
+<pre><code>[1] &quot;Compounds integrated for other Ipomopsis projects that did not pass filters:&quot;</code></pre>
+<pre class="r"><code>(quant_only &lt;- setdiff(names(quant.all), qual_chems))</code></pre>
 <pre><code> [1] &quot;3-methylbutanal oxime&quot;                             
  [2] &quot;g-terpinene&quot;                                       
  [3] &quot;methyl benzoate&quot;                                   
@@ -1326,8 +1328,9 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 [38] &quot;Benzenebutanoic acid, .gamma.-oxo-&quot;                </code></pre>
 <pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% iponew, .before=1) %&gt;% View()
 
-# compounds in both quant and qual lists
-(quant_qual &lt;- intersect(names(quant.all), qual_chems))</code></pre>
+print(&quot;Compounds that passed filters and already have quant integrations:&quot;)</code></pre>
+<pre><code>[1] &quot;Compounds that passed filters and already have quant integrations:&quot;</code></pre>
+<pre class="r"><code>(quant_qual &lt;- intersect(names(quant.all), qual_chems))</code></pre>
 <pre><code> [1] &quot;(E)-hex-2-enal&quot;                           
  [2] &quot;a-pinene&quot;                                 
  [3] &quot;b-myrcene&quot;                                
@@ -1361,15 +1364,43 @@ quant %&gt;% rownames_to_column(&quot;FileName&quot;) %&gt;% write_tsv(&quot;dat
 meta %&gt;% write_tsv(&quot;data/volatiles/filtered_meta.tsv&quot;)
 save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</code></pre>
 </div>
-<div id="retention-time-of-qual-integrations" class="section level2">
-<h2>Retention time of qual integrations</h2>
-<pre class="r"><code>ggplot(longdata %&gt;% filter(name %in% qual_chems), 
-       aes(x=RT, y=fct_reorder(name, RT), color=factor(name, levels=sample(levels(name))))) + 
-  geom_jitter(width = 0, height=0.5) + guides(color=&quot;none&quot;) + ylab(&quot;&quot;)</code></pre>
+<div id="retention-time-of-qual-and-quant-integrations"
+class="section level2">
+<h2>Retention time of qual and quant integrations</h2>
+<pre class="r"><code>quant.RT &lt;- quant.full %&gt;% summarize(RT = median(Ret.Time, na.rm=T), .by=Name) %&gt;% 
+  mutate(name = recode(Name, !!!shortnames)) %&gt;% filter(name %in% qual_chems)
+
+ggplot(longdata %&gt;% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(name, RT))) + 
+  geom_jitter(aes(color=factor(name, levels=sample(levels(name)))), width = 0, height=0.5, size=0.5) + 
+  geom_point(data=quant.RT) + 
+  guides(color=&quot;none&quot;) + ylab(&quot;&quot;) + theme_minimal()</code></pre>
 <p><img src="images/retention-1.svg" width="768" /></p>
-<pre class="r"><code>#TODO make sure quant has correct RT, investigate second peaks
-#TODO cosmene/carveol/alloocimene puzzle
-#TODO (E)-hex-2-enal vs. no isomer specified</code></pre>
+<p>New compounds to keep, some with multiple RTs:</p>
+<ul>
+<li>5-Methyloxazolidine</li>
+<li>methyl 2-methylbutanoate</li>
+<li>Decane, 3,6-dimethyl (3 RT)</li>
+<li>(3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol</li>
+<li>Formic acid, undecyl ester (3 RT)</li>
+<li>8-Hexadecenal, 14 methyl- (Z) (4+ RT)</li>
+<li>7-epi-trans-sesquisabinene hydrate (4+ RT)</li>
+</ul>
+<p>New compounds that already line up with quant integrations:</p>
+<ul>
+<li>hex-2-enal = (E)-hex-2-enal</li>
+<li>carveol = cosmene</li>
+<li>[(Z)-hex-3-enyl] 2-methylpropanoate = [(Z)-hex-3-enyl]
+butananoate</li>
+</ul>
+<p>Compounds with extra RTs to investigate:</p>
+<ul>
+<li>[(Z)-hex-3-enyl] butanoate (2 RT)</li>
+<li>hex-2-enal (2 RT)</li>
+<li>geranial (2 RT)</li>
+<li>cosmene (3 RT)</li>
+<li>a-terpineol (2 RT)</li>
+<li>b-caryophyllene (2 RT)</li>
+</ul>
 </div>
 </div>
 <div id="descriptions-of-filtered-volatiles" class="section level1">
