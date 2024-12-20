@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-12-17" />
+<meta name="date" content="2024-12-19" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-12-17</h4>
+<h4 class="date">2024-12-19</h4>
 
 </div>
 
@@ -472,10 +472,10 @@ explained &lt;- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(c
 <tbody>
 <tr class="odd">
 <td align="right">2017</td>
-<td align="right">12</td>
-<td align="right">11</td>
-<td align="right">11</td>
-<td align="right">10</td>
+<td align="right">32</td>
+<td align="right">25</td>
+<td align="right">49</td>
+<td align="right">22</td>
 <td align="right">44</td>
 <td align="right">3</td>
 </tr>
@@ -500,7 +500,7 @@ explained &lt;- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(c
 <tr class="even">
 <td align="right">2020</td>
 <td align="right">20</td>
-<td align="right">21</td>
+<td align="right">24</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right">13</td>
@@ -555,10 +555,10 @@ explained &lt;- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(c
 <tbody>
 <tr class="odd">
 <td align="right">2017</td>
-<td align="right">2.833</td>
-<td align="right">2.273</td>
-<td align="right">4.545</td>
-<td align="right">2.200</td>
+<td align="right">1.062</td>
+<td align="right">1.000</td>
+<td align="right">1.020</td>
+<td align="right">1.000</td>
 <td align="right">1.204</td>
 <td align="right">1.000</td>
 </tr>
@@ -583,7 +583,7 @@ explained &lt;- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(c
 <tr class="even">
 <td align="right">2020</td>
 <td align="right">1.000</td>
-<td align="right">1.143</td>
+<td align="right">1.000</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right">1.077</td>
@@ -643,16 +643,22 @@ explained &lt;- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(c
   scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
   labs(x=&quot;Site&quot;, y=&quot;Bag time&quot;, fill=&quot;Site, time&quot;)</code></pre>
 <p><img src="images/time-1.svg" width="768" /></p>
-<pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=(pump-bag)/60)) + 
-  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
-  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
-  labs(x=&quot;Site&quot;, y=&quot;Equilibration time (min)&quot;, fill=&quot;Site, time&quot;)</code></pre>
+<pre class="r"><code>ggplot(filter(metadata, type==&quot;floral&quot;), aes(x=time_length(equil, &quot;minutes&quot;), y=time_length(pumping, &quot;minutes&quot;), color=factor(year))) + 
+  geom_vline(xintercept=30) + geom_hline(yintercept=15) + xlim(c(0,NA)) + ylim(c(0, NA))+ coord_fixed()+
+  geom_jitter(height=0.5, width=0.5)+ #seconds not recorded
+  scale_color_brewer(palette = &quot;Paired&quot;) + theme_classic() + 
+  labs(x=&quot;Equilibration time&quot;, y=&quot;Pumping time&quot;, color=&quot;Site, time&quot;)</code></pre>
 <p><img src="images/time-2.svg" width="768" /></p>
-<pre class="r"><code>ggplot(metadata, aes(x=site, fill=paste(site, time), y=(end-pump)/60)) + 
-  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
-  scale_fill_brewer(palette = &quot;Paired&quot;) + theme_minimal() + 
-  labs(x=&quot;Site&quot;, y=&quot;Pumping time (min)&quot;, fill=&quot;Site, time&quot;)</code></pre>
-<p><img src="images/time-3.svg" width="768" /></p>
+</div>
+<div id="plant-identification" class="section level2">
+<h2>Plant identification</h2>
+<pre class="r"><code>#figure out which filenames are labelled with flower numbers vs. metal tags
+metadata %&gt;% filter(type==&quot;floral&quot;) %&gt;% mutate(plant.int=as.integer(plant)) %&gt;% 
+  arrange(year, site, plant.int) %&gt;% mutate(plant.int=factor(plant.int, levels=unique(plant.int))) %&gt;% 
+ggplot(aes(x=factor(year), y=plant.int, fill = as.integer(plant)&lt;=50)) +
+  geom_tile() + facet_wrap(vars(site), scales=&quot;free_y&quot;) + scale_fill_brewer(palette = &quot;Paired&quot;)+
+  guides(fill=&quot;none&quot;) + theme_classic() + labs(x=&quot;Year&quot;, y=&quot;Filename label&quot;) + theme(axis.text.x = element_text(angle=90))</code></pre>
+<p><img src="images/metaltags-1.svg" width="768" /></p>
 </div>
 </div>
 <div id="matching-field-metadata-and-filenames" class="section level1">
@@ -692,7 +698,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <tbody>
 <tr class="odd">
 <td align="left">ambient</td>
-<td align="right">107</td>
+<td align="right">108</td>
 <td align="right">113</td>
 </tr>
 <tr class="even">
@@ -902,7 +908,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2020-07-15</td>
 <td align="left">N</td>
 <td align="left">Ihyb</td>
-<td align="right">23</td>
+<td align="right">20</td>
 <td align="right">27</td>
 </tr>
 <tr class="even">
@@ -918,7 +924,7 @@ bind_rows(files=filemeta, field=metadata, .id=&quot;source&quot;)%&gt;%
 <td align="left">2020-07-21</td>
 <td align="left">D</td>
 <td align="left">Ihyb</td>
-<td align="right">20</td>
+<td align="right">24</td>
 <td align="right">23</td>
 </tr>
 <tr class="even">
@@ -1203,9 +1209,9 @@ Permutation: free
 Number of permutations: 999
 
 Model: capscale(formula = sqrt(qual.all.cut) ~ type, data = meta.all.noleaf)
-           Df Variance    F Pr(&gt;F)   
-Model       1 4.18e+05 3.85  0.002 **
-Residual 1034 1.12e+08               
+           Df Variance    F Pr(&gt;F)    
+Model       1 4.20e+05 3.88  0.001 ***
+Residual 1035 1.12e+08                
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.ambi)</code></pre>
@@ -1415,8 +1421,8 @@ save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</cod
 </tr>
 <tr class="even">
 <td align="left">2020</td>
-<td align="right">18</td>
 <td align="right">21</td>
+<td align="right">18</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right">12</td>
@@ -1469,10 +1475,10 @@ save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</cod
 <tbody>
 <tr class="odd">
 <td align="left">2017</td>
-<td align="right">12</td>
-<td align="right">11</td>
-<td align="right">11</td>
-<td align="right">10</td>
+<td align="right">31</td>
+<td align="right">25</td>
+<td align="right">49</td>
+<td align="right">22</td>
 <td align="right">45</td>
 <td align="right">3</td>
 </tr>
@@ -1496,7 +1502,7 @@ save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</cod
 </tr>
 <tr class="even">
 <td align="left">2020</td>
-<td align="right">18</td>
+<td align="right">21</td>
 <td align="right">18</td>
 <td align="right"></td>
 <td align="right"></td>
@@ -1603,7 +1609,7 @@ nmds.plot + geom_point(aes(color=time)) +
 <h2>CAP with time</h2>
 <pre class="r"><code>cap.t &lt;- capscale(sqrt(quant) ~ time, data=meta)
 explained(cap.t)</code></pre>
-<pre><code>[1] &quot;32% explained&quot;</code></pre>
+<pre><code>[1] &quot;33% explained&quot;</code></pre>
 <pre class="r"><code>cap.t.df &lt;- fortify(cap.t) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
 
 ggplot(filter(cap.t.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
@@ -1632,12 +1638,12 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(quant) ~ time + year + site + year:site + time:site, data = meta)
            Df Variance      F Pr(&gt;F)    
-time        1   366085 513.48  0.001 ***
-year        6    88434  20.67  0.001 ***
-site        2     9108   6.39  0.001 ***
-year:site  11    19912   2.54  0.001 ***
-time:site   2     4115   2.89  0.028 *  
-Residual  905   645214                  
+time        1   371305 523.48  0.001 ***
+year        6    86943  20.43  0.001 ***
+site        2     9199   6.48  0.001 ***
+year:site  11    19132   2.45  0.001 ***
+time:site   2     4373   3.08  0.019 *  
+Residual  905   641914                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.tys)</code></pre>
@@ -1668,15 +1674,15 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(quant.withvwc) ~ time + year + site + relVWC, data = meta.withvwc)
           Df Variance      F Pr(&gt;F)    
-time       1   287776 259.59  0.001 ***
-year       5   100803  18.19  0.001 ***
-site       2    12743   5.75  0.001 ***
-relVWC     1     2737   2.47  0.071 .  
-Residual 560   620803                  
+time       1   292554 264.47  0.001 ***
+year       5    99779  18.04  0.001 ***
+site       2    12653   5.72  0.001 ***
+relVWC     1     2735   2.47  0.065 .  
+Residual 558   617252                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.tysv)</code></pre>
-<pre><code>[1] &quot;39% explained&quot;</code></pre>
+<pre><code>[1] &quot;40% explained&quot;</code></pre>
 </div>
 <div id="cap-with-year-within-time" class="section level2">
 <h2>CAP with year, within time</h2>

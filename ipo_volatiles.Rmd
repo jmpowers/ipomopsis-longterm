@@ -93,15 +93,22 @@ ggplot(metadata, aes(x=site, fill=paste(site, time), y=bag)) +
   scale_fill_brewer(palette = "Paired") + theme_minimal() + 
   labs(x="Site", y="Bag time", fill="Site, time")
 
-ggplot(metadata, aes(x=site, fill=paste(site, time), y=(pump-bag)/60)) + 
-  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
-  scale_fill_brewer(palette = "Paired") + theme_minimal() + 
-  labs(x="Site", y="Equilibration time (min)", fill="Site, time")
+ggplot(filter(metadata, type=="floral"), aes(x=time_length(equil, "minutes"), y=time_length(pumping, "minutes"), color=factor(year))) + 
+  geom_vline(xintercept=30) + geom_hline(yintercept=15) + xlim(c(0,NA)) + ylim(c(0, NA))+ coord_fixed()+
+  geom_jitter(height=0.5, width=0.5)+ #seconds not recorded
+  scale_color_brewer(palette = "Paired") + theme_classic() + 
+  labs(x="Equilibration time", y="Pumping time", color="Site, time")
+```
 
-ggplot(metadata, aes(x=site, fill=paste(site, time), y=(end-pump)/60)) + 
-  facet_wrap(vars(year), nrow=1) + geom_boxplot(outlier.size=0.5) +
-  scale_fill_brewer(palette = "Paired") + theme_minimal() + 
-  labs(x="Site", y="Pumping time (min)", fill="Site, time")
+## Plant identification
+
+```{r metaltags}
+#figure out which filenames are labelled with flower numbers vs. metal tags
+metadata %>% filter(type=="floral") %>% mutate(plant.int=as.integer(plant)) %>% 
+  arrange(year, site, plant.int) %>% mutate(plant.int=factor(plant.int, levels=unique(plant.int))) %>% 
+ggplot(aes(x=factor(year), y=plant.int, fill = as.integer(plant)<=50)) +
+  geom_tile() + facet_wrap(vars(site), scales="free_y") + scale_fill_brewer(palette = "Paired")+
+  guides(fill="none") + theme_classic() + labs(x="Year", y="Filename label") + theme(axis.text.x = element_text(angle=90))
 ```
 
 # Matching field metadata and filenames
@@ -379,10 +386,17 @@ ggplot(longdata %>% filter(name %in% qual_chems),
 ## Sample size
 
 ```{r sampsize}
+load("data/volatiles/filtered_quantmeta.rda")
 meta %>% count(year, site, time) %>% 
   pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "floral samples")
 meta %>% count(year, site, time, plant) %>% count(year, site, time) %>% 
   pivot_wider(names_from=c("site","time"), values_from="n") %>% kable(caption = "plants")
+
+#average samples by plant
+meta.quant.plant <- bind_cols(meta, quant) %>% drop_na(plant) %>% 
+  group_by(year, site, time, plant) %>% summarize(across(where(is.numeric), ~mean(.x, na.rm=T))) %>% ungroup()
+meta.plant <- meta.quant.plant %>% select(year, site, time, plant, VWC)
+quant.plant <- meta.quant.plant %>% select(all_of(colnames(quant)))
 ```
 
 
@@ -402,8 +416,6 @@ pheatmap(corr.vols,
 ## Heatmap
 
 ```{r quant_heatmap, dev="png", dev.args=list(),fig.width=11, fig.height=8}
-load("data/volatiles/filtered_quantmeta.rda")
-
 pal <- with(meta, list(
   year = set_names(brewer.pal(nlevels(year), "Set2"), levels(year)),
   site = set_names(brewer.pal(nlevels(site), "Set1"), levels(site)),

@@ -293,9 +293,9 @@
 <polygon points='324.03,432.40 324.03,510.14 336.82,510.14 336.82,432.40 324.03,432.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter; fill: #33A02C;' />
 <line x1='324.03' y1='480.24' x2='336.82' y2='480.24' style='stroke-width: 2.13; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter;' />
 <line x1='347.47' y1='380.08' x2='347.47' y2='312.82' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<line x1='347.47' y1='485.47' x2='347.47' y2='498.18' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polygon points='341.08,380.08 341.08,485.47 353.87,485.47 353.87,380.08 341.08,380.08 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter; fill: #E31A1C;' />
-<line x1='341.08' y1='427.92' x2='353.87' y2='427.92' style='stroke-width: 2.13; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter;' />
+<line x1='347.47' y1='480.24' x2='347.47' y2='498.18' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polygon points='341.08,380.08 341.08,480.24 353.87,480.24 353.87,380.08 341.08,380.08 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter; fill: #E31A1C;' />
+<line x1='341.08' y1='426.43' x2='353.87' y2='426.43' style='stroke-width: 2.13; stroke: #333333; stroke-linecap: butt; stroke-linejoin: miter;' />
 </g>
 <g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw1NzYuMDA=)'>
 </g>

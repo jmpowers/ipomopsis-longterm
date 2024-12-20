@@ -34,19 +34,16 @@ date	time	site	type	field	files	sample	rundate	samplename	vial.x	vial.y	split_no
 2019-07-23	D	VF	floral	1	0	21						
 2019-08-02	D	Ihyb	floral	1	0	11						
 2019-08-12	N	Ihyb	floral	1	0	31						
-2020-07-15	N	Ihyb	floral	0	1	3015	2021-07-15	3015_Ihyb_nodate_7152021_02			guessed date based on metadata, could be 7/21 too	
+2020-07-15	N	Ihyb	floral	1	0	2200				10		
+2020-07-15	N	Ihyb	floral	1	0	400						
 2020-07-15	N	Ihyb	floral	1	0	399						
-2020-07-15	N	Ihyb	floral	1	0	19				19		JP: missing plant number
+2020-07-15	N	Ihyb	floral	1	0	19				19		JP: flowering plant 19, metal tag number missing from Diane's trait data
 2020-07-15	N	Ihyb	floral	1	0	2294						
 2020-07-15	N	Ihyb	floral	1	0	392						
 2020-07-15	N	Ihyb	ambient	1	0	airXL				air		
 2020-07-17	D	VF	floral	1	0	82				5		
 2020-07-17	D	VF	floral	1	0	75				6		
 2020-07-21	D	Ihyb	floral	0	1	nolabel	2021-07-14	nolabel_Ihyb_200721_7142021_19			add D	
-2020-07-21	D	Ihyb	floral	1	0	2200						
-2020-07-21	D	Ihyb	floral	1	0	305						
-2020-07-21	D	Ihyb	floral	1	0	400						
-2020-07-21	D	Ihyb	ambient	1	0	airXL				5		
 2021-07-15	D	Lagg	ambient	1	0	airKW				L26A		
 2021-07-20	D	VF	floral	1	0	464				10		
 2021-07-20	D	VF	floral	1	0	465				20		
