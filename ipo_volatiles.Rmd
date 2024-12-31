@@ -203,6 +203,7 @@ meta.all   <- meta.full %>% filter(FileName %in% files.match)
 quant.all <- quant.full %>% filter(Filename %in% files.match) %>%
   select(Filename, Name, Area) %>%
   mutate(Name = recode(Name, !!!shortnames)) %>%
+  filter(Name != "(3E)-4,8-dimethylnona-1,3,7-triene") %>% 
   pivot_wider(names_from = "Name", values_from="Area") %>% 
   arrange(match(Filename, meta.all$FileName)) %>% 
   write_tsv("data/volatiles/quant_all.tsv") %>% 
@@ -246,6 +247,30 @@ qual.all <- qual.data %>% select(Filename, Name, Area) %>%
   arrange(match(Filename, meta.all$FileName)) %>% 
   as.data.frame() %>% column_to_rownames("Filename")
 ```
+
+```{r quantslopes}
+quant.slopes <- set_names(rep(0,ncol(quant.all)), colnames(quant.all))
+#TODO get this working, already dropped "(3E)-4,8-dimethylnona-1,3,7-triene" from quant.all
+for(compvol in colnames(quant.all)) {
+  print(compvol)
+  nozeros <- bind_cols(select(qual.all,qual=compvol), select(quant.all,quant=compvol)) %>% 
+    filter(!(qual==0 | quant == 0))
+  quant.slopes[compvol] = coef(lm(quant ~ 0 + qual, data=nozeros))["qual"]
+}
+write_tsv(enframe(quant.slopes) %>% left_join(enframe(shortnames, name="Name", value="name")),
+          "data/volatiles/quant_slopes.tsv")
+
+quant.scaled <- sweep(quant.all, 2, quant.slopes, FUN = '/')
+
+quant.scaled.vol <- quant.scaled[volsmeta$FileName, 
+                                 colnames(quant.scaled) %in% 
+                                   intersect(colnames(quant.all), colnames(vol))] 
+
+#swap in scaled quant integrations
+#plot(unlist(vol[,colnames(quant.scaled.vol)]), unlist(quant.scaled.vol))
+vol[,colnames(quant.scaled.vol)] <- quant.scaled.vol
+```
+
 
 ```{r bouquetprep}
 longdata <- qual.data %>% load_longdata(sample="Filename", RT="Ret.Time", 
