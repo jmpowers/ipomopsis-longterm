@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2024-12-20" />
+<meta name="date" content="2025-01-10" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2024-12-20</h4>
+<h4 class="date">2025-01-10</h4>
 
 </div>
 
@@ -1135,6 +1135,7 @@ meta.all   &lt;- meta.full %&gt;% filter(FileName %in% files.match)
 quant.all &lt;- quant.full %&gt;% filter(Filename %in% files.match) %&gt;%
   select(Filename, Name, Area) %&gt;%
   mutate(Name = recode(Name, !!!shortnames)) %&gt;%
+  filter(Name != &quot;(3E)-4,8-dimethylnona-1,3,7-triene&quot;) %&gt;% 
   pivot_wider(names_from = &quot;Name&quot;, values_from=&quot;Area&quot;) %&gt;% 
   arrange(match(Filename, meta.all$FileName)) %&gt;% 
   write_tsv(&quot;data/volatiles/quant_all.tsv&quot;) %&gt;% 
@@ -1170,6 +1171,26 @@ qual.all &lt;- qual.data %&gt;% select(Filename, Name, Area) %&gt;%
   pivot_wider(names_from = &quot;Name&quot;, values_from=&quot;Area&quot;, values_fn = sum) %&gt;% 
   arrange(match(Filename, meta.all$FileName)) %&gt;% 
   as.data.frame() %&gt;% column_to_rownames(&quot;Filename&quot;)</code></pre>
+<pre class="r"><code>quant.slopes &lt;- set_names(rep(0,ncol(quant.all)), colnames(quant.all))
+#TODO get this working, already dropped &quot;(3E)-4,8-dimethylnona-1,3,7-triene&quot; from quant.all
+for(compvol in colnames(quant.all)) {
+  print(compvol)
+  nozeros &lt;- bind_cols(select(qual.all,qual=compvol), select(quant.all,quant=compvol)) %&gt;% 
+    filter(!(qual==0 | quant == 0))
+  quant.slopes[compvol] = coef(lm(quant ~ 0 + qual, data=nozeros))[&quot;qual&quot;]
+}
+write_tsv(enframe(quant.slopes) %&gt;% left_join(enframe(shortnames, name=&quot;Name&quot;, value=&quot;name&quot;)),
+          &quot;data/volatiles/quant_slopes.tsv&quot;)
+
+quant.scaled &lt;- sweep(quant.all, 2, quant.slopes, FUN = &#39;/&#39;)
+
+quant.scaled.vol &lt;- quant.scaled[volsmeta$FileName, 
+                                 colnames(quant.scaled) %in% 
+                                   intersect(colnames(quant.all), colnames(vol))] 
+
+#swap in scaled quant integrations
+#plot(unlist(vol[,colnames(quant.scaled.vol)]), unlist(quant.scaled.vol))
+vol[,colnames(quant.scaled.vol)] &lt;- quant.scaled.vol</code></pre>
 <pre class="r"><code>longdata &lt;- qual.data %&gt;% load_longdata(sample=&quot;Filename&quot;, RT=&quot;Ret.Time&quot;, 
                           name=&quot;Name&quot;, area=&quot;Area&quot;, match = &quot;SI&quot;, maxmatch=100) 
 metadata.df &lt;- meta.all %&gt;% 
@@ -1180,71 +1201,6 @@ rownames(metadata.df) &lt;- metadata.df$sample
 
 qual.all &lt;- make_sampletable(longdata, metadata.df)
 chems &lt;- make_chemtable(longdata, metadata.df)</code></pre>
-<div id="correlations-among-unfiltered-compounds"
-class="section level2">
-<h2>Correlations among unfiltered compounds</h2>
-<pre class="r"><code>meta.all.noleaf &lt;- meta.all %&gt;% filter(type != &quot;leaf&quot;)
-cut_threshold &lt;- 1e9
-qual.all.cut &lt;- qual.all[meta.all.noleaf$FileName, colSums(qual.all) &gt; cut_threshold | #big compounds
-                           colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
-
-contams &lt;- c(&quot;Nonanoic acid&quot;, &quot;Decanal&quot;, &quot;Caprolactam&quot;)
-inquant &lt;- data.frame(inquant=if_else(colnames(qual.all.cut) %in% setdiff(colnames(quant.all), contams),&quot;Y&quot;,&quot;N&quot;),
-                      row.names=colnames(qual.all.cut))
-pheatmap(cor(sqrt(qual.all.cut)), scale=&quot;none&quot;, 
-         clustering_method = &quot;mcquitty&quot;, cutree_rows = 20,
-         clustering_distance_rows=&quot;correlation&quot;, clustering_distance_cols=&quot;correlation&quot;,
-         clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
-         annotation_col = inquant, annotation_row = inquant,
-         color=colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(200), breaks=seq(-1,1,by=0.01), 
-         labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)</code></pre>
-<p><img src="images/corr_all-1.png" width="1152" /></p>
-</div>
-<div id="check-ambients-vs.-samples" class="section level2">
-<h2>Check ambients vs. samples</h2>
-<pre class="r"><code>cap.ambi &lt;- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
-anova(cap.ambi)</code></pre>
-<pre><code>Permutation test for capscale under reduced model
-Permutation: free
-Number of permutations: 999
-
-Model: capscale(formula = sqrt(qual.all.cut) ~ type, data = meta.all.noleaf)
-           Df Variance    F Pr(&gt;F)    
-Model       1 4.20e+05 3.88  0.001 ***
-Residual 1035 1.12e+08                
----
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
-<pre class="r"><code>explained(cap.ambi)</code></pre>
-<pre><code>[1] &quot;0% explained&quot;</code></pre>
-<pre class="r"><code>cap.ambi.df &lt;- fortify(cap.ambi) %&gt;% 
-  left_join(mutate(meta.all.noleaf, score=&quot;sites&quot;), by=c(label=&quot;FileName&quot;, &quot;score&quot;)) %&gt;% 
-  left_join(rownames_to_column(inquant, &quot;label&quot;))
-
-zoom &lt;- 40
-cap_threshold &lt;- 3
-ggplot(filter(cap.ambi.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
-  theme_classic() + theme(legend.position = &quot;top&quot;) + 
-  geom_point(aes(color=type, shape=type)) + scale_shape_manual(values=c(19,1))+
-  scale_color_manual(values=c(&quot;darkblue&quot;,&quot;magenta&quot;)) +
-  geom_text(data=filter(cap.ambi.df, score==&quot;species&quot;, abs(CAP1)&gt;cap_threshold), aes(x=CAP1*zoom))</code></pre>
-<p><img src="images/check_ambi-1.svg" width="768" /></p>
-<pre class="r"><code>#filter(cap.ambi.df, score==&quot;species&quot;, label%in%colnames(quant.all)) %&gt;% arrange(CAP1) %&gt;% View()
-ggplot(filter(cap.ambi.df, score==&quot;species&quot;),  aes(x=CAP1, y=MDS1, color=inquant)) +
-  labs(color= &quot;In quant integrations?&quot;)+
-  theme_classic() + theme(legend.position = &quot;top&quot;) +
-  geom_vline(xintercept=0)+ geom_hline(yintercept=0)+
-  geom_smooth() + geom_point() </code></pre>
-<p><img src="images/check_ambi-2.svg" width="768" /></p>
-<pre class="r"><code>compounds.cap.angles &lt;- cap.ambi.df %&gt;% filter(score==&quot;species&quot;) %&gt;% 
-  mutate(angle = atan2((CAP1*zoom), MDS1)*180/pi)
-
-ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inquant), ncol=1) +
-  geom_histogram(binwidth=5) + scale_x_continuous(breaks=seq(-180, 180, by=30))+
-  labs(fill= &quot;In quant integrations?&quot;)</code></pre>
-<p><img src="images/check_ambi-3.svg" width="768" /></p>
-<pre class="r"><code># cap.candidates &lt;- compounds.cap.angles %&gt;% 
-#   filter(abs(angle+90)&lt;5, inquant==&quot;N&quot;) %&gt;% select(name=label, CAP1, angle) %&gt;% arrange(CAP1)</code></pre>
-</div>
 <div id="filtering-criteria" class="section level2">
 <h2>Filtering criteria</h2>
 <pre class="r"><code>chemsf &lt;- chems %&gt;%
@@ -1291,41 +1247,40 @@ print(&quot;Compounds integrated for other Ipomopsis projects that did not pass 
 <pre><code> [1] &quot;3-methylbutanal oxime&quot;                             
  [2] &quot;g-terpinene&quot;                                       
  [3] &quot;methyl benzoate&quot;                                   
- [4] &quot;(3E)-4,8-dimethylnona-1,3,7-triene&quot;                
- [5] &quot;2-methylbenzonitrile&quot;                              
- [6] &quot;a-campholenal&quot;                                     
- [7] &quot;Decanal&quot;                                           
- [8] &quot;Caprolactam&quot;                                       
- [9] &quot;Nonanoic acid&quot;                                     
-[10] &quot;indole&quot;                                            
-[11] &quot;(E)-a-bergamotene&quot;                                 
-[12] &quot;pseudoionone&quot;                                      
-[13] &quot;trans-Geranylgeraniol&quot;                             
-[14] &quot;[(E)-hex-3-enyl] acetate&quot;                          
-[15] &quot;[(E)-hex-3-enyl] butanoate&quot;                        
-[16] &quot;(Z)-a-bergamotene&quot;                                 
-[17] &quot;a-humulene&quot;                                        
-[18] &quot;(2E)-2,7-dimethylocta-2,6-dien-1-ol&quot;               
-[19] &quot;benzaldehyde&quot;                                      
-[20] &quot;limonene&quot;                                          
-[21] &quot;methyl salicylate&quot;                                 
-[22] &quot;1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-&quot;        
-[23] &quot;(E)-4-oxohex-2-enal&quot;                               
-[24] &quot;p-mentha-1,3,8-triene&quot;                             
-[25] &quot;tricyclo[5.2.1.02,6]dec-2-ene&quot;                     
-[26] &quot;3,6-diethyl-3,6-dimethyltricyclo[3.1.0.02,4]hexane&quot;
-[27] &quot;furan-3-carbaldehyde&quot;                              
-[28] &quot;sabinene&quot;                                          
-[29] &quot;3-carene&quot;                                          
-[30] &quot;b-caryophyllene oxide&quot;                             
-[31] &quot;[(Z)-hex-3-enyl] 2-methylbutanoate&quot;                
-[32] &quot;2-butyloctan-1-ol&quot;                                 
-[33] &quot;hexan-1-ol&quot;                                        
-[34] &quot;3-methylbutan-1-ol&quot;                                
-[35] &quot;decan-2-one&quot;                                       
-[36] &quot;1,2,3-Propanetriol, 1-acetate&quot;                     
-[37] &quot;Benzamide&quot;                                         
-[38] &quot;Benzenebutanoic acid, .gamma.-oxo-&quot;                </code></pre>
+ [4] &quot;2-methylbenzonitrile&quot;                              
+ [5] &quot;a-campholenal&quot;                                     
+ [6] &quot;Decanal&quot;                                           
+ [7] &quot;Caprolactam&quot;                                       
+ [8] &quot;Nonanoic acid&quot;                                     
+ [9] &quot;indole&quot;                                            
+[10] &quot;(E)-a-bergamotene&quot;                                 
+[11] &quot;pseudoionone&quot;                                      
+[12] &quot;trans-Geranylgeraniol&quot;                             
+[13] &quot;[(E)-hex-3-enyl] acetate&quot;                          
+[14] &quot;[(E)-hex-3-enyl] butanoate&quot;                        
+[15] &quot;(Z)-a-bergamotene&quot;                                 
+[16] &quot;a-humulene&quot;                                        
+[17] &quot;(2E)-2,7-dimethylocta-2,6-dien-1-ol&quot;               
+[18] &quot;benzaldehyde&quot;                                      
+[19] &quot;limonene&quot;                                          
+[20] &quot;methyl salicylate&quot;                                 
+[21] &quot;1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-&quot;        
+[22] &quot;(E)-4-oxohex-2-enal&quot;                               
+[23] &quot;p-mentha-1,3,8-triene&quot;                             
+[24] &quot;tricyclo[5.2.1.02,6]dec-2-ene&quot;                     
+[25] &quot;3,6-diethyl-3,6-dimethyltricyclo[3.1.0.02,4]hexane&quot;
+[26] &quot;furan-3-carbaldehyde&quot;                              
+[27] &quot;sabinene&quot;                                          
+[28] &quot;3-carene&quot;                                          
+[29] &quot;b-caryophyllene oxide&quot;                             
+[30] &quot;[(Z)-hex-3-enyl] 2-methylbutanoate&quot;                
+[31] &quot;2-butyloctan-1-ol&quot;                                 
+[32] &quot;hexan-1-ol&quot;                                        
+[33] &quot;3-methylbutan-1-ol&quot;                                
+[34] &quot;decan-2-one&quot;                                       
+[35] &quot;1,2,3-Propanetriol, 1-acetate&quot;                     
+[36] &quot;Benzamide&quot;                                         
+[37] &quot;Benzenebutanoic acid, .gamma.-oxo-&quot;                </code></pre>
 <pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% iponew, .before=1) %&gt;% View()
 
 print(&quot;Compounds that passed filters and already have quant integrations:&quot;)</code></pre>
@@ -1375,15 +1330,23 @@ ggplot(longdata %&gt;% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(nam
   geom_point(data=quant.RT) + 
   guides(color=&quot;none&quot;) + ylab(&quot;&quot;) + theme_minimal()</code></pre>
 <p><img src="images/retention-1.svg" width="768" /></p>
-<p>New compounds to keep, some with multiple RTs:</p>
+<p>New compounds to investigate that correlate with known floral
+volatiles:</p>
+<ul>
+<li>methyl 2-methylbutanoate (fatty acid ester, clusters with
+a-pinene)</li>
+<li>(3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol (monoterpene alcohol,
+clusters with pseudoionone)</li>
+<li>7-epi-trans-sesquisabinene hydrate (C15, clusters with evening
+volatiles, but 4+ retention times)</li>
+</ul>
+<p>New but cluster with contaminants and have multiple retention
+times:</p>
 <ul>
 <li>5-Methyloxazolidine</li>
-<li>methyl 2-methylbutanoate</li>
 <li>Decane, 3,6-dimethyl (3 RT)</li>
-<li>(3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol</li>
 <li>Formic acid, undecyl ester (3 RT)</li>
 <li>8-Hexadecenal, 14 methyl- (Z) (4+ RT)</li>
-<li>7-epi-trans-sesquisabinene hydrate (4+ RT)</li>
 </ul>
 <p>New compounds that already line up with quant integrations:</p>
 <ul>
@@ -1392,7 +1355,7 @@ ggplot(longdata %&gt;% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(nam
 <li>[(Z)-hex-3-enyl] 2-methylpropanoate = [(Z)-hex-3-enyl]
 butananoate</li>
 </ul>
-<p>Compounds with extra RTs to investigate:</p>
+<p>Known compounds with extra RTs to investigate:</p>
 <ul>
 <li>[(Z)-hex-3-enyl] butanoate (2 RT)</li>
 <li>hex-2-enal (2 RT)</li>
@@ -1401,6 +1364,77 @@ butananoate</li>
 <li>a-terpineol (2 RT)</li>
 <li>b-caryophyllene (2 RT)</li>
 </ul>
+</div>
+<div id="correlations-among-filtered-and-unfiltered-compounds"
+class="section level2">
+<h2>Correlations among filtered and unfiltered compounds</h2>
+<pre class="r"><code>meta.all.noleaf &lt;- meta.all %&gt;% filter(type != &quot;leaf&quot;)
+cut_threshold &lt;- 1e9
+qual.all.cut &lt;- qual.all[meta.all.noleaf$FileName, colSums(qual.all) &gt; cut_threshold | #big compounds
+                           colnames(qual.all) %in% c(quant_only, qual_only, quant_qual)] #or in filtered qual or unfiltered quant lists
+contams &lt;- c(&quot;Nonanoic acid&quot;, &quot;Decanal&quot;, &quot;Caprolactam&quot;, &quot;Benzamide&quot;, &quot;methyl salicylate&quot;)
+chems.cut &lt;- tibble(name = colnames(qual.all.cut),
+                 status = case_when(name %in% contams ~    &quot;excluded, big&quot;,
+                                    name %in% quant_only ~ &quot;excluded, known&quot;,
+                                    name %in% qual_only ~  &quot;included, new&quot;,
+                                    name %in% quant_qual ~ &quot;included, known&quot;,
+                                    .default = &quot;excluded, big&quot;) %&gt;% as.factor()) %&gt;% 
+  column_to_rownames(&quot;name&quot;) %&gt;% as.data.frame()
+
+pheatmap(cor(sqrt(qual.all.cut)), scale=&quot;none&quot;, 
+         clustering_method = &quot;mcquitty&quot;, cutree_rows = 20,
+         clustering_distance_rows=&quot;correlation&quot;, clustering_distance_cols=&quot;correlation&quot;,
+         clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
+         annotation_col = chems.cut, annotation_row = chems.cut, 
+         annotation_colors=list(status=set_names(brewer.pal(4, &quot;Set1&quot;), levels(chems.cut$status))),
+         color=colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(200), breaks=seq(-1,1,by=0.01), 
+         labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)</code></pre>
+<p><img src="images/corr_all-1.png" width="1152" /></p>
+</div>
+<div id="check-ambients-vs.-samples" class="section level2">
+<h2>Check ambients vs. samples</h2>
+<pre class="r"><code>cap.ambi &lt;- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
+anova(cap.ambi)</code></pre>
+<pre><code>Permutation test for capscale under reduced model
+Permutation: free
+Number of permutations: 999
+
+Model: capscale(formula = sqrt(qual.all.cut) ~ type, data = meta.all.noleaf)
+           Df Variance    F Pr(&gt;F)    
+Model       1   390715 4.57  0.001 ***
+Residual 1035 88442792                
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code>explained(cap.ambi)</code></pre>
+<pre><code>[1] &quot;0% explained&quot;</code></pre>
+<pre class="r"><code>cap.ambi.df &lt;- fortify(cap.ambi) %&gt;% 
+  left_join(mutate(meta.all.noleaf, score=&quot;sites&quot;), by=c(label=&quot;FileName&quot;, &quot;score&quot;)) %&gt;% 
+  left_join(rownames_to_column(inquant, &quot;label&quot;))
+
+zoom &lt;- 40
+cap_threshold &lt;- 3
+ggplot(filter(cap.ambi.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
+  theme_classic() + theme(legend.position = &quot;top&quot;) + 
+  geom_point(aes(color=type, shape=type)) + scale_shape_manual(values=c(19,1))+
+  scale_color_manual(values=c(&quot;darkblue&quot;,&quot;magenta&quot;)) +
+  geom_text(data=filter(cap.ambi.df, score==&quot;species&quot;, abs(CAP1)&gt;cap_threshold), aes(x=CAP1*zoom))</code></pre>
+<p><img src="images/check_ambi-1.svg" width="768" /></p>
+<pre class="r"><code>#filter(cap.ambi.df, score==&quot;species&quot;, label%in%colnames(quant.all)) %&gt;% arrange(CAP1) %&gt;% View()
+ggplot(filter(cap.ambi.df, score==&quot;species&quot;),  aes(x=CAP1, y=MDS1, color=inquant)) +
+  labs(color= &quot;In quant integrations?&quot;)+
+  theme_classic() + theme(legend.position = &quot;top&quot;) +
+  geom_vline(xintercept=0)+ geom_hline(yintercept=0)+
+  geom_smooth() + geom_point() </code></pre>
+<p><img src="images/check_ambi-2.svg" width="768" /></p>
+<pre class="r"><code>compounds.cap.angles &lt;- cap.ambi.df %&gt;% filter(score==&quot;species&quot;) %&gt;% 
+  mutate(angle = atan2((CAP1*zoom), MDS1)*180/pi)
+
+ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inquant), ncol=1) +
+  geom_histogram(binwidth=5) + scale_x_continuous(breaks=seq(-180, 180, by=30))+
+  labs(fill= &quot;In quant integrations?&quot;)</code></pre>
+<p><img src="images/check_ambi-3.svg" width="768" /></p>
+<pre class="r"><code># cap.candidates &lt;- compounds.cap.angles %&gt;% 
+#   filter(abs(angle+90)&lt;5, inquant==&quot;N&quot;) %&gt;% select(name=label, CAP1, angle) %&gt;% arrange(CAP1)</code></pre>
 </div>
 </div>
 <div id="descriptions-of-filtered-volatiles" class="section level1">
@@ -1516,8 +1550,8 @@ meta %&gt;% count(year, site, time) %&gt;%
 </tr>
 <tr class="even">
 <td align="left">2018</td>
-<td align="right">5</td>
-<td align="right">6</td>
+<td align="right">8</td>
+<td align="right">10</td>
 <td align="right">15</td>
 <td align="right"></td>
 <td align="right">17</td>
@@ -1677,13 +1711,13 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(quant.plant) ~ time + year + site + time:year + time:site + year:site, data = meta.plant)
            Df Variance      F Pr(&gt;F)    
-time        1   371197 488.32  0.001 ***
-year        6    84106  18.44  0.001 ***
-site        2    10030   6.60  0.001 ***
-time:year   6    35794   7.85  0.001 ***
-time:site   2     4664   3.07  0.018 *  
-year:site  11    14003   1.67  0.025 *  
-Residual  784   595952                  
+time        1   374998 497.55  0.001 ***
+year        6    84568  18.70  0.001 ***
+site        2    10253   6.80  0.001 ***
+time:year   6    36200   8.01  0.001 ***
+time:site   2     4681   3.11  0.013 *  
+year:site  11    13724   1.66  0.020 *  
+Residual  793   597679                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.tys)</code></pre>
@@ -1715,17 +1749,17 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(quant.withvwc) ~ time + year + site + time:year + time:site + relVWC, data = meta.withvwc)
            Df Variance      F Pr(&gt;F)    
-time        1   292554 273.77  0.001 ***
-year        5    99779  18.67  0.001 ***
-site        2    12653   5.92  0.001 ***
-relVWC      1     2735   2.56  0.057 .  
-time:year   4    21340   4.99  0.001 ***
-time:site   2     6045   2.83  0.021 *  
-Residual  552   589867                  
+time        1   298999 283.15  0.001 ***
+year        5   100461  19.03  0.001 ***
+site        2    12888   6.10  0.001 ***
+relVWC      1     2553   2.42  0.075 .  
+time:year   4    22832   5.41  0.001 ***
+time:site   2     6091   2.88  0.016 *  
+Residual  561   592394                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.tysv)</code></pre>
-<pre><code>[1] &quot;42% explained&quot;</code></pre>
+<pre><code>[1] &quot;43% explained&quot;</code></pre>
 </div>
 <div id="cap-with-year-within-time" class="section level2">
 <h2>CAP with year, within time</h2>

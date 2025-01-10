@@ -1,64 +1,64 @@
-site	time	date	type	sample	plant	bag	pump	end	equil	pumping	flowers	buds	pump_id	VWC	notes
-VF	D	2018-07-18	floral	27	27	8:55	9:25	9:40	0:30	0:15	1	0	1	2.3	
-VF	D	2018-07-18	floral	25	25	9:22	9:52	10:07	0:30	0:15	1	0	1	2.3	
-VF	D	2018-07-18	floral	13	13	9:43	10:13	10:28	0:30	0:15	1	0	1	2.6	
-VF	D	2018-07-18	floral	10	10	10:02	10:32	10:47	0:30	0:15	1	0	1	1.3	
-VF	D	2018-07-18	floral	44	44	10:21	10:53	11:08	0:32	0:15	0	0	1	1.6	
-VF	D	2018-07-18	leaf	leaf1	39	11:13	11:43	11:58	0:30	0:15	0	0	1		leaf from VF 39
-VF	D	2018-07-18	floral	48	48	9:00	9:34	9:49	0:34	0:15	1	0	7	1.9	
-VF	D	2018-07-18	floral	36	36	9:26	9:55	10:10	0:29	0:15	1	0	7	3.9	
-VF	D	2018-07-18	floral	35	35	10:10	10:40	10:55	0:30	0:15	1	0	4	0.5	
-VF	D	2018-07-18	ambient	air2		11:10	11:10	11:25		0:15			8		JP: bag and pump time the same, removed bag time
-VF	D	2018-07-18	floral	26	26	8:48	9:21	9:36	0:33	0:15	1	0	2	1.2	
-VF	D	2018-07-18	floral	11	11	9:47	10:19	10:34	0:32	0:15	1	0	2	1.5	
-VF	D	2018-07-18	floral	22	22	8:52	9:22	9:37	0:30	0:15	1	0	3	3.5	
-VF	D	2018-07-18	floral	6	6	8:54	9:24	9:39	0:30	0:15	1	0	6	2.8	
-VF	D	2018-07-18	floral	45	45	9:27	9:57	10:12	0:30	0:15	1	0	3	2.6	
-VF	D	2018-07-18	floral	39	39	9:28	10:00	10:15	0:32	0:15	1	0	6	1.6	
-VF	D	2018-07-18	floral	40	40	9:50	10:20	10:35	0:30	0:15	1	0	3	1.9	
-VF	D	2018-07-18	floral	14	14	9:55	10:25	10:40	0:30	0:15	1	0	6	1.9	
-VF	D	2018-07-18	floral	34	34	10:34	11:04	11:19	0:30	0:15	1	0	3	1.5	
-VF	D	2018-07-18	ambient	air1		10:40	11:12	11:27	0:32	0:15			6		
-Lagg	D	2018-07-19	floral	6	6	9:40	10:10	10:25	0:30	0:15	1	0	1	8.8	JP: translate flower to metal tag number with PG Vegetative Natural Pop Data 2018
-Lagg	D	2018-07-19	floral	2	2	9:45	10:15	10:30	0:30	0:15	1	0	3	6.7	
-Lagg	D	2018-07-19	floral	3	3	10:06	10:36	10:51	0:30	0:15	1	0	1	13.5	
-Lagg	D	2018-07-19	floral	25	25	10:40	11:10	11:25	0:30	0:15	1	0	3	10.6	
-Lagg	D	2018-07-19	floral	29	29	10:44	11:14	11:29	0:30	0:15	1	1	1	13.0	
-Lagg	D	2018-07-19	floral	48	48	11:05	11:35	11:50	0:30	0:15	1	1	3	13.9	
-Lagg	D	2018-07-19	ambient	air2		11:18	11:48	12:03	0:30	0:15			1		
-Lagg	D	2018-07-19	floral	8	8	9:44	10:15	10:30	0:31	0:15	1	0	4	9.7	
-Lagg	D	2018-07-19	floral	50	50	10:08	10:39	10:54	0:31	0:15	1	0	4	10.8	
-Lagg	D	2018-07-19	floral	24	24	10:35	11:06	11:20	0:31	0:14	1	0	4	11.2	
-Lagg	D	2018-07-19	floral	35	35	11:17	11:47	12:02	0:30	0:15	1	0	4	10.8	
-Lagg	D	2018-07-19	floral	39	39	9:37	10:07	10:22	0:30	0:15	1	0	2	10.5	
-Lagg	D	2018-07-19	floral	41	41	9:45	10:15	10:30	0:30	0:15	1	0	6	11.2	
-Lagg	D	2018-07-19	floral	46	46	10:05	10:35	10:50	0:30	0:15	1	0	2	10.7	
-Lagg	D	2018-07-19	floral	36	36	10:18	10:48	11:03	0:30	0:15	1	0	6	14.7	
-Lagg	D	2018-07-19	floral	37	37	10:41	11:11	11:26	0:30	0:15	1	0	2	11.2	
-Lagg	D	2018-07-19	leaf	leaf	36	11:03	11:33	11:48	0:30	0:15			2		from L36
-Lagg	D	2018-07-19	ambient	air1		11:08	11:38	11:53	0:30	0:15			6		
-Ihyb	D	2018-07-20	floral	14	14	11:23	11:53	12:08	0:30	0:15	1	0	6	6.1	very small flower
-Ihyb	D	2018-07-20	ambient	air1		11:28	11:58	12:13	0:30	0:15			3		
-Ihyb	D	2018-07-20	floral	26	26	11:43	12:13	12:28	0:30	0:15	1	0	6	4.2	
-Ihyb	D	2018-07-20	ambient	air2		12:02	12:32	12:47	0:30	0:15			6		
-Ihyb	D	2018-07-20	floral	7	7	11:25	11:55	12:10	0:30	0:15	1	0	1	7.2	
-Ihyb	D	2018-07-20	floral	4	4	11:30	12:00	12:15	0:30	0:15	1	0	2	5.3	
-Ihyb	D	2018-07-20	floral	19	19	12:32	13:02	13:17	0:30	0:15	1	0	2	4.8	
-Ihyb	D	2018-07-20	leaf	leaf	19	12:28	12:58	13:13	0:30	0:15			1		from Ihyb19
-Ihyb	D	2018-07-26	floral	36	36	10:17	10:47	11:02	0:30	0:15	1	0	2	1.5	
-Ihyb	D	2018-07-26	floral	23	23	10:22	10:52	11:07	0:30	0:15	1	0		3.4	
-Ihyb	D	2018-07-26	floral	24	24	10:18	10:48	11:03	0:30	0:15	1	0	6	1.6	
-Ihyb	D	2018-07-26	ambient	air		10:29	10:59	11:14	0:30	0:15			1		
-Ihyb	N	2018-07-19	floral	25	25	20:40	21:10	21:25	0:30	0:15	1	0	1	4.9	JP: changed 7/19 times to PM
-Ihyb	N	2018-07-19	floral	26	26	20:45	21:15	21:30	0:30	0:15	1	0	3	5.9	
-Ihyb	N	2018-07-19	floral	33	33	21:20	21:50	22:05	0:30	0:15	1	0	1	9.2	corolla damage
-Ihyb	N	2018-07-19	floral	34	34	21:23	21:53	22:08	0:30	0:15	1	0	3	9.3	1 fruit in bag
-Ihyb	N	2018-07-19	floral	30	30	21:40	22:10	22:25	0:30	0:15	1	0	3	9.9	
-Ihyb	N	2018-07-19	ambient	air1		21:45	22:15	22:30	0:30	0:15			1		
-Ihyb	N	2018-07-19	ambient	air2		21:55	22:25	22:40	0:30	0:15			3		
-Ihyb	N	2018-07-19	floral	7	7	20:48	21:18	21:33	0:30	0:15	1	0		6.9	either pump 2 or 6
-Ihyb	N	2018-07-19	floral	12	12	21:05	21:36	21:51	0:31	0:15	1	0		8.6	either pump 2 or 6
-Ihyb	N	2018-07-19	floral	19	19	21:15	21:45	22:00	0:30	0:15	1	0		8	either pump 2 or 6
-Ihyb	N	2018-07-19	floral	20	20	21:25	21:55	22:10	0:30	0:15	1	0		5.9	either pump 2 or 6
-Ihyb	N	2018-07-19	floral	4	4	21:48	22:18	22:33	0:30	0:15	1	0		4.8	either pump 2 or 6
-Ihyb	N	2018-07-19	leaf	leaf	7	22:05	22:36	22:51	0:31	0:15				6.9	from Ihyb7; either pump 2 or 6
+site	time	date	observer	type	tag	sample	plant	bag	pump	end	equil	pumping	flowers	buds	pump_id	VWC	notes
+VF	D	2018-07-18		floral		27	27	8:55	9:25	9:40	0:30	0:15	1	0	1	2.3	JP: no scan of this date yet
+VF	D	2018-07-18		floral		25	25	9:22	9:52	10:07	0:30	0:15	1	0	1	2.3	
+VF	D	2018-07-18		floral		13	13	9:43	10:13	10:28	0:30	0:15	1	0	1	2.6	
+VF	D	2018-07-18		floral		10	10	10:02	10:32	10:47	0:30	0:15	1	0	1	1.3	
+VF	D	2018-07-18		floral		44	44	10:21	10:53	11:08	0:32	0:15	0	0	1	1.6	
+VF	D	2018-07-18		leaf		leaf1	39	11:13	11:43	11:58	0:30	0:15	0	0	1		leaf from VF 39
+VF	D	2018-07-18		floral		48	48	9:00	9:34	9:49	0:34	0:15	1	0	7	1.9	
+VF	D	2018-07-18		floral		36	36	9:26	9:55	10:10	0:29	0:15	1	0	7	3.9	
+VF	D	2018-07-18		floral		35	35	10:10	10:40	10:55	0:30	0:15	1	0	4	0.5	
+VF	D	2018-07-18		ambient		air2		11:10	11:10	11:25		0:15			8		JP: bag and pump time the same, removed bag time
+VF	D	2018-07-18		floral		26	26	8:48	9:21	9:36	0:33	0:15	1	0	2	1.2	
+VF	D	2018-07-18		floral		11	11	9:47	10:19	10:34	0:32	0:15	1	0	2	1.5	
+VF	D	2018-07-18		floral		22	22	8:52	9:22	9:37	0:30	0:15	1	0	3	3.5	
+VF	D	2018-07-18		floral		6	6	8:54	9:24	9:39	0:30	0:15	1	0	6	2.8	
+VF	D	2018-07-18		floral		45	45	9:27	9:57	10:12	0:30	0:15	1	0	3	2.6	
+VF	D	2018-07-18		floral		39	39	9:28	10:00	10:15	0:32	0:15	1	0	6	1.6	
+VF	D	2018-07-18		floral		40	40	9:50	10:20	10:35	0:30	0:15	1	0	3	1.9	
+VF	D	2018-07-18		floral		14	14	9:55	10:25	10:40	0:30	0:15	1	0	6	1.9	
+VF	D	2018-07-18		floral		34	34	10:34	11:04	11:19	0:30	0:15	1	0	3	1.5	
+VF	D	2018-07-18		ambient		air1		10:40	11:12	11:27	0:32	0:15			6		
+Lagg	D	2018-07-19	AF	floral		6	6	9:40	10:10	10:25	0:30	0:15	1	0	1	8.8	JP: plant = flag numbers. translate to metal tag number with "PG Vegetative Natural Pop Data 2018" or "Ihyb2018 flowering matchIDs"
+Lagg	D	2018-07-19	AF	floral		2	2	9:45	10:15	10:30	0:30	0:15	1	0	3	6.7	
+Lagg	D	2018-07-19	AF	floral		3	3	10:06	10:36	10:51	0:30	0:15	1	0	1	13.5	
+Lagg	D	2018-07-19	AF	floral		25	25	10:40	11:10	11:25	0:30	0:15	1	0	3	10.6	
+Lagg	D	2018-07-19	AF	floral		29	29	10:44	11:14	11:29	0:30	0:15	1	1	1	13.0	
+Lagg	D	2018-07-19	AF	floral		48	48	11:05	11:35	11:50	0:30	0:15	1	1	3	13.9	
+Lagg	D	2018-07-19	AF	ambient		air2		11:18	11:48	12:03	0:30	0:15			1		
+Lagg	D	2018-07-19	RD	floral		8	8	9:44	10:15	10:30	0:31	0:15	1	0	4	9.7	
+Lagg	D	2018-07-19	RD	floral		50	50	10:08	10:39	10:54	0:31	0:15	1	0	4	10.8	
+Lagg	D	2018-07-19	RD	floral		24	24	10:35	11:06	11:20	0:31	0:14	1	0	4	11.2	
+Lagg	D	2018-07-19	RD	floral		35	35	11:17	11:47	12:02	0:30	0:15	1	0	4	10.8	
+Lagg	D	2018-07-19	JN	floral		39	39	9:37	10:07	10:22	0:30	0:15	1	0	2	10.5	
+Lagg	D	2018-07-19	JN	floral		41	41	9:45	10:15	10:30	0:30	0:15	1	0	6	11.2	
+Lagg	D	2018-07-19	JN	floral		46	46	10:05	10:35	10:50	0:30	0:15	1	0	2	10.7	
+Lagg	D	2018-07-19	JN	floral		36	36	10:18	10:48	11:03	0:30	0:15	1	0	6	14.7	line above: L38 flower fell off by wind
+Lagg	D	2018-07-19	JN	floral		37	37	10:41	11:11	11:26	0:30	0:15	1	0	2	11.2	
+Lagg	D	2018-07-19	JN	leaf		leaf	36	11:03	11:33	11:48	0:30	0:15			2		from L36
+Lagg	D	2018-07-19	JN	ambient		air1		11:08	11:38	11:53	0:30	0:15			6		
+Ihyb	D	2018-07-20	AF	floral	121	14	14	11:23	11:53	12:08	0:30	0:15	1	0	6	6.1	very small flower
+Ihyb	D	2018-07-20	AF	ambient		air1		11:28	11:58	12:13	0:30	0:15			3		
+Ihyb	D	2018-07-20	AF	floral	138	26	26	11:43	12:13	12:28	0:30	0:15	1	0	6	4.2	
+Ihyb	D	2018-07-20	AF	ambient		air2		12:02	12:32	12:47	0:30	0:15			6		crossed out line above: tag 118 = flag Ihyb34, 11:46, 12:16, 12:31, 1, 0, only flower and bag blew off in wind; buds
+Ihyb	D	2018-07-20	RD	floral	2224	7	7	11:25	11:55	12:10	0:30	0:15	1	0	1	7.2	
+Ihyb	D	2018-07-20	RD	floral	2223	4	4	11:30	12:00	12:15	0:30	0:15	1	0	2	5.3	
+Ihyb	D	2018-07-20	RD	floral	2227	19	19	12:32	13:02	13:17	0:30	0:15	1	0	2	4.8	wind blew off 2 different flowers - sampling took forever
+Ihyb	D	2018-07-20	RD	leaf	2227	leaf	19	12:28	12:58	13:13	0:30	0:15			1		from Ihyb19
+Ihyb	D	2018-07-26	AF	floral	134	36	36	10:17	10:47	11:02	0:30	0:15	1	0	2	1.5	
+Ihyb	D	2018-07-26	AF	floral	183	23	23	10:22	10:52	11:07	0:30	0:15	1	0		3.4	
+Ihyb	D	2018-07-26	RD	floral	200	24	24	10:18	10:48	11:03	0:30	0:15	1	0	6	1.6	
+Ihyb	D	2018-07-26	RD	ambient		air		10:29	10:59	11:14	0:30	0:15			1		
+Ihyb	N	2018-07-19	AF	floral	126	25	25	20:40	21:10	21:25	0:30	0:15	1	0	1	4.9	JP: changed 7/19 times to PM. Left of L29
+Ihyb	N	2018-07-19	AF	floral	138	26	26	20:45	21:15	21:30	0:30	0:15	1	0	3	5.9	
+Ihyb	N	2018-07-19	AF	floral	184	33	33	21:20	21:50	22:05	0:30	0:15	1	0	1	9.2	corolla damage
+Ihyb	N	2018-07-19	AF	floral	118	34	34	21:23	21:53	22:08	0:30	0:15	1	0	3	9.3	1 fruit in bag
+Ihyb	N	2018-07-19	AF	floral	182	30	30	21:40	22:10	22:25	0:30	0:15	1	0	3	9.9	
+Ihyb	N	2018-07-19	AF	ambient		air1		21:45	22:15	22:30	0:30	0:15			1		
+Ihyb	N	2018-07-19	AF	ambient		air2		21:55	22:25	22:40	0:30	0:15			3		
+Ihyb	N	2018-07-19	RD	floral	2244	7	7	20:48	21:18	21:33	0:30	0:15	1	0		6.9	either pump 2 or 6 (forgot to record pump number for these)
+Ihyb	N	2018-07-19	RD	floral	2220	12	12	21:05	21:36	21:51	0:31	0:15	1	0		8.6	either pump 2 or 6
+Ihyb	N	2018-07-19	RD	floral	2227	19	19	21:15	21:45	22:00	0:30	0:15	1	0		8	either pump 2 or 6
+Ihyb	N	2018-07-19	RD	floral	139	20	20	21:25	21:55	22:10	0:30	0:15	1	0		5.9	either pump 2 or 6
+Ihyb	N	2018-07-19	RD	floral	2223	4	4	21:48	22:18	22:33	0:30	0:15	1	0		4.8	either pump 2 or 6
+Ihyb	N	2018-07-19	RD	leaf	2224	leaf	7	22:05	22:36	22:51	0:31	0:15				6.9	from Ihyb7; either pump 2 or 6

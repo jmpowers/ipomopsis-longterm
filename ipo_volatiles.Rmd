@@ -248,7 +248,7 @@ qual.all <- qual.data %>% select(Filename, Name, Area) %>%
   as.data.frame() %>% column_to_rownames("Filename")
 ```
 
-```{r quantslopes}
+```{r quantslopes, eval=FALSE}
 quant.slopes <- set_names(rep(0,ncol(quant.all)), colnames(quant.all))
 #TODO get this working, already dropped "(3E)-4,8-dimethylnona-1,3,7-triene" from quant.all
 for(compvol in colnames(quant.all)) {
@@ -283,64 +283,6 @@ rownames(metadata.df) <- metadata.df$sample
 
 qual.all <- make_sampletable(longdata, metadata.df)
 chems <- make_chemtable(longdata, metadata.df)
-```
-
-
-## Correlations among unfiltered compounds 
-
-```{r corr_all, fig.height=25, fig.width=12, dev="png", dev.args=list()}
-meta.all.noleaf <- meta.all %>% filter(type != "leaf")
-cut_threshold <- 1e9
-qual.all.cut <- qual.all[meta.all.noleaf$FileName, colSums(qual.all) > cut_threshold | #big compounds
-                           colnames(qual.all) %in% colnames(quant.all)] #or in unfiltered quant list
-
-contams <- c("Nonanoic acid", "Decanal", "Caprolactam")
-inquant <- data.frame(inquant=if_else(colnames(qual.all.cut) %in% setdiff(colnames(quant.all), contams),"Y","N"),
-                      row.names=colnames(qual.all.cut))
-pheatmap(cor(sqrt(qual.all.cut)), scale="none", 
-         clustering_method = "mcquitty", cutree_rows = 20,
-         clustering_distance_rows="correlation", clustering_distance_cols="correlation",
-         clustering_callback = function(hc, ...){dendsort(hc, type="average")},
-         annotation_col = inquant, annotation_row = inquant,
-         color=colorRampPalette(c("blue","white","red"))(200), breaks=seq(-1,1,by=0.01), 
-         labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)
-```
-
-## Check ambients vs. samples
-
-```{r check_ambi}
-cap.ambi <- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
-anova(cap.ambi)
-explained(cap.ambi)
-
-cap.ambi.df <- fortify(cap.ambi) %>% 
-  left_join(mutate(meta.all.noleaf, score="sites"), by=c(label="FileName", "score")) %>% 
-  left_join(rownames_to_column(inquant, "label"))
-
-zoom <- 40
-cap_threshold <- 3
-ggplot(filter(cap.ambi.df, score=="sites"), aes(x=CAP1, y=MDS1, label=greekify(label))) +
-  theme_classic() + theme(legend.position = "top") + 
-  geom_point(aes(color=type, shape=type)) + scale_shape_manual(values=c(19,1))+
-  scale_color_manual(values=c("darkblue","magenta")) +
-  geom_text(data=filter(cap.ambi.df, score=="species", abs(CAP1)>cap_threshold), aes(x=CAP1*zoom))
-
-#filter(cap.ambi.df, score=="species", label%in%colnames(quant.all)) %>% arrange(CAP1) %>% View()
-ggplot(filter(cap.ambi.df, score=="species"),  aes(x=CAP1, y=MDS1, color=inquant)) +
-  labs(color= "In quant integrations?")+
-  theme_classic() + theme(legend.position = "top") +
-  geom_vline(xintercept=0)+ geom_hline(yintercept=0)+
-  geom_smooth() + geom_point() 
-
-compounds.cap.angles <- cap.ambi.df %>% filter(score=="species") %>% 
-  mutate(angle = atan2((CAP1*zoom), MDS1)*180/pi)
-
-ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inquant), ncol=1) +
-  geom_histogram(binwidth=5) + scale_x_continuous(breaks=seq(-180, 180, by=30))+
-  labs(fill= "In quant integrations?")
-
-# cap.candidates <- compounds.cap.angles %>% 
-#   filter(abs(angle+90)<5, inquant=="N") %>% select(name=label, CAP1, angle) %>% arrange(CAP1)
 ```
 
 ## Filtering criteria
@@ -406,15 +348,18 @@ ggplot(longdata %>% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(name, 
   guides(color="none") + ylab("") + theme_minimal()
 ```
 
-New compounds to keep, some with multiple RTs:
+New compounds to investigate that correlate with known floral volatiles:
+
+* methyl 2-methylbutanoate (fatty acid ester, clusters with a-pinene)
+* (3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol (monoterpene alcohol, clusters with pseudoionone)
+* 7-epi-trans-sesquisabinene hydrate (C15, clusters with evening volatiles, but 4+ retention times)
+
+New but cluster with contaminants and have multiple retention times:
 
 * 5-Methyloxazolidine
-* methyl 2-methylbutanoate
 * Decane, 3,6-dimethyl (3 RT)
-* (3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol
 * Formic acid, undecyl ester (3 RT)
 * 8-Hexadecenal, 14 methyl- (Z) (4+ RT)
-* 7-epi-trans-sesquisabinene hydrate (4+ RT)
 
 New compounds that already line up with quant integrations:
 
@@ -422,7 +367,7 @@ New compounds that already line up with quant integrations:
 * carveol = cosmene
 * [(Z)-hex-3-enyl] 2-methylpropanoate = [(Z)-hex-3-enyl] butananoate
 
-Compounds with extra RTs to investigate:
+Known compounds with extra RTs to investigate:
 
 * [(Z)-hex-3-enyl] butanoate (2 RT)
 * hex-2-enal (2 RT)
@@ -430,6 +375,70 @@ Compounds with extra RTs to investigate:
 * cosmene (3 RT)
 * a-terpineol (2 RT)
 * b-caryophyllene (2 RT)
+
+## Correlations among filtered and unfiltered compounds 
+
+```{r corr_all, fig.height=25, fig.width=12, dev="png", dev.args=list()}
+meta.all.noleaf <- meta.all %>% filter(type != "leaf")
+cut_threshold <- 1e9
+qual.all.cut <- qual.all[meta.all.noleaf$FileName, colSums(qual.all) > cut_threshold | #big compounds
+                           colnames(qual.all) %in% c(quant_only, qual_only, quant_qual)] #or in filtered qual or unfiltered quant lists
+contams <- c("Nonanoic acid", "Decanal", "Caprolactam", "Benzamide", "methyl salicylate")
+chems.cut <- tibble(name = colnames(qual.all.cut),
+                 status = case_when(name %in% contams ~    "excluded, big",
+                                    name %in% quant_only ~ "excluded, known",
+                                    name %in% qual_only ~  "included, new",
+                                    name %in% quant_qual ~ "included, known",
+                                    .default = "excluded, big") %>% as.factor()) %>% 
+  column_to_rownames("name") %>% as.data.frame()
+
+pheatmap(cor(sqrt(qual.all.cut)), scale="none", 
+         clustering_method = "mcquitty", cutree_rows = 20,
+         clustering_distance_rows="correlation", clustering_distance_cols="correlation",
+         clustering_callback = function(hc, ...){dendsort(hc, type="average")},
+         annotation_col = chems.cut, annotation_row = chems.cut, 
+         annotation_colors=list(status=set_names(brewer.pal(4, "Set1"), levels(chems.cut$status))),
+         color=colorRampPalette(c("blue","white","red"))(200), breaks=seq(-1,1,by=0.01), 
+         labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)
+```
+
+## Check ambients vs. samples
+
+```{r check_ambi}
+cap.ambi <- capscale(sqrt(qual.all.cut) ~ type, data=meta.all.noleaf)
+anova(cap.ambi)
+explained(cap.ambi)
+
+cap.ambi.df <- fortify(cap.ambi) %>% 
+  left_join(mutate(meta.all.noleaf, score="sites"), by=c(label="FileName", "score")) %>% 
+  left_join(rownames_to_column(inquant, "label"))
+
+zoom <- 40
+cap_threshold <- 3
+ggplot(filter(cap.ambi.df, score=="sites"), aes(x=CAP1, y=MDS1, label=greekify(label))) +
+  theme_classic() + theme(legend.position = "top") + 
+  geom_point(aes(color=type, shape=type)) + scale_shape_manual(values=c(19,1))+
+  scale_color_manual(values=c("darkblue","magenta")) +
+  geom_text(data=filter(cap.ambi.df, score=="species", abs(CAP1)>cap_threshold), aes(x=CAP1*zoom))
+
+#filter(cap.ambi.df, score=="species", label%in%colnames(quant.all)) %>% arrange(CAP1) %>% View()
+ggplot(filter(cap.ambi.df, score=="species"),  aes(x=CAP1, y=MDS1, color=inquant)) +
+  labs(color= "In quant integrations?")+
+  theme_classic() + theme(legend.position = "top") +
+  geom_vline(xintercept=0)+ geom_hline(yintercept=0)+
+  geom_smooth() + geom_point() 
+
+compounds.cap.angles <- cap.ambi.df %>% filter(score=="species") %>% 
+  mutate(angle = atan2((CAP1*zoom), MDS1)*180/pi)
+
+ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inquant), ncol=1) +
+  geom_histogram(binwidth=5) + scale_x_continuous(breaks=seq(-180, 180, by=30))+
+  labs(fill= "In quant integrations?")
+
+# cap.candidates <- compounds.cap.angles %>% 
+#   filter(abs(angle+90)<5, inquant=="N") %>% select(name=label, CAP1, angle) %>% arrange(CAP1)
+```
+
 
 # Descriptions of filtered volatiles
 
