@@ -39,7 +39,9 @@ explained <- function(cap) paste0(round(100*summary(cap)$constr.chi/summary(cap)
 metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatiles - 20", full.names=T) %>% 
   map_dfr(~read_tsv(.x, show_col_types = F) %>% 
             mutate(across(any_of(c("pump_id", "plant", "vial", "sample")), as.character)), .id="metafile") %>% 
-  mutate(year = year(date))
+  mutate(year = year(date),
+         taxon = fct_collapse(site, agg = c("Lagg", "VF"), hyb = "Ihyb"),
+         taxontime = paste0(taxon, time))
 
 # metadata %>% add_count(year, date, time, site, type, sample) %>% filter(n>1) %>% 
 #   arrange(year, date, time, site, type, sample) %>% write_tsv("data/volatiles/metadupes.tsv", na="")
@@ -199,7 +201,7 @@ need_meta <- setdiff(quant.full$Filename, meta.full$FileName)#just the ones filt
 
 #only keep file-metadata matches
 files.match <- intersect(meta.full$FileName, quant.full$Filename)
-meta.all   <- meta.full %>% filter(FileName %in% files.match)
+meta.all <- meta.full %>% filter(FileName %in% files.match)
 quant.all <- quant.full %>% filter(Filename %in% files.match) %>%
   select(Filename, Name, Area) %>%
   mutate(Name = recode(Name, !!!shortnames)) %>%
@@ -238,7 +240,7 @@ qual.full <- list.files("data/volatiles/qual/", full.names = T) %>%
 
 #only keep file-metadata matches
 files.match <- intersect(meta.full$FileName, qual.full$Filename)
-meta.all   <- meta.full %>% filter(FileName %in% files.match)
+meta.all <- meta.full %>% filter(FileName %in% files.match)
 qual.data <-  qual.full %>% filter(Filename %in% files.match) %>% 
   filter(Name != "") %>% #drop peaks without identifications
   mutate(Name = droplevels(recode(Name, !!!shortnames)))#bouquet doesn't like empty levels
@@ -278,7 +280,7 @@ longdata <- qual.data %>% load_longdata(sample="Filename", RT="Ret.Time",
 metadata.df <- meta.all %>% 
   as.data.frame() %>% #tibbles break bouquet's add_count_freqs
   select(-sample) %>% #name conflict with bouquet
-  load_metadata(date="date", sample="FileName", type="type")
+  load_metadata(date="date", sample="FileName", type="type", group="taxontime")
 rownames(metadata.df) <- metadata.df$sample
 
 qual.all <- make_sampletable(longdata, metadata.df)
@@ -288,17 +290,20 @@ chems <- make_chemtable(longdata, metadata.df)
 ## Filtering criteria
 
 ```{r bouquet}
+minratio <- 4
 chemsf <- chems %>%
-  filter_RT(2, 17) %>% 
-  filter_match(0.8) %>% 
-  filter_freq(0.1) %>% 
-  filter_contaminant(cont.list = c("Caprolactam")) %>%
-  filter_area(min_maximum = 1e5) %>% 
-  filter_ambient_ratio(qual.all, metadata.df, ratio = 4) %>%
+  filter_area(min_maximum = 1e5) %>% #not used
+  filter_RT(0, 20) %>% #before 20 minutes
+  filter_freq(0.2, group=TRUE) %>% #in 20% of samples of any species-time group
+  filter_ambient_ratio(qual.all, metadata.df, ratio = minratio, group=TRUE) %>% #and exceeds ambients in that group
   combine_filters() 
 
-chemsf$filter_final <- with(chemsf, filter_freq.floral=="OK" &
-                              filter_ambient_ratio=="OK") #only use these for final filtering
+chemsf$filter_final <- with(chemsf, filter_RT=="OK" & RT.var < 2 & # variance of retention time < 2 min
+                              ((filter_freq.aggD=="OK" & ambient_ratio_aggD>minratio)|
+                                 (filter_freq.aggN=="OK" & ambient_ratio_aggN>minratio)|
+                                 (filter_freq.hybD=="OK" & ambient_ratio_hybD>minratio)|
+                                 (filter_freq.hybN=="OK" & ambient_ratio_hybN>minratio)) |
+                              name==c("indole"))#manually included - not detected by peak picker
 
 bouquet::plot_filters(chemsf, option="rarity", yrange=3.5)
 bouquet::plot_filters(chemsf, option="ambient", yrange=3.5)
@@ -385,18 +390,19 @@ qual.all.cut <- qual.all[meta.all.noleaf$FileName, colSums(qual.all) > cut_thres
                            colnames(qual.all) %in% c(quant_only, qual_only, quant_qual)] #or in filtered qual or unfiltered quant lists
 contams <- c("Nonanoic acid", "Decanal", "Caprolactam", "Benzamide", "methyl salicylate")
 chems.cut <- tibble(name = colnames(qual.all.cut),
-                 status = case_when(name %in% contams ~    "excluded, big",
-                                    name %in% quant_only ~ "excluded, known",
-                                    name %in% qual_only ~  "included, new",
-                                    name %in% quant_qual ~ "included, known",
-                                    .default = "excluded, big") %>% as.factor()) %>% 
+                    inquant = name %in% setdiff(names(quant.all), contams),
+                    status = case_when(name %in% contams ~    "excluded, big",
+                                       name %in% quant_only ~ "excluded, known",
+                                       name %in% qual_only ~  "included, new",
+                                       name %in% quant_qual ~ "included, known",
+                                       .default = "excluded, big") %>% as.factor()) %>% 
   column_to_rownames("name") %>% as.data.frame()
 
 pheatmap(cor(sqrt(qual.all.cut)), scale="none", 
          clustering_method = "mcquitty", cutree_rows = 20,
          clustering_distance_rows="correlation", clustering_distance_cols="correlation",
          clustering_callback = function(hc, ...){dendsort(hc, type="average")},
-         annotation_col = chems.cut, annotation_row = chems.cut, 
+         annotation_col = select(chems.cut, -inquant), annotation_row = select(chems.cut, -inquant), 
          annotation_colors=list(status=set_names(brewer.pal(4, "Set1"), levels(chems.cut$status))),
          color=colorRampPalette(c("blue","white","red"))(200), breaks=seq(-1,1,by=0.01), 
          labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)
@@ -411,7 +417,7 @@ explained(cap.ambi)
 
 cap.ambi.df <- fortify(cap.ambi) %>% 
   left_join(mutate(meta.all.noleaf, score="sites"), by=c(label="FileName", "score")) %>% 
-  left_join(rownames_to_column(inquant, "label"))
+  left_join(rownames_to_column(chems.cut, "label"))
 
 zoom <- 40
 cap_threshold <- 3
