@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2025-01-16" />
+<meta name="date" content="2025-01-17" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2025-01-16</h4>
+<h4 class="date">2025-01-17</h4>
 
 </div>
 
@@ -1214,11 +1214,12 @@ chemsf &lt;- chems %&gt;%
   combine_filters() 
 
 chemsf$filter_final &lt;- with(chemsf, filter_RT==&quot;OK&quot; &amp; RT.var &lt; 2 &amp; # variance of retention time &lt; 2 min
+                              name != &quot;carveol&quot; &amp;  #same peaks as cosmene
                               ((filter_freq.aggD==&quot;OK&quot; &amp; ambient_ratio_aggD&gt;minratio)|
                                  (filter_freq.aggN==&quot;OK&quot; &amp; ambient_ratio_aggN&gt;minratio)|
                                  (filter_freq.hybD==&quot;OK&quot; &amp; ambient_ratio_hybD&gt;minratio)|
                                  (filter_freq.hybN==&quot;OK&quot; &amp; ambient_ratio_hybN&gt;minratio)) |
-                              name==c(&quot;indole&quot;))#manually included - not detected by peak picker
+                              name==&quot;indole&quot;) #manually included - not detected by peak picker
 
 bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre>
 <p><img src="images/bouquet-1.svg" width="768" /></p>
@@ -1234,8 +1235,7 @@ bouquet::plot_filters(chemsf, option=&quot;rarity&quot;, yrange=3.5)</code></pre
 print(&quot;New compounds for investigation, not yet in quant integrations:&quot;)</code></pre>
 <pre><code>[1] &quot;New compounds for investigation, not yet in quant integrations:&quot;</code></pre>
 <pre class="r"><code>(qual_only &lt;- setdiff(qual_chems, names(quant.all)))</code></pre>
-<pre><code>[1] &quot;hexan-2-one&quot;         &quot;hexa-2,4-diene&quot;      &quot;camphene&quot;           
-[4] &quot;carveol&quot;             &quot;2-methylprop-2-enal&quot;</code></pre>
+<pre><code>character(0)</code></pre>
 <pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% qual_only, .before=1) %&gt;% View()
 
 print(&quot;Compounds integrated for other Ipomopsis projects that did not pass filters:&quot;)</code></pre>
@@ -1301,7 +1301,11 @@ print(&quot;Compounds that passed filters and already have quant integrations:&q
 [15] &quot;verbenone&quot;                                
 [16] &quot;3-ethenyl-1,2-dimethylcyclohexa-1,4-diene&quot;
 [17] &quot;geranial&quot;                                 
-[18] &quot;2,3-dihydroxypropyl acetate&quot;              </code></pre>
+[18] &quot;2,3-dihydroxypropyl acetate&quot;              
+[19] &quot;camphene&quot;                                 
+[20] &quot;2-methylprop-2-enal&quot;                      
+[21] &quot;hexa-2,4-diene&quot;                           
+[22] &quot;hexan-2-one&quot;                              </code></pre>
 <pre class="r"><code>toolow &lt;- rownames(quant.all)[rowSums(quant.all[,quant_qual]) == 0] #exclude 1 sample with no filtered integrations
 
 qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
@@ -1386,7 +1390,7 @@ pheatmap(cor(sqrt(qual.all.cut)), scale=&quot;none&quot;,
          clustering_distance_rows=&quot;correlation&quot;, clustering_distance_cols=&quot;correlation&quot;,
          clustering_callback = function(hc, ...){dendsort(hc, type=&quot;average&quot;)},
          annotation_col = select(chems.cut, -inquant), annotation_row = select(chems.cut, -inquant), 
-         annotation_colors=list(status=set_names(brewer.pal(4, &quot;Set1&quot;), levels(chems.cut$status))),
+         annotation_colors=list(status=set_names(brewer.pal(3, &quot;Set1&quot;), levels(chems.cut$status))),
          color=colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(200), breaks=seq(-1,1,by=0.01), 
          labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)</code></pre>
 <p><img src="images/corr_all-1.png" width="1152" /></p>
@@ -1401,8 +1405,8 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(qual.all.cut) ~ type, data = meta.all.noleaf)
            Df Variance    F Pr(&gt;F)    
-Model       1   394274 4.58  0.001 ***
-Residual 1035 89008265                
+Model       1   394034 4.58  0.001 ***
+Residual 1035 88987031                
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.ambi)</code></pre>
@@ -1464,7 +1468,7 @@ meta %&gt;% count(year, site, time) %&gt;%
 <td align="right">25</td>
 <td align="right">49</td>
 <td align="right">22</td>
-<td align="right">63</td>
+<td align="right">64</td>
 <td align="right">3</td>
 </tr>
 <tr class="even">
@@ -1680,7 +1684,7 @@ nmds.plot + geom_point(aes(color=time)) +
 <h2>CAP with time</h2>
 <pre class="r"><code>cap.t &lt;- capscale(sqrt(quant) ~ time, data=meta)
 explained(cap.t)</code></pre>
-<pre><code>[1] &quot;32% explained&quot;</code></pre>
+<pre><code>[1] &quot;30% explained&quot;</code></pre>
 <pre class="r"><code>cap.t.df &lt;- fortify(cap.t) %&gt;% left_join(mutate(meta, score=&quot;sites&quot;), by=c(label=&quot;sample&quot;, &quot;score&quot;))
 
 ggplot(filter(cap.t.df, score==&quot;sites&quot;), aes(x=CAP1, y=MDS1, label=greekify(label))) +
@@ -1711,13 +1715,13 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(quant.plant) ~ time + year + site + time:year + time:site + year:site, data = meta.plant)
            Df Variance      F Pr(&gt;F)    
-time        1   375831 488.15  0.001 ***
-year        6    90497  19.59  0.001 ***
-site        2     8216   5.34  0.001 ***
-time:year   6    36932   7.99  0.001 ***
-time:site   2     4654   3.02  0.013 *  
-year:site  11    14130   1.67  0.020 *  
-Residual  793   610542                  
+time        1   381071 451.75  0.001 ***
+year        6   109900  21.71  0.001 ***
+site        2    10960   6.50  0.001 ***
+time:year   6    41114   8.12  0.001 ***
+time:site   2     5042   2.99  0.010 ** 
+year:site  11    23027   2.48  0.001 ***
+Residual  793   668934                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.tys)</code></pre>
@@ -1749,17 +1753,17 @@ Number of permutations: 999
 
 Model: capscale(formula = sqrt(quant.withvwc) ~ time + year + site + time:year + time:site + relVWC, data = meta.withvwc)
            Df Variance      F Pr(&gt;F)    
-time        1   300853 283.67  0.001 ***
-year        5   106664  20.11  0.001 ***
-site        2    11207   5.28  0.001 ***
-relVWC      1     2385   2.25  0.099 .  
-time:year   4    23375   5.51  0.001 ***
-time:site   2     5867   2.77  0.019 *  
-Residual  561   594991                  
+time        1   302076 271.85  0.001 ***
+year        5   111085  19.99  0.001 ***
+site        2    11810   5.31  0.001 ***
+relVWC      1     2404   2.16  0.078 .  
+time:year   4    23759   5.35  0.001 ***
+time:site   2     6033   2.71  0.017 *  
+Residual  561   623378                  
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <pre class="r"><code>explained(cap.tysv)</code></pre>
-<pre><code>[1] &quot;43% explained&quot;</code></pre>
+<pre><code>[1] &quot;42% explained&quot;</code></pre>
 </div>
 <div id="cap-with-year-within-time" class="section level2">
 <h2>CAP with year, within time</h2>

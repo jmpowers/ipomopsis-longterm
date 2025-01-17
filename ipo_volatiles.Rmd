@@ -299,11 +299,12 @@ chemsf <- chems %>%
   combine_filters() 
 
 chemsf$filter_final <- with(chemsf, filter_RT=="OK" & RT.var < 2 & # variance of retention time < 2 min
+                              name != "carveol" &  #same peaks as cosmene
                               ((filter_freq.aggD=="OK" & ambient_ratio_aggD>minratio)|
                                  (filter_freq.aggN=="OK" & ambient_ratio_aggN>minratio)|
                                  (filter_freq.hybD=="OK" & ambient_ratio_hybD>minratio)|
                                  (filter_freq.hybN=="OK" & ambient_ratio_hybN>minratio)) |
-                              name==c("indole"))#manually included - not detected by peak picker
+                              name=="indole") #manually included - not detected by peak picker
 
 bouquet::plot_filters(chemsf, option="rarity", yrange=3.5)
 bouquet::plot_filters(chemsf, option="ambient", yrange=3.5)
@@ -409,7 +410,7 @@ pheatmap(cor(sqrt(qual.all.cut)), scale="none",
          clustering_distance_rows="correlation", clustering_distance_cols="correlation",
          clustering_callback = function(hc, ...){dendsort(hc, type="average")},
          annotation_col = select(chems.cut, -inquant), annotation_row = select(chems.cut, -inquant), 
-         annotation_colors=list(status=set_names(brewer.pal(4, "Set1"), levels(chems.cut$status))),
+         annotation_colors=list(status=set_names(brewer.pal(3, "Set1"), levels(chems.cut$status))),
          color=colorRampPalette(c("blue","white","red"))(200), breaks=seq(-1,1,by=0.01), 
          labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)
 ```
