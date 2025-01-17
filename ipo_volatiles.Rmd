@@ -41,7 +41,9 @@ metadata <- list.files("data/volatiles", pattern = "Ipomopsis long-term volatile
             mutate(across(any_of(c("pump_id", "plant", "vial", "sample")), as.character)), .id="metafile") %>% 
   mutate(year = year(date),
          taxon = fct_collapse(site, agg = c("Lagg", "VF"), hyb = "Ihyb"),
-         taxontime = paste0(taxon, time))
+         taxontime = paste0(taxon, time),
+         total_time = end - bag,
+         total_time = replace_na(total_time, median(total_time, na.rm=T))) # fill in 45 minutes when missing metadata
 
 # metadata %>% add_count(year, date, time, site, type, sample) %>% filter(n>1) %>% 
 #   arrange(year, date, time, site, type, sample) %>% write_tsv("data/volatiles/metadupes.tsv", na="")
@@ -200,7 +202,7 @@ quant.full <- list.files("data/volatiles/quant/", full.names = T) %>%
 need_meta <- setdiff(quant.full$Filename, meta.full$FileName)#just the ones filtered out when reading in filemeta
 
 #only keep file-metadata matches
-files.match <- intersect(meta.full$FileName, quant.full$Filename)
+files.match <- filter(meta.full, match)$FileName
 meta.all <- meta.full %>% filter(FileName %in% files.match)
 quant.all <- quant.full %>% filter(Filename %in% files.match) %>%
   select(Filename, Name, Area) %>%
@@ -239,7 +241,7 @@ qual.full <- list.files("data/volatiles/qual/", full.names = T) %>%
   map_dfr(read.shimadzu)
 
 #only keep file-metadata matches
-files.match <- intersect(meta.full$FileName, qual.full$Filename)
+files.match <- filter(meta.full, match)$FileName
 meta.all <- meta.full %>% filter(FileName %in% files.match)
 qual.data <-  qual.full %>% filter(Filename %in% files.match) %>% 
   filter(Name != "") %>% #drop peaks without identifications
@@ -248,29 +250,6 @@ qual.all <- qual.data %>% select(Filename, Name, Area) %>%
   pivot_wider(names_from = "Name", values_from="Area", values_fn = sum) %>% 
   arrange(match(Filename, meta.all$FileName)) %>% 
   as.data.frame() %>% column_to_rownames("Filename")
-```
-
-```{r quantslopes, eval=FALSE}
-quant.slopes <- set_names(rep(0,ncol(quant.all)), colnames(quant.all))
-#TODO get this working, already dropped "(3E)-4,8-dimethylnona-1,3,7-triene" from quant.all
-for(compvol in colnames(quant.all)) {
-  print(compvol)
-  nozeros <- bind_cols(select(qual.all,qual=compvol), select(quant.all,quant=compvol)) %>% 
-    filter(!(qual==0 | quant == 0))
-  quant.slopes[compvol] = coef(lm(quant ~ 0 + qual, data=nozeros))["qual"]
-}
-write_tsv(enframe(quant.slopes) %>% left_join(enframe(shortnames, name="Name", value="name")),
-          "data/volatiles/quant_slopes.tsv")
-
-quant.scaled <- sweep(quant.all, 2, quant.slopes, FUN = '/')
-
-quant.scaled.vol <- quant.scaled[volsmeta$FileName, 
-                                 colnames(quant.scaled) %in% 
-                                   intersect(colnames(quant.all), colnames(vol))] 
-
-#swap in scaled quant integrations
-#plot(unlist(vol[,colnames(quant.scaled.vol)]), unlist(quant.scaled.vol))
-vol[,colnames(quant.scaled.vol)] <- quant.scaled.vol
 ```
 
 
@@ -331,15 +310,32 @@ toolow <- rownames(quant.all)[rowSums(quant.all[,quant_qual]) == 0] #exclude 1 s
 
 qual <- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual <- qual[!rownames(qual) %in% toolow,]
-quant <- quant.all[rownames(qual), quant_qual]
-quant.long <- quant %>% rownames_to_column("sample") %>% pivot_longer(colnames(quant))
+quant.area <- quant.all[rownames(qual), quant_qual]
 ipochemsf <- ipochems[match(colnames(qual), ipochems$shortname),]
 meta <- metadata.df[rownames(qual),] %>% 
   mutate(across(c(year, site, time), factor))
 
-quant %>% rownames_to_column("FileName") %>% write_tsv("data/volatiles/filtered_quant.tsv")
+quant.area %>% rownames_to_column("FileName") %>% write_tsv("data/volatiles/filtered_quant.tsv")
 meta %>% write_tsv("data/volatiles/filtered_meta.tsv")
-save(quant, meta, file = "data/volatiles/filtered_quantmeta.rda")
+save(quant.area, meta, file = "data/volatiles/filtered_quantmeta.rda")
+```
+
+```{r convert}
+#Since quantitative mode only integrates the top ion, need to scale them up to the area of all ions (TIC).
+quant.slopes <- set_names(rep(0,ncol(quant.area)), colnames(quant.area))
+for(compvol in colnames(quant.area)) {
+  nozeros <- bind_cols(select(qual,qual=compvol), select(quant.area,quant=compvol)) %>% 
+    filter(!(qual==0 | quant == 0))
+  quant.slopes[compvol] = coef(lm(quant ~ 0 + qual, data=nozeros))["qual"]
+}
+write_tsv(enframe(quant.slopes), "data/volatiles/quant_slopes.tsv")
+
+#Convert quant areas to nanograms per hour
+quant <- quant.area %>% 
+  sweep(2, quant.slopes, FUN = '/') %>% #convert quant areas to qual areas
+  sweep(2, ipochemsf$area_per_ng2019, FUN = '/') %>%  # convert qual areas to nanograms 
+  sweep(1, as.numeric(meta$total_time, units="hours"),  FUN = '/') #divide by equilibration + pumping time
+quant.long <- quant %>% rownames_to_column("sample") %>% pivot_longer(colnames(quant))
 ```
 
 ## Retention time of qual and quant integrations
@@ -415,7 +411,6 @@ pheatmap(cor(sqrt(qual.all.cut)), scale="none",
          labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)
 ```
 
-
 ## Check ambients vs. samples
 
 ```{r check_ambi}
@@ -453,7 +448,6 @@ ggplot(compounds.cap.angles, aes(x=angle, fill=inquant)) + facet_wrap(vars(inqua
 #   filter(abs(angle+90)<5, inquant=="N") %>% select(name=label, CAP1, angle) %>% arrange(CAP1)
 ```
 
-
 # Descriptions of filtered volatiles
 
 ## Sample size
@@ -472,6 +466,26 @@ meta.quant.plant <- bind_cols(meta, quant) %>% drop_na(plant) %>%
 meta.plant <- meta.quant.plant %>% select(ystp, year, site, time, plant, VWC) 
 quant.plant <- meta.quant.plant %>% select(all_of(colnames(quant)), ystp) %>% column_to_rownames("ystp")
 quant.long.plant <- quant.plant %>% rownames_to_column("ystp") %>% pivot_longer(colnames(quant))
+```
+
+## Table of volatile emission rates
+
+```{r voltable}
+#Get Kovats retention index from RMBL-GCMS project
+load("data/volatiles/get_kovats.rda") 
+quant.RI.2018 <- quant.RT %>% mutate(RI = get_kovats(RT, "2018-09-03")) %>% mutate(name = shortnames[Name])
+
+quant %>% decostand(method = "tot") %>% #relative amount in each sample
+  pivot_longer(everything()) %>% group_by(name) %>% summarize(mean_rel = mean(value)) %>% 
+  arrange(desc(mean_rel)) %>% kable(caption = "Mean relative amounts of each volatile")
+
+quant.plant %>% #average by plant first
+  pivot_longer(everything()) %>% group_by(name) %>% summarize(mean_emissions = mean(value), sd_emissions=sd(value)) %>% 
+  left_join(ipochemsf) %>%  arrange(class, desc(mean_emissions)) %>% 
+  left_join(quant.RI.2018) %>% 
+  mutate(meansd = paste(sprintf(mean_emissions, fmt = '%#.1f'), "\U00B1", sprintf(sd_emissions, fmt = '%#.1f')),
+         name=greekify(name), RI= round(RI)) %>% 
+  select(class, RI, name, meansd) %>%  kable(caption = "Mean emission rates of each volatile")
 ```
 
 ## Correlations
