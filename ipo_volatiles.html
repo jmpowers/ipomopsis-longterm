@@ -11,7 +11,7 @@
 
 <meta name="author" content="John Powers" />
 
-<meta name="date" content="2025-01-15" />
+<meta name="date" content="2025-01-16" />
 
 <title>Long-term Ipomopsis Floral Volatiles</title>
 
@@ -254,7 +254,7 @@ div.tocify {
 Volatiles</h1>
 <h4 class="author"><a href="http://sites.uci.edu/powers/">John
 Powers</a></h4>
-<h4 class="date">2025-01-15</h4>
+<h4 class="date">2025-01-16</h4>
 
 </div>
 
@@ -1279,7 +1279,7 @@ print(&quot;Compounds integrated for other Ipomopsis projects that did not pass 
 [36] &quot;decan-2-one&quot;                                       
 [37] &quot;Benzamide&quot;                                         
 [38] &quot;Benzenebutanoic acid, .gamma.-oxo-&quot;                </code></pre>
-<pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% iponew, .before=1) %&gt;% View()
+<pre class="r"><code>#chemsf %&gt;% filter(filter_final) %&gt;% mutate(check = name %in% quant_only, .before=1) %&gt;% View()
 
 print(&quot;Compounds that passed filters and already have quant integrations:&quot;)</code></pre>
 <pre><code>[1] &quot;Compounds that passed filters and already have quant integrations:&quot;</code></pre>
@@ -1302,7 +1302,7 @@ print(&quot;Compounds that passed filters and already have quant integrations:&q
 [16] &quot;3-ethenyl-1,2-dimethylcyclohexa-1,4-diene&quot;
 [17] &quot;geranial&quot;                                 
 [18] &quot;2,3-dihydroxypropyl acetate&quot;              </code></pre>
-<pre class="r"><code>toolow &lt;- rownames(quant.all)[rowSums(quant.all[,quant_qual]) &lt; 2500] #exclude 2 samples with very low integrations
+<pre class="r"><code>toolow &lt;- rownames(quant.all)[rowSums(quant.all[,quant_qual]) == 0] #exclude 1 sample with no filtered integrations
 
 qual &lt;- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual &lt;- qual[!rownames(qual) %in% toolow,]
@@ -1320,42 +1320,44 @@ save(quant, meta, file = &quot;data/volatiles/filtered_quantmeta.rda&quot;)</cod
 class="section level2">
 <h2>Retention time of qual and quant integrations</h2>
 <pre class="r"><code>quant.RT &lt;- quant.full %&gt;% summarize(RT = median(Ret.Time, na.rm=T), .by=Name) %&gt;% 
-  mutate(name = recode(Name, !!!shortnames)) %&gt;% filter(name %in% qual_chems)
+  mutate(name = recode(Name, !!!shortnames))
 
 ggplot(longdata %&gt;% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(name, RT))) + 
   geom_jitter(aes(color=factor(name, levels=sample(levels(name)))), width = 0, height=0.5, size=0.5) + 
-  geom_point(data=quant.RT) + 
+  geom_point(data=quant.RT %&gt;% filter(name %in% qual_chems)) + 
   guides(color=&quot;none&quot;) + ylab(&quot;&quot;) + theme_minimal()</code></pre>
 <p><img src="images/retention-1.svg" width="768" /></p>
-<p>New compounds to investigate that correlate with known floral
-volatiles:</p>
+<pre class="r"><code>puzzle &lt;- c(&quot;tricyclo[5.2.1.02,6]dec-2-ene&quot;, &quot;p-mentha-1,3,8-triene&quot;, &quot;cosmene&quot;, &quot;carveol&quot;, &quot;3-ethenyl-1,2-dimethylcyclohexa-1,4-diene&quot;)
+puzzle.RT &lt;- c(8.42, 9.63, 10.32, 10.47)
+ggplot(longdata %&gt;% filter(name %in% puzzle), aes(x=RT, y=fct_reorder(name, RT))) +
+  geom_vline(xintercept=puzzle.RT)+
+  geom_jitter(aes(color=factor(name, levels=sample(levels(name)))), width = 0, height=0.5, size=0.5) +
+  geom_point(data=quant.full %&gt;% mutate(name = recode(Name, !!!shortnames), RT=Ret.Time) %&gt;% filter(name %in% puzzle)) + 
+  annotate(geom=&quot;text&quot;, x=puzzle.RT-0.07, y=0.5, label=LETTERS[1:4])+
+  guides(color=&quot;none&quot;, shape=&quot;none&quot;) + ylab(&quot;&quot;) + theme_minimal()</code></pre>
+<p><img src="images/retention-2.svg" width="768" /></p>
+<pre class="r"><code>#TODO tighten up retention time allowances for quant integrations as they are spilling over</code></pre>
+<p>New compounds that correlate with known floral volatiles:</p>
 <ul>
-<li>methyl 2-methylbutanoate (fatty acid ester, clusters with
-a-pinene)</li>
-<li>(3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol (monoterpene alcohol,
-clusters with pseudoionone)</li>
-<li>7-epi-trans-sesquisabinene hydrate (C15, clusters with evening
-volatiles, but 4+ retention times)</li>
+<li>camphene (clusters with a-pinene, verbenone, limonene)</li>
 </ul>
-<p>New but cluster with contaminants and have multiple retention
-times:</p>
+<p>New small molecules that cluster with sunscreen (homosalate and
+2-ethylhexyl salicylate):</p>
 <ul>
-<li>5-Methyloxazolidine</li>
-<li>Decane, 3,6-dimethyl (3 RT)</li>
-<li>Formic acid, undecyl ester (3 RT)</li>
-<li>8-Hexadecenal, 14 methyl- (Z) (4+ RT)</li>
+<li>hexan-2-one (methyl butyl ketone, 2 retention times)</li>
+<li>2-methylprop-2-enal (methacrolein, isoprene derivative)</li>
+<li>hexa-2,4-diene</li>
 </ul>
-<p>New compounds that already line up with quant integrations:</p>
+<p>New compound part of complex of four unknown terpenoids, already
+integrated:</p>
 <ul>
-<li>hex-2-enal = (E)-hex-2-enal</li>
-<li>carveol = cosmene</li>
-<li>[(Z)-hex-3-enyl] 2-methylpropanoate = [(Z)-hex-3-enyl]
-butananoate</li>
+<li>carveol</li>
 </ul>
 <p>Known compounds with extra RTs to investigate:</p>
 <ul>
 <li>[(Z)-hex-3-enyl] butanoate (2 RT)</li>
-<li>hex-2-enal (2 RT)</li>
+<li>(E)-hex-2-enal (2 RT)</li>
+<li>a-pinene (2 RT)</li>
 <li>geranial (2 RT)</li>
 <li>cosmene (3 RT)</li>
 <li>a-terpineol (2 RT)</li>

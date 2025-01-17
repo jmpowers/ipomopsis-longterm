@@ -321,12 +321,12 @@ print("New compounds for investigation, not yet in quant integrations:")
 
 print("Compounds integrated for other Ipomopsis projects that did not pass filters:")
 (quant_only <- setdiff(names(quant.all), qual_chems))
-#chemsf %>% filter(filter_final) %>% mutate(check = name %in% iponew, .before=1) %>% View()
+#chemsf %>% filter(filter_final) %>% mutate(check = name %in% quant_only, .before=1) %>% View()
 
 print("Compounds that passed filters and already have quant integrations:")
 (quant_qual <- intersect(names(quant.all), qual_chems))
 
-toolow <- rownames(quant.all)[rowSums(quant.all[,quant_qual]) < 2500] #exclude 2 samples with very low integrations
+toolow <- rownames(quant.all)[rowSums(quant.all[,quant_qual]) == 0] #exclude 1 sample with no filtered integrations
 
 qual <- prune_sampletable(qual.all, chemsf, metadata.df)[, quant_qual]
 qual <- qual[!rownames(qual) %in% toolow,]
@@ -345,37 +345,43 @@ save(quant, meta, file = "data/volatiles/filtered_quantmeta.rda")
 
 ```{r retention}
 quant.RT <- quant.full %>% summarize(RT = median(Ret.Time, na.rm=T), .by=Name) %>% 
-  mutate(name = recode(Name, !!!shortnames)) %>% filter(name %in% qual_chems)
+  mutate(name = recode(Name, !!!shortnames))
 
 ggplot(longdata %>% filter(name %in% qual_chems), aes(x=RT, y=fct_reorder(name, RT))) + 
   geom_jitter(aes(color=factor(name, levels=sample(levels(name)))), width = 0, height=0.5, size=0.5) + 
-  geom_point(data=quant.RT) + 
+  geom_point(data=quant.RT %>% filter(name %in% qual_chems)) + 
   guides(color="none") + ylab("") + theme_minimal()
+
+puzzle <- c("tricyclo[5.2.1.02,6]dec-2-ene", "p-mentha-1,3,8-triene", "cosmene", "carveol", "3-ethenyl-1,2-dimethylcyclohexa-1,4-diene")
+puzzle.RT <- c(8.42, 9.63, 10.32, 10.47)
+ggplot(longdata %>% filter(name %in% puzzle), aes(x=RT, y=fct_reorder(name, RT))) +
+  geom_vline(xintercept=puzzle.RT)+
+  geom_jitter(aes(color=factor(name, levels=sample(levels(name)))), width = 0, height=0.5, size=0.5) +
+  geom_point(data=quant.full %>% mutate(name = recode(Name, !!!shortnames), RT=Ret.Time) %>% filter(name %in% puzzle)) + 
+  annotate(geom="text", x=puzzle.RT-0.07, y=0.5, label=LETTERS[1:4])+
+  guides(color="none", shape="none") + ylab("") + theme_minimal()
+#TODO tighten up retention time allowances for quant integrations as they are spilling over
 ```
 
-New compounds to investigate that correlate with known floral volatiles:
+New compounds  that correlate with known floral volatiles:
 
-* methyl 2-methylbutanoate (fatty acid ester, clusters with a-pinene)
-* (3E,5E)-2,6-dimethylocta-3,5,7-trien-2-ol (monoterpene alcohol, clusters with pseudoionone)
-* 7-epi-trans-sesquisabinene hydrate (C15, clusters with evening volatiles, but 4+ retention times)
+* camphene (clusters with a-pinene, verbenone, limonene)
 
-New but cluster with contaminants and have multiple retention times:
+New small molecules that cluster with sunscreen (homosalate and 2-ethylhexyl salicylate):
 
-* 5-Methyloxazolidine
-* Decane, 3,6-dimethyl (3 RT)
-* Formic acid, undecyl ester (3 RT)
-* 8-Hexadecenal, 14 methyl- (Z) (4+ RT)
+* hexan-2-one (methyl butyl ketone, 2 retention times)
+* 2-methylprop-2-enal (methacrolein, isoprene derivative)
+* hexa-2,4-diene
 
-New compounds that already line up with quant integrations:
+New compound part of complex of four unknown terpenoids, already integrated:
 
-* hex-2-enal = (E)-hex-2-enal
-* carveol = cosmene
-* [(Z)-hex-3-enyl] 2-methylpropanoate = [(Z)-hex-3-enyl] butananoate
+* carveol
 
 Known compounds with extra RTs to investigate:
 
 * [(Z)-hex-3-enyl] butanoate (2 RT)
-* hex-2-enal (2 RT)
+* (E)-hex-2-enal (2 RT)
+* a-pinene (2 RT)
 * geranial (2 RT)
 * cosmene (3 RT)
 * a-terpineol (2 RT)
@@ -407,6 +413,7 @@ pheatmap(cor(sqrt(qual.all.cut)), scale="none",
          color=colorRampPalette(c("blue","white","red"))(200), breaks=seq(-1,1,by=0.01), 
          labels_row=greekify(colnames(qual.all.cut)), show_colnames = F)
 ```
+
 
 ## Check ambients vs. samples
 
